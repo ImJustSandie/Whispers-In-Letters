@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67152d8daea5e584b921889ac55c7ca8, type: 3}
-  m_Name: Test
+  m_Name: Libreria 2
   m_EditorClassIdentifier: Assembly-CSharp::InteractableData
-  interactionName: Cubo de Prueba
-  inkKnot: inicio
+  interactionName: Lib 1
+  inkKnot: obj1

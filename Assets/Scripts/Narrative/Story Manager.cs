@@ -1,5 +1,7 @@
 using Ink.Runtime;
 using UnityEngine;
+using TMPro;
+using System;
 
 public class StoryManager : MonoBehaviour
 {
@@ -7,7 +9,16 @@ public class StoryManager : MonoBehaviour
 
     public TextAsset inkJSON;
 
+    [Header("UI")]
+    [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] private TextMeshProUGUI dialogueText;
+
     private Story story;
+    private bool dialogueActive;
+    private bool pendingEnd;
+
+    public bool IsDialogueActive => dialogueActive;
+    public event Action<bool> OnDialogueStateChanged;
 
     void Awake()
     {
@@ -15,12 +26,17 @@ public class StoryManager : MonoBehaviour
 
         if (inkJSON == null)
         {
-            Debug.LogError("[StoryManager] inkJSON no está asignado en el Inspector.");
+            Debug.LogError("[StoryManager] inkJSON no esta asignado en el Inspector.");
             return;
         }
 
         story = new Story(inkJSON.text);
         Debug.Log("[StoryManager] Story inicializado correctamente.");
+
+        if (dialoguePanel != null)
+        {
+            dialoguePanel.SetActive(false);
+        }
     }
 
     public void StartStory(string knot)
@@ -29,28 +45,79 @@ public class StoryManager : MonoBehaviour
 
         if (string.IsNullOrEmpty(knot))
         {
-            Debug.LogWarning("[StoryManager] El knot está vacío o nulo.");
+            Debug.LogWarning("[StoryManager] El knot esta vacio o nulo.");
+            return;
+        }
+
+        if (dialogueActive)
+        {
+            Debug.LogWarning("[StoryManager] Ya hay un dialogo activo. Ignorando nueva llamada.");
             return;
         }
 
         story.ChoosePathString(knot);
-        ContinueStory();
+        dialogueActive = true;
+        pendingEnd = false;
+
+        if (dialoguePanel != null)
+        {
+            dialoguePanel.SetActive(true);
+        }
+
+        OnDialogueStateChanged?.Invoke(true);
+
+        AdvanceStory();
     }
 
-    public void ContinueStory()
+    public void AdvanceStory()
     {
-        while (story.canContinue)
+        if (!dialogueActive)
         {
-            string line = story.Continue();
+            Debug.LogWarning("[StoryManager] AdvanceStory llamado sin dialogo activo.");
+            return;
+        }
+
+        if (pendingEnd)
+        {
+            EndStory();
+            return;
+        }
+
+        if (story.canContinue)
+        {
+            string line = story.Continue().Trim();
             Debug.Log(line);
+
+            if (dialogueText != null)
+            {
+                dialogueText.text = line;
+            }
+
+            pendingEnd = !story.canContinue && story.currentChoices.Count == 0;
+            return;
         }
 
         if (story.currentChoices.Count > 0)
         {
-            for (int i = 0; i < story.currentChoices.Count; i++)
-            {
-                Debug.Log($"[{i}] {story.currentChoices[i].text}");
-            }
+            Debug.LogWarning("[StoryManager] Hay opciones pero no hay UI para elegir; se tomara la primera por defecto.");
+            story.ChooseChoiceIndex(0);
+            AdvanceStory();
+            return;
         }
+
+        EndStory();
+    }
+
+    private void EndStory()
+    {
+        dialogueActive = false;
+        pendingEnd = false;
+
+        if (dialoguePanel != null)
+        {
+            dialoguePanel.SetActive(false);
+        }
+
+        OnDialogueStateChanged?.Invoke(false);
     }
 }

@@ -32,6 +32,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (StoryManager.Instance != null && StoryManager.Instance.IsDialogueActive)
+        {
+            return;
+        }
+
         Vector3 movement = new Vector3(moveInput.x, 0, moveInput.y);
         controller.Move(movement * moveSpeed * Time.deltaTime);
     }
