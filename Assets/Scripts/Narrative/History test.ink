@@ -31,4 +31,16 @@ Hola Sophia
 
 Voy a hacer mi mayor esfuerzo por mejorar, de verdad quiero lograrlo esta vez...
 
+Este es un nuevo dialogo
+
+
 -> END
+
+
+=== estante ===
+Hola lowell
+
+Soy un estante
+
+->END
+
