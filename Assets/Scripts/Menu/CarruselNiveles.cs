@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
+
 public class CarruselNiveles : MonoBehaviour
 {
     public Image imagenNivel;
@@ -13,6 +14,7 @@ public class CarruselNiveles : MonoBehaviour
     public Image estrella1;
     public Image estrella2;
     public Image estrella3;
+    public Image estrella4;
 
     public GameObject candado;
 
@@ -63,6 +65,7 @@ public class CarruselNiveles : MonoBehaviour
         estrella1.enabled = estrellas >= 1;
         estrella2.enabled = estrellas >= 2;
         estrella3.enabled = estrellas >= 3;
+        estrella4.enabled = estrellas >= 4;
 
         // bloquear niveles
         if (nivelActual == 0)
