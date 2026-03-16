@@ -29,22 +29,27 @@ public class CarruselNiveles : MonoBehaviour
 
     public void SiguienteNivel()
     {
-        if (nivelActual < imagenesNiveles.Length - 1)
+        nivelActual++;
+
+        if (nivelActual >= imagenesNiveles.Length)
         {
-            nivelActual++;
-            ActualizarNivel();
+            nivelActual = 0;
         }
+
+        ActualizarNivel();
     }
 
     public void NivelAnterior()
     {
-        if (nivelActual > 0)
-        {
-            nivelActual--;
-            ActualizarNivel();
-        }
-    }
+        nivelActual--;
 
+        if (nivelActual < 0)
+        {
+            nivelActual = imagenesNiveles.Length - 1;
+        }
+
+        ActualizarNivel();
+    }
     void ActualizarNivel()
     {
         imagenNivel.sprite = imagenesNiveles[nivelActual];
