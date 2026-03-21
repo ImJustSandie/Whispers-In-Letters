@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    [SerializeField] private float rotationSpeed = 10f;
 
     private CharacterController controller;
     private PlayerControls controls;
@@ -46,7 +47,18 @@ public class PlayerMovement : MonoBehaviour
             moveSpeed = 5f;
         }
 
+
+
+
         Vector3 movement = new Vector3(moveInput.x, 0, moveInput.y);
+
+        // Rotar el modelo suavemente hacia la direccion de movimiento
+        if (movement.sqrMagnitude > 0.01f)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(movement);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        }
+
         controller.Move(movement * moveSpeed * Time.deltaTime);
     }
 }

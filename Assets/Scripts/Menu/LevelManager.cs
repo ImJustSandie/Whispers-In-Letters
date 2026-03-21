@@ -79,6 +79,10 @@ public class LevelManager : MonoBehaviour
             yield return null;
         }
 
+        // 3.5 Reubicar al jugador en el SpawnPoint correcto
+        yield return null; // Esperar un frame para que todos los objetos de la nueva escena se inicialicen
+        HandlePlayerSpawn();
+
         // 4. Efecto Fade In (Aclarar pantalla)
         if (fadeCanvasGroup != null)
         {
@@ -93,5 +97,56 @@ public class LevelManager : MonoBehaviour
             fadeCanvasGroup.blocksRaycasts = false;
             fadeCanvasGroup.gameObject.SetActive(false); // Apagarlo para que no estorbe en el Editor ni en el juego
         }
+    }
+
+    /// <summary>
+    /// Busca al jugador por Tag y lo reubica en el SpawnPoint correspondiente a la escena anterior.
+    /// </summary>
+    private void HandlePlayerSpawn()
+    {
+        if (GameManager.Instance == null || GameManager.Instance.GetGameState() == null)
+        {
+            Debug.Log("[LevelManager] No hay GameManager/GameState. Spawn omitido.");
+            return;
+        }
+
+        string previousScene = GameManager.Instance.GetGameState().previousSceneName;
+        Debug.Log($"[LevelManager] Buscando SpawnPoint para escena anterior: '{previousScene}'");
+
+        if (string.IsNullOrEmpty(previousScene)) return;
+
+        // Buscar al jugador por Tag
+        GameObject player = GameObject.FindWithTag("Player");
+        if (player == null)
+        {
+            Debug.LogWarning("[LevelManager] No se encontro jugador con Tag 'Player' en la escena.");
+            return;
+        }
+
+        // Buscar SpawnPoints
+        SpawnPoint[] spawnPoints = Object.FindObjectsByType<SpawnPoint>(FindObjectsSortMode.None);
+        Debug.Log($"[LevelManager] SpawnPoints encontrados: {spawnPoints.Length}");
+
+        foreach (SpawnPoint sp in spawnPoints)
+        {
+            Debug.Log($"[LevelManager] Comparando SpawnPoint '{sp.fromSceneName}' con '{previousScene}'");
+
+            if (sp.fromSceneName.Trim().Equals(previousScene.Trim(), System.StringComparison.OrdinalIgnoreCase))
+            {
+                // Desactivar CharacterController temporalmente para poder teletransportar
+                CharacterController cc = player.GetComponent<CharacterController>();
+                if (cc != null) cc.enabled = false;
+
+                player.transform.position = sp.transform.position;
+                player.transform.rotation = sp.transform.rotation;
+
+                if (cc != null) cc.enabled = true;
+
+                Debug.Log($"[LevelManager] Jugador reubicado en SpawnPoint de '{previousScene}'");
+                return;
+            }
+        }
+
+        Debug.LogWarning($"[LevelManager] No se encontro SpawnPoint para '{previousScene}'.");
     }
 }
