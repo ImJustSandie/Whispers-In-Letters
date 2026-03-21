@@ -1,6 +1,5 @@
 using Ink.Runtime;
 using UnityEngine;
-using TMPro;
 using System;
 
 public class StoryManager : MonoBehaviour
@@ -11,11 +10,10 @@ public class StoryManager : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private GameObject dialoguePanel;
-    [SerializeField] private TextMeshProUGUI dialogueText;
 
+    private DialogueUIController uiController;
     private Story story;
     private bool dialogueActive;
-    private bool pendingEnd;
 
     public bool IsDialogueActive => dialogueActive;
     public event Action<bool> OnDialogueStateChanged;
@@ -35,6 +33,19 @@ public class StoryManager : MonoBehaviour
 
         if (dialoguePanel != null)
         {
+            // Intentamos obtener el DialogueUIController en el panel o en sus hijos
+            uiController = dialoguePanel.GetComponentInChildren<DialogueUIController>(true);
+            
+            if (uiController == null)
+            {
+                Debug.LogError("[StoryManager] No se encontro DialogueUIController en el dialoguePanel ni en sus hijos.");
+            }
+            else
+            {
+                // Suscribirse al evento de finalizacion del dialogo
+                uiController.OnDialogueEnded += EndStory;
+            }
+
             dialoguePanel.SetActive(false);
         }
     }
@@ -57,16 +68,20 @@ public class StoryManager : MonoBehaviour
 
         story.ChoosePathString(knot);
         dialogueActive = true;
-        pendingEnd = false;
 
         if (dialoguePanel != null)
         {
             dialoguePanel.SetActive(true);
         }
 
-        OnDialogueStateChanged?.Invoke(true);
+        if (uiController != null)
+        {
+            uiController.ResetUI();
+            uiController.SetStory(story);
+            uiController.DisplayNextLine();
+        }
 
-        AdvanceStory();
+        OnDialogueStateChanged?.Invoke(true);
     }
 
     public void AdvanceStory()
@@ -77,41 +92,16 @@ public class StoryManager : MonoBehaviour
             return;
         }
 
-        if (pendingEnd)
+        // Delegamos el avance del dialogo al UI Controller (para saltar el Typewriter o avanzar de linea)
+        if (uiController != null)
         {
-            EndStory();
-            return;
+            uiController.OnAdvanceInput();
         }
-
-        if (story.canContinue)
-        {
-            string line = story.Continue().Trim();
-            Debug.Log(line);
-
-            if (dialogueText != null)
-            {
-                dialogueText.text = line;
-            }
-
-            pendingEnd = !story.canContinue && story.currentChoices.Count == 0;
-            return;
-        }
-
-        if (story.currentChoices.Count > 0)
-        {
-            Debug.LogWarning("[StoryManager] Hay opciones pero no hay UI para elegir; se tomara la primera por defecto.");
-            story.ChooseChoiceIndex(0);
-            AdvanceStory();
-            return;
-        }
-
-        EndStory();
     }
 
     private void EndStory()
     {
         dialogueActive = false;
-        pendingEnd = false;
 
         if (dialoguePanel != null)
         {

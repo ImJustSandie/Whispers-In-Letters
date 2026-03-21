@@ -78,7 +78,7 @@ public class CarruselNiveles : MonoBehaviour
     {
         if (nivelActual == 0)
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("Biblioteca");
         }
     }
 }
