@@ -37,7 +37,27 @@ public class DialogueTagProcessor : MonoBehaviour
                         HandleSpriteTag(tagValue);
                         break;
                     
-                    // Aqui puedes procesar otros tags en el futuro (ej. audio, animacion, layout)
+                    case "setflag":
+                        if (GameManager.Instance != null)
+                        {
+                            // Si el tag es #setflag:conocio_sophia, guardamos "conocio_sophia" en el SO
+                            GameManager.Instance.SetStoryFlag(tagValue, true);
+                            Debug.Log($"[Ink] Nueva decisión registrada en el GameState: {tagValue}");
+                        }
+                        break;
+                        
+                    case "setvar":
+                        if (GameManager.Instance != null && splitTag.Length >= 3)
+                        {
+                            // Si el tag es #setvar:joseph_actitud:motivado
+                            // splitTag[0] = "setvar", splitTag[1] = "joseph_actitud", splitTag[2] = "motivado"
+                            string varKey = splitTag[1].Trim();
+                            string varVal = splitTag[2].Trim();
+                            
+                            GameManager.Instance.SetStoryVariable(varKey, varVal);
+                            Debug.Log($"[Ink] Variable mutada registrada: {varKey} = {varVal}");
+                        }
+                        break;
                 }
             }
         }

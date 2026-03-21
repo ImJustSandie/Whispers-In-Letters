@@ -1,4 +1,13 @@
 
+// Declarar funciones externas para conectar con el GameManager de Unity
+EXTERNAL GetFlag(flagName)
+EXTERNAL GetVar(varName)
+// (Estos fallbacks son solo para que Inky no marque error de sintaxis)
+=== function GetFlag(flagName) ===
+~ return false
+=== function GetVar(varName) ===
+~ return ""
+
 === inicio ===
 #sprite:sophia_happy
 Este es un dialogo de prueba
@@ -25,45 +34,61 @@ Hola wenas
 
 === Joseph1 ===
 
+// --- REENCUENTRO INMEDIATO (si ya habló antes en esta misma sesión o poco después) ---
+{ GetVar("actitud_joseph") == "motivado":
+    -> Joseph1_Motivado_Reencuentro
+}
+{ GetVar("actitud_joseph") == "cuestionado":
+    -> Joseph1_Cuestionado_Reencuentro
+}
+
+// --- PRIMER ENCUENTRO ---
+
 #sprite:sophia_happy
-Hola
+Hola...
 
 #sprite:joseph_neutral
-¿Asi que esta es la biblioteca? no se si me siento comodo aquí, pero creo que me iré acostumbrando.
+¿Así que esta es la biblioteca? No sé si me siento cómodo aquí... pero creo que me iré acostumbrando.
 
-Voy a hacer mi mayor esfuerzo por mejorar, de verdad quiero lograrlo esta vez...
+#sprite:joseph_neutral
+Voy a hacer mi mayor esfuerzo por mejorar... de verdad quiero lograrlo esta vez...
 
-+ [Motivarlo]
-    #sprite:sophia_happy
-    Me alegra escuchar eso. Este puede ser un buen comienzo si te lo tomas en serio.
+    + [Motivarlo]
+        #setvar:actitud_joseph:motivado
 
-    #sprite:joseph_neutral
-    Eso intento... aunque no siempre es fácil mantenerme enfocado.
+        #sprite:sophia_happy
+        Me alegra escuchar eso. Este puede ser un buen comienzo si te lo tomas en serio.
 
-    #sprite:sophia_happy
-    No tienes que hacerlo perfecto, solo constante.
+        #sprite:joseph_neutral
+        Eso intento... aunque no siempre es fácil mantenerme enfocado.
 
-    #sprite:joseph_neutral
-    Supongo que eso suena más alcanzable...
+        #sprite:sophia_happy
+        No tienes que hacerlo perfecto, solo constante.
 
-    -> Joseph1_Motivado
+        #sprite:joseph_neutral
+        Supongo que eso suena más alcanzable...
 
-+ [Cuestionarlo]
-    #sprite:sophia_happy
-    Ya has dicho eso antes. ¿Qué va a ser diferente esta vez?
+        -> Joseph1_Motivado
 
-    #sprite:joseph_neutral
-    ...lo sé. No tengo una gran respuesta.
+    + [Cuestionarlo]
+        #setvar:actitud_joseph:cuestionado
 
-    #sprite:sophia_happy
-    Entonces empieza por algo pequeño. Demuéstralo con acciones.
+        #sprite:sophia_happy    
+        Ya has dicho eso antes. ¿Qué va a ser diferente esta vez?
 
-    #sprite:joseph_neutral
-    Supongo que tienes razón... hablar es fácil.
+        #sprite:joseph_neutral
+        ...lo sé. No tengo una gran respuesta.
 
-    -> Joseph1_Cuestionado
+        #sprite:sophia_happy
+        Entonces empieza por algo pequeño. Demuéstralo con acciones.
+
+        #sprite:joseph_neutral
+        Supongo que tienes razón... hablar es fácil.
+
+        -> Joseph1_Cuestionado
 
 
+// --- RAMA MOTIVADO (PRIMERA VEZ) ---
 === Joseph1_Motivado ===
 
 #sprite:joseph_neutral
@@ -78,6 +103,7 @@ Gracias. De verdad.
 -> END
 
 
+// --- RAMA CUESTIONADO (PRIMERA VEZ) ---
 === Joseph1_Cuestionado ===
 
 #sprite:joseph_neutral
@@ -88,5 +114,50 @@ Exactamente.
 
 #sprite:joseph_neutral
 Entonces... empezaré ahora.
+
+-> END
+
+
+// --- REENCUENTRO SI LO MOTIVASTE ---
+=== Joseph1_Motivado_Reencuentro ===
+
+#sprite:joseph_neutral
+Oh... Sophia.
+
+#sprite:joseph_neutral
+He estado pensando en lo que dijiste... eso de ser constante.
+
+#sprite:joseph_neutral
+No hice mucho todavía, pero... al menos abrí un libro.
+
+#sprite:sophia_happy
+Eso ya es un avance.
+
+#sprite:joseph_neutral
+Supongo que sí... antes ni siquiera lo intentaba.
+
+-> END
+
+
+// --- REENCUENTRO SI LO CUESTIONASTE ---
+=== Joseph1_Cuestionado_Reencuentro ===
+
+#sprite:joseph_neutral
+...Sophia.
+
+#sprite:joseph_neutral
+No pude dejar de pensar en lo que dijiste.
+
+#sprite:joseph_neutral
+Tenías razón... hablo mucho, pero hago poco.
+
+#sprite:sophia_happy
+¿Y ahora?
+
+#sprite:joseph_neutral
+...ahora al menos me incomoda seguir igual.
+
+#sprite:joseph_neutral
+Supongo que eso es un inicio.
 
 -> END
