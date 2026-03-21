@@ -37,6 +37,15 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
+        if(controls.Player.Sprint.IsPressed())
+        {
+            moveSpeed = 10f;
+        }
+        else
+        {
+            moveSpeed = 5f;
+        }
+
         Vector3 movement = new Vector3(moveInput.x, 0, moveInput.y);
         controller.Move(movement * moveSpeed * Time.deltaTime);
     }

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deb3212b184d2d242bb4f3eea5083a37, type: 3}
+  m_Name: Portrait Data Base
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterPortraitData
+  portraits:
+  - id: sophia_happy
+    portrait: {fileID: 21300000, guid: 5fde2372b598eab4b9561176df16169a, type: 3}
+  - id: joseph_neutral
+    portrait: {fileID: 21300000, guid: 70d0f62ee65bbd442b419295be95241c, type: 3}
