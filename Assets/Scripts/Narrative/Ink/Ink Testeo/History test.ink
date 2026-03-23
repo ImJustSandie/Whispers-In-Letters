@@ -1,3 +1,8 @@
+INCLUDE Test Interactions.ink
+INCLUDE Joseph Arcade.ink
+INCLUDE Cartas.ink
+
+
 
 // Declarar funciones externas para conectar con el GameManager de Unity
 EXTERNAL GetFlag(flagName)
@@ -7,6 +12,7 @@ EXTERNAL GetVar(varName)
 ~ return false
 === function GetVar(varName) ===
 ~ return ""
+
 
 === inicio ===
 #sprite:sophia_happy
@@ -35,16 +41,31 @@ Hola wenas
 === Joseph1 ===
 
 // --- REENCUENTRO INMEDIATO (si ya habló antes en esta misma sesión o poco después) ---
-{ GetVar("actitud_joseph") == "motivado":
+{ GetVar("ruta") == "biblioteca":
     -> Joseph1_Motivado_Reencuentro
 }
-{ GetVar("actitud_joseph") == "cuestionado":
+{ GetVar("ruta") == "arcade":
+    -> Joseph1_Cuestionado_Reencuentro
+}
+
+{ GetVar("ruta") == "bibliotecaApoyo":
+    -> Joseph1_Motivado_Reencuentro
+}
+{ GetVar("ruta") == "arcadeApoyo":
+    -> Joseph1_Cuestionado_Reencuentro
+}
+
+{ GetVar("ruta") == "bibliotecaNegacion":
+    -> Joseph1_Motivado_Reencuentro
+}
+{ GetVar("ruta") == "arcadeNegacion":
     -> Joseph1_Cuestionado_Reencuentro
 }
 
 // --- PRIMER ENCUENTRO ---
 
 #sprite:sophia_happy
+#setflag: Primer Encuentro
 Hola...
 
 #sprite:joseph_neutral
@@ -54,7 +75,7 @@ Hola...
 Voy a hacer mi mayor esfuerzo por mejorar... de verdad quiero lograrlo esta vez...
 
     + [Motivarlo]
-        #setvar:actitud_joseph:motivado
+        #setvar:ruta:biblioteca
 
         #sprite:sophia_happy
         Me alegra escuchar eso. Este puede ser un buen comienzo si te lo tomas en serio.
@@ -71,7 +92,7 @@ Voy a hacer mi mayor esfuerzo por mejorar... de verdad quiero lograrlo esta vez.
         -> Joseph1_Motivado
 
     + [Cuestionarlo]
-        #setvar:actitud_joseph:cuestionado
+        #setvar:ruta:arcade
 
         #sprite:sophia_happy    
         Ya has dicho eso antes. ¿Qué va a ser diferente esta vez?
@@ -121,6 +142,7 @@ Entonces... empezaré ahora.
 // --- REENCUENTRO SI LO MOTIVASTE ---
 === Joseph1_Motivado_Reencuentro ===
 
+#setvar: ruta: Neutro
 #sprite:joseph_neutral
 Oh... Sophia.
 

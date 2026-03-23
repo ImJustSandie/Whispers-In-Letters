@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67152d8daea5e584b921889ac55c7ca8, type: 3}
   m_Name: Libreria 3
   m_EditorClassIdentifier: Assembly-CSharp::InteractableData
-  interactionName: 'obj2 '
-  inkKnot: obj2
+  interactionName: InteractionTest
+  inkKnot: InteractionTest
