@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 60803add4f45ce442a26e835acae0962
+guid: e89af97329fc4ae47afa656861e90f86
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -8,17 +8,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: MatElementosParque
-    second: {fileID: 2100000, guid: 9b34768b3eaf27a4383c48ff081605ad, type: 2}
+    second: {fileID: 2100000, guid: 4c8a9b415147d124a8d4f7e9c85e3f60, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: MatPiedras
-    second: {fileID: 2100000, guid: c06de41ffe56f384ca284424a40d366e, type: 2}
+    second: {fileID: 2100000, guid: 90a0a35ac7f5d674ab4a92e0751156b0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: MatTerreno
-    second: {fileID: 2100000, guid: 05eefdc6f226faa48b7afda7e2a4bd4d, type: 2}
+    second: {fileID: 2100000, guid: 5716034fd405ce446ac1e3c07e42ef90, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

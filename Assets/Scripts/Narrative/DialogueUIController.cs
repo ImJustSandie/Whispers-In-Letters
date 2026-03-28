@@ -19,6 +19,7 @@ public class DialogueUIController : MonoBehaviour
 
     [Header("Settings")]
     [SerializeField] private float typewriterSpeed = 0.05f;
+    [SerializeField] private float choiceButtonMinHeight = 60f;
 
     // Evento que se dispara al finalizar el dialogo
     public event Action OnDialogueEnded;
@@ -180,6 +181,19 @@ public class DialogueUIController : MonoBehaviour
             {
                 buttonText.text = choice.text;
             }
+
+            // Hacer que el boton crezca verticalmente segun el contenido de texto
+            ContentSizeFitter sizeFitter = button.GetComponent<ContentSizeFitter>();
+            if (sizeFitter == null)
+                sizeFitter = button.gameObject.AddComponent<ContentSizeFitter>();
+            sizeFitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+            sizeFitter.horizontalFit = ContentSizeFitter.FitMode.Unconstrained;
+
+            // Garantizar una altura minima para botones con texto corto
+            LayoutElement layoutElement = button.GetComponent<LayoutElement>();
+            if (layoutElement == null)
+                layoutElement = button.gameObject.AddComponent<LayoutElement>();
+            layoutElement.minHeight = choiceButtonMinHeight;
 
             // Asignamos el evento de clic
             int choiceIndex = i; // Capturamos el indice para el closure

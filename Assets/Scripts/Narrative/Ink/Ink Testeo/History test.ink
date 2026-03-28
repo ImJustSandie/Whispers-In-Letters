@@ -1,6 +1,5 @@
-INCLUDE Test Interactions.ink
-INCLUDE Joseph Arcade.ink
-INCLUDE Cartas.ink
+INCLUDE Ruta Biblioteca.ink
+
 
 
 
@@ -89,9 +88,9 @@ Voy a hacer mi mayor esfuerzo por mejorar... de verdad quiero lograrlo esta vez.
         #sprite:joseph_neutral
         Supongo que eso suena más alcanzable...
 
-        -> Joseph1_Motivado
+        -> END
 
-    + [Cuestionarlo]
+    + [Cuestionarlo por su falta de compromiso]
         #setvar:ruta:arcade
 
         #sprite:sophia_happy    
@@ -106,7 +105,7 @@ Voy a hacer mi mayor esfuerzo por mejorar... de verdad quiero lograrlo esta vez.
         #sprite:joseph_neutral
         Supongo que tienes razón... hablar es fácil.
 
-        -> Joseph1_Cuestionado
+        -> END
 
 
 // --- RAMA MOTIVADO (PRIMERA VEZ) ---
