@@ -924,6 +924,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 512048867087757620, guid: 584d1c7cc616ec3468023132bc8fe25f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 813b5ea8cbe304144ac9cfb1666500df, type: 2}
+    - target: {fileID: 1100019333244758341, guid: 584d1c7cc616ec3468023132bc8fe25f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 813b5ea8cbe304144ac9cfb1666500df, type: 2}
+    - target: {fileID: 2233772304315984066, guid: 584d1c7cc616ec3468023132bc8fe25f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 813b5ea8cbe304144ac9cfb1666500df, type: 2}
     - target: {fileID: 7484659744807050193, guid: 584d1c7cc616ec3468023132bc8fe25f, type: 3}
       propertyPath: m_Name
       value: Habitacion
@@ -968,6 +980,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7890060358192734029, guid: 584d1c7cc616ec3468023132bc8fe25f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 813b5ea8cbe304144ac9cfb1666500df, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
