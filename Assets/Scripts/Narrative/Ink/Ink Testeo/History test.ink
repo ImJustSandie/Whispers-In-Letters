@@ -1,6 +1,3 @@
-INCLUDE Test Interactions.ink
-INCLUDE Joseph Arcade.ink
-INCLUDE Cartas.ink
 INCLUDE Ruta Biblioteca.ink
 
 
