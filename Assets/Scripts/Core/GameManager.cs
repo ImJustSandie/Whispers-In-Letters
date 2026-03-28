@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour
     [Header("Global State References")]
     [SerializeField] private GameStateSO gameState;
 
+    [Header("Debugging")]
+    [Tooltip("Si esta activado, borrara todas las decisiones y la posicion guardada cada vez que des Play")]
+    [SerializeField] private bool clearStateOnStart = false;
+
     private void Awake()
     {
         if (Instance == null)
@@ -14,6 +18,12 @@ public class GameManager : MonoBehaviour
             Instance = this;
             // Garantiza que este administrador nunca se destruya al cambiar de escena
             DontDestroyOnLoad(gameObject);
+
+            if (clearStateOnStart && gameState != null)
+            {
+                gameState.ClearState();
+                Debug.Log("[GameManager] El progreso ha sido reseteado por configuracion de Debug.");
+            }
         }
         else
         {
@@ -51,5 +61,29 @@ public class GameManager : MonoBehaviour
             return gameState.HasFlag(flagName);
         }
         return false;
+    }
+
+    /// <summary>
+    /// Registra una "decisión exclusiva" asignándole un valor especifico a una clave. 
+    /// (Ejemplo: key="trato_joseph", value="motivado").
+    /// </summary>
+    public void SetStoryVariable(string key, string value)
+    {
+        if (gameState != null)
+        {
+            gameState.SetVariable(key, value);
+        }
+    }
+
+    /// <summary>
+    /// Intenta consultar qué variable fue escogida para cierta decisión importante.
+    /// </summary>
+    public string GetStoryVariable(string key)
+    {
+        if (gameState != null)
+        {
+            return gameState.GetVariable(key);
+        }
+        return string.Empty;
     }
 }

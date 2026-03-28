@@ -16,3 +16,4 @@ MonoBehaviour:
   previousSceneName: 
   playerPosition: {x: 0, y: 0, z: 0}
   unlockedFlags: []
+  storyVariables: []

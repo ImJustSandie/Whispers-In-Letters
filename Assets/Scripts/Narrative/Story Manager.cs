@@ -31,6 +31,16 @@ public class StoryManager : MonoBehaviour
         story = new Story(inkJSON.text);
         Debug.Log("[StoryManager] Story inicializado correctamente.");
 
+        // Vincular funciones externas para que Ink lea directamente del GameManager
+        story.BindExternalFunction("GetFlag", (string flagName) => {
+            return GameManager.Instance != null && GameManager.Instance.GetStoryFlag(flagName);
+        });
+
+        story.BindExternalFunction("GetVar", (string varName) => {
+            if (GameManager.Instance != null) return GameManager.Instance.GetStoryVariable(varName);
+            return "";
+        });
+
         if (dialoguePanel != null)
         {
             // Intentamos obtener el DialogueUIController en el panel o en sus hijos
