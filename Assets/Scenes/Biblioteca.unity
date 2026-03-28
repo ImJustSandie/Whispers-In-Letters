@@ -1878,6 +1878,66 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3431801096791188220, guid: f4f836400565c0448bf62ba321a88780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329687136291285433, guid: f4f836400565c0448bf62ba321a88780, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 01e91e8843c4058479099c2308092d10, type: 3}
+    - target: {fileID: 4811060856129450685, guid: f4f836400565c0448bf62ba321a88780, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811060856129450685, guid: f4f836400565c0448bf62ba321a88780, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235569491112898639, guid: f4f836400565c0448bf62ba321a88780, type: 3}
+      propertyPath: m_margin.x
+      value: 71.06183
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235569491112898639, guid: f4f836400565c0448bf62ba321a88780, type: 3}
+      propertyPath: m_margin.z
+      value: -1005.1376
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235569491112898639, guid: f4f836400565c0448bf62ba321a88780, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 6420050c4090e5f4cb1e7c3f3867b457, type: 2}
+    - target: {fileID: 5235569491112898639, guid: f4f836400565c0448bf62ba321a88780, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 806946236576824012, guid: 6420050c4090e5f4cb1e7c3f3867b457, type: 2}
+    - target: {fileID: 5235569491112898639, guid: f4f836400565c0448bf62ba321a88780, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235569491112898639, guid: f4f836400565c0448bf62ba321a88780, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235569491112898639, guid: f4f836400565c0448bf62ba321a88780, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7843032915237971125, guid: f4f836400565c0448bf62ba321a88780, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 13.673006
+      objectReference: {fileID: 0}
+    - target: {fileID: 7843032915237971125, guid: f4f836400565c0448bf62ba321a88780, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.1127815
+      objectReference: {fileID: 0}
+    - target: {fileID: 7843032915237971125, guid: f4f836400565c0448bf62ba321a88780, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0442
+      objectReference: {fileID: 0}
+    - target: {fileID: 7843032915237971125, guid: f4f836400565c0448bf62ba321a88780, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 192
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
