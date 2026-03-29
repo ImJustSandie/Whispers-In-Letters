@@ -15,6 +15,10 @@ public class GameStateSO : ScriptableObject
     [Tooltip("Lista de decisiones narrativas o eventos que ya ocurrieron.")]
     [SerializeField] private List<string> unlockedFlags = new List<string>();
 
+    [Header("Story Variables")]
+    [Tooltip("Variables dinámicas del juego (ej. actitud_joseph = motivado).")]
+    [SerializeField] private List<StoryVariable> storyVariables = new List<StoryVariable>();
+
     /// <summary>
     /// Marca o desmarca un evento narrativo (path).
     /// </summary>
@@ -60,8 +64,6 @@ public class GameStateSO : ScriptableObject
     }
 
     /// <summary>
-<<<<<<< Updated upstream
-=======
     /// Guarda o actualiza una variable específica (ej. actitud_joseph = motivado).
     /// Asegura de que nunca hayan variables duplicadas (son mutables o únicas).
     /// </summary>
@@ -100,7 +102,6 @@ public class GameStateSO : ScriptableObject
     }
 
     /// <summary>
->>>>>>> Stashed changes
     /// Reinicia todo el estado a limpio (Util para un nuevo juego).
     /// </summary>
     public void ClearState()
