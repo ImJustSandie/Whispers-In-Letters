@@ -15,6 +15,13 @@ public class GameStateSO : ScriptableObject
     [Tooltip("Lista de decisiones narrativas o eventos que ya ocurrieron.")]
     [SerializeField] private List<string> unlockedFlags = new List<string>();
 
+    [System.Serializable]
+    public struct StoryVariable
+    {
+        public string key;
+        public string value;
+    }
+
     [Header("Story Variables")]
     [Tooltip("Variables dinámicas del juego (ej. actitud_joseph = motivado).")]
     [SerializeField] private List<StoryVariable> storyVariables = new List<StoryVariable>();
@@ -110,5 +117,6 @@ public class GameStateSO : ScriptableObject
         previousSceneName = "";
         playerPosition = Vector3.zero;
         unlockedFlags.Clear();
+        storyVariables.Clear();
     }
 }
