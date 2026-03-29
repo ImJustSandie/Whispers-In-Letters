@@ -182,3 +182,30 @@ Tenías razón... hablo mucho, pero hago poco.
 Supongo que eso es un inicio.
 
 -> END
+
+
+
+
+=== Biblioteca_2 ===
+
+{ GetVar("ruta") == "bibliotecaApoyo":
+    -> Joseph1_Motivado_Reencuentro
+}
+{ GetVar("ruta") == "bibliotecaNegacion":
+    -> Joseph1_Motivado_Reencuentro
+}
+
+
+=== CuartoBloqueado ===
+
+#sprite:sophia_happy
+Aun no puedo irme a mi cuarto, tengo cosas que hacer
+ -> END
+ 
+ === CamaBloqueada ===
+ 
+ #sprite:sophia_happy
+ Aun no puedo irme a dormir, tengo cosas que hacer
+->END
+
+->END

@@ -28,13 +28,13 @@ public class DialogueTagProcessor : MonoBehaviour
             
             if (splitTag.Length >= 2)
             {
-                string tagKey = splitTag[0].Trim().ToLower(); // "sprite"
-                string tagValue = splitTag[1].Trim().ToLower(); // "sophia_happy"
+                string tagKey = splitTag[0].Trim().ToLower(); // "sprite", "setflag", etc.
+                string tagValue = splitTag[1].Trim(); // "sophia_happy", "Ruta Terminada", etc.
 
                 switch (tagKey)
                 {
                     case SPRITE_TAG:
-                        HandleSpriteTag(tagValue);
+                        HandleSpriteTag(tagValue.ToLower());
                         break;
                     
                     // Aqui puedes procesar otros tags en el futuro (ej. audio, animacion, layout)

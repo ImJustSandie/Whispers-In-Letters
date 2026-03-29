@@ -9,6 +9,12 @@ public class SceneTransitionTrigger : MonoBehaviour
     [Tooltip("Asegurate de que Sophia tenga el 'Tag' correcto configurado en el Inspector.")]
     public string playerTag = "Player";
 
+    [Tooltip("Opcional: Si escribes un flag aquí (ej: 'Ruta Terminada'), la transición solo funcionará si el jugador tiene este flag activo.")]
+    public string requiredFlag = "";
+
+    [Tooltip("Opcional: Nudo de Ink que se reproducirá si el jugador intenta cruzar pero no tiene el flag requerido.")]
+    public string fallbackKnot = "";
+
     private bool isTransitioning = false;
 
     // Si tu juego es 3D usa OnTriggerEnter, si es 2D usa OnTriggerEnter2D
@@ -17,6 +23,21 @@ public class SceneTransitionTrigger : MonoBehaviour
         // Revisamos si quien toco la puerta fue realmente el jugador y si no estamos ya cargando
         if (other.CompareTag(playerTag) && !isTransitioning)
         {
+            if (!string.IsNullOrEmpty(requiredFlag))
+            {
+                if (GameManager.Instance == null || !GameManager.Instance.GetStoryFlag(requiredFlag))
+                {
+                    Debug.Log($"[SceneTransition] Acceso denegado. Se requiere el flag: {requiredFlag}");
+                    
+                    if (!string.IsNullOrEmpty(fallbackKnot) && StoryManager.Instance != null)
+                    {
+                        StoryManager.Instance.StartStory(fallbackKnot);
+                    }
+                    
+                    return;
+                }
+            }
+
             if (LevelManager.Instance != null && !string.IsNullOrEmpty(destinationSceneName))
             {
                 isTransitioning = true;

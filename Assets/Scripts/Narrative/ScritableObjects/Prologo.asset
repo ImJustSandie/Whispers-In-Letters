@@ -10,7 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67152d8daea5e584b921889ac55c7ca8, type: 3}
-  m_Name: Libreria 2
+  m_Name: Prologo
   m_EditorClassIdentifier: Assembly-CSharp::InteractableData
-  interactionName: Lib 1
-  inkKnot: obj1
+<<<<<<< Updated upstream:Assets/Scripts/Narrative/ScritableObjects/Libreria 3.asset
+  interactionName: 'obj2 '
+  inkKnot: obj2
+=======
+  interactionName: Prologo
+  inkKnot: prologo_joseph
+>>>>>>> Stashed changes:Assets/Scripts/Narrative/ScritableObjects/Prologo.asset

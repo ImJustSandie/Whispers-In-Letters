@@ -4,13 +4,91 @@
 // Integra el sistema de flags y vars de History test.ink
 // ==========================================
 
+
 // ==========================================
-// INICIO: Reencuentro o primer encuentro
+// PRÓLOGO: Primer encuentro con Joseph
+// El jugador decide si mandarlo a estudiar o a relajarse.
+// Knot de entrada principal para este arco narrativo.
+// ==========================================
+
+=== prologo_joseph ===
+
+// Si ya se tomó una decisión sobre Joseph, no repetir el prólogo
+{ GetFlag("Prologo Joseph") == true:
+    -> inicio_biblioteca
+}
+
+#setflag: Prologo Joseph
+#sprite:joseph_neutral
+Joseph: Sophia... hoy es uno de esos días en que no sé si seguir o simplemente desaparecer un rato.
+
+#sprite:sophia_happy
+Sophia: ¿Qué quieres decir con eso, Joseph?
+
+#sprite:joseph_neutral
+Joseph: Tengo un parcial la próxima semana. Ni siquiera sé por dónde empezar. Me siento paralizado.
+
+#sprite:sophia_happy
+Sophia: Ese bloqueo lo conozco. La pregunta es qué hacemos con él.
+
+#sprite:joseph_neutral
+Joseph: No sé... a veces siento que necesito despejarme primero. Otras, que si no estudio ahora nunca lo haré.
+
+* [Llévalo a la biblioteca - Ahora es el momento, la claridad viene al empezar]
+    #setvar:ruta:entrada_pendiente
+
+    #sprite:sophia_happy
+    Sophia: El bloqueo no se va esperando, Joseph. Se rompe actuando. Vamos a la biblioteca.
+
+    #sprite:joseph_neutral
+    Joseph: ...Está bien. Contigo al menos siento que no voy solo.
+
+    #sprite:sophia_happy
+    Sophia: Nunca vas solo. Vamos.
+
+    -> END
+
+* [Mándalo al arcade - Necesita descansar antes de poder concentrarse]
+    #setvar:ruta:arcade
+
+    #sprite:sophia_happy
+    Sophia: De acuerdo, a veces la mente necesita soltar antes de poder agarrar algo nuevo.
+
+    #sprite:joseph_neutral
+    Joseph: ¿Lo dices en serio? ¿No me vas a regañar?
+
+    #sprite:sophia_happy
+    Sophia: Esta vez no. Pero que sea un descanso real, no una huida. Cuando vuelvas, hablamos.
+
+    #sprite:joseph_neutral
+    Joseph: Prometido. Gracias, Sophia.
+
+    -> END
+
+
+// ==========================================
+// INICIO: Reencuentro o primer encuentro en biblioteca
+// (Se activa cuando el jugador entra con Joseph a la biblioteca)
 // ==========================================
 
 === inicio_biblioteca ===
 
-// Si ya hubo un reencuentro previo, saltar directo al estado guardado
+// Redirigir según el estado actual de la ruta
+{ GetVar("ruta") == "entrada_pendiente":
+    -> decision_entrada_biblioteca
+}
+{ GetVar("ruta") == "estrategia_pendiente":
+    -> biblioteca_estrategia
+}
+{ GetVar("ruta") == "avance_pendiente":
+    -> decision_avance_estrategia
+}
+{ GetVar("ruta") == "disciplina_pendiente":
+    -> biblioteca_disciplina
+}
+{ GetVar("ruta") == "rendicion_pendiente":
+    -> biblioteca_rendicion_final
+}
 { GetVar("ruta") == "disciplina":
     -> reencuentro_disciplina
 }
@@ -18,10 +96,10 @@
     -> reencuentro_rendicion
 }
 
-// --- PRIMER ENCUENTRO ---
+// --- PRIMER ENCUENTRO (solo si no hay estado previo) ---
 
-#sprite:sophia_happy
 #setflag: Encuentro Biblioteca
+#sprite:sophia_happy
 Sophia: Joseph deberías aprovechar para repasar o prepararte. Si quieres que esta vez sea diferente, necesitas comprometerte de verdad.
 
 #sprite:joseph_neutral
@@ -42,29 +120,66 @@ Joseph: Es el lugar que más odio en este campus. El silencio allí dentro me gr
 #sprite:sophia_happy
 Sophia: Pues hoy vamos a entrar para que ese silencio se convierta en concentración.
 
--> decision_entrada_biblioteca
+// Marcar que la primera conversación terminó y hay una decisión pendiente
+#setvar:ruta:entrada_pendiente
+
+-> END
 
 
 // ==========================================
 // DECISIÓN DE ENTRADA
+// (El jugador vuelve a hablar con Sophia/Joseph
+//  para tomar la decisión de cómo proceder)
 // ==========================================
 
 === decision_entrada_biblioteca ===
 
+{ GetVar("ruta") != "entrada_pendiente":
+    -> END
+}
+
+#sprite:sophia_happy
+Sophia: Bien, Joseph. Ahora que estamos aquí, ¿cuál es tu plan?
+
 * [Diseñar una estrategia de estudio - Él no es un estudiante de molde]
-    #setvar:ruta:estrategia
-    -> biblioteca_estrategia
+    #setvar:ruta:estrategia_pendiente
+
+    #sprite:sophia_happy
+    Sophia: Perfecto. No todos aprendemos igual, así que encontraremos tu método.
+
+    #sprite:joseph_neutral
+    Joseph: Está bien... voy a intentarlo. Aunque no prometo nada.
+
+    #sprite:sophia_happy
+    Sophia: Con eso es suficiente por ahora. Vuelve cuando estés listo para empezar.
+
+    -> END
 
 * [Me doy por vencida - Tienes serias limitantes académicas]
-    #setvar:ruta:rendicion
-    -> biblioteca_rendicion_final
+    #setvar:ruta:rendicion_pendiente
+
+    #sprite:sophia_happy
+    Sophia: Joseph... no tiene sentido seguir forzando algo que te causa tanto daño.
+
+    #sprite:joseph_neutral
+    Joseph: ¿Lo dices en serio? ¿Me estás diciendo que abandone?
+
+    #sprite:sophia_happy
+    Sophia: Te digo que tu energía merece un camino que no te destruya. Piénsalo.
+
+    -> END
 
 
 // ==========================================
-// RAMA DISCIPLINA: Estrategia de estudio
+// RAMA ESTRATEGIA: Diseñar un método de estudio
+// (Knot separado, el jugador lo retoma después)
 // ==========================================
 
 === biblioteca_estrategia ===
+
+{ GetVar("ruta") != "estrategia_pendiente":
+    -> END
+}
 
 #setflag: Estrategia Planteada
 #sprite:joseph_neutral
@@ -88,29 +203,71 @@ Sophia: Es la única forma: avanzar lento pero seguro. No compitas contra el rel
 #sprite:joseph_neutral
 Joseph: Está bien. Nada se pierde, peor es no intentarlo.
 
--> decision_avance_estrategia
+// Guardar estado para que el jugador pueda explorar y volver
+#setvar:ruta:avance_pendiente
+
+-> END
 
 
 // ------------------------------------------
 // DECISIÓN: ¿Progresó con la estrategia?
+// (El jugador vuelve después de haber explorado)
 // ------------------------------------------
 
 === decision_avance_estrategia ===
 
+{ GetVar("ruta") != "avance_pendiente":
+    -> END
+}
+
+#sprite:sophia_happy
+Sophia: Joseph, han pasado unos días desde que empezaste el método. ¿Cómo te fue?
+
 * [Joseph ha mejorado - Hay que ser constante y disciplinado]
-    #setvar:ruta:disciplina
-    -> biblioteca_disciplina
+    #setvar:ruta:disciplina_pendiente
+
+    #sprite:joseph_neutral
+    Joseph: Creo que... algo está cambiando. No entiendo todo, pero ya no me bloqueo igual.
+
+    #sprite:sophia_happy
+    Sophia: Eso es exactamente lo que esperaba. La constancia está dando frutos.
+
+    #sprite:joseph_neutral
+    Joseph: Todavía me cuesta. Pero seguiré.
+
+    #sprite:sophia_happy
+    Sophia: Ven a contarme más cuando estés listo. Yo estaré por aquí.
+
+    -> END
 
 * [No avanzaste casi nada - Este reto es muy duro]
-    #setvar:ruta:rendicion
-    -> biblioteca_rendicion_final
+    #setvar:ruta:rendicion_pendiente
+
+    #sprite:joseph_neutral
+    Joseph: No puedo mentirte, Sophia. Apenas pude con una página. No sirvo para esto.
+
+    #sprite:sophia_happy
+    Sophia: Tu esfuerzo fue real, aunque el resultado no fuera el esperado.
+
+    #sprite:joseph_neutral
+    Joseph: ¿Y de qué sirve el esfuerzo si no lleva a ningún lado?
+
+    #sprite:sophia_happy
+    Sophia: Quizás hay otro lado al que debería llevarte. Piénsalo. Hablaremos pronto.
+
+    -> END
 
 
 // ==========================================
-// RAMA FINAL: Disciplina y constancia (Epílogo estoico)
+// RAMA FINAL: Disciplina y constancia
+// (Knot separado, retomado después de explorar)
 // ==========================================
 
 === biblioteca_disciplina ===
+
+{ GetVar("ruta") != "disciplina_pendiente":
+    -> END
+}
 
 #setflag: Disciplina Alcanzada
 #sprite:joseph_neutral
@@ -140,14 +297,23 @@ Sophia: No lo hagas por ellos. Hazlo por la dignidad de tu propia voluntad.
 #sprite:joseph_neutral
 Joseph: Está bien, tomaré un poco de agua y seguiré. No voy a permitir que el cansancio me venza.
 
+// Conversación completa — resetear para futuros reencuentros
+#setvar:ruta:disciplina
+#setflag: Ruta Terminada
+
 -> END
 
 
 // ==========================================
-// RAMA FINAL: Rendición (Epílogo Nietzsche)
+// RAMA FINAL: Rendición
+// (Knot separado, retomado desde estado pendiente)
 // ==========================================
 
 === biblioteca_rendicion_final ===
+
+{ GetVar("ruta") != "rendicion_pendiente":
+    -> END
+}
 
 #setflag: Rendicion Aceptada
 #sprite:joseph_neutral
@@ -171,17 +337,20 @@ Sophia: Tu energía debe ir a otro lugar donde no tengas que luchar contra tu pr
 #sprite:joseph_neutral
 Joseph: Adiós a los libros... es hora de aceptar que este camino nunca fue el mío.
 
+// Conversación completa — resetear para futuros reencuentros
+#setvar:ruta:rendicion
+#setflag: Ruta Terminada
+
 -> END
 
 
 // ==========================================
-// REENCUENTROS (si el jugador vuelve a hablar
-// con Joseph después de una sesión previa)
+// REENCUENTROS (el jugador vuelve a hablar
+// con Joseph/Sophia después de concluir la ruta)
 // ==========================================
 
 === reencuentro_disciplina ===
 
-#setvar:ruta:Neutro
 #sprite:joseph_neutral
 Joseph: Sophia... he seguido con el método que diseñamos.
 
@@ -199,7 +368,6 @@ Joseph: Gracias por no rendirte conmigo.
 
 === reencuentro_rendicion ===
 
-#setvar:ruta:Neutro
 #sprite:joseph_neutral
 Joseph: Sophia... después de lo que pasó en la biblioteca, estuve pensando.
 
