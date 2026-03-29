@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using UnityEngine.InputSystem;
 
 
 public class CarruselNiveles : MonoBehaviour
@@ -27,6 +27,19 @@ public class CarruselNiveles : MonoBehaviour
     void Start()
     {
         ActualizarNivel();
+    }
+
+    void Update()
+    {
+        if (Keyboard.current.aKey.wasPressedThisFrame)
+        {
+            NivelAnterior();
+        }
+
+        if (Keyboard.current.dKey.wasPressedThisFrame)
+        {
+            SiguienteNivel();
+        }
     }
 
     public void SiguienteNivel()
