@@ -11,33 +11,36 @@ public class GameStateSO : ScriptableObject
     [Header("Player Information")]
     public Vector3 playerPosition;
 
-    [Header("Narrative Flags (Opcionales)")]
-    [Tooltip("Lista de decisiones binarias que ya ocurrieron.")]
+    [Header("Narrative Flags")]
+    [Tooltip("Lista de decisiones narrativas o eventos que ya ocurrieron.")]
     [SerializeField] private List<string> unlockedFlags = new List<string>();
-
-    [System.Serializable]
-    public struct StoryVariable
-    {
-        public string key;
-        public string value;
-    }
-
-    [Header("Narrative Variables (Clave-Valor)")]
-    [Tooltip("Lista de variables donde una clave especifica guarda un único valor.")]
-    [SerializeField] private List<StoryVariable> storyVariables = new List<StoryVariable>();
 
     /// <summary>
     /// Marca o desmarca un evento narrativo (path).
     /// </summary>
     public void SetFlag(string flagName, bool state)
     {
+        if (string.IsNullOrEmpty(flagName)) return;
+        string cleanFlag = flagName.Trim();
+        string lowerFlag = cleanFlag.ToLower();
+
+        int index = -1;
+        for (int i = 0; i < unlockedFlags.Count; i++)
+        {
+            if (unlockedFlags[i].Trim().ToLower() == lowerFlag)
+            {
+                index = i;
+                break;
+            }
+        }
+
         if (state)
         {
-            if (!unlockedFlags.Contains(flagName)) unlockedFlags.Add(flagName);
+            if (index == -1) unlockedFlags.Add(cleanFlag);
         }
         else
         {
-            if (unlockedFlags.Contains(flagName)) unlockedFlags.Remove(flagName);
+            if (index != -1) unlockedFlags.RemoveAt(index);
         }
     }
 
@@ -46,29 +49,39 @@ public class GameStateSO : ScriptableObject
     /// </summary>
     public bool HasFlag(string flagName)
     {
-        return unlockedFlags.Contains(flagName);
+        if (string.IsNullOrEmpty(flagName)) return false;
+        string lowerFlag = flagName.Trim().ToLower();
+
+        foreach (var f in unlockedFlags)
+        {
+            if (f.Trim().ToLower() == lowerFlag) return true;
+        }
+        return false;
     }
 
     /// <summary>
+<<<<<<< Updated upstream
+=======
     /// Guarda o actualiza una variable específica (ej. actitud_joseph = motivado).
     /// Asegura de que nunca hayan variables duplicadas (son mutables o únicas).
     /// </summary>
     public void SetVariable(string key, string value)
     {
+        if (string.IsNullOrEmpty(key)) return;
+        string lowerKey = key.Trim().ToLower();
+
         for (int i = 0; i < storyVariables.Count; i++)
         {
-            if (storyVariables[i].key == key)
+            if (storyVariables[i].key.Trim().ToLower() == lowerKey)
             {
-                // Si la clave ya existe, mutamos su valor sobreescribiendo el viejo
                 StoryVariable v = storyVariables[i];
-                v.value = value;
+                v.value = value.Trim();
                 storyVariables[i] = v;
                 return;
             }
         }
         
-        // Si no existía de antes, la creamos nueva
-        storyVariables.Add(new StoryVariable { key = key, value = value });
+        storyVariables.Add(new StoryVariable { key = key.Trim(), value = value.Trim() });
     }
 
     /// <summary>
@@ -76,23 +89,25 @@ public class GameStateSO : ScriptableObject
     /// </summary>
     public string GetVariable(string key)
     {
+        if (string.IsNullOrEmpty(key)) return string.Empty;
+        string lowerKey = key.Trim().ToLower();
+
         foreach (var v in storyVariables)
         {
-            if (v.key == key) return v.value;
+            if (v.key.Trim().ToLower() == lowerKey) return v.value;
         }
         return string.Empty;
     }
 
     /// <summary>
+>>>>>>> Stashed changes
     /// Reinicia todo el estado a limpio (Util para un nuevo juego).
     /// </summary>
-    [ContextMenu("Resetear Estado (Para Debugging)")]
     public void ClearState()
     {
         currentSceneName = "";
         previousSceneName = "";
         playerPosition = Vector3.zero;
         unlockedFlags.Clear();
-        storyVariables.Clear();
     }
 }
