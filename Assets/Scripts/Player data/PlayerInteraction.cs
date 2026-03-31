@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerInteraction : MonoBehaviour
 {
     private PlayerControls controls;
-    private InteractableObject currentInteractable;
+    private IInteractable currentInteractable;
 
     void Awake()
     {
@@ -38,18 +38,18 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        InteractableObject interactable = other.GetComponent<InteractableObject>();
+        IInteractable interactable = other.GetComponentInParent<IInteractable>();
 
         if (interactable != null)
         {
             currentInteractable = interactable;
-            Debug.Log("Objeto cercano: " + interactable.data.interactionName);
+            Debug.Log("Objeto cercano: " + interactable.GetInteractionName());
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        InteractableObject interactable = other.GetComponent<InteractableObject>();
+        IInteractable interactable = other.GetComponentInParent<IInteractable>();
 
         if (interactable != null && interactable == currentInteractable)
         {

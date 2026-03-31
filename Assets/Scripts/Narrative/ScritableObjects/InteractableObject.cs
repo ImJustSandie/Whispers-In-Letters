@@ -1,8 +1,13 @@
 using UnityEngine;
 
-public class InteractableObject : MonoBehaviour
+public class InteractableObject : MonoBehaviour, IInteractable
 {
     public InteractableData data;
+
+    public string GetInteractionName()
+    {
+        return data != null ? data.interactionName : gameObject.name;
+    }
 
     [Tooltip("Opcional: Si escribes un flag aquí (ej: 'Ruta Terminada'), el objeto o NPC no se podrá interactuar hasta conseguirlo.")]
     public string requiredFlag = "";

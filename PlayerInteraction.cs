@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerInteraction : MonoBehaviour
 {
     private PlayerControls controls;
-    private InteractableObject currentInteractable;
+    private IInteractable currentInteractable;
 
     void Awake()
     {
@@ -38,18 +38,23 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        InteractableObject interactable = other.GetComponent<InteractableObject>();
+        // Usamos GetComponentInParent por si el collider (hitbox) es un hijo del GameObject que tiene el script.
+        IInteractable interactable = other.GetComponentInParent<IInteractable>();
 
         if (interactable != null)
         {
             currentInteractable = interactable;
-            Debug.Log("Objeto cercano: " + interactable.data.interactionName);
+            Debug.Log("Objeto cercano detectado: " + interactable.GetInteractionName());
+        }
+        else
+        {
+            Debug.Log("Entró a la hitbox de: " + other.gameObject.name + " , pero no se encontró la interfaz IInteractable.");
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        InteractableObject interactable = other.GetComponent<InteractableObject>();
+        IInteractable interactable = other.GetComponentInParent<IInteractable>();
 
         if (interactable != null && interactable == currentInteractable)
         {

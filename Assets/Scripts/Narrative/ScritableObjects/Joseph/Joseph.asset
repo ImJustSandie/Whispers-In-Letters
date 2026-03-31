@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c564ab7993cefad49b09d816989dcba2, type: 3}
+  m_Name: Joseph
+  m_EditorClassIdentifier: Assembly-CSharp::AdvancedInteractableData
+  interactionName: Joseph
+  interactions:
+  - description: Eleccion Prologo
+    inkKnot: Desicion_DeCamino
+    conditions:
+    - conditionType: 1
+      flagName: Joseph2_Prologo
+      variableKey: 
+      requiredValue: 
+  - description: Prologo de Joseph
+    inkKnot: Joseph1_Prologo
+    conditions: []
