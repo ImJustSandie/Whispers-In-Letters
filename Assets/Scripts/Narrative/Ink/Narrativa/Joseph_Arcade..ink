@@ -165,7 +165,7 @@ Hazlo, Joseph. Explora, juega, sé el dueño de este pequeño universo.
 }
 
 { GetVar("ruta") == "universidad":
-    -> Camino_2_Joseph_Arcade
+    -> Camino_2_2_Joseph_Arcade
 }
 { GetVar("ruta") == "desicion2":
     -> Desicion2_Arcade
