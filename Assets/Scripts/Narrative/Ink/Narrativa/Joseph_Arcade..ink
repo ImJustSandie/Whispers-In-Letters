@@ -82,10 +82,10 @@ Disfrútalo. Te lo mereces después de tanto tiempo viviendo para los demás.
 Voy a jugar mi primera partida.
 
 // Juega por primera vez
-#setvar:ruta:desicion
+#setvar:ruta:desicion_Arcade_1
 -> END
 
-=== Desicion1_Arcade ===
+=== HandleDesicion1_Arcade ===
 #setflag:Desicion1_Arcade
 
   { GetVar("ruta") == "motivacion":
@@ -94,9 +94,12 @@ Voy a jugar mi primera partida.
 { GetVar("ruta") == "desmotivarlo":
     -> Camino_2_Joseph_Arcade
 }
-{ GetVar("ruta") == "desicion":
+{GetVar("ruta") == "desicion_Arcade_1":
     -> Desicion1_Arcade
 }
+
+=== Desicion1_Arcade ===
+
 #sprite: sophia_thinking
   Que deberia hacer con joseph
   
@@ -114,10 +117,12 @@ Voy a jugar mi primera partida.
      ->END
      
     +[Decidir luego]
-     #setvar:ruta:desicion
+     #setvar:ruta:desicion_Arcade_1
      #sprite:sophia_thinking
      Dare una vuelta y luego sigo hablando con joseph
      ->END
+     
+     
      
 === Camino_1_Joseph_Arcade ===
 #setflag:Camino_1_Joseph_Arcade
@@ -158,18 +163,20 @@ Hazlo, Joseph. Explora, juega, sé el dueño de este pequeño universo.
 -> END
 
 
-=== Desicion2_Arcade ===
+=== HandleDesicion2_Arcade ===
 #setflag:Desicion2_Arcade
   { GetVar("ruta") == "vocacion":
     -> Camino_1_2_Joseph_Arcade
 }
 
 { GetVar("ruta") == "universidad":
-    -> Camino_2_Joseph_Arcade
+    -> Camino_2_2_Joseph_Arcade
 }
 { GetVar("ruta") == "desicion2":
     -> Desicion2_Arcade
 }
+
+=== Desicion2_Arcade ===
   Que deberia hacer con joseph
   
     +[Darle otra oportunidad]

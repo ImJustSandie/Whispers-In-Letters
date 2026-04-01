@@ -27,6 +27,18 @@ public class AdvancedInteractableObject : MonoBehaviour, IInteractable
 
         Debug.Log("[AdvancedInteractableObject] Interact() ejecutado. Knot: '" + knot + "'");
 
+        // Bonus: Rotar hacia el jugador para que se sienta como una conversación real
+        GameObject player = GameObject.FindWithTag("Player");
+        if (player != null)
+        {
+            Vector3 directionToPlayer = player.transform.position - transform.position;
+            directionToPlayer.y = 0;
+            if (directionToPlayer.sqrMagnitude > 0.001f)
+            {
+                transform.rotation = Quaternion.LookRotation(directionToPlayer);
+            }
+        }
+
         if (StoryManager.Instance == null)
         {
             Debug.LogError("[AdvancedInteractableObject] StoryManager.Instance es NULL. ¿Está en la escena?");

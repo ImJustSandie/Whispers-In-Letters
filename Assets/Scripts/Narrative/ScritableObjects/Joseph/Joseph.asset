@@ -14,13 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AdvancedInteractableData
   interactionName: Joseph
   interactions:
-  - description: Eleccion Prologo
-    inkKnot: Desicion_DeCamino
+  - description: Prologo de Biblioteca
+    inkKnot: Joseph_Bibloteca_Prologo
     conditions:
-    - conditionType: 1
-      flagName: Joseph2_Prologo
-      variableKey: 
-      requiredValue: 
+    - conditionType: 2
+      flagName: 
+      variableKey: ruta
+      requiredValue: biblioteca
+  - description: Prologo de Arcade
+    inkKnot: Joseph_Arcade_Prologo
+    conditions:
+    - conditionType: 2
+      flagName: 
+      variableKey: ruta
+      requiredValue: arcade
+  - description: Eleccion Prologo
+    inkKnot: HandleDesicion_DeCamino
+    conditions:
+    - conditionType: 2
+      flagName: 
+      variableKey: ruta
+      requiredValue: desicion_Decamino
   - description: Prologo de Joseph
     inkKnot: Joseph1_Prologo
     conditions: []

@@ -16,4 +16,14 @@ MonoBehaviour:
   - id: sophia_happy
     portrait: {fileID: 21300000, guid: 5fde2372b598eab4b9561176df16169a, type: 3}
   - id: joseph_neutral
-    portrait: {fileID: 21300000, guid: 70d0f62ee65bbd442b419295be95241c, type: 3}
+    portrait: {fileID: 21300000, guid: 77eab7d468d1cdc4cb4e9b9057e2f3be, type: 3}
+  - id: joseph_sad
+    portrait: {fileID: 21300000, guid: 53651ee9190f32b4ab7f929b218167b1, type: 3}
+  - id: joseph_happy
+    portrait: {fileID: 21300000, guid: cd1b4e4970c6ab14d89f1c8c8735d723, type: 3}
+  - id: sophia_sad
+    portrait: {fileID: 21300000, guid: ba2a8690c01168d4b9f324bfce70ab00, type: 3}
+  - id: sophia_thinking
+    portrait: {fileID: 21300000, guid: eeecb38707cdfbd459e7711bfb320276, type: 3}
+  - id: sophia_neutral
+    portrait: {fileID: 21300000, guid: 1917e5ec69150814ea22f1a4c25ee754, type: 3}

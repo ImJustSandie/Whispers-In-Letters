@@ -20,7 +20,7 @@
       #setvar:ruta:desicion3
     ->END
     
-    === Desicion3_Arcade ===
+    === HandleDesicion3_Arcade ===
     #setflag:Desicion3_Arcade
       #setvar:ruta:desicion3
     
@@ -34,6 +34,8 @@
     { GetVar("ruta") == "desicion3":
         -> Desicion3_Arcade
     }
+    
+=== Desicion3_Arcade ===
     
       Que deberia hacer con joseph
       

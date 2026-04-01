@@ -3,6 +3,8 @@ INCLUDE Joseph_Bibloteca.ink
 INCLUDE Epilogos.ink
 INCLUDE Joseph_Arcade..ink
 INCLUDE Joseph_Arcade_Camino2.ink
+INCLUDE Objects.ink
+
 
 
 
@@ -97,10 +99,12 @@ EXTERNAL GetVar(varName)
   En unas dos horas. ¿Por qué?
   #sprite:sophia_euforic
   Dos horas es tiempo suficiente para cambiar el rumbo del día. ¡Vamos, camina!
+  #setvar:ruta:desicion_Decamino
   -->END
-  === Desicion_DeCamino ===
-   #setflag:Desicion_DeCamino 
-  { GetVar("ruta") == "arcade":
+  
+  === HandleDesicion_DeCamino ===
+#setflag:Desicion_DeCamino 
+{ GetVar("ruta") == "arcade":
     -> Joseph_Arcade_Prologo
 }
 
@@ -111,6 +115,11 @@ EXTERNAL GetVar(varName)
 { GetVar("ruta") == "desicion_Decamino":
     -> Desicion_DeCamino
 }
+
+-> END
+
+
+=== Desicion_DeCamino ===
 
     #setvar:ruta:desicion_Decamino
     #sprite:sophia_thinking
