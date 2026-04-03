@@ -8,10 +8,12 @@ public class MenuInicio : MonoBehaviour
     public GameObject panelMenu;
     public GameObject panelCreditos;
     public GameObject panelAjustes;
+    public GameObject panelNiveles;
 
     public void Jugar()
     {
-        SceneManager.LoadScene("Niveles");
+        panelMenu.SetActive(false);
+        panelNiveles.SetActive(true);
     }
 
     public void MostrarCreditos()
