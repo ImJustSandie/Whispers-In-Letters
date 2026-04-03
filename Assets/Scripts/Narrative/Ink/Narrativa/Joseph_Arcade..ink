@@ -78,52 +78,36 @@ Es increíble… Me siento como si estuviera en otra dimensión. Una donde no de
 Gracias por traerme.
 #sprite:sophia_neutral
 Disfrútalo. Te lo mereces después de tanto tiempo viviendo para los demás.
-#sprite:joseph_happy
-Voy a jugar mi primera partida.
-
-// Juega por primera vez
 #setvar:ruta:desicion_Arcade_1
+#setflag:Desicion1_Arcade
+Voy a jugar mi primera partida.
 -> END
 
 === HandleDesicion1_Arcade ===
-#setflag:Desicion1_Arcade
-
-  { GetVar("ruta") == "motivacion":
-    -> Camino_1_Joseph_Arcade
+{
+- GetVar("ruta") == "motivacion": -> Camino_1_Joseph_Arcade
+- GetVar("ruta") == "desmotivarlo": -> Camino_2_Joseph_Arcade
+- GetVar("ruta") == "desicion_Arcade_1": -> Desicion1_Arcade
 }
-{ GetVar("ruta") == "desmotivarlo":
-    -> Camino_2_Joseph_Arcade
-}
-{GetVar("ruta") == "desicion_Arcade_1":
-    -> Desicion1_Arcade
-}
-
 === Desicion1_Arcade ===
-
 #sprite: sophia_thinking
-  Que deberia hacer con joseph
-  
-    +[Dejarlo y que siga jugando]
-    #setvar:ruta:motivacion
-     #sprite:sophia_euforic
-     joseph se merece romper esa rutina y encontrar un respiro de la universidad
+Que deberia hacer con joseph
++[Dejarlo y que siga jugando]
+#setvar:ruta:motivacion
+#sprite:sophia_euforic
+joseph se merece romper esa rutina y encontrar un respiro de la universidad
+-> END
++[llevarlo a la universidad]
+#setvar:ruta:desmotivarlo
+#sprite:sophia_sad
+Que le hice a joseph debo sacarlo
+-> END
++[Decidir luego]
+#setvar:ruta:desicion_Arcade_1
+#sprite:sophia_thinking
+Dare una vuelta y luego sigo hablando con joseph
+-> END
 
-     ->END
-  
-    +[llevarlo a la universidad]
-    #setvar:ruta:desmotivarlo
-     #sprite:sophia_sad
-     Que le hice a joseph debo  sacarlo
-     ->END
-     
-    +[Decidir luego]
-     #setvar:ruta:desicion_Arcade_1
-     #sprite:sophia_thinking
-     Dare una vuelta y luego sigo hablando con joseph
-     ->END
-     
-     
-     
 === Camino_1_Joseph_Arcade ===
 #setflag:Camino_1_Joseph_Arcade
 #setvar:ruta:desicion2
@@ -154,54 +138,39 @@ Me siento invencible... es como si toda la frustración de estos años se estuvi
 #sprite:sophia_happy
 Eso es lo que pasa cuando dejas de ser quien tus padres quieren y te conviertes en quien realmente eres: un conquistador.
 
-#sprite:joseph_happy
-¡Otra partida! Siento que ahora mismo nada puede salir mal.
-
-#sprite:sophia_euforic
-Hazlo, Joseph. Explora, juega, sé el dueño de este pequeño universo.
 #setvar:ruta:desicion2
+#setflag:Desicion2_Arcade
+Hazlo, Joseph. Explora, juega, sé el dueño de este pequeño universo.
 -> END
 
-
 === HandleDesicion2_Arcade ===
-#setflag:Desicion2_Arcade
-  { GetVar("ruta") == "vocacion":
-    -> Camino_1_2_Joseph_Arcade
+{
+- GetVar("ruta") == "vocacion": -> Camino_1_2_Joseph_Arcade
+- GetVar("ruta") == "universidad": -> Camino_2_2_Joseph_Arcade
+- GetVar("ruta") == "desicion2": -> Desicion2_Arcade
 }
-
-{ GetVar("ruta") == "universidad":
-    -> Camino_2_2_Joseph_Arcade
-}
-{ GetVar("ruta") == "desicion2":
-    -> Desicion2_Arcade
-}
-
 === Desicion2_Arcade ===
-  Que deberia hacer con joseph
-  
-    +[Darle otra oportunidad]
-    #setvar:ruta:vocacion
-     #sprite:sophia_euforic
-     Tienes potencial para esto de los videojuegos
-     ->END
-  
-    +[Eso no vale para nada]
-    #setvar:ruta:universidad
-     #sprite:sophia_neutral
-     debo detener 
-     ->END
-     
-    +[Decidir luego]
-     #setvar:ruta:desicion2
-     #sprite:sophia_thinking
-     Dare una vuelta y luego sigo hablando con joseph
-     ->END
+Que deberia hacer con joseph
++[Darle otra oportunidad]
+#setvar:ruta:vocacion
+#sprite:sophia_euforic
+Tienes potencial para esto de los videojuegos
+-> END
++[Eso no vale para nada]
+#setvar:ruta:universidad
+#sprite:sophia_neutral
+debo detener 
+-> END
++[Decidir luego]
+#setvar:ruta:desicion2
+#sprite:sophia_thinking
+Dare una vuelta y luego sigo hablando con joseph
+-> END
 
 === Camino_1_2_Joseph_Arcade ===
 #setflag:Camino_1_2_Joseph_Arcade
 #sprite:joseph_neutral
 Me gusta este lugar... no hay preguntas difíciles, solo obstáculos que puedo saltar o destruir. aquí es donde realmente pertenezco. Además, acabo de descubrir algo, no soy un mal estudiante, soy un profesional fuera de lugar
-
 #sprite:sophia_happy
 Te lo dije. Solo necesitabas un entorno diferente. Tienes una coordinación asombrosa. He visto a gente jugar años y no tienen tu precisión.
 
@@ -254,13 +223,11 @@ Ve y demuestra que esta es tu verdadera razón de ser, no una simple escapatoria
 
 #sprite:joseph_happy
 Gracias, Sophia... es la primera vez que siento que alguien valida lo que realmente soy.
+#setvar:ruta:Epilogo1
 
 #sprite:sophia_neutral
 Solo no mires atrás; corre antes de que la duda te alcance de nuevo.
 
-#setvar:ruta:Epilogo1
 -> END
 
-{ GetVar("ruta") == "Epilogo1":
-    -> epilogo_schopenhauer
-}
+{ GetVar("ruta") == "Epilogo1": -> epilogo_schopenhauer }

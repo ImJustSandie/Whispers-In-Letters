@@ -29,45 +29,35 @@ Forzarlo más solo te va a romper.
 Tienes razón... voy a cerrar el libro.
 
 #sprite:sophia_neutral
-No tiene sentido pelear una batalla perdida.
-
 #setvar:ruta:decision_biblioteca_3
-->END
-
-=== decision_biblioteca_3 ===
 #setflag:decision_biblioteca_3
+No tiene sentido pelear una batalla perdida.
+-> END
 
+=== HandleDecision_Biblioteca_3 ===
+{
+- GetVar("ruta") == "ultimo_esfuerzo": -> Camino_1_2_Joseph_Biblioteca
+- GetVar("ruta") == "rendicion_final": -> Camino_2_2_Joseph_Biblioteca
+- GetVar("ruta") == "decision_biblioteca_3": -> decision_biblioteca_3
+}
+=== decision_biblioteca_3 ===
 #sprite:sophia_thinking
 ¿Qué debería hacer con Joseph?
-
 +[Intentarlo otra vez]
-    #sprite:sophia_neutral
-    #setvar:ruta:ultimo_esfuerzo
-    No debería rendirmetan fácil
-    -> END
-
+#sprite:sophia_neutral
+#setvar:ruta:ultimo_esfuerzo
+No debería rendirmetan fácil
+-> END
 +[Aceptar la derrota]
-    #setvar:ruta:rendicion_final
-    #sprite:sophia_sad
-    Este es un caso perdido
-    -> END
-
+#setvar:ruta:rendicion_final
+#sprite:sophia_sad
+Este es un caso perdido
+-> END
 +[Decidir después]
-    #sprite:sophia_thinking
-    #setvar:ruta:decision_biblioteca_3
-    Necesito pensarlo
-    -> END
-
-
-{ GetVar("ruta") == "ultimo_esfuerzo":
-    -> Camino_1_2_Joseph_Biblioteca
-}
-{ GetVar("ruta") == "rendicion_final":
-    -> Camino_2_2_Joseph_Biblioteca
-}
-{ GetVar("ruta") == "decision_biblioteca_3":
-    -> decision_biblioteca_3
-}
+#sprite:sophia_thinking
+#setvar:ruta:decision_biblioteca_3
+Necesito pensarlo
+-> END
 
 === Camino_2_2_Joseph_Biblioteca ===
 #setflag:Camino_2_2_Joseph_Biblioteca
@@ -104,11 +94,7 @@ Entonces vámonos. Este lugar ya no tiene nada más para ti.
 
 #sprite:joseph_sad
 Adiós a los libros... supongo que este nunca fue mi camino.
-
 #setvar:ruta:Epilogo4
 -> END
 
-
-{ GetVar("ruta") == "Epilogo4":
-    -> epilogo_nietzsche
-}
+{ GetVar("ruta") == "Epilogo4": -> epilogo_nietzsche }

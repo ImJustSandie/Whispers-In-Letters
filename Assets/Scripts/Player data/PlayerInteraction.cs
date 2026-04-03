@@ -10,6 +10,18 @@ public class PlayerInteraction : MonoBehaviour
     {
         controls = new PlayerControls();
         controls.Player.Interact.performed += ctx => TryInteract();
+        
+        // Modo skip de dialogo (DEBUG)
+        controls.Player.SaltarTexto.started += ctx => SetSkip(true);
+        controls.Player.SaltarTexto.canceled += ctx => SetSkip(false);
+    }
+
+    private void SetSkip(bool skip)
+    {
+        if (StoryManager.Instance != null && StoryManager.Instance.IsDialogueActive)
+        {
+            StoryManager.Instance.SetSkipMode(skip);
+        }
     }
 
     void OnEnable()

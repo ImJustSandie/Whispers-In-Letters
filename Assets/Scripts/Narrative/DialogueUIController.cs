@@ -216,7 +216,14 @@ public class DialogueUIController : MonoBehaviour
         foreach (char letter in line.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(typewriterSpeed);
+            
+            float currentSpeed = typewriterSpeed;
+            if (StoryManager.Instance != null && StoryManager.Instance.IsSkippingMode)
+            {
+                currentSpeed = 0.005f; // Velocidad de skip (aprox 1 letra por frame)
+            }
+            
+            yield return new WaitForSeconds(currentSpeed);
         }
 
         // Una vez que termina de escribirse el texto, mostramos las opciones si las hay

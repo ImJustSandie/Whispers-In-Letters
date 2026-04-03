@@ -14,8 +14,12 @@ public class StoryManager : MonoBehaviour
     private DialogueUIController uiController;
     private Story story;
     private bool dialogueActive;
+    private bool isSkippingMode;
+    private float skipTimer;
+    [SerializeField] private float skipDelay = 0.2f;
 
     public bool IsDialogueActive => dialogueActive;
+    public bool IsSkippingMode => isSkippingMode;
     public event Action<bool> OnDialogueStateChanged;
 
     void Awake()
@@ -106,6 +110,28 @@ public class StoryManager : MonoBehaviour
         if (uiController != null)
         {
             uiController.OnAdvanceInput();
+        }
+    }
+
+    public void SetSkipMode(bool skip)
+    {
+        isSkippingMode = skip;
+    }
+
+    private void Update()
+    {
+        if (isSkippingMode && dialogueActive)
+        {
+            skipTimer += Time.deltaTime;
+            if (skipTimer >= skipDelay)
+            {
+                skipTimer = 0f;
+                AdvanceStory();
+            }
+        }
+        else
+        {
+            skipTimer = 0f;
         }
     }
 

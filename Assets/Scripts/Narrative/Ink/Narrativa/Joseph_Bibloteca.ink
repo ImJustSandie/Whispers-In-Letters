@@ -37,45 +37,36 @@ Míralo como un entrenamiento para tu espíritu. Vamos, Joseph, antes de que pie
 Un café nos ayudaría más que una lección ahora mismo.
 
 #sprite:sophia_euforic
+#setvar:ruta:Decision_Biblioteca_1
+#setflag:Decision_Biblioteca_1
 El café será tu recompensa si logras concentrarte una hora entera. ¡Andando!
-
 // Sophia y Joseph caminan hacia la biblioteca
 -> END
 
 
+=== HandleDecision_Biblioteca_1 ===
+{
+- GetVar("ruta") == "estrategia": -> Camino_1_Joseph_Biblioteca
+- GetVar("ruta") == "rendirse": -> Camino_2_Joseph_Biblioteca
+- GetVar("ruta") == "Decision_Biblioteca_1": -> Decision_Biblioteca_1
+}
 === Decision_Biblioteca_1 ===
-#setflag:Decision_Biblioteca_1
-
 #sprite:sophia_thinking
 ¿Qué debería hacer con Joseph?
-
 +[Crear estrategia]
-    #sprite:sophia_euforic
-    #setvar:ruta:estrategia
-     voy a ayudar a joseph
-    -> END
-
+#sprite:sophia_euforic
+#setvar:ruta:estrategia
+voy a ayudar a joseph
+-> END
 +[Decirle que no puede]
-    #sprite:sophia_sad
-    #setvar:ruta:rendirse
-    mejor me rindo
-    -> END
-
+#sprite:sophia_sad
+#setvar:ruta:rendirse
+mejor me rindo
+-> END
 +[Pensar después]
-    #sprite:sophia_thinking
-    #setvar:ruta:Decision_Biblioteca_1
-    -> END
-
-
-{ GetVar("ruta") == "estrategia":
-    -> Camino_1_Joseph_Biblioteca
-}
-{ GetVar("ruta") == "rendirse":
-    -> Camino_2_Joseph_Biblioteca
-}
-{ GetVar("ruta") == "Decision_Biblioteca_1":
-    -> Decision_Biblioteca_1
-}
+#sprite:sophia_thinking
+#setvar:ruta:Decision_Biblioteca_1
+-> END
 
 
 === Camino_1_Joseph_Biblioteca ===
@@ -121,53 +112,37 @@ Es la única forma: avanzar lento, pero seguro.
 Me tomará el triple de tiempo...
 
 #sprite:sophia_neutral
+#setvar:ruta:decision_biblioteca_2
+#setflag:decision_biblioteca_2
 No compitas con otros. Compite con tu propio ritmo.
-
 #sprite:joseph_neutral
 Está bien... peor es no intentarlo.
-
-#setvar:ruta:decision_biblioteca_2
 -> END
-
-
+=== HandleDecision_Biblioteca_2 ===
+{
+- GetVar("ruta") == "disciplina": -> Camino_1_2_Joseph_Biblioteca
+- GetVar("ruta") == "rendirse_2": -> Camino_2_2_Joseph_Biblioteca
+- GetVar("ruta") == "decision_biblioteca_2": -> decision_biblioteca_2
+}
 === decision_biblioteca_2 ===
-#setflag:decision_biblioteca_2
-
 #sprite:sophia_thinking
 ¿Qué debería hacer con Joseph?
-
 +[Seguir disciplinado]
-    #sprite:sophia_neutral
-    #setvar:ruta:disciplina
-    Joseph ha mejorado, pero hay que ser constante y disciplinado - Hay mucho camino por recorrer
-    -> END
-
+#sprite:sophia_neutral
+#setvar:ruta:disciplina
+Joseph ha mejorado, pero hay que ser constante y disciplinado - Hay mucho camino por recorrer
+-> END
 +[Rendirse]
-    #setvar:ruta:rendirse_2
-    No  ha avanzado casi nada - Este es un reto muy duro
-    -> END
-
+#setvar:ruta:rendirse_2
+No ha avanzado casi nada - Este es un reto muy duro
+-> END
 +[Decidir después]
-    #sprite:sophia_thinking
-    #setvar:ruta:decision_biblioteca_2
-    Voy a pensarlo
-    -> END
-
-
-{ GetVar("ruta") == "disciplina":
-    -> Camino_1_2_Joseph_Biblioteca
-}
-{ GetVar("ruta") == "rendirse_2":
-    -> Camino_2_2_Joseph_Biblioteca
-}
-{ GetVar("ruta") == "decision_biblioteca_2":
-    -> decision_biblioteca_2
-}
-
-
+#sprite:sophia_thinking
+#setvar:ruta:decision_biblioteca_2
+Voy a pensarlo
+-> END
 === Camino_1_2_Joseph_Biblioteca ===
 #setflag:Camino_1_2_Joseph_Biblioteca
-
 #sprite:joseph_neutral
 Llevo dos horas con la misma página, pero no he sentido ganas de rendirme ni una sola vez.
 
@@ -221,10 +196,7 @@ Está bien... tomaré agua y seguiré.
 
 #sprite:sophia_euforic
 Tu libertad está en no rendirte.
-
 #setvar:ruta:Epilogo3
 -> END
 
-{ GetVar("ruta") == "Epilogo3":
-    -> epilogo_estoicos
-}
+{ GetVar("ruta") == "Epilogo3": -> epilogo_estoicos }

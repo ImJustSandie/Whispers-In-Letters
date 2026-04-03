@@ -49,9 +49,7 @@ EXTERNAL GetVar(varName)
      Para los amigos siempre hay tiempo, cuéntame que te tiene tan preocupado
      ->Joseph2_Prologo
    
-  { GetVar("ruta") == "desicion_prologo":
-    -> Joseph1_Prologo_Reencuentro
-}
+{ GetVar("ruta") == "desicion_prologo": -> Joseph1_Prologo_Reencuentro }
 
 === Joseph2_Prologo ===
  #setflag:Joseph2_Prologo
@@ -99,40 +97,28 @@ EXTERNAL GetVar(varName)
   #sprite:joseph_neutral
   En unas dos horas. ¿Por qué?
   #sprite:sophia_euforic
+  #setvar:ruta:desicion_Decamino
+  #setflag:Desicion_DeCamino 
   Dos horas es tiempo suficiente para cambiar el rumbo del día. ¡Vamos, camina!
-  #setvar:ruta:desicion_Decamino
-  -->END
-  
-  === HandleDesicion_DeCamino ===
-#setflag:Desicion_DeCamino 
-{ GetVar("ruta") == "arcade":
-    -> Joseph_Arcade_Prologo
+  -> END
+=== HandleDesicion_DeCamino ===
+{
+    - GetVar("ruta") == "arcade": -> Joseph_Arcade_Prologo
+    - GetVar("ruta") == "biblioteca": -> Joseph_Bibloteca_Prologo
+    - GetVar("ruta") == "desicion_Decamino": -> Desicion_DeCamino
 }
-
-{ GetVar("ruta") == "biblioteca":
- -> Joseph_Bibloteca_Prologo
-    
-}
-{ GetVar("ruta") == "desicion_Decamino":
-    -> Desicion_DeCamino
-}
-
--> END
-
-
 === Desicion_DeCamino ===
-
-    #setvar:ruta:desicion_Decamino
-    #sprite:sophia_thinking
-    Que deberia hacer con joseph
+#setvar:ruta:desicion_Decamino
+#sprite:sophia_thinking
+Que deberia hacer con joseph
   + [Ir al arcade]
+     #setvar:ruta:arcade
      Le dire a joseph de ir al arcade
-        #setvar:ruta:arcade
-  -> END
+     -> END
   + [Ir a la biblioteca]
-        Le dire a joseph de ir a la Biblioteca
-         #setvar:ruta:biblioteca
-  -> END
+     #setvar:ruta:biblioteca
+     Le dire a joseph de ir a la Biblioteca
+     -> END
   + [Mas tarde decir]
-  #setvar:ruta:desicion_Decamino
-  -> END
+     #setvar:ruta:desicion_Decamino
+     -> END

@@ -15,48 +15,36 @@
     #sprite:sophia_neutral
     Y eso no va a cambiar si te quedas escondido aquí. Lo que encontraste, te lo llevas contigo.
     
+    #setvar:ruta:desicion3
+    #setflag:Desicion3_Arcade
     #sprite:joseph_sad
     …Supongo que tienes razón. No puedo quedarme aquí para siempre, aunque quisiera.
-      #setvar:ruta:desicion3
-    ->END
+    -> END
     
     === HandleDesicion3_Arcade ===
-    #setflag:Desicion3_Arcade
-      #setvar:ruta:desicion3
-    
-      { GetVar("ruta") == "Oportunidad":
-        -> Camino_1_2_Joseph_Arcade
-    }
-    { GetVar("ruta") == "sacarlo":
-        -> Camino_2_2_Joseph_Arcade
-         
-    }
-    { GetVar("ruta") == "desicion3":
-        -> Desicion3_Arcade
-    }
-    
+#setvar:ruta:desicion3
+{
+- GetVar("ruta") == "Oportunidad": -> Camino_1_2_Joseph_Arcade
+- GetVar("ruta") == "sacarlo": -> Camino_2_2_Joseph_Arcade
+- GetVar("ruta") == "desicion3": -> Desicion3_Arcade
+}
 === Desicion3_Arcade ===
-    
-      Que deberia hacer con joseph
-      
-        +[Motivar a joseph a seguir su sueños]
-        #setvar:ruta:Oportunidad
-        #sprite:sophia_euforic
-        Aquí joseph encontro la razón de vida despues de todo  No es un fracasado, solo  tenías otro enfoque
-    
-        -> END
-      
-        +[Eso no vale para nada]
-        #setvar:ruta:sacarlo
-        #sprite:sophia_neutral
-        debo detener 
-         ->Camino_2_2_Joseph_Arcade
-         
-        +[Decidir luego]
-        #setvar:ruta:desicion3
-        #sprite:sophia_thinking
-        Dare una vuelta y luego sigo hablando con joseph
-        ->END
+Que deberia hacer con joseph
++[Motivar a joseph a seguir su sueños]
+#setvar:ruta:Oportunidad
+#sprite:sophia_euforic
+Aquí joseph encontro la razón de vida despues de todo No es un fracasado, solo tenías otro enfoque
+-> END
++[Eso no vale para nada]
+#setvar:ruta:sacarlo
+#sprite:sophia_neutral
+debo detener
+-> Camino_2_2_Joseph_Arcade
++[Decidir luego]
+#setvar:ruta:desicion3
+#sprite:sophia_thinking
+Dare una vuelta y luego sigo hablando con joseph
+-> END
     
     ===Camino_2_2_Joseph_Arcade ===
     #setflag:Camino_2_2_Joseph_Arcade
@@ -127,11 +115,8 @@
     
     #sprite:sophia_happy
     Entonces hagámoslo bien esta vez… enfrentémoslo juntos, paso a paso.
-    
     #sprite:joseph_neutral
     No te culpes tanto… al menos ahora sé que, aunque cueste, mi lugar está allá afuera.
     #setvar:ruta:epilogo2 
-    { GetVar("ruta") == "epilogo2":
-        -> epilogo_hegel
-    }
+{ GetVar("ruta") == "epilogo2": -> epilogo_hegel }
     ->END
