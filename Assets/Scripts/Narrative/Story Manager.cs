@@ -18,6 +18,7 @@ public class StoryManager : MonoBehaviour
     private float skipTimer;
     [SerializeField] private float skipDelay = 0.2f;
 
+    public Story Story => story;
     public bool IsDialogueActive => dialogueActive;
     public bool IsSkippingMode => isSkippingMode;
     public event Action<bool> OnDialogueStateChanged;

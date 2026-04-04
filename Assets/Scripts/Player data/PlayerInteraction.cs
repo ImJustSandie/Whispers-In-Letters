@@ -36,6 +36,8 @@ public class PlayerInteraction : MonoBehaviour
 
     void TryInteract()
     {
+        Debug.Log("[PlayerInteraction] Intentando interactuar. DialogueActive: " + (StoryManager.Instance != null && StoryManager.Instance.IsDialogueActive));
+        
         if (StoryManager.Instance != null && StoryManager.Instance.IsDialogueActive)
         {
             StoryManager.Instance.AdvanceStory();
@@ -44,6 +46,8 @@ public class PlayerInteraction : MonoBehaviour
 
         if (currentInteractable != null)
         {
+            Debug.Log("[PlayerInteraction] Ejecutando Interact() en: " + currentInteractable.GetInteractionName());
+            
             // Rotar suavemente hacia el objeto con el que vamos a interactuar
             Component targetComponent = currentInteractable as Component;
             if (targetComponent != null)
@@ -53,13 +57,15 @@ public class PlayerInteraction : MonoBehaviour
 
                 if (directionToTarget.sqrMagnitude > 0.001f)
                 {
-                    // Nota: Aquí podrías usar una Corrutina para un Slerp gradual, 
-                    // pero un LookRotation directo es preferible a que el jugador le dé la espalda.
                     transform.rotation = Quaternion.LookRotation(directionToTarget);
                 }
             }
 
             currentInteractable.Interact();
+        }
+        else
+        {
+            Debug.LogWarning("[PlayerInteraction] currentInteractable es NULL.");
         }
     }
 

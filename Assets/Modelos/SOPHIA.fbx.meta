@@ -3,7 +3,12 @@ guid: 859f1bcfb0736f14f9c567c70be59633
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Sophia
+    second: {fileID: 2100000, guid: 2b2f06fa0a8d32a47916b4e124398ce7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
