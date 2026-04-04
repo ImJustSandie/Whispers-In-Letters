@@ -13,6 +13,7 @@ public class PhilosopherCardDatabase : ScriptableObject
         public string rutaValue;        // valor exacto en Ink: "Epilogo1"
         public string acceptanceKnot;   // "epilogo_schopenhauer"
         public string reprocheKnot;     // "epilogo_schopenhauer_reproche"
+        public string reflectionKnot;   // "reflexion_schopenhauer"
         public Sprite cardSprite;       // imagen visual de la carta
         public string displayName;      // "Schopenhauer"
     }

@@ -118,5 +118,6 @@ Dare una vuelta y luego sigo hablando con joseph
     #sprite:joseph_neutral
     No te culpes tanto… al menos ahora sé que, aunque cueste, mi lugar está allá afuera.
     #setvar:ruta:epilogo2 
+    #setflag:Final_Alcanzado
 { GetVar("ruta") == "epilogo2": -> epilogo_hegel }
     ->END

@@ -1634,9 +1634,13 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.86
       objectReference: {fileID: 0}
+    - target: {fileID: 1587621824887606940, guid: 7583498a34aca45418f507fef36555af, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3522509792451639052, guid: 7583498a34aca45418f507fef36555af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.89
+      value: -5.75
       objectReference: {fileID: 0}
     - target: {fileID: 3522509792451639052, guid: 7583498a34aca45418f507fef36555af, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1644,7 +1648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3522509792451639052, guid: 7583498a34aca45418f507fef36555af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.37
+      value: -7.43
       objectReference: {fileID: 0}
     - target: {fileID: 3522509792451639052, guid: 7583498a34aca45418f507fef36555af, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1678,13 +1682,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: JOSEPH
       objectReference: {fileID: 0}
+    - target: {fileID: 4548372568722024163, guid: 7583498a34aca45418f507fef36555af, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4838974983302278572, guid: 7583498a34aca45418f507fef36555af, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.038
       objectReference: {fileID: 0}
     - target: {fileID: 4838974983302278572, guid: 7583498a34aca45418f507fef36555af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.143
+      value: 0.105
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133160153705520486, guid: 7583498a34aca45418f507fef36555af, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133160153705520486, guid: 7583498a34aca45418f507fef36555af, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.061
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 603525200062353412, guid: 7583498a34aca45418f507fef36555af, type: 3}

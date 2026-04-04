@@ -122,3 +122,71 @@ Que deberia hacer con joseph
   + [Mas tarde decir]
      #setvar:ruta:desicion_Decamino
      -> END
+     
+=== Habitacion_Bloqueada ===
+#sprite:sophia_neutral
+Aun no deberia ir a mi habitacion, tengo cosas que hacer.
+-> END
+
+=== Salida_Bloqueada ===
+#sprite:sophia_neutral
+Estoy muy cansada, no creo que quiera salir mas por hoy
+-> END
+
+
+=== Cama_Bloqueada ===
+#sprite:sophia_neutral
+Aun no me puedo ir a dormir, tengo cosas que hacer.
+-> END
+
+
+=== Reflexion_Final ===
+#sprite:sophia_neutral
+(Depuración) Esta es una reflexión genérica. No se encontró un nudo específico para la carta leída.
+-> Final_Del_Juego
+
+=== Final_Del_Juego ===
+Es el momento de cerrar los ojos y dejar que el pensamiento descanse... hasta que volvamos a despertar. #fade_out
+-> END
+
+
+=== Confirmacion_Dormir ===
+#sprite:sophia_neutral
+Estoy exhausta... Siento que si me duermo ahora, este día finalmente habrá terminado. 
+¿Estoy lista para dejarlo todo atrás por hoy?
++ [Sí, es momento de descansar]
+    -> Reflexion_Final_Selector
++ [No, todavía hay algo que me inquieta]
+    -> END
+
+=== Reflexion_Final_Selector ===
+{
+    - GetVar("proxima_reflexion") == "reflexion_schopenhauer": -> reflexion_schopenhauer
+    - GetVar("proxima_reflexion") == "reflexion_hegel": -> reflexion_hegel
+    - GetVar("proxima_reflexion") == "reflexion_estoicos": -> reflexion_estoicos
+    - GetVar("proxima_reflexion") == "reflexion_nietzsche": -> reflexion_nietzsche
+    - else: -> Reflexion_Final
+}
+
+
+=== reflexion_schopenhauer ===
+#sprite:sophia_thinking
+(Depuración) Has leído la carta de Schopenhauer. Sophia reflexiona sobre la voluntad y el deseo...
+-> Final_Del_Juego
+
+=== reflexion_hegel ===
+#sprite:sophia_thinking
+(Depuración) Has leído la carta de Hegel. Sophia reflexiona sobre el progreso de la razón y el deber...
+-> Final_Del_Juego
+
+=== reflexion_estoicos ===
+#sprite:sophia_thinking
+(Depuración) Has leído la carta de los Estoicos. Sophia reflexiona sobre el control interno y la paz...
+-> Final_Del_Juego
+
+=== reflexion_nietzsche ===
+#sprite:sophia_thinking
+(Depuración) Has leído la carta de Nietzsche. Sophia reflexiona sobre el superhombre y la creación de valores...
+-> Final_Del_Juego
+
+

@@ -9,6 +9,8 @@ public class DialogueTagProcessor : MonoBehaviour
 
     // Evento para separar la logica de parseo de la interfaz visual
     public event Action<Sprite> OnPortraitSpriteChanged;
+    
+    public bool PendingFadeOut { get; set; }
 
     private const string SPRITE_TAG = "sprite";
 
@@ -49,8 +51,6 @@ public class DialogueTagProcessor : MonoBehaviour
                     case "setvar":
                         if (GameManager.Instance != null && splitTag.Length >= 3)
                         {
-                            // Si el tag es #setvar:joseph_actitud:motivado
-                            // splitTag[0] = "setvar", splitTag[1] = "joseph_actitud", splitTag[2] = "motivado"
                             string varKey = splitTag[1].Trim();
                             string varVal = splitTag[2].Trim();
                             
@@ -58,7 +58,15 @@ public class DialogueTagProcessor : MonoBehaviour
                             Debug.Log($"[Ink] Variable mutada registrada: {varKey} = {varVal}");
                         }
                         break;
+
+                    case "fade_out":
+                        PendingFadeOut = true;
+                        break;
                 }
+            }
+            else if (cleanTag.ToLower() == "fade_out")
+            {
+                PendingFadeOut = true;
             }
         }
     }

@@ -224,6 +224,7 @@ Ve y demuestra que esta es tu verdadera razón de ser, no una simple escapatoria
 #sprite:joseph_happy
 Gracias, Sophia... es la primera vez que siento que alguien valida lo que realmente soy.
 #setvar:ruta:Epilogo1
+#setflag:Final_Alcanzado
 
 #sprite:sophia_neutral
 Solo no mires atrás; corre antes de que la duda te alcance de nuevo.

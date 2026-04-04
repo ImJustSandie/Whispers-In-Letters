@@ -141,6 +141,7 @@ No ha avanzado casi nada - Este es un reto muy duro
 #setvar:ruta:decision_biblioteca_2
 Voy a pensarlo
 -> END
+
 === Camino_1_2_Joseph_Biblioteca ===
 #setflag:Camino_1_2_Joseph_Biblioteca
 #sprite:joseph_neutral
@@ -197,6 +198,7 @@ Está bien... tomaré agua y seguiré.
 #sprite:sophia_euforic
 Tu libertad está en no rendirte.
 #setvar:ruta:Epilogo3
+#setflag:Final_Alcanzado
 -> END
 
-{ GetVar("ruta") == "Epilogo3": -> epilogo_estoicos }
+{ GetVar("ruta") == "Epilogo3": -> epilogo_estoicos}

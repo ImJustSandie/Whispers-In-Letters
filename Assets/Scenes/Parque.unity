@@ -3375,11 +3375,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 932306878235839150, guid: 400e502875888304798ecd64e88ebcb3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.51
+      value: 2.18
       objectReference: {fileID: 0}
     - target: {fileID: 932306878235839150, guid: 400e502875888304798ecd64e88ebcb3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 872.3
+      value: 873.05
       objectReference: {fileID: 0}
     - target: {fileID: 932306878235839150, guid: 400e502875888304798ecd64e88ebcb3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3932,7 +3932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 932306878235839150, guid: 400e502875888304798ecd64e88ebcb3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 872.3
+      value: 872.69
       objectReference: {fileID: 0}
     - target: {fileID: 932306878235839150, guid: 400e502875888304798ecd64e88ebcb3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5846,11 +5846,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2900221217359328154, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
       propertyPath: fallbackKnot
-      value: 
+      value: Habitacion_Bloqueada
       objectReference: {fileID: 0}
     - target: {fileID: 2900221217359328154, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
       propertyPath: requiredFlag
-      value: 
+      value: Final_Alcanzado
       objectReference: {fileID: 0}
     - target: {fileID: 2900221217359328154, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
       propertyPath: destinationSceneName
@@ -6297,7 +6297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   gameState: {fileID: 11400000, guid: b00d5dd577a8a8f458d12412e3a8b51b, type: 2}
-  clearStateOnStart: 0
+  clearStateOnStart: 1
 --- !u!4 &2069785599
 Transform:
   m_ObjectHideFlags: 0

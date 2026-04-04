@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c564ab7993cefad49b09d816989dcba2, type: 3}
+  m_Name: Joseph Biblioteca
+  m_EditorClassIdentifier: Assembly-CSharp::AdvancedInteractableData
+  interactionName: Joseph Biblioteca
+  interactions:
+  - description: rendicion_final
+    inkKnot: Camino_2_2_Joseph_Biblioteca
+    conditions:
+    - conditionType: 2
+      flagName: 
+      variableKey: ruta
+      requiredValue: rendicion_final
+  - description: ultimo_esfuerzo
+    inkKnot: Camino_1_2_Joseph_Biblioteca
+    conditions:
+    - conditionType: 2
+      flagName: 
+      variableKey: ruta
+      requiredValue: ultimo_esfuerzo
+  - description: Decision Biblioteca 3
+    inkKnot: HandleDecision_Biblioteca_3
+    conditions:
+    - conditionType: 2
+      flagName: 
+      variableKey: ruta
+      requiredValue: decision_biblioteca_3
+  - description: Rendirse
+    inkKnot: Camino_2_Joseph_Biblioteca
+    conditions:
+    - conditionType: 2
+      flagName: 
+      variableKey: ruta
+      requiredValue: rendirse
+  - description: Camino_1_2_Joseph_Biblioteca
+    inkKnot: Camino_1_2_Joseph_Biblioteca
+    conditions:
+    - conditionType: 2
+      flagName: 
+      variableKey: ruta
+      requiredValue: disciplina
+  - description: rendirse_2
+    inkKnot: Camino_2_2_Joseph_Biblioteca
+    conditions:
+    - conditionType: 2
+      flagName: 
+      variableKey: ruta
+      requiredValue: rendirse_2
+  - description: Decision Biblioteca 2
+    inkKnot: HandleDecision_Biblioteca_2
+    conditions:
+    - conditionType: 2
+      flagName: 
+      variableKey: ruta
+      requiredValue: decision_biblioteca_2
+  - description: Ruta Estrategia
+    inkKnot: Camino_1_Joseph_Biblioteca
+    conditions:
+    - conditionType: 2
+      flagName: 
+      variableKey: ruta
+      requiredValue: estrategia
+  - description: Decision Biblioteca 1
+    inkKnot: HandleDecision_Biblioteca_1
+    conditions:
+    - conditionType: 2
+      flagName: 
+      variableKey: ruta
+      requiredValue: Decision_Biblioteca_1

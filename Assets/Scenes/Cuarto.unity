@@ -964,6 +964,83 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &505331262
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 417442851376666777, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 417442851376666777, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+      propertyPath: m_Center.x
+      value: 0.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 2454259149512531947, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900221217359328154, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+      propertyPath: fallbackKnot
+      value: Salida_Bloqueada
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900221217359328154, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+      propertyPath: requiredFlag
+      value: Nunca va a pasar lol
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419845811883684385, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419845811883684385, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0000002438785
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419845811883684385, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419845811883684385, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419845811883684385, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419845811883684385, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419845811883684385, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419845811883684385, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419845811883684385, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419845811883684385, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6878047443670441339, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+      propertyPath: m_Name
+      value: Cambio de escena
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
 --- !u!1 &617513443
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,6 +1214,8 @@ GameObject:
   m_Component:
   - component: {fileID: 768789084}
   - component: {fileID: 768789085}
+  - component: {fileID: 768789087}
+  - component: {fileID: 768789088}
   m_Layer: 0
   m_Name: Bed Coll
   m_TagString: Untagged
@@ -1180,6 +1259,43 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &768789087
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768789083}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.99, y: 1, z: 1.58}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &768789088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768789083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7144fc266c2952744b4018a3685b4100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FinalReflectionInteractable
+  cardDatabase: {fileID: 11400000, guid: 7a1eae4d62103fd449bb1cb02e0cca31, type: 2}
+  lockedRoomKnot: Habitacion_Bloqueada
+  unreadLetterKnot: Cama_Bloqueada
+  defaultReflectionKnot: Reflexion_Final
 --- !u!4 &777680914 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4311093405443292114, guid: 584d1c7cc616ec3468023132bc8fe25f, type: 3}
@@ -2735,3 +2851,4 @@ SceneRoots:
   - {fileID: 359404593}
   - {fileID: 58292974}
   - {fileID: 291166263}
+  - {fileID: 505331262}

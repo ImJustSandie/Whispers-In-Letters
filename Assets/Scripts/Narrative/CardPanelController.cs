@@ -83,6 +83,18 @@ public class CardPanelController : MonoBehaviour
 
         string knot = isAcceptance ? entry.acceptanceKnot : entry.reprocheKnot;
         contentText.text = GetKnotText(knot);
+
+        // Registrar progreso
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.SetStoryFlag("Carta_Leida", true);
+            GameManager.Instance.SetStoryVariable("ultima_carta_leida", entry.rutaValue);
+            
+            if (isAcceptance)
+            {
+                GameManager.Instance.SetStoryFlag("Carta_Aceptacion_Leida", true);
+            }
+        }
     }
 
     /// <summary>

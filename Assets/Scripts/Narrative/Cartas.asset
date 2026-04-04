@@ -17,23 +17,27 @@ MonoBehaviour:
     rutaValue: Epilogo1
     acceptanceKnot: epilogo_schopenhauer
     reprocheKnot: epilogo_schopenhauer_reproche
+    reflectionKnot: reflexion_schopenhauer
     cardSprite: {fileID: 21300000, guid: dfdee0000ac7aa547ae4af82af130fb1, type: 3}
     displayName: Schopenhauer
   - philosopherKey: Hegel
     rutaValue: epilogo2
     acceptanceKnot: epilogo_hegel
     reprocheKnot: epilogo_hegel_reproche
+    reflectionKnot: reflexion_hegel
     cardSprite: {fileID: 21300000, guid: 122a9c9e2fb250a4ba24d3284afc2a41, type: 3}
     displayName: Hegel
   - philosopherKey: Estoicos
     rutaValue: Epilogo3
     acceptanceKnot: epilogo_estoicos
     reprocheKnot: epilogo_estoicos_reproche
+    reflectionKnot: reflexion_estoicos
     cardSprite: {fileID: 21300000, guid: 4817d767fbee45e4080853d84c265596, type: 3}
     displayName: Estoicos
   - philosopherKey: Nietzsche
     rutaValue: Epilogo4
-    acceptanceKnot: "epilogo_nietzsche\t"
+    acceptanceKnot: epilogo_nietzsche
     reprocheKnot: epilogo_nietzsche_reproche
+    reflectionKnot: reflexion_nietzsche
     cardSprite: {fileID: 21300000, guid: c9174c921b7e1364983654acbcd90a06, type: 3}
     displayName: Nietzsche

@@ -40,6 +40,48 @@ public class LevelManager : MonoBehaviour
         StartCoroutine(TransitionToScene(sceneName.Trim()));
     }
 
+    /// <summary>
+    /// Inicia un oscurecimiento gradual de la pantalla.
+    /// </summary>
+    public void FadeToBlack(float duration = -1f)
+    {
+        float d = duration < 0 ? fadeDuration : duration;
+        StartCoroutine(FadeRoutine(0f, 1f, d, true));
+    }
+
+    /// <summary>
+    /// Inicia un aclaramiento gradual de la pantalla.
+    /// </summary>
+    public void FadeToClear(float duration = -1f)
+    {
+        float d = duration < 0 ? fadeDuration : duration;
+        StartCoroutine(FadeRoutine(1f, 0f, d, false));
+    }
+
+    private IEnumerator FadeRoutine(float startAlpha, float endAlpha, float duration, bool blockRaycasts)
+    {
+        if (fadeCanvasGroup == null) yield break;
+
+        fadeCanvasGroup.gameObject.SetActive(true);
+        fadeCanvasGroup.blocksRaycasts = blockRaycasts;
+
+        float timer = 0f;
+        while (timer < duration)
+        {
+            fadeCanvasGroup.alpha = Mathf.Lerp(startAlpha, endAlpha, timer / duration);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        fadeCanvasGroup.alpha = endAlpha;
+        
+        if (endAlpha <= 0)
+        {
+            fadeCanvasGroup.blocksRaycasts = false;
+            fadeCanvasGroup.gameObject.SetActive(false);
+        }
+    }
+
     private IEnumerator TransitionToScene(string sceneName)
     {
         // 1. Efecto Fade Out (Oscurecer pantalla)

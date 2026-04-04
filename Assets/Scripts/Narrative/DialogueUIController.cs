@@ -117,6 +117,14 @@ public class DialogueUIController : MonoBehaviour
             // Fin del dialogo
             ClearChoices();
             dialogueText.text = "";
+
+            // Verificar si hay un fade out pendiente del último tag procesado
+            if (tagProcessor != null && tagProcessor.PendingFadeOut)
+            {
+                LevelManager.Instance?.FadeToBlack();
+                tagProcessor.PendingFadeOut = false; // Resetear
+            }
+
             OnDialogueEnded?.Invoke();
         }
         else if (story.currentChoices.Count > 0 && !isTyping)

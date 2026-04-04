@@ -93,8 +93,9 @@ Estoy cansado de pelear contra una pared que no se mueve.
 Entonces vámonos. Este lugar ya no tiene nada más para ti.
 
 #sprite:joseph_sad
-Adiós a los libros... supongo que este nunca fue mi camino.
 #setvar:ruta:Epilogo4
+#setflag:Final_Alcanzado
+Adiós a los libros... supongo que este nunca fue mi camino.
 -> END
 
 { GetVar("ruta") == "Epilogo4": -> epilogo_nietzsche }
