@@ -1030,76 +1030,13 @@ PrefabInstance:
     - target: {fileID: 7379521307885823770, guid: e4384912ae6ff9540b42a02d9fa36568, type: 3}
       propertyPath: dialoguePanel
       value: 
-      objectReference: {fileID: 818696097}
+      objectReference: {fileID: 646017018}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4384912ae6ff9540b42a02d9fa36568, type: 3}
---- !u!4 &668540913 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4695873388183018423, guid: 09975c50e0ee1c64684cdbd14923b48e, type: 3}
-  m_PrefabInstance: {fileID: 412132651}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &770434704 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2501087124736587111, guid: 09975c50e0ee1c64684cdbd14923b48e, type: 3}
-  m_PrefabInstance: {fileID: 412132651}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &783331331
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 783331332}
-  - component: {fileID: 783331333}
-  m_Layer: 0
-  m_Name: R Marcian Coll
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &783331332
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 783331331}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.062, y: -0.126, z: 0}
-  m_LocalScale: {x: 0.30704, y: 0.30704, z: 0.30704}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1860548640}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &783331333
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 783331331}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1.8129747, z: 1.3019248}
-  m_Center: {x: 0, y: 0.40648738, z: 0.00933068}
---- !u!1001 &818696096
+--- !u!1001 &646017017
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1191,28 +1128,79 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5235569491112898639, guid: f4f836400565c0448bf62ba321a88780, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 5235569491112898639, guid: f4f836400565c0448bf62ba321a88780, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 7374836010346699785, guid: f4f836400565c0448bf62ba321a88780, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4f836400565c0448bf62ba321a88780, type: 3}
---- !u!1 &818696097 stripped
+--- !u!1 &646017018 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7374836010346699785, guid: f4f836400565c0448bf62ba321a88780, type: 3}
-  m_PrefabInstance: {fileID: 818696096}
+  m_PrefabInstance: {fileID: 646017017}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &668540913 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4695873388183018423, guid: 09975c50e0ee1c64684cdbd14923b48e, type: 3}
+  m_PrefabInstance: {fileID: 412132651}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &770434704 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2501087124736587111, guid: 09975c50e0ee1c64684cdbd14923b48e, type: 3}
+  m_PrefabInstance: {fileID: 412132651}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &783331331
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 783331332}
+  - component: {fileID: 783331333}
+  m_Layer: 0
+  m_Name: R Marcian Coll
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &783331332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783331331}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.062, y: -0.126, z: 0}
+  m_LocalScale: {x: 0.30704, y: 0.30704, z: 0.30704}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1860548640}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &783331333
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783331331}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.8129747, z: 1.3019248}
+  m_Center: {x: 0, y: 0.40648738, z: 0.00933068}
 --- !u!4 &831261780 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6470437031990930622, guid: 09975c50e0ee1c64684cdbd14923b48e, type: 3}
@@ -2974,10 +2962,10 @@ SceneRoots:
   - {fileID: 1985198706}
   - {fileID: 1616721690}
   - {fileID: 641413235}
-  - {fileID: 818696096}
   - {fileID: 412132651}
   - {fileID: 506692375}
   - {fileID: 553953128}
   - {fileID: 1942014319}
   - {fileID: 1599931271}
   - {fileID: 1038024601}
+  - {fileID: 646017017}
