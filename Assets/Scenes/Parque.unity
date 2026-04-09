@@ -6261,7 +6261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   gameState: {fileID: 11400000, guid: b00d5dd577a8a8f458d12412e3a8b51b, type: 2}
-  clearStateOnStart: 1
+  clearStateOnStart: 0
 --- !u!4 &2069785599
 Transform:
   m_ObjectHideFlags: 0

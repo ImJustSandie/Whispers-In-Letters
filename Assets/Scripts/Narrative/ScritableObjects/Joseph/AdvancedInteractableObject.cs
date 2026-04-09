@@ -4,6 +4,10 @@ public class AdvancedInteractableObject : MonoBehaviour, IInteractable
 {
     public AdvancedInteractableData data;
 
+    [Header("Audio")]
+    [Tooltip("Audio que se reproduce al interactuar exitosamente")]
+    public AudioEvent interactionSound;
+
     public string GetInteractionName()
     {
         return data != null ? data.interactionName : gameObject.name;
@@ -46,5 +50,11 @@ public class AdvancedInteractableObject : MonoBehaviour, IInteractable
         }
 
         StoryManager.Instance.StartStory(knot);
+
+        // Reproducir sonido de interacción
+        if (interactionSound != null)
+        {
+            interactionSound.PlaySFX();
+        }
     }
 }
