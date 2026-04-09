@@ -1725,6 +1725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AdvancedInteractableObject
   data: {fileID: 11400000, guid: 479692a6189fc2d44acc7ebf8dfa00a7, type: 2}
+  interactionSound: {fileID: 0}
 --- !u!4 &1075167808 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7134446639021718402, guid: 09975c50e0ee1c64684cdbd14923b48e, type: 3}
@@ -1905,15 +1906,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5067325131023357740, guid: e20ead91f76e42145a12ae4373a929c9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 5067325131023357740, guid: e20ead91f76e42145a12ae4373a929c9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 5067325131023357740, guid: e20ead91f76e42145a12ae4373a929c9, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 5067325131023357740, guid: e20ead91f76e42145a12ae4373a929c9, type: 3}
       propertyPath: m_LocalPosition.x

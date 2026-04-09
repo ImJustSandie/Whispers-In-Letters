@@ -812,6 +812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AdvancedInteractableObject
   data: {fileID: 11400000, guid: 9247be7210c3ffa4bb63d4901823d93a, type: 2}
+  interactionSound: {fileID: 0}
 --- !u!1001 &394693753
 PrefabInstance:
   m_ObjectHideFlags: 0
