@@ -53,7 +53,9 @@ Está bien. Total, ya me siento como un extraño en mi propia vida.
 Esa es la actitud que quería ver. Vamos, antes de que el arrepentimiento te alcance en la puerta del salón.
 
 #sprite:joseph_neutral
+#setflag:Desicion_DeCamino
 Solo por hoy. Solo por esta vez intentaré no pensar en las consecuencias.
+
 ->END
 
 === Joseph_Arcade_===

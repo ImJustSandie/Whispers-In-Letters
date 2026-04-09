@@ -782,6 +782,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2900221217359328154, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+      propertyPath: fallbackKnot
+      value: prologo_arcade_falta_objeto
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900221217359328154, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+      propertyPath: requiredFlag
+      value: prologue_arcade_item_collected
+      objectReference: {fileID: 0}
     - target: {fileID: 5419845811883684385, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
       propertyPath: m_LocalScale.x
       value: 11.52954
@@ -918,6 +926,111 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6eed8814d70fb14dbb293437fd51e34, type: 3}
+--- !u!1001 &570222260
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1486978961850026616, guid: 23bd8e8b994b3a84abfecb06f39da217, type: 3}
+      propertyPath: m_Name
+      value: Gamepad_Classic
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156984657478592334, guid: 23bd8e8b994b3a84abfecb06f39da217, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156984657478592334, guid: 23bd8e8b994b3a84abfecb06f39da217, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156984657478592334, guid: 23bd8e8b994b3a84abfecb06f39da217, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156984657478592334, guid: 23bd8e8b994b3a84abfecb06f39da217, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.87619984
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156984657478592334, guid: 23bd8e8b994b3a84abfecb06f39da217, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -1.0730353e-16
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156984657478592334, guid: 23bd8e8b994b3a84abfecb06f39da217, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.48194826
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156984657478592334, guid: 23bd8e8b994b3a84abfecb06f39da217, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156984657478592334, guid: 23bd8e8b994b3a84abfecb06f39da217, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156984657478592334, guid: 23bd8e8b994b3a84abfecb06f39da217, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156984657478592334, guid: 23bd8e8b994b3a84abfecb06f39da217, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1486978961850026616, guid: 23bd8e8b994b3a84abfecb06f39da217, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 570222263}
+    - targetCorrespondingSourceObject: {fileID: 1486978961850026616, guid: 23bd8e8b994b3a84abfecb06f39da217, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 570222262}
+  m_SourcePrefab: {fileID: 100100000, guid: 23bd8e8b994b3a84abfecb06f39da217, type: 3}
+--- !u!1 &570222261 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1486978961850026616, guid: 23bd8e8b994b3a84abfecb06f39da217, type: 3}
+  m_PrefabInstance: {fileID: 570222260}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &570222262
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570222261}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.36
+  m_Center: {x: -2.8429348e-10, y: 0.0109327575, z: 0.009539308}
+--- !u!114 &570222263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570222261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d21e08d194f9f3a489f2c64699786990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PrologueItemInteractable
+  flagToSetOnCollect: prologue_arcade_item_collected
+  inkKnotOnInteract: prologo_arcade_recoger_objeto
+  interactionName: Control
+  interactionSound: {fileID: 0}
 --- !u!1 &572681402
 GameObject:
   m_ObjectHideFlags: 0
@@ -1725,6 +1838,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AdvancedInteractableObject
   data: {fileID: 11400000, guid: 479692a6189fc2d44acc7ebf8dfa00a7, type: 2}
+  interactionSound: {fileID: 0}
+  visibilityConditions:
+  - conditionType: 2
+    flagName: 
+    variableKey: ruta
+    requiredValue: arcade
+  disappearAfterDialogue: 0
+  disappearCondition:
+    conditionType: 0
+    flagName: 
+    variableKey: 
+    requiredValue: 
+  disappearFadeDuration: -1
 --- !u!4 &1075167808 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7134446639021718402, guid: 09975c50e0ee1c64684cdbd14923b48e, type: 3}
@@ -2969,3 +3095,4 @@ SceneRoots:
   - {fileID: 1599931271}
   - {fileID: 1038024601}
   - {fileID: 646017017}
+  - {fileID: 570222260}

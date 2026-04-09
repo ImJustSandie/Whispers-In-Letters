@@ -39,6 +39,7 @@ Un café nos ayudaría más que una lección ahora mismo.
 #sprite:sophia_euforic
 #setvar:ruta:Decision_Biblioteca_1
 #setflag:Decision_Biblioteca_1
+#setflag:Desicion_DeCamino
 El café será tu recompensa si logras concentrarte una hora entera. ¡Andando!
 // Sophia y Joseph caminan hacia la biblioteca
 -> END
