@@ -11,6 +11,10 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private CanvasGroup fadeCanvasGroup;
     [SerializeField] private float fadeDuration = 1f;
 
+    /// <summary>Duración configurada del fade, para que otros sistemas puedan sincronizar sus waits.</summary>
+    public float FadeDuration => fadeDuration;
+
+
     private void Awake()
     {
         if (Instance == null)
@@ -99,15 +103,19 @@ public class LevelManager : MonoBehaviour
             fadeCanvasGroup.alpha = 1f;
         }
 
-        // 2. Registrar el historial en la persistencia atraves del GameManager
+        // 2. Registrar el historial en la persistencia a través del GameManager
         if (GameManager.Instance != null && GameManager.Instance.GetGameState() != null)
         {
             var state = GameManager.Instance.GetGameState();
             state.previousSceneName = SceneManager.GetActiveScene().name;
             state.currentSceneName = sceneName;
+
+            // Auto-save: persistir en disco antes de cambiar de escena.
+            // Así, si el juego se cierra durante la carga, el progreso no se pierde.
+            GameManager.Instance.SaveGame();
         }
 
-        // 3. Carga asincrona para no congelar el juego
+        // 3. Carga asíncrona para no congelar el juego
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
         
         if (asyncLoad == null)

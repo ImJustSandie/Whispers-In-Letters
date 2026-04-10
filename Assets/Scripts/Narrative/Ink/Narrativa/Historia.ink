@@ -5,6 +5,8 @@ INCLUDE Joseph_Arcade..ink
 INCLUDE Joseph_Arcade_Camino2.ink
 INCLUDE Objects.ink
 INCLUDE Joseph_Bibloteca_Camino2.ink
+INCLUDE Prologo.ink
+
 
 
 
@@ -98,7 +100,6 @@ EXTERNAL GetVar(varName)
   En unas dos horas. ¿Por qué?
   #sprite:sophia_euforic
   #setvar:ruta:desicion_Decamino
-  #setflag:Desicion_DeCamino 
   Dos horas es tiempo suficiente para cambiar el rumbo del día. ¡Vamos, camina!
   -> END
 === HandleDesicion_DeCamino ===

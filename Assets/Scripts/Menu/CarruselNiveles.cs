@@ -87,45 +87,26 @@ public class CarruselNiveles : MonoBehaviour
             candado.SetActive(true);
     }
 
-    [Tooltip("Arrastra aqui el objeto Estado (GameStateSO) para que el menu pueda leer la ultima escena sin necesitar un GameManager.")]
-    public GameStateSO gameState;
-
+    /// <summary>
+    /// Inicia el nivel seleccionado delegando completamente al GameManager.
+    /// El GameManager decide si cargar una partida existente o iniciar una nueva,
+    /// según si existe un save en disco.
+    ///
+    /// REGLA: CarruselNiveles NO debe acceder a GameStateSO ni a SaveSystem directamente.
+    /// </summary>
     public void CargarNivel()
     {
-        if (nivelActual == 0)
+        if (nivelActual != 0) return; // Por ahora solo el nivel 0 (Parque) está disponible
+
+        if (GameManager.Instance == null)
         {
-            string escenaDestino = "Parque"; // Escena por defecto
-
-            // Si le damos el reference por Inspector, leemos los datos directo del archivo SO.
-            // Asi evitamos problemas si el GameManager todavia no ha cargado en la escena inicial.
-            if (gameState != null)
-            {
-                string escenaGuardada = gameState.currentSceneName;
-                if (!string.IsNullOrEmpty(escenaGuardada))
-                {
-                    escenaDestino = escenaGuardada;
-                }
-            }
-            // Fallback por si usan GameManager en lugar de asignarlo directo
-            else if (GameManager.Instance != null && GameManager.Instance.GetGameState() != null)
-            {
-                string escenaGuardada = GameManager.Instance.GetGameState().currentSceneName;
-                if (!string.IsNullOrEmpty(escenaGuardada))
-                {
-                    escenaDestino = escenaGuardada;
-                }
-            }
-
-            Debug.Log($"[CarruselNiveles] Cargando partida en: {escenaDestino}");
-
-            if (LevelManager.Instance != null)
-            {
-                LevelManager.Instance.ChangeScene(escenaDestino);
-            }
-            else
-            {
-                SceneManager.LoadScene(escenaDestino);
-            }
+            // Fallback de emergencia solo para debug directo desde escena de menú
+            Debug.LogWarning("[CarruselNiveles] GameManager no encontrado. Cargando escena directamente (solo para debug).");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Parque");
+            return;
         }
+
+        // Delegamos completamente: el GameManager verifica el save y decide el flujo.
+        GameManager.Instance.RequestLoadLevel("Parque");
     }
-}
+}

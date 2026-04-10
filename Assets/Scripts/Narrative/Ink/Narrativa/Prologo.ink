@@ -1,0 +1,72 @@
+// ============================================================
+// PRÓLOGO — Whispers in Letters
+// Archivo: Prologo.ink
+// Incluido desde Historia.ink
+//
+// KNOTS DISPONIBLES:
+//   prologo_parque_inicio          → Sophia llega al parque (primera vez)
+//   prologo_arcade_llegada         → Sophia llega al Arcade
+//   prologo_arcade_recoger_objeto  → Sophia recoge el objeto del Arcade
+//   prologo_arcade_falta_objeto    → Fallback: intenta salir sin recoger
+//   prologo_biblioteca_llegada     → Sophia llega a la Biblioteca
+//   prologo_biblioteca_recoger_obj → Sophia recoge el objeto de la Biblioteca
+//   prologo_biblioteca_falta_objeto→ Fallback: intenta salir sin recoger
+//   prologo_parque_final           → Joseph aparece, prólogo termina
+// ============================================================
+
+=== prologo_parque_inicio ===
+#sprite:sophia_neutral
+Espera... creo que me dejé algo en el arcade.
+#sprite:sophia_thinking
+Debería ir a buscarlo antes de que se haga tarde.
+-> END
+
+=== prologo_arcade_llegada ===
+#sprite:sophia_neutral
+Aquí estaba. Déjame revisar dónde lo dejé...
+-> END
+
+=== prologo_arcade_recoger_objeto ===
+#sprite:sophia_euforic
+¡Aquí está! Menos mal.
+#sprite:sophia_thinking
+Aunque... también tengo algo pendiente en la biblioteca.
+Creo que debería pasarme por allá antes de volver.
+-> END
+
+=== prologo_arcade_falta_objeto ===
+#sprite:sophia_neutral
+Todavía no he encontrado lo que vine a buscar.
+Debería seguir mirando por aquí.
+-> END
+
+=== prologo_biblioteca_llegada ===
+#sprite:sophia_neutral
+La biblioteca. Siempre tan tranquila a esta hora.
+#sprite:sophia_thinking
+Vamos, tiene que estar por algún lado...
+-> END
+
+=== prologo_biblioteca_recoger_obj ===
+#sprite:sophia_euforic
+¡Lo encontré!
+#sprite:sophia_neutral
+#setflag:prologue_completed
+Bien. Ya tengo todo lo que necesitaba.
+Supongo que puedo volver al parque ahora.
+-> END
+
+=== prologo_biblioteca_falta_objeto ===
+#sprite:sophia_neutral
+Aún no encuentro lo que vine a buscar aquí.
+Debería revisarlo bien antes de irme.
+-> END
+
+=== prologo_parque_final ===
+#sprite:sophia_neutral
+...
+#sprite:sophia_thinking
+Ese es Joseph.
+#sprite:sophia_euforic
+¡Joseph! Espera, voy a hablar con él.
+-> END

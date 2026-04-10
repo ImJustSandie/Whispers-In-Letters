@@ -812,6 +812,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AdvancedInteractableObject
   data: {fileID: 11400000, guid: 9247be7210c3ffa4bb63d4901823d93a, type: 2}
+  interactionSound: {fileID: 0}
+  visibilityConditions:
+  - conditionType: 2
+    flagName: 
+    variableKey: ruta
+    requiredValue: biblioteca
+  disappearAfterDialogue: 0
+  disappearCondition:
+    conditionType: 0
+    flagName: 
+    variableKey: 
+    requiredValue: 
+  disappearFadeDuration: -1
 --- !u!1001 &394693753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -823,6 +836,14 @@ PrefabInstance:
     - target: {fileID: 2454259149512531947, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900221217359328154, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+      propertyPath: fallbackKnot
+      value: prologo_biblioteca_falta_objeto
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900221217359328154, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+      propertyPath: requiredFlag
+      value: prologue_library_item_collected
       objectReference: {fileID: 0}
     - target: {fileID: 5419845811883684385, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2370,8 +2391,56 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2501087124736587111, guid: f181d6123494e4e478d357b8080ddce6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1463175153}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -4333109128523465833, guid: f181d6123494e4e478d357b8080ddce6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1383922793}
+    - targetCorrespondingSourceObject: {fileID: -4333109128523465833, guid: f181d6123494e4e478d357b8080ddce6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1383922792}
   m_SourcePrefab: {fileID: 100100000, guid: f181d6123494e4e478d357b8080ddce6, type: 3}
+--- !u!1 &1383922791 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4333109128523465833, guid: f181d6123494e4e478d357b8080ddce6, type: 3}
+  m_PrefabInstance: {fileID: 1383922790}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1383922792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383922791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d21e08d194f9f3a489f2c64699786990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PrologueItemInteractable
+  flagToSetOnCollect: prologue_library_item_collected
+  inkKnotOnInteract: prologo_biblioteca_recoger_obj
+  interactionName: Papel
+  interactionSound: {fileID: 0}
+--- !u!135 &1383922793
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383922791}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.13
+  m_Center: {x: 0.012051093, y: -0.16214333, z: 0.055654615}
 --- !u!4 &1390620768 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4520190644874201910, guid: f181d6123494e4e478d357b8080ddce6, type: 3}
