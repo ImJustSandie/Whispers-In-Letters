@@ -16,21 +16,22 @@
 
 === prologo_parque_inicio ===
 #sprite:sophia_neutral
-Espera... creo que me dejé algo en el arcade.
+Espera... creo que me dejé el control en el arcade.
 #sprite:sophia_thinking
 Debería ir a buscarlo antes de que se haga tarde.
 -> END
 
 === prologo_arcade_llegada ===
 #sprite:sophia_neutral
-Aquí estaba. Déjame revisar dónde lo dejé...
+El arcade tambien llamado el templo del presente. 
+Déjame revisar dónde lo dejé...
 -> END
 
 === prologo_arcade_recoger_objeto ===
 #sprite:sophia_euforic
 ¡Aquí está! Menos mal.
 #sprite:sophia_thinking
-Aunque... también tengo algo pendiente en la biblioteca.
+Aunque... también recuerdo que deje un pergamino en la biblioteca.
 Creo que debería pasarme por allá antes de volver.
 -> END
 

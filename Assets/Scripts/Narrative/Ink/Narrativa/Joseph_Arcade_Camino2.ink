@@ -34,7 +34,7 @@ Que deberia hacer con joseph
 #setvar:ruta:Oportunidad
 #sprite:sophia_euforic
 Aquí joseph encontro la razón de vida despues de todo No es un fracasado, solo tenías otro enfoque
--> END
+-> Camino_1_2_Joseph_Arcade
 +[Eso no vale para nada]
 #setvar:ruta:sacarlo
 #sprite:sophia_neutral

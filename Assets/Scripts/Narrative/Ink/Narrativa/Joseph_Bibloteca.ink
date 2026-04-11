@@ -32,18 +32,55 @@ Esta vez es diferente porque no vas a estar solo. Vamos a vencer ese miedo junto
 
 #sprite:sophia_neutral
 Míralo como un entrenamiento para tu espíritu. Vamos, Joseph, antes de que pierdas el valor.
+// Sophia y Joseph caminan hacia la biblioteca
+
+
+-> END
+==== Joseph_Bibloteca===
+#setflag:Joseph_Bibloteca
+#sprite:sophia_neutral
+Ya estamos aquí. Mira este lugar… el silencio casi se puede tocar.
 
 #sprite:joseph_neutral
-Un café nos ayudaría más que una lección ahora mismo.
+Es más imponente de lo que recordaba.
 
-#sprite:sophia_euforic
+#sprite:joseph_neutral
+Esas computadoras… parecen de otra época. Como si el tiempo se hubiera detenido para que nadie deje de estudiar.
+
+#sprite:sophia_thinking
+Es un refugio. Aquí el ruido del exterior no existe.
+
+#sprite:sophia_neutral
+Solo estás tú… y lo que decidas aprender.
+
+#sprite:joseph_sad
+(Suspira)
+Solo espero que este “refugio” no termine siendo otra celda.
+
+#sprite:sophia_neutral
+Empieza por algo pequeño. No tienes que entenderlo todo hoy.
+
+#sprite:joseph_neutral
+…Supongo que puedo intentarlo.
+
+#sprite:joseph_neutral
+voy a tomar un libro de la estantería, lo observare un momento
+
+#sprite:joseph_sad
+Hace tiempo que no abro uno sin sentir presión…
+
+#sprite:sophia_thinking
+Entonces no lo hagas por presión.
+
+#sprite:sophia_neutral
+Hazlo por curiosidad. Solo una página.
+
+#sprite:joseph_neutral
+…Está bien. Una página.
 #setvar:ruta:Decision_Biblioteca_1
 #setflag:Decision_Biblioteca_1
 #setflag:Desicion_DeCamino
-El café será tu recompensa si logras concentrarte una hora entera. ¡Andando!
-// Sophia y Joseph caminan hacia la biblioteca
--> END
-
+-> Decision_Biblioteca_1 
 
 === HandleDecision_Biblioteca_1 ===
 {

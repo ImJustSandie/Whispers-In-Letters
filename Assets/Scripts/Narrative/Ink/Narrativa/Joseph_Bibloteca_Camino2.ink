@@ -5,33 +5,55 @@
 Es inútil, Sophia... por más que lo intente, estas palabras son solo ruido para mí.
 
 #sprite:sophia_sad
-Veo el esfuerzo en tus ojos, pero también veo que tu mente se bloquea.
+Veo el esfuerzo en tus ojos… pero también cómo tu mente se bloquea cada vez que intentas avanzar.
 
 #sprite:joseph_sad
-No es falta de ganas... simplemente no tengo las herramientas para procesar esto.
+No es falta de ganas... simplemente no tengo las herramientas para procesarlo.
 
 #sprite:sophia_thinking
-A veces insistir no es virtud, sino una forma de tortura.
+A veces insistir no es una virtud… sino una forma de lastimarte sin darte cuenta.
 
 #sprite:joseph_sad
-Mis compañeros ya terminaron... y yo sigo en la introducción.
+Mis compañeros ya terminaron… y yo sigo atrapado en la introducción.
+
+#sprite:joseph_sad
+Es como si todos estuvieran leyendo el mismo idioma… y yo estuviera mirando símbolos que no encajan en nada.
 
 #sprite:sophia_neutral
-Quizás estamos forzando una cerradura que no tiene llave para ti.
+Quizás no es que no puedas… sino que estás intentando abrirlo de la forma equivocada.
+
+#sprite:sophia_thinking
+No todas las cerraduras están hechas para la misma llave.
 
 #sprite:joseph_sad
-Es doloroso admitirlo... pero este es mi límite.
+Es doloroso admitirlo… pero este es mi límite.
+
+#sprite:joseph_sad
+Y cada vez que lo intento más, solo me siento más atrás.
 
 #sprite:sophia_sad
-Forzarlo más solo te va a romper.
+Forzarlo más no te va a hacer avanzar… solo te va a romper.
 
-#sprite:joseph_neutral
-Tienes razón... voy a cerrar el libro.
+#sprite:joseph_sad
+Tienes razón… ya no sé si estoy aprendiendo o solo sobreviviendo a esto.
+
+#sprite:joseph_sad
+Voy a cerrar el libro.
+
+#sprite:joseph_sad
+Se siente extraño… como rendirme en silencio.
 
 #sprite:sophia_neutral
+No es rendirse.
+
+#sprite:sophia_neutral
+Es dejar de pelear una batalla que no está hecha para ganarse así.
+
 #setvar:ruta:decision_biblioteca_3
 #setflag:decision_biblioteca_3
-No tiene sentido pelear una batalla perdida.
+
+#sprite:sophia_neutral
+No tiene sentido seguir rompiéndote contra algo que no responde.
 -> END
 
 === HandleDecision_Biblioteca_3 ===
@@ -72,30 +94,47 @@ Joseph, detente. No vamos a leer ni una sola línea más.
 Creer en lo imposible también puede ser un error.
 
 #sprite:sophia_neutral
-Seguir aquí solo va a desgastarte.
+Seguir aquí no te está formando… te está desgastando.
 
 #sprite:joseph_sad
 Entonces... ¿soy un caso perdido?
 
 #sprite:sophia_neutral
-Para este camino, sí. Y seguir insistiendo sería perder más de tu vida.
+No. Pero este camino no es para ti. Y seguir insistiendo solo te va a vaciar más.
 
 #sprite:joseph_sad
-Se siente como un vacío... pero también como si me quitaras un peso enorme.
+He invertido tanto tiempo… tantos intentos…
+Dejarlo ahora se siente como confirmar que todos tenían razón sobre mí.
 
 #sprite:sophia_thinking
-Tu energía debería ir a un lugar donde no luches contra tu propia naturaleza.
+O como dejar de demostrarles que no la tenían.
 
 #sprite:joseph_neutral
-Estoy cansado de pelear contra una pared que no se mueve.
-
-#sprite:sophia_neutral
-Entonces vámonos. Este lugar ya no tiene nada más para ti.
+Estoy cansado… de estudiar sin entender, de avanzar sin sentir nada.
 
 #sprite:joseph_sad
+Es como golpear una pared que no se rompe… y empezar a romperme yo.
+
+#sprite:sophia_neutral
+Entonces deja de golpearla.
+
+#sprite:sophia_thinking
+Tu energía debería ir a un lugar donde no luches contra ti mismo.
+
+#sprite:joseph_neutral
+Se siente vacío… pero también más ligero.
+
+#sprite:sophia_neutral
+Eso no es derrota. Es espacio.
+
+#sprite:joseph_sad
+Nunca pensé que rendirme se sentiría así…
+
 #setvar:ruta:Epilogo4
 #setflag:Final_Alcanzado
-Adiós a los libros... supongo que este nunca fue mi camino.
+
+#sprite:joseph_sad
+Adiós a los libros… supongo que este nunca fue mi camino.
 -> END
 
 { GetVar("ruta") == "Epilogo4": -> epilogo_nietzsche }
