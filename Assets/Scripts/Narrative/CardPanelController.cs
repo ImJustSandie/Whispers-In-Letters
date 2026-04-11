@@ -93,6 +93,8 @@ public class CardPanelController : MonoBehaviour
             if (isAcceptance)
             {
                 GameManager.Instance.SetStoryFlag("Carta_Aceptacion_Leida", true);
+                // Guardamos exclusivamente la ruta de la carta de aceptación para la reflexión final en la cama
+                GameManager.Instance.SetStoryVariable("carta_aceptacion_ruta", entry.rutaValue);
             }
         }
     }

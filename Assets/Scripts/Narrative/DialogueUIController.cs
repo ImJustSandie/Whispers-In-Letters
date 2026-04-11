@@ -21,6 +21,27 @@ public class DialogueUIController : MonoBehaviour
     [SerializeField] private float typewriterSpeed = 0.05f;
     [SerializeField] private float choiceButtonMinHeight = 60f;
 
+    [Header("Audio")]
+    [Tooltip("El sonido que se reproduce al saltar a la siguiente línea del diálogo.")]
+    [SerializeField] private AudioEvent advanceDialogueSound;
+
+    [Tooltip("El bip constante que suena mientras se escribe el texto automáticamente.")]
+    [SerializeField] private AudioEvent typewriterBeepSound;
+
+    [Tooltip("Frecuencia de bips (1 = cada letra, 3 = cada 3 letras, etc.). Ajusta para que suene natural sin aturdir.")]
+    [SerializeField] private int lettersPerBeep = 2;
+
+    [System.Serializable]
+    public struct CharacterVoice
+    {
+        public string characterId; // ej: "sophia"
+        public AudioEvent voiceBeep;
+    }
+
+    [Header("Voces por Personaje")]
+    [Tooltip("Define los bips para cada personaje (usa el mismo nombre que el prefijo del sprite, ej: 'sophia' para 'sophia_happy'). Si no hay coincidencia, usa el por defecto.")]
+    [SerializeField] private List<CharacterVoice> characterVoices = new List<CharacterVoice>();
+
     // Evento que se dispara al finalizar el dialogo
     public event Action OnDialogueEnded;
 
@@ -28,16 +49,21 @@ public class DialogueUIController : MonoBehaviour
     private Coroutine typewriterCoroutine;
     private bool isTyping;
     private string currentLineText;
+    private AudioEvent defaultTypewriterBeepSound;
 
     private void Awake()
     {
+        // Guardamos el sonido por defecto para restaurarlo si el personaje no tiene voz configurada
+        defaultTypewriterBeepSound = typewriterBeepSound;
+
         if (tagProcessor != null)
         {
-            // Suscribir a eventos que disparan cambios visuales a raiz de tags
+            // Suscribir a eventos visuales y auditivos que vienen de Ink
             tagProcessor.OnPortraitSpriteChanged += UpdatePortraitImage;
+            tagProcessor.OnCharacterSpeaking += UpdateTypewriterVoice;
         }
 
-        // Asegurarse de ocultar inicialmente la imagen de retrato si esta vacia
+        // Asegurarse de ocultar inicialmente la imagen de retrato
         if (portraitImage != null && portraitImage.sprite == null)
         {
             portraitImage.gameObject.SetActive(false);
@@ -49,6 +75,25 @@ public class DialogueUIController : MonoBehaviour
         if (tagProcessor != null)
         {
             tagProcessor.OnPortraitSpriteChanged -= UpdatePortraitImage;
+            tagProcessor.OnCharacterSpeaking -= UpdateTypewriterVoice;
+        }
+    }
+
+    private void UpdateTypewriterVoice(string characterId)
+    {
+        if (string.IsNullOrEmpty(characterId)) return;
+
+        // Usamos string.Equals que es seguro contra strings nulos (por si dejaron campos vacíos en el Inspector)
+        int index = characterVoices.FindIndex(v => string.Equals(v.characterId, characterId, StringComparison.OrdinalIgnoreCase));
+        
+        if (index >= 0 && characterVoices[index].voiceBeep != null)
+        {
+            typewriterBeepSound = characterVoices[index].voiceBeep;
+        }
+        else
+        {
+            // Fallback al sonido maestro
+            typewriterBeepSound = defaultTypewriterBeepSound;
         }
     }
 
@@ -97,6 +142,12 @@ public class DialogueUIController : MonoBehaviour
         {
             currentLineText = story.Continue().Trim(); // Limpiar espacios en blanco al inicio o final
             
+            // Reproducir sonido si está configurado
+            if (advanceDialogueSound != null)
+            {
+                advanceDialogueSound.PlaySFX();
+            }
+
             // Procesamos los tags de la linea actual para cualquier efecto visual, de audio o sprite
             if (tagProcessor != null)
             {
@@ -221,10 +272,23 @@ public class DialogueUIController : MonoBehaviour
         // Ocultamos las opciones mientras se escribe el texto
         ClearChoices();
 
+        int letterIndex = 0;
+
         foreach (char letter in line.ToCharArray())
         {
             dialogueText.text += letter;
             
+            // Producir sonido estilo "Typewriter beep" al ritmo configurado
+            // Y no reproducimos el bip si el carácter es un espacio, para dar una pausa natural.
+            if (typewriterBeepSound != null && !char.IsWhiteSpace(letter))
+            {
+                if (letterIndex % lettersPerBeep == 0)
+                {
+                    typewriterBeepSound.PlaySFX();
+                }
+            }
+            letterIndex++;
+
             float currentSpeed = typewriterSpeed;
             if (StoryManager.Instance != null && StoryManager.Instance.IsSkippingMode)
             {

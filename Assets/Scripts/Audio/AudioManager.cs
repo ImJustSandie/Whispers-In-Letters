@@ -75,4 +75,37 @@ public class AudioManager : MonoBehaviour
     {
         MusicAudioSource.Stop();
     }
+
+    // ==== MÉTODOS DE ACTUALIZACIÓN EN TIEMPO REAL ====
+
+    public void SetMusicVolume(float volume)
+    {
+        musicVolume = Mathf.Clamp01(volume);
+        MusicAudioSource.volume = musicVolume; // Asumiendo que la escala de AudioEvent era 1. (Ideal si tus clips ya están normalizados)
+    }
+
+    public void SetSFXVolume(float volume)
+    {
+        sfxVolume = Mathf.Clamp01(volume);
+    }
+
+    public void SetUIVolume(float volume)
+    {
+        uiVolume = Mathf.Clamp01(volume);
+    }
+
+    // OnValidate se ejecuta automáticamente cada vez que cambias un valor en el Inspector de Unity
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        if (Application.isPlaying)
+        {
+            if (MusicAudioSource != null && MusicAudioSource.isPlaying)
+            {
+                // Actualiza en vivo. Nota: Ignora el localVolume del AudioEvent en este refresh rápido
+                MusicAudioSource.volume = musicVolume; 
+            }
+        }
+    }
+#endif
 }

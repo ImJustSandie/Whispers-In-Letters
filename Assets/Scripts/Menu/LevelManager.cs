@@ -36,11 +36,14 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    private bool isTransitioning = false;
+
     /// <summary>
     /// Cambia a la escena indicada aplicando transiciones visuales.
     /// </summary>
     public void ChangeScene(string sceneName)
     {
+        if (isTransitioning) return;
         StartCoroutine(TransitionToScene(sceneName.Trim()));
     }
 
@@ -88,6 +91,8 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator TransitionToScene(string sceneName)
     {
+        isTransitioning = true;
+        
         // 1. Efecto Fade Out (Oscurecer pantalla)
         if (fadeCanvasGroup != null)
         {
@@ -121,6 +126,7 @@ public class LevelManager : MonoBehaviour
         if (asyncLoad == null)
         {
             Debug.LogError($"[LevelManager] No se pudo cargar la escena '{sceneName}'. ¿Aseguraste agregarla en File -> Build Settings?");
+            isTransitioning = false;
             yield break; // Detener la corrutina para evitar errores
         }
 
@@ -147,6 +153,8 @@ public class LevelManager : MonoBehaviour
             fadeCanvasGroup.blocksRaycasts = false;
             fadeCanvasGroup.gameObject.SetActive(false); // Apagarlo para que no estorbe en el Editor ni en el juego
         }
+
+        isTransitioning = false;
     }
 
     /// <summary>
