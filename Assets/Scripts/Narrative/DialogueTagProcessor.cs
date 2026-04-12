@@ -10,6 +10,9 @@ public class DialogueTagProcessor : MonoBehaviour
     // Evento para separar la logica de parseo de la interfaz visual
     public event Action<Sprite> OnPortraitSpriteChanged;
     
+    // Evento para avisar qué personaje está hablando (ej: "sophia", para adaptar su voz)
+    public event Action<string> OnCharacterSpeaking;
+
     public bool PendingFadeOut { get; set; }
 
     private const string SPRITE_TAG = "sprite";
@@ -48,6 +51,15 @@ public class DialogueTagProcessor : MonoBehaviour
                         }
                         break;
                         
+                    case "deleteflag":
+                        if (GameManager.Instance != null)
+                        {
+                            // Elimina un flag dejándolo en falso
+                            GameManager.Instance.SetStoryFlag(tagValue, false);
+                            Debug.Log($"[Ink] Decisión eliminada del GameState (borrada): {tagValue}");
+                        }
+                        break;
+                        
                     case "setvar":
                         if (GameManager.Instance != null && splitTag.Length >= 3)
                         {
@@ -73,6 +85,14 @@ public class DialogueTagProcessor : MonoBehaviour
 
     private void HandleSpriteTag(string spriteId)
     {
+        // 1. Extraer nombre base del personaje (e.g. "sophia" de "sophia_happy")
+        string[] parts = spriteId.Split('_');
+        if (parts.Length > 0)
+        {
+            OnCharacterSpeaking?.Invoke(parts[0]);
+        }
+
+        // 2. Procesar el retrato visual
         if (portraitData == null)
         {
             Debug.LogWarning("[DialogueTagProcessor] No hay CharacterPortraitData asignado en el Inspector.");

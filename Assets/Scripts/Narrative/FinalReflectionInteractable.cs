@@ -46,8 +46,8 @@ public class FinalReflectionInteractable : MonoBehaviour, IInteractable
             return;
         }
 
-        // 3. Obtener qué carta fue la última leída
-        string ultimaCarta = GameManager.Instance.GetStoryVariable("ultima_carta_leida");
+        // 3. Obtener qué carta fue la elegida en la aceptación
+        string ultimaCarta = GameManager.Instance.GetStoryVariable("carta_aceptacion_ruta");
         string selectedReflectionKnot = defaultReflectionKnot;
 
         if (!string.IsNullOrEmpty(ultimaCarta))

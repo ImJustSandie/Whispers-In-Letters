@@ -900,6 +900,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 11400000, guid: 81b288779ef34bc49b3cc4d9ccba4213, type: 2}
+        m_TargetAssemblyTypeName: AudioEvent, Assembly-CSharp
+        m_MethodName: PlayUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 558076321}
         m_TargetAssemblyTypeName: MenuInicio, Assembly-CSharp
         m_MethodName: MostrarAjustes
@@ -1278,6 +1290,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 11400000, guid: 81b288779ef34bc49b3cc4d9ccba4213, type: 2}
+        m_TargetAssemblyTypeName: AudioEvent, Assembly-CSharp
+        m_MethodName: PlayUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 558076321}
         m_TargetAssemblyTypeName: MenuInicio, Assembly-CSharp
         m_MethodName: MostrarCreditos
@@ -1668,9 +1692,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2064189035240888415, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
-      propertyPath: clearStateOnStart
-      value: 1
+    - target: {fileID: 694720348087310390, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2966658357349865118, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: musicVolume
+      value: 0.062
       objectReference: {fileID: 0}
     - target: {fileID: 5638436678370919060, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: m_Name
@@ -1719,13 +1747,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5638436678370919060, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1728045472}
-    - targetCorrespondingSourceObject: {fileID: 5638436678370919060, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1728045476}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
 --- !u!1 &322299454
 GameObject:
@@ -3534,6 +3556,7 @@ MonoBehaviour:
   panelAjustes: {fileID: 901741292}
   panelNiveles: {fileID: 1218654884}
   animPanelNiveles: {fileID: 328667526}
+  clickSound: {fileID: 0}
 --- !u!224 &558076322
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3792,6 +3815,52 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &657935573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 657935575}
+  - component: {fileID: 657935574}
+  m_Layer: 0
+  m_Name: SceneMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &657935574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657935573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2039a1e44387094ca71403604246aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneMusicStarter
+  sceneMusic: {fileID: 11400000, guid: 97200d530a84d7849964b7a20e5b7140, type: 2}
+  playOnStart: 1
+--- !u!4 &657935575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657935573}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 703.18616, y: 0, z: 1431.7456}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &703290422
 GameObject:
   m_ObjectHideFlags: 0
@@ -4223,6 +4292,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 11400000, guid: 81b288779ef34bc49b3cc4d9ccba4213, type: 2}
+        m_TargetAssemblyTypeName: AudioEvent, Assembly-CSharp
+        m_MethodName: PlayUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1417199816}
         m_TargetAssemblyTypeName: CarruselNiveles, Assembly-CSharp
         m_MethodName: NivelAnterior
@@ -4967,6 +5048,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 11400000, guid: 81b288779ef34bc49b3cc4d9ccba4213, type: 2}
+        m_TargetAssemblyTypeName: AudioEvent, Assembly-CSharp
+        m_MethodName: PlayUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 558076321}
         m_TargetAssemblyTypeName: MenuInicio, Assembly-CSharp
         m_MethodName: VolverMenu
@@ -5701,7 +5794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventSystem
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1439758531}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1236762345
@@ -6813,6 +6906,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 11400000, guid: 68847f1d71b1efb41a905829e0884430, type: 2}
+        m_TargetAssemblyTypeName: AudioEvent, Assembly-CSharp
+        m_MethodName: PlayUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 558076321}
         m_TargetAssemblyTypeName: MenuInicio, Assembly-CSharp
         m_MethodName: Jugar
@@ -7383,6 +7488,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 11400000, guid: 81b288779ef34bc49b3cc4d9ccba4213, type: 2}
+        m_TargetAssemblyTypeName: AudioEvent, Assembly-CSharp
+        m_MethodName: PlayUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 558076321}
         m_TargetAssemblyTypeName: MenuInicio, Assembly-CSharp
         m_MethodName: Salir
@@ -7995,6 +8112,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 11400000, guid: 81b288779ef34bc49b3cc4d9ccba4213, type: 2}
+        m_TargetAssemblyTypeName: AudioEvent, Assembly-CSharp
+        m_MethodName: PlayUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1417199816}
         m_TargetAssemblyTypeName: CarruselNiveles, Assembly-CSharp
         m_MethodName: SiguienteNivel
@@ -8306,41 +8435,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1728045471 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5638436678370919060, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
-  m_PrefabInstance: {fileID: 296831563}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1728045472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1728045471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e75b6548f02b1f4c9e80b3514a3afc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
-  MusicAudioSource: {fileID: 0}
-  UIAudioSource: {fileID: 0}
-  SFXAudioSource: {fileID: 0}
-  musicVolume: 1
-  uiVolume: 1
-  sfxVolume: 1
---- !u!114 &1728045476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1728045471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51c03f3e60f633c438ceaa11cf8ab607, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PrologueManager
 --- !u!1 &1756762352
 GameObject:
   m_ObjectHideFlags: 0
@@ -10137,6 +10231,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 11400000, guid: 81b288779ef34bc49b3cc4d9ccba4213, type: 2}
+        m_TargetAssemblyTypeName: AudioEvent, Assembly-CSharp
+        m_MethodName: PlayUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2050723114}
         m_TargetAssemblyTypeName: MenuBotones, Assembly-CSharp
         m_MethodName: IrAlMenu
@@ -10286,4 +10392,5 @@ SceneRoots:
   - {fileID: 1417199817}
   - {fileID: 2050723115}
   - {fileID: 596414020}
+  - {fileID: 657935575}
   - {fileID: 296831563}

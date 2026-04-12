@@ -48,7 +48,7 @@ MonoBehaviour:
     - conditionType: 2
       flagName: 
       variableKey: ruta
-      requiredValue: desicion2
+      requiredValue: vocacion
   - description: Arcade Desicion 2 (Motivacion)
     inkKnot: HandleDesicion2_Arcade
     conditions:
