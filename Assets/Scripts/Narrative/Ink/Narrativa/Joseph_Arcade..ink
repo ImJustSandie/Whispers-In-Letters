@@ -59,6 +59,7 @@ Vamos, antes de que te arrepientas.
 #sprite:joseph_neutral
 #setflag:Desicion_DeCamino
 Solo por hoy.
+#scene: Arcade
 
 ->END
 
@@ -238,6 +239,7 @@ Gracias, Sophia… nunca me había sentido así de validado.
 
 #setvar:ruta:Epilogo1
 #setflag:Final_Alcanzado
+#deleteflag:exploracion
 
 #sprite:sophia_neutral
 No mires atrás. Corre antes de que la duda vuelva.

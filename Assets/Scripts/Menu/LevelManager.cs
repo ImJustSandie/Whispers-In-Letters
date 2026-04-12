@@ -11,6 +11,10 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private CanvasGroup fadeCanvasGroup;
     [SerializeField] private float fadeDuration = 1f;
 
+    [Header("Audio")]
+    [Tooltip("Sonido a reproducir cuando se transiciona a otra escena")]
+    [SerializeField] private AudioEvent sceneTransitionSound;
+
     /// <summary>Duración configurada del fade, para que otros sistemas puedan sincronizar sus waits.</summary>
     public float FadeDuration => fadeDuration;
 
@@ -92,6 +96,11 @@ public class LevelManager : MonoBehaviour
     private IEnumerator TransitionToScene(string sceneName)
     {
         isTransitioning = true;
+
+        if (sceneTransitionSound != null)
+        {
+            sceneTransitionSound.PlaySFX();
+        }
         
         // 1. Efecto Fade Out (Oscurecer pantalla)
         if (fadeCanvasGroup != null)

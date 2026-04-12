@@ -122,6 +122,7 @@ Dare una vuelta y luego sigo hablando con joseph
     No te culpes tanto… al menos ahora sé que, aunque cueste, mi lugar está allá afuera.
     #setvar:ruta:epilogo2 
     #setflag:Final_Alcanzado
+    #deleteflag:exploracion
 { GetVar("ruta") == "epilogo2": -> epilogo_hegel }
     ->END
     

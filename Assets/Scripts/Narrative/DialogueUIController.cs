@@ -76,6 +76,10 @@ public class DialogueUIController : MonoBehaviour
             tagProcessor.OnCharacterSpeaking += UpdateTypewriterVoice;
             tagProcessor.OnSoundRequested += HandleSoundRequested;
         }
+        else
+        {
+            Debug.LogWarning("[DialogueUIController] No hay un TagProcessor asignado. Los tags de #sonido y #sprite no funcionarán.");
+        }
 
         // Asegurarse de ocultar inicialmente la imagen de retrato
         if (portraitImage != null && portraitImage.sprite == null)
@@ -99,14 +103,30 @@ public class DialogueUIController : MonoBehaviour
         // Encontrar el sonido en la lista
         int index = dialogueSounds.FindIndex(s => string.Equals(s.soundId, soundId, StringComparison.OrdinalIgnoreCase));
         
-        if (index >= 0 && dialogueSounds[index].audioEvent != null)
+        if (index >= 0)
         {
-            dialogueSounds[index].audioEvent.PlaySFX();
-            // Asignamos el delay basado en la duracion del clip para que Typewriter espere
-            if (dialogueSounds[index].audioEvent.clip != null)
+            if (dialogueSounds[index].audioEvent != null)
             {
-                currentDelayBeforeTyping = dialogueSounds[index].audioEvent.clip.length;
+                dialogueSounds[index].audioEvent.PlaySFX();
+                
+                // Asignamos el delay basado en la duracion del clip para que Typewriter espere
+                if (dialogueSounds[index].audioEvent.clip != null)
+                {
+                    currentDelayBeforeTyping = dialogueSounds[index].audioEvent.clip.length;
+                }
+                else
+                {
+                    Debug.LogWarning($"[DialogueUIController] El tag #sonido:{soundId} se detectó, pero el AudioEvent no tiene un Clip asignado.");
+                }
             }
+            else
+            {
+                Debug.LogWarning($"[DialogueUIController] Se detectó el tag #sonido:{soundId}, pero el AudioEvent en la lista Dialogue Sounds es NULL.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning($"[DialogueUIController] Se llamó al tag #sonido:{soundId}, pero esa ID no existe en la lista 'Dialogue Sounds' del Inspector.");
         }
     }
 
@@ -153,6 +173,11 @@ public class DialogueUIController : MonoBehaviour
         ClearChoices();
         UpdatePortraitImage(null);
         isFirstLineInDialogueSequence = true;
+
+        if (tagProcessor != null)
+        {
+            tagProcessor.PendingFadeOut = false;
+        }
     }
 
     /// <summary>

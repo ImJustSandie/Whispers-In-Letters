@@ -8,9 +8,6 @@ INCLUDE Joseph_Bibloteca_Camino2.ink
 INCLUDE Prologo.ink
 
 
-
-
-
 // Declarar funciones externas para conectar con el GameManager de Unity
 EXTERNAL GetFlag(flagName)
 EXTERNAL GetVar(varName)
@@ -27,6 +24,7 @@ EXTERNAL GetVar(varName)
  #sprite:joseph_neutral
  Ah, hola Sophia, que bueno encontrarte.
  #sprite:joseph_sad
+ #sonido: joseph_suspira
   La verdad no. Es lo mismo de siempre, pero más pesado...
    #setvar:ruta:desicion_prologo
   -> Joseph1_Prologo_Reencuentro
@@ -143,8 +141,22 @@ Que deberia hacer con joseph
      
 === Habitacion_Bloqueada ===
 #sprite:sophia_neutral
-Aun no deberia ir a mi habitacion, tengo cosas que hacer.
+Aun no deberia ir a mi casa, tengo cosas que hacer.
 -> END
+
+=== Confirmacion_Entrar_Cuarto ===
+#sprite:sophia_thinking
+Estoy a punto de entrar a mi cuarto. Siento que si entro, ya no volveré a salir por hoy...
+¿Realmente quiero terminar de explorar por ahora?
++ [Sí, estoy segura.]
+    #sprite:sophia_neutral
+    Muy bien, es hora de entrar.
+    #scene: Cuarto
+    -> END
++ [No, todavía quiero revisar algo más.]
+    #sprite:sophia_neutral
+    Mejor me doy otra vuelta antes de encerrarme.
+    -> END
 
 === Salida_Bloqueada ===
 #sprite:sophia_neutral
@@ -157,6 +169,11 @@ Estoy muy cansada, no creo que quiera salir mas por hoy
 Aun no me puedo ir a dormir, tengo cosas que hacer.
 -> END
 
+===Salidas_Bloqueadas===
+#sprite:sophia_neutral
+Estoy muy cansada, quiero ir a mi casa a recostarme
+-> END
+
 
 === Reflexion_Final ===
 #sprite:sophia_neutral
@@ -164,7 +181,9 @@ Aun no me puedo ir a dormir, tengo cosas que hacer.
 -> Final_Del_Juego
 
 === Final_Del_Juego ===
-Es el momento de cerrar los ojos y dejar que el pensamiento descanse... hasta que volvamos a despertar. #fade_out
+Es el momento de cerrar los ojos y dejar que el pensamiento descanse... hasta que volvamos a despertar. 
+#fade_out
+#scene: Menu
 -> END
 
 

@@ -132,6 +132,7 @@ Nunca pensé que rendirme se sentiría así…
 
 #setvar:ruta:Epilogo4
 #setflag:Final_Alcanzado
+#deleteflag:exploracion
 
 #sprite:joseph_sad
 Adiós a los libros… supongo que este nunca fue mi camino.

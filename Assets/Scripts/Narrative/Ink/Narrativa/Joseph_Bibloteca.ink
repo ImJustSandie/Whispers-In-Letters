@@ -35,7 +35,7 @@ Esta vez es diferente porque no vas a estar solo. Vamos a vencer ese miedo junto
 #sprite:sophia_neutral
 Míralo como un entrenamiento para tu espíritu. Vamos, Joseph, antes de que pierdas el valor.
 // Sophia y Joseph caminan hacia la biblioteca
-
+#scene: Biblioteca
 
 -> END
 ==== Joseph_Bibloteca===
@@ -240,6 +240,7 @@ Está bien... tomaré agua y seguiré.
 Tu libertad está en no rendirte.
 #setvar:ruta:Epilogo3
 #setflag:Final_Alcanzado
+#deleteflag:exploracion
 -> END
 { GetVar("ruta") == "Epilogo3": -> epilogo_estoicos}
 

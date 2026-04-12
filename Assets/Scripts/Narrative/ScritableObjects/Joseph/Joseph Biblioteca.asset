@@ -77,3 +77,10 @@ MonoBehaviour:
       flagName: 
       variableKey: ruta
       requiredValue: Decision_Biblioteca_1
+  - description: Inicio
+    inkKnot: Joseph_Bibloteca
+    conditions:
+    - conditionType: 0
+      flagName: 
+      variableKey: 
+      requiredValue: 

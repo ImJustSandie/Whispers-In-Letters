@@ -16,8 +16,11 @@
 
 === prologo_parque_inicio ===
 #sprite:sophia_neutral
+#sonido:sophia_suspira
 Espera... creo que me dejé el control en el arcade.
 #sprite:sophia_thinking
+#sonido:sophia_sorpresa
+#setflag:exploracion
 Debería ir a buscarlo antes de que se haga tarde.
 -> END
 
@@ -29,6 +32,7 @@ Déjame revisar dónde lo dejé...
 
 === prologo_arcade_recoger_objeto ===
 #sprite:sophia_euforic
+#sonido: sophia_risa
 ¡Aquí está! Menos mal.
 #sprite:sophia_thinking
 Aunque... también recuerdo que deje mi libro favorito en la biblioteca.

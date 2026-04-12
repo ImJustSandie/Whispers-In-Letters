@@ -33,7 +33,11 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     public void PlaySFX(AudioEvent audioEvent)
     {
-        if (audioEvent == null || audioEvent.clip == null) return;
+        if (audioEvent == null || audioEvent.clip == null)
+        {
+            Debug.LogWarning("[AudioManager] Intento de reproducir un SFX con un AudioEvent o Clip nulo.");
+            return;
+        }
         
         SFXAudioSource.pitch = audioEvent.pitch;
         SFXAudioSource.PlayOneShot(audioEvent.clip, audioEvent.volume * sfxVolume);

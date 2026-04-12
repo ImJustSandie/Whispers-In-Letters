@@ -78,6 +78,13 @@ public class DialogueTagProcessor : MonoBehaviour
                     case "sonido":
                         OnSoundRequested?.Invoke(tagValue.ToLower());
                         break;
+                        
+                    case "scene":
+                        if (LevelManager.Instance != null)
+                        {
+                            LevelManager.Instance.ChangeScene(tagValue);
+                        }
+                        break;
 
                     case "fade_out":
                         PendingFadeOut = true;

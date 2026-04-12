@@ -19,6 +19,21 @@ public class InteractableObject : MonoBehaviour, IInteractable
     [Tooltip("Opcional: Nudo de Ink que se reproducirá si el jugador NO tiene el flag requerido.")]
     public string fallbackKnot = "";
 
+    [Tooltip("Activa esta casilla para que la interacción empiece automáticamente en cuanto el jugador toque el objeto (Trigger), sin tener que presionar el botón.")]
+    public bool autoTriggerOnEnter = false;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (autoTriggerOnEnter && other.CompareTag("Player"))
+        {
+            // Evitar que el diálogo inicie si ya hay otro corriendo
+            if (StoryManager.Instance != null && !StoryManager.Instance.IsDialogueActive)
+            {
+                Interact();
+            }
+        }
+    }
+
     public void Interact()
     {
         if (!string.IsNullOrEmpty(requiredFlag))

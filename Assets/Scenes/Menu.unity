@@ -1696,10 +1696,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2064189035240888415, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: clearStateOnStart
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2966658357349865118, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: musicVolume
       value: 0.062
       objectReference: {fileID: 0}
+    - target: {fileID: 3376640301427573764, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: sceneTransitionSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 1c51676deadc48d46bbff4f7287996ae, type: 2}
     - target: {fileID: 5638436678370919060, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: m_Name
       value: Game Manager

@@ -1622,6 +1622,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2900221217359328154, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+      propertyPath: fallbackKnot
+      value: Salidas_Bloqueadas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900221217359328154, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+      propertyPath: requiredFlag
+      value: exploracion
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900221217359328154, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
       propertyPath: destinationSceneName
       value: Biblioteca
       objectReference: {fileID: 0}
@@ -2639,11 +2647,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2900221217359328154, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
       propertyPath: fallbackKnot
-      value: 
+      value: Salidas_Bloqueadas
       objectReference: {fileID: 0}
     - target: {fileID: 2900221217359328154, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
       propertyPath: requiredFlag
-      value: 
+      value: exploracion
       objectReference: {fileID: 0}
     - target: {fileID: 2900221217359328154, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
       propertyPath: destinationSceneName
@@ -5178,6 +5186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AdvancedInteractableObject
   data: {fileID: 11400000, guid: 9ff9cc649b1d91a4faf6b069a6b0248c, type: 2}
   interactionSound: {fileID: 0}
+  autoTriggerOnEnter: 0
   visibilityConditions:
   - conditionType: 1
     flagName: prologue_completed
@@ -5570,11 +5579,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cambio de escena (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2900221217359328154, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6878047443670441339, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1810606193}
   m_SourcePrefab: {fileID: 100100000, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+--- !u!1 &1810606192 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6878047443670441339, guid: b9c6a0371a3ef164ba25d15fd8f9067b, type: 3}
+  m_PrefabInstance: {fileID: 1810606191}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1810606193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810606192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d5f6a1eddb5aa49939f183c3b583d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
+  data: {fileID: 11400000, guid: b7e7a74949678a742af53f78b827be9a, type: 2}
+  interactionSound: {fileID: 0}
+  requiredFlag: Final_Alcanzado
+  fallbackKnot: Habitacion_Bloqueada
+  autoTriggerOnEnter: 1
 --- !u!1 &1839090382
 GameObject:
   m_ObjectHideFlags: 0

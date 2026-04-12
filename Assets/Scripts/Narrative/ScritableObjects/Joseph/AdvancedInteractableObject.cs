@@ -24,6 +24,21 @@ public class AdvancedInteractableObject : MonoBehaviour, IInteractable
     // Visibilidad condicional
     // ─────────────────────────────────────────────────────────────────────────
 
+    [Header("Auto Trigger (Hitbox)")]
+    [Tooltip("Activa esta casilla para que la interacción empiece automáticamente al entrar al Trigger, sin esperar a que se presione el botón.")]
+    public bool autoTriggerOnEnter = false;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (autoTriggerOnEnter && other.CompareTag("Player"))
+        {
+            if (StoryManager.Instance != null && !StoryManager.Instance.IsDialogueActive)
+            {
+                Interact();
+            }
+        }
+    }
+
     [Header("Visibility Conditions")]
     [Tooltip("Si la lista está vacía, el objeto siempre es visible al cargar la escena. " +
              "Si contiene condiciones, TODAS deben cumplirse o el objeto se desactiva.")]
@@ -115,6 +130,9 @@ public class AdvancedInteractableObject : MonoBehaviour, IInteractable
     {
         // Solo actuamos cuando el diálogo termina
         if (isActive) return;
+
+        // Si el objeto ya está desactivado, no debe procesar desapariciones ni fundidos
+        if (!gameObject.activeInHierarchy) return;
 
         // Verificar la condición de desaparición
         if (!disappearCondition.IsMet()) return;
