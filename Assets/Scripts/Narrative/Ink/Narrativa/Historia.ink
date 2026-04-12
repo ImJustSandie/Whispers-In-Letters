@@ -216,7 +216,8 @@ no fue un castigo, sino una forma de enseñarle a dominar sus impulsos y su...
 #sprite:sophia_thinking
 Es cierto… vivir condicionado por el “tú debes” de la obediencia y las tradiciones que nos imponen es una carga pesada que no nos deja elegir el camino.
 #sprite:sophia_thinking
-Hice bien al incitar a Joseph a romper sus límites. Él tenía que pensar en lo que realmente quiere, dejando de lado las verdades de otros para empezar a inventar su propia vida.
+Hice bien al incitar a Joseph a romper sus límites. Él tenía que pensar en lo que realmente quiere, 
+dejando de lado las verdades de otros para empezar a inventar su propia vida.
 -> Final_Del_Juego
 
 

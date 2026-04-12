@@ -2,7 +2,8 @@
 === Joseph_Arcade_Prologo==
 #setflag:Joseph_Arcade_Prologo
 #sprite:sophia_thinking
-He estado pensando en lo que dijiste… a veces nos exigimos demasiado. ¿Y si hoy simplemente te das un respiro?
+He estado pensando en lo que dijiste… a veces nos exigimos demasiado. 
+¿Y si hoy simplemente te das un respiro?
 
 #sprite:joseph_sad
 ¿"Darme un respiro" cómo?
@@ -74,9 +75,11 @@ Ay caramba... esto me encanta, es el paraíso.
 #sprite:joseph_neutral
 Hace siglos que no jugaba uno de estos. Mi padre siempre decía que esto era perder el tiempo.
 #sprite:sophia_happy
-¡Pruébalo! Deja que tus manos decidan por ti. No pienses en el examen de mañana, solo en el oponente de la pantalla.
+¡Pruébalo! Deja que tus manos decidan por ti. 
+No pienses en el examen de mañana, solo en el oponente de la pantalla.
 #sprite:joseph_happy
-Es increíble… Me siento como si estuviera en otra dimensión. Una donde no decepciono a nadie. Podría quedarme aquí horas... o días enteros si me lo permitieran.
+Es increíble… Me siento como si estuviera en otra dimensión. Una donde no decepciono a nadie. 
+Podría quedarme aquí horas... o días enteros si me lo permitieran.
 #sprite:sophia_happy
 ¿Ves? La libertad no estaba escondida en los libros, estaba en este lugar.
 #sprite:joseph_happy
@@ -146,7 +149,7 @@ Eso pasa cuando dejas de vivir para otros… y empiezas a ser tú.
 #setvar:ruta:desicion2
 #setflag:Desicion2_Arcade
 Hazlo, Joseph. Explora, juega, sé el dueño de este pequeño universo.
--> END
+-> Desicion2_Arcade
 
 === HandleDesicion2_Arcade ===
 {
@@ -175,7 +178,8 @@ Dare una vuelta y luego sigo hablando con joseph
 === Camino_1_2_Joseph_Arcade ===
 #setflag:Camino_1_2_Joseph_Arcade
 #sprite:joseph_neutral
-Me gusta este lugar... no hay preguntas difíciles, solo obstáculos que puedo superar. Aquí es donde pertenezco.
+Me gusta este lugar... no hay preguntas difíciles, solo obstáculos que puedo superar. 
+Aquí es donde pertenezco.
 Además, acabo de entender algo: no soy un mal estudiante… solo estaba en el lugar equivocado.
 
 #sprite:sophia_happy
@@ -239,3 +243,10 @@ No mires atrás. Corre antes de que la duda vuelva.
 -> END
 
 { GetVar("ruta") == "Epilogo1": -> epilogo_schopenhauer }
+
+===Joseph_Final_1====
+#setflag:Joseph_Final_1
+#sprite:joseph_neutral
+Gracias Sophia por ayudarme, 
+Voy a seguir jugando  y me volvere streamer
+->END

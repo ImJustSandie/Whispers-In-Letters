@@ -31,7 +31,7 @@ Déjame revisar dónde lo dejé...
 #sprite:sophia_euforic
 ¡Aquí está! Menos mal.
 #sprite:sophia_thinking
-Aunque... también recuerdo que deje un pergamino en la biblioteca.
+Aunque... también recuerdo que deje mi libro favorito en la biblioteca.
 Creo que debería pasarme por allá antes de volver.
 -> END
 

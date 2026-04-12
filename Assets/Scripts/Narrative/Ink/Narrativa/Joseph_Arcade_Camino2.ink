@@ -19,7 +19,7 @@
     #setflag:Desicion3_Arcade
     #sprite:joseph_sad
     …Supongo que tienes razón. No puedo quedarme aquí para siempre, aunque quisiera.
-    -> END
+    -> Desicion3_Arcade
     
     === HandleDesicion3_Arcade ===
 #setvar:ruta:desicion3
@@ -55,7 +55,9 @@ Dare una vuelta y luego sigo hablando con joseph
     ¡Solo cinco minutos más! Estoy a punto de romper otro récord, no puedes interrumpir ahora.
     
     #sprite:sophia_euforic
-    ¡¿A quién le importa un récord en una máquina?! Hace una hora que me dijiste que ya terminabas, no voy a permitir que te hundas en este antro.
+    ¡¿A quién le importa un récord en una máquina?! 
+    Hace una hora que me dijiste que ya terminabas, 
+    no voy a permitir que te hundas en este antro.
     
     #sprite:joseph_sad
     ¡Déjame en paz, Sophia! Aquí es donde soy feliz, no en esas clases.
@@ -79,7 +81,8 @@ Dare una vuelta y luego sigo hablando con joseph
     Está bien, ya voy... pero no esperes que te agradezca esto.
     
     #sprite:sophia_thinking
-    Estás reaccionando así porque te costó soltarlo. Pero escucha: la libertad no es hacer lo que uno quiere todo el tiempo.
+    Estás reaccionando así porque te costó soltarlo. Pero escucha: 
+    la libertad no es hacer lo que uno quiere todo el tiempo.
     
     #sprite:sophia_neutral
     Muévete, Joseph. Tienes clase. Tu futuro no se va a construir aquí dentro.
@@ -121,3 +124,10 @@ Dare una vuelta y luego sigo hablando con joseph
     #setflag:Final_Alcanzado
 { GetVar("ruta") == "epilogo2": -> epilogo_hegel }
     ->END
+    
+===Joseph_Final_2====
+#setflag:Joseph_Final_2
+#sprite:joseph_neutral
+Gracias Sophia por ayudarme, 
+Prometo enfocarme mas, e ir a la universidad
+->END

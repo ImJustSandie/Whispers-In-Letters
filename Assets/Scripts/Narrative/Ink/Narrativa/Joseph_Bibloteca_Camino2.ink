@@ -54,7 +54,7 @@ Es dejar de pelear una batalla que no está hecha para ganarse así.
 
 #sprite:sophia_neutral
 No tiene sentido seguir rompiéndote contra algo que no responde.
--> END
+-> decision_biblioteca_3
 
 === HandleDecision_Biblioteca_3 ===
 {
@@ -138,3 +138,10 @@ Adiós a los libros… supongo que este nunca fue mi camino.
 -> END
 
 { GetVar("ruta") == "Epilogo4": -> epilogo_nietzsche }
+
+===Joseph_Final_4====
+#setflag:Joseph_Final_4
+#sprite:joseph_neutral
+Gracias Sophia por ayudarme, 
+Me siento mas relajado ahora que no tengo presiones
+->END
