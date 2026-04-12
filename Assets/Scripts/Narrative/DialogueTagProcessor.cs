@@ -13,6 +13,10 @@ public class DialogueTagProcessor : MonoBehaviour
     // Evento para avisar qué personaje está hablando (ej: "sophia", para adaptar su voz)
     public event Action<string> OnCharacterSpeaking;
 
+    // Evento para reproducir un sonido especial (ej: tag #sonido: joseph_suspira)
+    public event Action<string> OnSoundRequested;
+
+
     public bool PendingFadeOut { get; set; }
 
     private const string SPRITE_TAG = "sprite";
@@ -69,6 +73,10 @@ public class DialogueTagProcessor : MonoBehaviour
                             GameManager.Instance.SetStoryVariable(varKey, varVal);
                             Debug.Log($"[Ink] Variable mutada registrada: {varKey} = {varVal}");
                         }
+                        break;
+                        
+                    case "sonido":
+                        OnSoundRequested?.Invoke(tagValue.ToLower());
                         break;
 
                     case "fade_out":

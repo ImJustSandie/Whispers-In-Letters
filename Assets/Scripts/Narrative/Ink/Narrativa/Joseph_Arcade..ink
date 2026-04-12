@@ -69,6 +69,7 @@ Solo por hoy.
 #sprite:sophia_euforic
 ¡Bienvenido al templo del presente! Aquí el placer es la única norma.
 #sprite:joseph_happy
+#sonido: joseph_sorpresa
 Ay caramba... esto me encanta, es el paraíso.
 #sprite:sophia_happy
 ¡Mira ese juego! Se ve genial. Olvida la carrera y el "llegar a ser alguien". Pásatela bien y ya.

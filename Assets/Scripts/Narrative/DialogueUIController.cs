@@ -42,6 +42,17 @@ public class DialogueUIController : MonoBehaviour
     [Tooltip("Define los bips para cada personaje (usa el mismo nombre que el prefijo del sprite, ej: 'sophia' para 'sophia_happy'). Si no hay coincidencia, usa el por defecto.")]
     [SerializeField] private List<CharacterVoice> characterVoices = new List<CharacterVoice>();
 
+    [System.Serializable]
+    public struct DialogueSound
+    {
+        public string soundId;
+        public AudioEvent audioEvent;
+    }
+
+    [Header("Efectos de Sonido (Tags)")]
+    [Tooltip("Define los sonidos llamados por el tag #sonido: nombre_sonido. Ej: id='joseph_suspira'")]
+    [SerializeField] private List<DialogueSound> dialogueSounds = new List<DialogueSound>();
+
     // Evento que se dispara al finalizar el dialogo
     public event Action OnDialogueEnded;
 
@@ -50,6 +61,8 @@ public class DialogueUIController : MonoBehaviour
     private bool isTyping;
     private string currentLineText;
     private AudioEvent defaultTypewriterBeepSound;
+    private float currentDelayBeforeTyping = 0f;
+    private bool isFirstLineInDialogueSequence = true;
 
     private void Awake()
     {
@@ -61,6 +74,7 @@ public class DialogueUIController : MonoBehaviour
             // Suscribir a eventos visuales y auditivos que vienen de Ink
             tagProcessor.OnPortraitSpriteChanged += UpdatePortraitImage;
             tagProcessor.OnCharacterSpeaking += UpdateTypewriterVoice;
+            tagProcessor.OnSoundRequested += HandleSoundRequested;
         }
 
         // Asegurarse de ocultar inicialmente la imagen de retrato
@@ -76,6 +90,23 @@ public class DialogueUIController : MonoBehaviour
         {
             tagProcessor.OnPortraitSpriteChanged -= UpdatePortraitImage;
             tagProcessor.OnCharacterSpeaking -= UpdateTypewriterVoice;
+            tagProcessor.OnSoundRequested -= HandleSoundRequested;
+        }
+    }
+
+    private void HandleSoundRequested(string soundId)
+    {
+        // Encontrar el sonido en la lista
+        int index = dialogueSounds.FindIndex(s => string.Equals(s.soundId, soundId, StringComparison.OrdinalIgnoreCase));
+        
+        if (index >= 0 && dialogueSounds[index].audioEvent != null)
+        {
+            dialogueSounds[index].audioEvent.PlaySFX();
+            // Asignamos el delay basado en la duracion del clip para que Typewriter espere
+            if (dialogueSounds[index].audioEvent.clip != null)
+            {
+                currentDelayBeforeTyping = dialogueSounds[index].audioEvent.clip.length;
+            }
         }
     }
 
@@ -121,6 +152,7 @@ public class DialogueUIController : MonoBehaviour
         if (dialogueText != null) dialogueText.text = "";
         ClearChoices();
         UpdatePortraitImage(null);
+        isFirstLineInDialogueSequence = true;
     }
 
     /// <summary>
@@ -129,6 +161,7 @@ public class DialogueUIController : MonoBehaviour
     public void SetStory(Story currentStory)
     {
         story = currentStory;
+        isFirstLineInDialogueSequence = true;
     }
 
     /// <summary>
@@ -141,18 +174,21 @@ public class DialogueUIController : MonoBehaviour
         if (story.canContinue)
         {
             currentLineText = story.Continue().Trim(); // Limpiar espacios en blanco al inicio o final
+            currentDelayBeforeTyping = 0f; // Reiniciar delay
             
-            // Reproducir sonido si está configurado
-            if (advanceDialogueSound != null)
-            {
-                advanceDialogueSound.PlaySFX();
-            }
-
             // Procesamos los tags de la linea actual para cualquier efecto visual, de audio o sprite
             if (tagProcessor != null)
             {
                 tagProcessor.ProcessTags(story.currentTags);
             }
+
+            // Reproducir sonido de avance solo si NO es la primera linea de la secuencia
+            if (!isFirstLineInDialogueSequence && advanceDialogueSound != null)
+            {
+                advanceDialogueSound.PlaySFX();
+            }
+            
+            isFirstLineInDialogueSequence = false;
 
             // Detenemos cualquier efecto Typewriter que este en ejecucion
             if (typewriterCoroutine != null)
@@ -161,7 +197,7 @@ public class DialogueUIController : MonoBehaviour
             }
             
             // Iniciamos el efecto Typewriter para la nueva linea
-            typewriterCoroutine = StartCoroutine(TypewriterEffect(currentLineText));
+            typewriterCoroutine = StartCoroutine(TypewriterEffect(currentLineText, currentDelayBeforeTyping));
         }
         else if (story.currentChoices.Count == 0)
         {
@@ -264,13 +300,19 @@ public class DialogueUIController : MonoBehaviour
     /// Corrutina para mostrar el texto letra por letra (efecto Typewriter).
     /// </summary>
     /// <param name="line">La linea de texto a mostrar.</param>
-    private IEnumerator TypewriterEffect(string line)
+    private IEnumerator TypewriterEffect(string line, float delayBeforeStart = 0f)
     {
         isTyping = true;
         dialogueText.text = "";
         
         // Ocultamos las opciones mientras se escribe el texto
         ClearChoices();
+
+        // Esperamos si hay un sonido especial que deba reproducirse antes
+        if (delayBeforeStart > 0f)
+        {
+            yield return new WaitForSeconds(delayBeforeStart);
+        }
 
         int letterIndex = 0;
 

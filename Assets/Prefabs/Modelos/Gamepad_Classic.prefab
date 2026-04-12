@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9156984657478592334}
   - component: {fileID: 4102012126084568100}
   - component: {fileID: 5332164986070164843}
+  - component: {fileID: -6092781574185468741}
   m_Layer: 0
   m_Name: Gamepad_Classic
   m_TagString: Untagged
@@ -66,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 821316d92fc12fe4d9d7387a78f37f89, type: 2}
+  - {fileID: 2100000, guid: 4477370e961b5f34688fffc8240b04af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -90,3 +91,19 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-6092781574185468741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486978961850026616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d21e08d194f9f3a489f2c64699786990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PrologueItemInteractable
+  flagToSetOnCollect: 
+  inkKnotOnInteract: 
+  interactionName: Control
+  interactionSound: {fileID: 0}

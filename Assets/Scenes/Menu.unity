@@ -1704,6 +1704,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: dialogueSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: dialogueSounds.Array.data[0].soundId
+      value: joseph_suspira
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: dialogueSounds.Array.data[1].soundId
+      value: joseph_sorpresa
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: dialogueSounds.Array.data[2].soundId
+      value: sophia_risa
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: dialogueSounds.Array.data[3].soundId
+      value: sophia_sorpresa
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: dialogueSounds.Array.data[4].soundId
+      value: sophia_suspira
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: dialogueSounds.Array.data[0].audioEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 824b2b5f5163e3b4480d26191c76a249, type: 2}
+    - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: dialogueSounds.Array.data[1].audioEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 238f02a34e4b68c4d87a316207c2870e, type: 2}
+    - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: dialogueSounds.Array.data[2].audioEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: f3e4dd3929c7b244e8cfba8da221c8d6, type: 2}
+    - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: dialogueSounds.Array.data[3].audioEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 1cace908d7b80da41bbe0eb47ab3d635, type: 2}
+    - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: dialogueSounds.Array.data[4].audioEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 2b0a5ebc97bdf46459dc27f262ce3a8f, type: 2}
     - target: {fileID: 8884749705660651705, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: m_LocalPosition.x
       value: 703.1862
