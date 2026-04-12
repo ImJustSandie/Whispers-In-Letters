@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3063737502864057050
 RectTransform:
   m_ObjectHideFlags: 0
@@ -107,6 +107,7 @@ MonoBehaviour:
     voiceBeep: {fileID: 11400000, guid: ad521e259e360524eb4c85cc3dffd264, type: 2}
   - characterId: sophia
     voiceBeep: {fileID: 11400000, guid: 8d5276c4f6110034b90ff8f104a7c443, type: 2}
+  dialogueSounds: []
 --- !u!1 &1202314813231957439
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,6 +697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
   fadeCanvasGroup: {fileID: 2192324850508401730}
   fadeDuration: 0.5
+  sceneTransitionSound: {fileID: 0}
 --- !u!114 &2966658357349865118
 MonoBehaviour:
   m_ObjectHideFlags: 0

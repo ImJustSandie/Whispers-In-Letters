@@ -14,6 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AdvancedInteractableData
   interactionName: Joseph Biblioteca
   interactions:
+  - description: Final
+    inkKnot: Handle_Final_Joseph
+    conditions:
+    - conditionType: 1
+      flagName: Final_Alcanzado
+      variableKey: 
+      requiredValue: 
   - description: rendicion_final
     inkKnot: Camino_2_2_Joseph_Biblioteca
     conditions:

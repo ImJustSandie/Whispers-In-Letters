@@ -239,4 +239,12 @@ Hice bien al incitar a Joseph a romper sus límites. Él tenía que pensar en lo
 dejando de lado las verdades de otros para empezar a inventar su propia vida.
 -> Final_Del_Juego
 
+=== Handle_Final_Joseph ===
+{
+    -GetVar("ruta") == "Epilogo1" :-> Joseph_Final_1
+    -GetVar("ruta") == "Epilogo2" :-> Joseph_Final_2
+    -GetVar("ruta") == "Epilogo3" :-> Joseph_Final_3
+    -GetVar("ruta") == "Epilogo4" :-> Joseph_Final_4
+}
+        
 
