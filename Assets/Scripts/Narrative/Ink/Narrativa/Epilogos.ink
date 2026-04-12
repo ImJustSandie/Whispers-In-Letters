@@ -73,24 +73,3 @@ Sophia: #setflag:Carta_Leida
 
 -> END
 
-
-// ==========================================
-// EPÍLOGO FINAL
-// ==========================================
-
-=== epilogo_final ===
-#setflag:epilogo_final
-// Sophia se encuentra en su casa y le llegan tres cartas. #setflag:Carta_Leida
-// Son las de los filósofos que no se escogieron.
-// Todas dicen: ¿Por qué no escogiste otro camino?
-// Sophia reflexiona.
-
-+ [Yo sé que hice lo correcto]
-No se puede vivir en la duda perpetua; elegí basándome en lo que Joseph necesitaba en ese instante. La libertad no es elegir todos los caminos, es tener el valor de comprometerse con uno solo y aceptar sus consecuencias.
-    -> END
-+ [Tal vez pude haberme arrepentido]
-  Pero no lo hago. El arrependimiento es el deseo de ser otra persona en otro tiempo, y se eligió vivir este presente. La vida no es un ejercicio de lógica perfecta, sino un ensayo de voluntad.
-    -> END
-+ [Tal vez pude haber escogido otro camino]
-  El universo es infinito y nosotros solo vemos una parte. Nunca dejaremos de preguntarnos "qué habría pasado si...". Ese es el precio de ser humanos y tener el poder de decidir
-    -> END

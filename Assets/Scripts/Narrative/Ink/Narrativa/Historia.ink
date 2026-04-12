@@ -57,51 +57,68 @@ EXTERNAL GetVar(varName)
  #setflag:Joseph2_Prologo
 #setvar:ruta:desicion
 #sprite:joseph_happy
- Gracias por escucharme.
- #sprite:joseph_sad
- Es que... no sé qué estoy haciendo con mi vida. Mi familia siempre me ha dado todo lo económico, pero me siento solo, ¿sabes?
-  #sprite:joseph_sad
-  pero me siento solo, ¿sabes? Esta es la cuarta carrera que empiezo y no sé si voy a terminarla. Siento que solo estudio por la presión de ellos y por miedo a fracasar otra vez.
-  #sprite:sophia_sad
-  No digas eso, no te des tan duro. Todos tenemos nuestro ritmo y talento, solo que a veces tarda en aparecer.
-  #sprite:sophia_neutral
-  Somos jóvenes, este es el momento para cometer errores y volverlo a intentar, ¿no crees?
-  #sprite:joseph_sad
-  Eso dicen todos, pero yo siento que el tiempo se me escapa.
-  #sprite:joseph_neutral
-  Dicen que soy "libre" de elegir, pero cada elección se siente como una celda nueva.
-  #sprite:sophia_thinking
-  ¿Por qué estás tan empeñado en completar una carrera universitaria?
-  #sprite:joseph_sad
-  Porque no quiero decepcionar a mi familia
-  #sprite:sophia_thinking
-  Entiendo. y ¿Qué carrera escogiste esta vez?
-   #sprite:joseph_neutral
-  Derecho, No soy muy fanático de la idea, pero al menos
-  #sprite:joseph_happy
-  si quiero terminar una carrera, quiero hacerlo con algo que disfrute.
-   #sprite:sophia_thinking
-  ¿Y crees que puedes completarla?
-  #sprite:joseph_happy
-  Eso espero, estoy estudiando con dedicación. Me gusta leer, debatir, y ¿ayudar a la gente, supongo...?
-  #sprite:joseph_neutral
-   Y aunque no soy muy fanático de la idea de hacerme abogado,
-  #sprite:joseph_happy
-  si quiero terminar una carrera, quiero hacer algo que disfrute.
-   #sprite:sophia_neutral
-  Claro, ya estoy entendiendo tu postura. Pero a veces, para encontrar la salida, hay que cambiar de perspectiva.
-  #sprite:joseph_happy
-  A veces hablas como si te hubieras tragado una enciclopedia, ¿lo sabías?
-  #sprite:sophia_euforic
-  Y tú hablas como si pensar fuera un deporte extremo. 
-  #sprite:sophia_euforic
-  Oye Joseph, ¿a qué hora entras a clases hoy?
-  #sprite:joseph_neutral
-  En unas dos horas. ¿Por qué?
-  #sprite:sophia_euforic
-  #setvar:ruta:desicion_Decamino
-  Dos horas es tiempo suficiente para cambiar el rumbo del día. ¡Vamos, camina!
-  -> END
+Gracias por escucharme.
+
+#sprite:joseph_sad
+No sé qué estoy haciendo con mi vida.
+Mi familia me ha dado todo, pero me siento solo.
+
+#sprite:joseph_sad
+Esta es la cuarta carrera que empiezo…
+y siento que solo estudio por presión.
+
+#sprite:sophia_sad
+No te castigues tanto.
+Cada quien encuentra su camino a su ritmo.
+
+#sprite:joseph_neutral
+Eso dicen… pero siento que el tiempo se me escapa.
+
+#sprite:joseph_neutral
+Se supone que soy libre, pero cada decisión pesa.
+
+#sprite:sophia_thinking
+Entonces, ¿por qué insistir en una carrera?
+
+#sprite:joseph_sad
+Porque no quiero decepcionar a mi familia.
+
+#sprite:sophia_thinking
+¿Y qué estás estudiando ahora?
+
+#sprite:joseph_neutral
+Derecho.
+No me apasiona, pero…
+
+#sprite:joseph_happy
+me gusta leer, debatir… ayudar a la gente.
+
+#sprite:sophia_neutral
+Entonces no suena tan mal.
+
+#sprite:sophia_thinking
+Tal vez no necesitas cambiar de camino,
+sino de perspectiva.
+
+#sprite:joseph_happy
+A veces hablas como enciclopedia.
+
+#sprite:sophia_euforic
+Y tú como si pensar doliera.
+
+#sprite:sophia_euforic
+Oye, ¿a qué hora entras?
+
+#sprite:joseph_neutral
+En dos horas.
+
+#sprite:sophia_euforic
+Perfecto.
+Dos horas bastan para cambiar el rumbo del día.
+
+#setvar:ruta:desicion_Decamino
+¡Vamos, camina!
+  -> Desicion_DeCamino
 === HandleDesicion_DeCamino ===
 {
     - GetVar("ruta") == "arcade": -> Joseph_Arcade_Prologo
@@ -115,11 +132,11 @@ Que deberia hacer con joseph
   + [Ir al arcade]
      #setvar:ruta:arcade
      Le dire a joseph de ir al arcade
-     -> END
+     -> Joseph_Arcade_Prologo
   + [Ir a la biblioteca]
      #setvar:ruta:biblioteca
      Le dire a joseph de ir a la Biblioteca
-     -> END
+     -> Joseph_Bibloteca_Prologo
   + [Mas tarde decir]
      #setvar:ruta:desicion_Decamino
      -> END
@@ -172,22 +189,35 @@ Estoy exhausta... Siento que si me duermo ahora, este día finalmente habrá ter
 
 === reflexion_schopenhauer ===
 #sprite:sophia_thinking
-(Depuración) Has leído la carta de Schopenhauer. Sophia reflexiona sobre la voluntad y el deseo...
+Lo sabía… ahora entiendo mejor por qué llevar a Joseph al Arcade fue lo correcto en ese momento.
+#sprite:sophia_thinking
+En un mundo que a veces parece puro sufrimiento, ese alivio momentáneo era la única libertad real que se podía alcanzar.
 -> Final_Del_Juego
 
 === reflexion_hegel ===
 #sprite:sophia_thinking
-(Depuración) Has leído la carta de Hegel. Sophia reflexiona sobre el progreso de la razón y el deber...
+Esto me ha hecho ver que mi impulso de llevar a Joseph a la universidad no fue una imposición, sino un acto de verdadera libertad.
+#sprite:sophia_thinking
+No se trata de hacer lo que uno quiera, ni de seguir reglas porque sí, sino de hacer que nuestras acciones tengan un sentido dentro de la sociedad.
 -> Final_Del_Juego
 
 === reflexion_estoicos ===
 #sprite:sophia_thinking
-(Depuración) Has leído la carta de los Estoicos. Sophia reflexiona sobre el control interno y la paz...
+Pensar en que hay cosas que se pueden controlar y otras que no me crea una dualidad.
+#sprite:sophia_thinking
+Es lo mismo que sucede con Joseph: no puede controlar lo que sus padres esperan de él, pero sí cómo se siente respecto a eso.
+#sprite:sophia_thinking
+Definitivamente hay que vencer esa dualidad y buscar el control. Eso fue lo que logré con Joseph al mantenerlo en la biblioteca
+#sprite:sophia_thinking
+no fue un castigo, sino una forma de enseñarle a dominar sus impulsos y su...
 -> Final_Del_Juego
 
 === reflexion_nietzsche ===
 #sprite:sophia_thinking
-(Depuración) Has leído la carta de Nietzsche. Sophia reflexiona sobre el superhombre y la creación de valores...
+Es cierto… vivir condicionado por el “tú debes” de la obediencia y las tradiciones que nos imponen es una carga pesada que no nos deja elegir el camino.
+#sprite:sophia_thinking
+Hice bien al incitar a Joseph a romper sus límites. Él tenía que pensar en lo que realmente quiere, 
+dejando de lado las verdades de otros para empezar a inventar su propia vida.
 -> Final_Del_Juego
 
 
