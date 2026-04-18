@@ -31,8 +31,8 @@
 - GetVar("ruta") == "desicion3": -> Desicion3_Arcade
 }
 === Desicion3_Arcade ===
-Que deberia hacer con joseph
-+[Motivar a joseph a seguir su sueños]
+Que deberia hacer con Joseph
++[Motivar a Joseph a seguir su sueños]
 #setvar:ruta:Oportunidad
 #sprite:sophia_euforic
 Aquí joseph encontro la razón de vida despues de todo No es un fracasado, solo tenías otro enfoque
@@ -45,7 +45,7 @@ debo detener
 +[Decidir luego]
 #setvar:ruta:desicion3
 #sprite:sophia_thinking
-Dare una vuelta y luego sigo hablando con joseph
+Dare una vuelta y luego sigo hablando con Joseph
 -> END
     
     ===Camino_2_2_Joseph_Arcade ===
@@ -125,11 +125,11 @@ Dare una vuelta y luego sigo hablando con joseph
     #setflag:Final_Alcanzado
     #deleteflag:exploracion
 { GetVar("ruta") == "epilogo2": -> epilogo_hegel }
-    ->END
+    ->Sophia_Cansada
     
 ===Joseph_Final_2====
 #setflag:Joseph_Final_2
 #sprite:joseph_neutral
 Gracias Sophia por ayudarme, 
 Prometo enfocarme mas, e ir a la universidad
-->END
+->Sophia_Cansada

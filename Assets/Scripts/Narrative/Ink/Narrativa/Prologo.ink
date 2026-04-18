@@ -17,7 +17,7 @@
 === prologo_parque_inicio ===
 #sprite:sophia_neutral
 #sonido:sophia_suspira
-Espera... creo que me dejé el control en el arcade.
+Espera... creo que dejé el control en el Arcade.
 #sprite:sophia_thinking
 #sonido:sophia_sorpresa
 #setflag:exploracion
@@ -32,10 +32,10 @@ Déjame revisar dónde lo dejé...
 
 === prologo_arcade_recoger_objeto ===
 #sprite:sophia_euforic
-#sonido: sophia_risa
+#sonido:sophia_risa
 ¡Aquí está! Menos mal.
 #sprite:sophia_thinking
-#sonido: sophia_sorpresa
+#sonido:sophia_sorpresa
 Aunque... también recuerdo que deje mi libro favorito en la biblioteca.
 Creo que debería pasarme por allá antes de volver.
 -> END
@@ -55,7 +55,7 @@ Vamos, tiene que estar por algún lado...
 
 === prologo_biblioteca_recoger_obj ===
 #sprite:sophia_euforic
-#sonido: sophia_risa
+#sonido:sophia_risa
 ¡Lo encontré!
 #sprite:sophia_neutral
 #setflag:prologue_completed
@@ -71,6 +71,7 @@ Debería revisarlo bien antes de irme.
 
 === prologo_parque_final ===
 #sprite:sophia_neutral
+#sonido:sophia_sorpresa
 ...
 #sprite:sophia_thinking
 Ese es Joseph.

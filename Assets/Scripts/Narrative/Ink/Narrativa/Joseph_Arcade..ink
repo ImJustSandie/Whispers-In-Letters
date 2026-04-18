@@ -6,7 +6,7 @@ He estado pensando en lo que dijiste… a veces nos exigimos demasiado.
 ¿Y si hoy simplemente te das un respiro?
 
 #sprite:joseph_confundido
-#sonido: joseph_suspiro
+#sonido:joseph_suspiro
 ¿"Darme un respiro" cómo?
 
 #sprite:sophia_neutral
@@ -25,7 +25,7 @@ Suena tentador… ¿y la clase?
 La clase seguirá ahí. Tú necesitas parar hoy.
 
 #sprite:joseph_sad
-#sonido: joseph_gruñido
+#sonido:joseph_gruñido
 No necesito un refugio… necesito un título para que mi padre deje de verme como un error.
 
 #sprite:sophia_thinking
@@ -72,7 +72,7 @@ Solo por hoy.
 #sprite:sophia_euforic
 ¡Bienvenido al templo del presente! Aquí el placer es la única norma.
 #sprite:joseph_happy
-#sonido: joseph_sorpresa
+#sonido:joseph_sorpresa
 Ay caramba... esto me encanta, es el paraíso.
 #sprite:sophia_happy
 ¡Mira ese juego! Se ve genial. Olvida la carrera y el "llegar a ser alguien". Pásatela bien y ya.
@@ -87,7 +87,7 @@ Podría quedarme aquí horas... o días enteros si me lo permitieran.
 #sprite:sophia_happy
 ¿Ves? La libertad no estaba escondida en los libros, estaba en este lugar.
 #sprite:joseph_happy
-#sonido: joseph_risa
+#sonido:joseph_risa
 Gracias por traerme.
 #sprite:sophia_neutral
 Disfrútalo. Te lo mereces después de tanto tiempo viviendo para los demás.
@@ -104,21 +104,21 @@ Voy a jugar mi primera partida.
 }
 === Desicion1_Arcade ===
 #sprite: sophia_thinking
-Que deberia hacer con joseph
+Que deberia hacer con Joseph
 +[Dejarlo y que siga jugando]
 #setvar:ruta:motivacion
 #sprite:sophia_euforic
-joseph se merece romper esa rutina y encontrar un respiro de la universidad
+Joseph se merece romper esa rutina y encontrar un respiro de la universidad
 ->  Camino_1_Joseph_Arcade
 +[llevarlo a la universidad]
 #setvar:ruta:desmotivarlo
 #sprite:sophia_sad
-Que le hice a joseph debo sacarlo
+Que le hice a Joseph debo sacarlo
 -> Camino_2_Joseph_Arcade
 +[Decidir luego]
 #setvar:ruta:desicion_Arcade_1
 #sprite:sophia_thinking
-Dare una vuelta y luego sigo hablando con joseph
+Dare una vuelta y luego sigo hablando con Joseph
 -> END
 
 === Camino_1_Joseph_Arcade ===
@@ -246,7 +246,7 @@ Gracias, Sophia… nunca me había sentido así de validado.
 
 #sprite:sophia_neutral
 No mires atrás. Corre antes de que la duda vuelva.
--> END
+-> Sophia_Cansada
 
 { GetVar("ruta") == "Epilogo1": -> epilogo_schopenhauer }
 
@@ -255,4 +255,4 @@ No mires atrás. Corre antes de que la duda vuelva.
 #sprite:joseph_neutral
 Gracias Sophia por ayudarme, 
 Voy a seguir jugando  y me volvere streamer
-->END
+->Sophia_Cansada

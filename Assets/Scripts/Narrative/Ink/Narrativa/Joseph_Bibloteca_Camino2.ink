@@ -136,7 +136,7 @@ Nunca pensé que rendirme se sentiría así…
 
 #sprite:joseph_sad
 Adiós a los libros… supongo que este nunca fue mi camino.
--> END
+-> Sophia_Cansada
 
 { GetVar("ruta") == "Epilogo4": -> epilogo_nietzsche }
 
@@ -145,4 +145,4 @@ Adiós a los libros… supongo que este nunca fue mi camino.
 #sprite:joseph_neutral
 Gracias Sophia por ayudarme, 
 Me siento mas relajado ahora que no tengo presiones
-->END
+->Sophia_Cansada

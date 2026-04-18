@@ -5,7 +5,7 @@ Joseph, deberías aprovechar para repasar o prepararte.
 Si quieres que esta vez sea diferente, necesitas comprometerte de verdad.
 
 #sprite:joseph_sad
-#sonido: joseph_suspiro
+#sonido:joseph_suspiro
 ¿Pretendes que llene mi vacío existencial con más libros? Sophia, 
 eso es lo que me ha estado asfixiando toda la vida.
 
@@ -44,7 +44,7 @@ Míralo como un entrenamiento para tu espíritu. Vamos, Joseph, antes de que pie
 Ya estamos aquí. Mira este lugar… el silencio casi se puede tocar.
 
 #sprite:joseph_neutral
-#sonido: joseph_sorpresa
+#sonido:joseph_sorpresa
 Es más imponente de lo que recordaba.
 
 #sprite:joseph_neutral
@@ -58,7 +58,7 @@ Es un refugio. Aquí el ruido del exterior no existe.
 Solo estás tú… y lo que decidas aprender.
 
 #sprite:joseph_sad
-#sonido: joseph_suspiro
+#sonido:joseph_suspiro
 Solo espero que este “refugio” no termine siendo otra celda.
 
 #sprite:sophia_neutral
@@ -98,7 +98,7 @@ Hazlo por curiosidad. Solo una página.
 +[Crear estrategia]
 #sprite:sophia_euforic
 #setvar:ruta:estrategia
-voy a ayudar a joseph
+voy a ayudar a Joseph
 -> Camino_1_Joseph_Biblioteca
 +[Decirle que no puede]
 #sprite:sophia_sad
@@ -242,7 +242,7 @@ Tu libertad está en no rendirte.
 #setvar:ruta:Epilogo3
 #setflag:Final_Alcanzado
 #deleteflag:exploracion
--> END
+-> Sophia_Cansada
 { GetVar("ruta") == "Epilogo3": -> epilogo_estoicos}
 
 
@@ -251,4 +251,4 @@ Tu libertad está en no rendirte.
 #sprite:joseph_neutral
 Gracias Sophia por ayudarme, 
 voy a seguir  estudiando un poco mas en la biblioteca
-->END
+->Sophia_Cansada

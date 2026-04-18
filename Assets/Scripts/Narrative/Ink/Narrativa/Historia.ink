@@ -35,7 +35,7 @@ EXTERNAL GetVar(varName)
 
   ¿Seguro que tienes tiempo para escuchar mis dramas?
   
-    +[No Escuhar a joseph]
+    +[No Escuchar a Joseph]
     #setvar:ruta:desicion_prologo
      #sprite:sophia_euforic
      no tengo tiempo, pero espero que te vaya bien
@@ -44,7 +44,7 @@ EXTERNAL GetVar(varName)
      No hay problema, nos vemos
      ->END
      
-    +[Si Escuhar a joseph]
+    +[Si Escuchar a Joseph]
     #setvar:ruta:aprobacion
      #sprite:sophia_happy
      Para los amigos siempre hay tiempo, cuéntame que te tiene tan preocupado
@@ -129,18 +129,26 @@ Dos horas bastan para cambiar el rumbo del día.
 === Desicion_DeCamino ===
 #setvar:ruta:desicion_Decamino
 #sprite:sophia_thinking
-Que deberia hacer con joseph
+Que deberia hacer con Joseph
   + [Ir al arcade]
      #setvar:ruta:arcade
-     Le dire a joseph de ir al arcade
+     Le diré a Joseph de ir al arcade
      -> Joseph_Arcade_Prologo
   + [Ir a la biblioteca]
      #setvar:ruta:biblioteca
-     Le dire a joseph de ir a la Biblioteca
+     Le diré a Joseph de ir a la Biblioteca
      -> Joseph_Bibloteca_Prologo
-  + [Mas tarde decir]
+  + [Mas tarde decidir]
      #setvar:ruta:desicion_Decamino
+     Voy a pensar a donde llevar a Joseph
      -> END
+     
+===Sophia_Cansada===
+#sprite:sophia_neutral
+Es suficiente por hoy...
+Deberia Volveré a la habitación.
+-> END
+
      
 === Habitacion_Bloqueada ===
 #sprite:sophia_neutral
