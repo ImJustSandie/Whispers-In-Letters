@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
         if (Animator != null)
         {
             Animator.SetFloat("MovementA", moveInput.magnitude);
-            Animator.SetBool("Sprint", controls.Player.Sprint.IsPressed());
+            Animator.SetBool("Sprint", controls.Player.Sprint.IsPressed() && moveInput.magnitude > 0.01f);
         }
     }
 }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ef85f0830e1dbe74283c6cb81282b04d
+guid: 00341651c6b889d4e88e6bf6a94afa1c
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -32,39 +32,10 @@ ModelImporter:
     clipAnimations:
     - serializedVersion: 16
       name: Idle
-      takeName: Pruebas
-      internalID: 8235731661585897139
+      takeName: Idle
+      internalID: -3100369314251171874
       firstFrame: -1
       lastFrame: 39
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Walk
-      takeName: Pruebas
-      internalID: -9193875246070187485
-      firstFrame: 41
-      lastFrame: 80
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
