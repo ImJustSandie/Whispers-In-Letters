@@ -100,6 +100,17 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "8ff71fc1-7c15-4840-8c84-a42be2dc9cc7",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Abir menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "1D Axis",
                     "id": "b33f5c57-de91-408a-aa00-85e0da066502",
                     "path": "1DAxis",

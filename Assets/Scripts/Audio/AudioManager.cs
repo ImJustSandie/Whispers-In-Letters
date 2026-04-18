@@ -21,10 +21,24 @@ public class AudioManager : MonoBehaviour
             Instance = this;
             // Evita que el AudioManager se destruya al cambiar de escenas
             DontDestroyOnLoad(gameObject);
+            LoadVolumes();
         }
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void LoadVolumes()
+    {
+        musicVolume = PlayerPrefs.GetFloat("MusicVolume", 1f);
+        sfxVolume = PlayerPrefs.GetFloat("SFXVolume", 1f);
+        uiVolume = PlayerPrefs.GetFloat("UIVolume", 1f);
+
+        // Aplicar volumen inicial a la fuente de música
+        if (MusicAudioSource != null)
+        {
+            MusicAudioSource.volume = musicVolume;
         }
     }
 
@@ -85,17 +99,20 @@ public class AudioManager : MonoBehaviour
     public void SetMusicVolume(float volume)
     {
         musicVolume = Mathf.Clamp01(volume);
-        MusicAudioSource.volume = musicVolume; // Asumiendo que la escala de AudioEvent era 1. (Ideal si tus clips ya están normalizados)
+        MusicAudioSource.volume = musicVolume; 
+        PlayerPrefs.SetFloat("MusicVolume", musicVolume);
     }
 
     public void SetSFXVolume(float volume)
     {
         sfxVolume = Mathf.Clamp01(volume);
+        PlayerPrefs.SetFloat("SFXVolume", sfxVolume);
     }
 
     public void SetUIVolume(float volume)
     {
         uiVolume = Mathf.Clamp01(volume);
+        PlayerPrefs.SetFloat("UIVolume", uiVolume);
     }
 
     // OnValidate se ejecuta automáticamente cada vez que cambias un valor en el Inspector de Unity
