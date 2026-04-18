@@ -1,0 +1,592 @@
+fileFormatVersion: 2
+guid: f0d5ce95d4dc1024789a2584412df06f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Joseph Confundido Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1596
+        width: 475
+        height: 417
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6109cbad58c2d4040a5094a62cc44c07
+      internalID: -1626837327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Confundido Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1596
+        width: 475
+        height: 417
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58317337dc0ae854bb7665545c459a76
+      internalID: 1001729854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Confundido Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 1597
+        width: 474
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f9e99dc8d0119a4da2bc71798dd3488
+      internalID: -1478838625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Confundido Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 1597
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c42f5545c5abb4a9b3679bb29f8a16
+      internalID: 1211485024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Confundido Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 1596
+        width: 475
+        height: 417
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 848e0ec9dc62c0b46b326c6b4bd15041
+      internalID: -1333843937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Confundido Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1097
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab9a6718ca9686f44987e8b161abea46
+      internalID: 1891773372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Confundido Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1097
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af7b6094a98400469dc0485138aea0e
+      internalID: -5993190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Confundido Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 1097
+        width: 474
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6364f81cc26fbc44bc71377a4bf79fa
+      internalID: 1662989947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Confundido Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 1097
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d32aa9639b81fc848825124b2c0e5a4e
+      internalID: -1744263734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Confundido Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 1097
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04fec0b6f373caf479e9770c9f97315b
+      internalID: -709584915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Confundido Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 598
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a48afb3179d45c941ad788d12c8dd7b0
+      internalID: 169352306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Confundido Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 598
+        width: 475
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db2f7fffd63304441a1a9a6b9f5af274
+      internalID: 1358099704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Confundido Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 598
+        width: 474
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3472a823ddc517c48b60489e162a9123
+      internalID: 1062352291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Confundido Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 598
+        width: 475
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a49b006a612624198b4e411903f9eb
+      internalID: -607931469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Confundido Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 598
+        width: 475
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 538ba1bcb1e748b4da1c1c8d7ebe7e34
+      internalID: -1422771676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Confundido Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 98
+        width: 475
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab845e782c03c194aaee5b66626d8915
+      internalID: 1436078004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Confundido Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 98
+        width: 475
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 562559b2e36e2bd478299216cc900552
+      internalID: 517429960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Confundido Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 98
+        width: 474
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9424f6b79c6077441ac641838c1ba37a
+      internalID: 221831617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Confundido Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 98
+        width: 475
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cca51426595db14a9d857809ef852c6
+      internalID: 628335837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Confundido Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 97
+        width: 475
+        height: 416
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a03140650424bd14e89df1662882f8da
+      internalID: -1506701370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4baf0792df7b1a6479ec8c5eab2a4ca9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5252128839492798,"y":0.21131889522075654},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Joseph Confundido Spritesheet_0: -1626837327
+      Joseph Confundido Spritesheet_1: 1001729854
+      Joseph Confundido Spritesheet_10: 169352306
+      Joseph Confundido Spritesheet_11: 1358099704
+      Joseph Confundido Spritesheet_12: 1062352291
+      Joseph Confundido Spritesheet_13: -607931469
+      Joseph Confundido Spritesheet_14: -1422771676
+      Joseph Confundido Spritesheet_15: 1436078004
+      Joseph Confundido Spritesheet_16: 517429960
+      Joseph Confundido Spritesheet_17: 221831617
+      Joseph Confundido Spritesheet_18: 628335837
+      Joseph Confundido Spritesheet_19: -1506701370
+      Joseph Confundido Spritesheet_2: -1478838625
+      Joseph Confundido Spritesheet_3: 1211485024
+      Joseph Confundido Spritesheet_4: -1333843937
+      Joseph Confundido Spritesheet_5: 1891773372
+      Joseph Confundido Spritesheet_6: -5993190
+      Joseph Confundido Spritesheet_7: 1662989947
+      Joseph Confundido Spritesheet_8: -1744263734
+      Joseph Confundido Spritesheet_9: -709584915
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

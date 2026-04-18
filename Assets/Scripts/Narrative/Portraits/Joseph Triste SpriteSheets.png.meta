@@ -1,0 +1,592 @@
+fileFormatVersion: 2
+guid: acd2db0773211a54097db207cf59d3e7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Joseph Triste SpriteSheets_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1583
+        width: 475
+        height: 417
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63624f8438169b446bce47c229136e21
+      internalID: -1242758287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Triste SpriteSheets_1
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1583
+        width: 475
+        height: 417
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1c462e0944a12846a60c6985e91ac55
+      internalID: -606871877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Triste SpriteSheets_2
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 1585
+        width: 474
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6533bbe7a05bb740bc5628e7edd3c04
+      internalID: -1064789874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Triste SpriteSheets_3
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 1585
+        width: 475
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b07e2184a031844b7f7a24df811d01
+      internalID: 958269320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Triste SpriteSheets_4
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 1583
+        width: 475
+        height: 417
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29d948c2c28038b4a95002003c45cfaa
+      internalID: 955734471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Triste SpriteSheets_5
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1084
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993a0b5c0880d7e46a5cc634678c734e
+      internalID: 1288018957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Triste SpriteSheets_6
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1084
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aa1728ae4471bf428a3b6f5510b09c6
+      internalID: 1590059695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Triste SpriteSheets_7
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 1084
+        width: 474
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8535c4b92305eab4fa5deb4f4dacac36
+      internalID: -1909054499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Triste SpriteSheets_8
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 1084
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c657bb4a1ce77e489563948d2c6debb
+      internalID: -583434667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Triste SpriteSheets_9
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 1084
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b50763b382b41eb499c403f201836a1a
+      internalID: -1444454214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Triste SpriteSheets_10
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 585
+        width: 475
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19675a07f1b6f8448eb3ef2f4f4c13e
+      internalID: -261655826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Triste SpriteSheets_11
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 585
+        width: 475
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29f1723c59872004e9b68bfd8fa42c2f
+      internalID: -385120143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Triste SpriteSheets_12
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 585
+        width: 474
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2125c84aa7e81040b284574290b0dcb
+      internalID: 1097533615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Triste SpriteSheets_13
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 585
+        width: 475
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8b707e9c1861649a8f5add88014f58
+      internalID: 1771897226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Triste SpriteSheets_14
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 585
+        width: 475
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 945db96dcdd96974f827e6bc113c8cd8
+      internalID: -1071838461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Triste SpriteSheets_15
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 85
+        width: 475
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e419e5840f6e7a4ba6f8af317c49122
+      internalID: 772171827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Triste SpriteSheets_16
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 85
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa01aa13c4590e4aba0ce502114081d
+      internalID: 595804396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Triste SpriteSheets_17
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 85
+        width: 474
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e95aba0751db2448c07112607709a1
+      internalID: 146886192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Triste SpriteSheets_18
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 85
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db12d39a4f354044a2b00d912443d20
+      internalID: -417223177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Triste SpriteSheets_19
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 84
+        width: 475
+        height: 416
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a751a76b5ec460d4e97e9f80af89781c
+      internalID: 998531851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c4efbe20e1db58b4c865b4427cf05f23
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5252128839492798,"y":0.21131889522075654},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Joseph Triste SpriteSheets_0: -1242758287
+      Joseph Triste SpriteSheets_1: -606871877
+      Joseph Triste SpriteSheets_10: -261655826
+      Joseph Triste SpriteSheets_11: -385120143
+      Joseph Triste SpriteSheets_12: 1097533615
+      Joseph Triste SpriteSheets_13: 1771897226
+      Joseph Triste SpriteSheets_14: -1071838461
+      Joseph Triste SpriteSheets_15: 772171827
+      Joseph Triste SpriteSheets_16: 595804396
+      Joseph Triste SpriteSheets_17: 146886192
+      Joseph Triste SpriteSheets_18: -417223177
+      Joseph Triste SpriteSheets_19: 998531851
+      Joseph Triste SpriteSheets_2: -1064789874
+      Joseph Triste SpriteSheets_3: 958269320
+      Joseph Triste SpriteSheets_4: 955734471
+      Joseph Triste SpriteSheets_5: 1288018957
+      Joseph Triste SpriteSheets_6: 1590059695
+      Joseph Triste SpriteSheets_7: -1909054499
+      Joseph Triste SpriteSheets_8: -583434667
+      Joseph Triste SpriteSheets_9: -1444454214
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

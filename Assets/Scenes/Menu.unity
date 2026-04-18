@@ -4947,8 +4947,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6420050c4090e5f4cb1e7c3f3867b457, type: 2}
-  m_sharedMaterial: {fileID: 806946236576824012, guid: 6420050c4090e5f4cb1e7c3f3867b457, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9175,8 +9175,8 @@ MonoBehaviour:
   m_text: "LIDER DE PROYECTO\nANDRES MOYA\n \n\nPROGRAMADOR\nALEJANDRO SANDOVAL\n\n\nDISE\xD1ADORA
     UI/UX\nSARA SANTOS\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6420050c4090e5f4cb1e7c3f3867b457, type: 2}
-  m_sharedMaterial: {fileID: 806946236576824012, guid: 6420050c4090e5f4cb1e7c3f3867b457, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

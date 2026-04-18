@@ -1,0 +1,592 @@
+fileFormatVersion: 2
+guid: dfd22328dd939544f8884cfc6b6e172e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Joseph Neutro SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1608
+        width: 475
+        height: 416
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 441cc5cc4f5909f458a22139b7a7e7f5
+      internalID: 1594030266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Neutro SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 1609
+        width: 474
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a81b98a571b5534da45a3cabefb9296
+      internalID: 1272038782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Neutro SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 1609
+        width: 474
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 113d2f3c2ed13a04e99a92f541d49429
+      internalID: 2002524253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Neutro SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 1609
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84a2cfd5084a3f409bdd3d127d299c8
+      internalID: 1470677667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Neutro SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 1609
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02b057ee4e67d314bacb725ea2ad5a93
+      internalID: -978033927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Neutro SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1109
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea70c3d3665f4046885201412d032a8
+      internalID: 1125269579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Neutro SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1109
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 591aa6b00f29b904596c8c4ed57f9624
+      internalID: -1210531515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Neutro SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 1109
+        width: 474
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 834a98c9bb625974891fc42cff27763b
+      internalID: 1264572140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Neutro SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 1109
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b629e230a49c9e146ad5b8ef8650533e
+      internalID: 1456110451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Neutro SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 1109
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53e11d56df949a649ae3b60a95d8ed44
+      internalID: 1733721000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Neutro SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 610
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e955e9c7aabd09b4a82c5f6479132764
+      internalID: -185691863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Neutro SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 610
+        width: 475
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d573188fb5a75ba4ebc54f8bd561b843
+      internalID: 1032435497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Neutro SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 610
+        width: 474
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8f0ef582952f24686a2775756e81f0
+      internalID: 489142874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Neutro SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 610
+        width: 475
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e529d82264335640b9faf3a4dcd997a
+      internalID: -1671877258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Neutro SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 610
+        width: 475
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7f152babd4de8a4d8b4fa31975327fa
+      internalID: -410081454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Neutro SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 110
+        width: 475
+        height: 413
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b7cda91b16cba4c971432cbe595dbb
+      internalID: 1398641641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Neutro SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 110
+        width: 474
+        height: 413
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d2d5784441160b488cc34785ff543a0
+      internalID: 1202704500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Neutro SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 110
+        width: 474
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9890e02b638e2a6438701866385c8348
+      internalID: 1501321111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Neutro SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 110
+        width: 475
+        height: 413
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80989ba16d328d4419c97f132bc66758
+      internalID: -1627697671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Neutro SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 108
+        width: 475
+        height: 416
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6d59e94cd462f442b436b150edd8877
+      internalID: -1620231507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d8f8d84e32d14ea428152f30b43a6866
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5252128839492798,"y":0.21131889522075654},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Joseph Neutro SpriteSheet_0: 1594030266
+      Joseph Neutro SpriteSheet_1: 1272038782
+      Joseph Neutro SpriteSheet_10: -185691863
+      Joseph Neutro SpriteSheet_11: 1032435497
+      Joseph Neutro SpriteSheet_12: 489142874
+      Joseph Neutro SpriteSheet_13: -1671877258
+      Joseph Neutro SpriteSheet_14: -410081454
+      Joseph Neutro SpriteSheet_15: 1398641641
+      Joseph Neutro SpriteSheet_16: 1202704500
+      Joseph Neutro SpriteSheet_17: 1501321111
+      Joseph Neutro SpriteSheet_18: -1627697671
+      Joseph Neutro SpriteSheet_19: -1620231507
+      Joseph Neutro SpriteSheet_2: 2002524253
+      Joseph Neutro SpriteSheet_3: 1470677667
+      Joseph Neutro SpriteSheet_4: -978033927
+      Joseph Neutro SpriteSheet_5: 1125269579
+      Joseph Neutro SpriteSheet_6: -1210531515
+      Joseph Neutro SpriteSheet_7: 1264572140
+      Joseph Neutro SpriteSheet_8: 1456110451
+      Joseph Neutro SpriteSheet_9: 1733721000
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

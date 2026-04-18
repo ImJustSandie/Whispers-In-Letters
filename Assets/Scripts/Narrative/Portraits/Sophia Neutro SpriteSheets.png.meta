@@ -1,0 +1,592 @@
+fileFormatVersion: 2
+guid: 67788f8601f4fbb4cb354240d139e306
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Neutro SpriteSheets_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1626
+        width: 475
+        height: 431
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706c9764852acea46b009092fbfbfa1e
+      internalID: -1256929694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neutro SpriteSheets_1
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1626
+        width: 475
+        height: 431
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d13001ed2e84ec14d85ad749d73212e1
+      internalID: -136811689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neutro SpriteSheets_2
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 1626
+        width: 474
+        height: 431
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d72054f5fb1b06a4a8f36710754ab386
+      internalID: 1331565827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neutro SpriteSheets_3
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 1626
+        width: 475
+        height: 433
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 550e4645afe181f4ab7af13d2e8cc5b5
+      internalID: -744102797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neutro SpriteSheets_4
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 1626
+        width: 475
+        height: 433
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b8b64836ab62c4ea8680d2f478b016
+      internalID: -65098977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neutro SpriteSheets_5
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1126
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b34f55425717b4295c6428c9b4e359
+      internalID: -509015987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neutro SpriteSheets_6
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1126
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2fac1409330cc4c996f9856e6eba2d
+      internalID: 1765519843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neutro SpriteSheets_7
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 1125
+        width: 474
+        height: 434
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c5d12438e499b64690f280eb761a6c6
+      internalID: 1684103037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neutro SpriteSheets_8
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 1126
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bdd3c2b7f1cb804e85f3341558f35ab
+      internalID: 2141691075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neutro SpriteSheets_9
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 1126
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 646b2f8d54230b844a7b82226a910cdf
+      internalID: 1860419401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neutro SpriteSheets_10
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 624
+        width: 475
+        height: 435
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04375c14bba66bf4da3c029a1231c3f2
+      internalID: 806474571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neutro SpriteSheets_11
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 625
+        width: 475
+        height: 434
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59cd210ea83d7e64d90fe8cc47195c43
+      internalID: -1202258514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neutro SpriteSheets_12
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 625
+        width: 474
+        height: 434
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55bf13b510c711d49a0f068fffa2eaae
+      internalID: 1327872666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neutro SpriteSheets_13
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 624
+        width: 475
+        height: 435
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 287071cc35fb63f498765ac87547bf29
+      internalID: 446623323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neutro SpriteSheets_14
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 625
+        width: 475
+        height: 434
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c5e4d33c6160f43ba06841deca2fd2
+      internalID: -655094588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neutro SpriteSheets_15
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 126
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a2c3568b6586e40bfcb0c3d4bdc28f
+      internalID: -688202217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neutro SpriteSheets_16
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 126
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b26d46103f7ecf468621d234c8ba481
+      internalID: 54078639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neutro SpriteSheets_17
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 126
+        width: 474
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49b3049cadcfde74986c45950a8ad829
+      internalID: -969239261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neutro SpriteSheets_18
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 127
+        width: 475
+        height: 430
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bd601e406b4530438d65152917757a2
+      internalID: -727600353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neutro SpriteSheets_19
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 127
+        width: 475
+        height: 430
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158c201256c021b43bd1d99e31acbee8
+      internalID: -1183522628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e608975fa6b32364184bab67f6310ffd
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.3823406994342804,"y":0.25918421149253847},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Neutro SpriteSheets_0: -1256929694
+      Neutro SpriteSheets_1: -136811689
+      Neutro SpriteSheets_10: 806474571
+      Neutro SpriteSheets_11: -1202258514
+      Neutro SpriteSheets_12: 1327872666
+      Neutro SpriteSheets_13: 446623323
+      Neutro SpriteSheets_14: -655094588
+      Neutro SpriteSheets_15: -688202217
+      Neutro SpriteSheets_16: 54078639
+      Neutro SpriteSheets_17: -969239261
+      Neutro SpriteSheets_18: -727600353
+      Neutro SpriteSheets_19: -1183522628
+      Neutro SpriteSheets_2: 1331565827
+      Neutro SpriteSheets_3: -744102797
+      Neutro SpriteSheets_4: -65098977
+      Neutro SpriteSheets_5: -509015987
+      Neutro SpriteSheets_6: 1765519843
+      Neutro SpriteSheets_7: 1684103037
+      Neutro SpriteSheets_8: 2141691075
+      Neutro SpriteSheets_9: 1860419401
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
