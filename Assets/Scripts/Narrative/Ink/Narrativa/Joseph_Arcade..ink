@@ -5,13 +5,14 @@
 He estado pensando en lo que dijiste… a veces nos exigimos demasiado. 
 ¿Y si hoy simplemente te das un respiro?
 
-#sprite:joseph_sad
+#sprite:joseph_confundido
+#sonido: joseph_suspiro
 ¿"Darme un respiro" cómo?
 
 #sprite:sophia_neutral
 Dejar de pensar tanto. Solo vivir un rato.
 
-#sprite:joseph_sad
+#sprite:joseph_molesto  
 No estoy para caminatas filosóficas.
 
 #sprite:sophia_thinking
@@ -24,6 +25,7 @@ Suena tentador… ¿y la clase?
 La clase seguirá ahí. Tú necesitas parar hoy.
 
 #sprite:joseph_sad
+#sonido: joseph_gruñido
 No necesito un refugio… necesito un título para que mi padre deje de verme como un error.
 
 #sprite:sophia_thinking
@@ -32,7 +34,7 @@ No necesito un refugio… necesito un título para que mi padre deje de verme co
 #sprite:joseph_sad
 Tal vez… pero es la única forma que tengo de no fallar.
 
-#sprite:joseph_sad
+#sprite:joseph_confundido
 Y si falto, el profesor me va a marcar.
 
 #sprite:sophia_neutral
@@ -50,7 +52,7 @@ Si alguien me ve fuera del campus…
 #sprite:sophia_happy
 Nadie lo sabrá. Solo por hoy, deja de pensar en consecuencias.
 
-#sprite:joseph_neutral
+#sprite:joseph_sad
 Está bien… igual ya me siento fuera de lugar.
 
 #sprite:sophia_happy
@@ -85,6 +87,7 @@ Podría quedarme aquí horas... o días enteros si me lo permitieran.
 #sprite:sophia_happy
 ¿Ves? La libertad no estaba escondida en los libros, estaba en este lugar.
 #sprite:joseph_happy
+#sonido: joseph_risa
 Gracias por traerme.
 #sprite:sophia_neutral
 Disfrútalo. Te lo mereces después de tanto tiempo viviendo para los demás.
@@ -122,6 +125,7 @@ Dare una vuelta y luego sigo hablando con joseph
 #setflag:Camino_1_Joseph_Arcade
 #setvar:ruta:desicion2
 #sprite:joseph_happy
+#sonido: joseph_risa
 ¡Sophia! ¡Le acabo de ganar al récord de la semana! ¡Soy el rey de este lugar!
 
 #sprite:joseph_happy
@@ -179,7 +183,7 @@ Dare una vuelta y luego sigo hablando con joseph
 
 === Camino_1_2_Joseph_Arcade ===
 #setflag:Camino_1_2_Joseph_Arcade
-#sprite:joseph_neutral
+#sprite:joseph_happy
 Me gusta este lugar... no hay preguntas difíciles, solo obstáculos que puedo superar. 
 Aquí es donde pertenezco.
 Además, acabo de entender algo: no soy un mal estudiante… solo estaba en el lugar equivocado.
@@ -208,9 +212,8 @@ Se acabó intentar encajar en algo que no soy. Voy a hacer mi propio camino.
 #sprite:sophia_thinking
 ¿Y si esta “libertad” es solo otra presión distinta?
 
-// Joseph decae un momento
-
-#sprite:joseph_sad
+#sprite:joseph_neutral
+#sonido: joseph_suspiro
 Tal vez esto es una locura… mis padres nunca aceptarían esto.
 
 #sprite:sophia_neutral
@@ -222,7 +225,7 @@ Aquí no soy ese fracaso… aquí soy alguien.
 #sprite:sophia_happy
 Entonces no dejes que ese miedo te detenga. Vuelve al juego.
 
-#sprite:joseph_neutral
+#sprite:joseph_confundido
 ¿Me estás diciendo que ignore sus llamadas?
 
 #sprite:sophia_thinking

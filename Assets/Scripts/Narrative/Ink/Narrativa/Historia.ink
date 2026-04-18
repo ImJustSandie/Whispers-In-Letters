@@ -23,7 +23,7 @@ EXTERNAL GetVar(varName)
  Hola Joseph, que milagro en verte por aquí tan temprano.
  #sprite:joseph_neutral
  Ah, hola Sophia, que bueno encontrarte.
- #sprite:joseph_sad
+ #sprite:joseph_confundido
  #sonido: joseph_suspira
   La verdad no. Es lo mismo de siempre, pero más pesado...
    #setvar:ruta:desicion_prologo
@@ -40,6 +40,7 @@ EXTERNAL GetVar(varName)
      #sprite:sophia_euforic
      no tengo tiempo, pero espero que te vaya bien
      #sprite:joseph_sad
+     #sonido: joseph_suspira
      No hay problema, nos vemos
      ->END
      
@@ -57,7 +58,8 @@ EXTERNAL GetVar(varName)
 #sprite:joseph_happy
 Gracias por escucharme.
 
-#sprite:joseph_sad
+#sprite:joseph_confundido
+#sonido: joseph_suspira
 No sé qué estoy haciendo con mi vida.
 Mi familia me ha dado todo, pero me siento solo.
 
@@ -69,10 +71,10 @@ y siento que solo estudio por presión.
 No te castigues tanto.
 Cada quien encuentra su camino a su ritmo.
 
-#sprite:joseph_neutral
+#sprite:joseph_sad
 Eso dicen… pero siento que el tiempo se me escapa.
 
-#sprite:joseph_neutral
+#sprite:joseph_confundido
 Se supone que soy libre, pero cada decisión pesa.
 
 #sprite:sophia_thinking
@@ -102,6 +104,7 @@ sino de perspectiva.
 A veces hablas como enciclopedia.
 
 #sprite:sophia_euforic
+#sonido: sophia_risa
 Y tú como si pensar doliera.
 
 #sprite:sophia_euforic
@@ -146,6 +149,7 @@ Aun no deberia ir a mi casa, tengo cosas que hacer.
 
 === Confirmacion_Entrar_Cuarto ===
 #sprite:sophia_thinking
+#sonido: sophia_suspira
 Estoy a punto de entrar a mi cuarto. Siento que si entro, ya no volveré a salir por hoy...
 ¿Realmente quiero terminar de explorar por ahora?
 + [Sí, estoy segura.]
@@ -171,6 +175,7 @@ Aun no me puedo ir a dormir, tengo cosas que hacer.
 
 ===Salidas_Bloqueadas===
 #sprite:sophia_neutral
+#sonido: sophia_suspira
 Estoy muy cansada, quiero ir a mi casa a recostarme
 -> END
 
@@ -189,6 +194,7 @@ Es el momento de cerrar los ojos y dejar que el pensamiento descanse... hasta qu
 
 === Confirmacion_Dormir ===
 #sprite:sophia_neutral
+#sonido: sophia_suspira
 Estoy exhausta... Siento que si me duermo ahora, este día finalmente habrá terminado. 
 ¿Estoy lista para dejarlo todo atrás por hoy?
 + [Sí, es momento de descansar]

@@ -35,6 +35,7 @@ Déjame revisar dónde lo dejé...
 #sonido: sophia_risa
 ¡Aquí está! Menos mal.
 #sprite:sophia_thinking
+#sonido: sophia_sorpresa
 Aunque... también recuerdo que deje mi libro favorito en la biblioteca.
 Creo que debería pasarme por allá antes de volver.
 -> END
@@ -54,6 +55,7 @@ Vamos, tiene que estar por algún lado...
 
 === prologo_biblioteca_recoger_obj ===
 #sprite:sophia_euforic
+#sonido: sophia_risa
 ¡Lo encontré!
 #sprite:sophia_neutral
 #setflag:prologue_completed

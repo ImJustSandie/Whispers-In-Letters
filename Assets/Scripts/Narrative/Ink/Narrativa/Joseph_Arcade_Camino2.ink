@@ -4,12 +4,14 @@
     Estuvo bien, pero ya es hora de irnos, Joseph. No podemos quedarnos aquí para siempre.
     
     #sprite:joseph_sad
+    #sonido: joseph_suspiro
     ¿Ya? Apenas estaba empezando en serio… siempre tiene que acabarse justo cuando mejor se pone.
     
     #sprite:sophia_thinking
     Precisamente por eso. No se trata de escapar, sino de saber cuándo parar.
     
     #sprite:joseph_sad
+    #sonido: joseph_gruñido
     Es fácil decirlo… aquí al menos siento que soy bueno en algo. Afuera… todo es distinto.
     
     #sprite:sophia_neutral
@@ -48,13 +50,13 @@ Dare una vuelta y luego sigo hablando con joseph
     
     ===Camino_2_2_Joseph_Arcade ===
     #setflag:Camino_2_2_Joseph_Arcade
-    #sprite:sophia_euforic
+    #sprite:sophia_enojada
     ¡Joseph, suelta ese mando ahora mismo! Llevamos horas aquí y ya perdiste la noción del tiempo.
     
-    #sprite:joseph_sad
+    #sprite:joseph_molesto
     ¡Solo cinco minutos más! Estoy a punto de romper otro récord, no puedes interrumpir ahora.
     
-    #sprite:sophia_euforic
+    #sprite:sophia_enojada
     ¡¿A quién le importa un récord en una máquina?! 
     Hace una hora que me dijiste que ya terminabas, 
     no voy a permitir que te hundas en este antro.
@@ -68,7 +70,7 @@ Dare una vuelta y luego sigo hablando con joseph
     #sprite:joseph_sad
     ¡Me estás arruinando el momento! ¡Casi lo tenía!
     
-    #sprite:sophia_neutral
+    #sprite:sophia_enojada
     Te estoy evitando que te pierdas aquí; camina hacia la puerta.
     
     #sprite:joseph_sad
@@ -90,8 +92,6 @@ Dare una vuelta y luego sigo hablando con joseph
     #sprite:joseph_sad
     Oye, no me empujes… puedo salir solo.
     
-    // Sophia reflexiona y cambia tono
-    
     #sprite:sophia_thinking
     Joseph… mírame. Lo siento, no debí traerte aquí.
     
@@ -104,7 +104,7 @@ Dare una vuelta y luego sigo hablando con joseph
     #sprite:joseph_sad
     Por un momento sentí que todo tenía sentido… y ahora volver duele más.
     
-    #sprite:sophia_thinking
+    #sprite:sophia_sad
     Me duele verte así… no era la idea.
     
     #sprite:joseph_sad
@@ -117,6 +117,7 @@ Dare una vuelta y luego sigo hablando con joseph
     Tal vez solo querías ayudar… pero ahora se siente como si hubiera sido mentira.
     
     #sprite:sophia_happy
+    #sonido: sophia_risa
     Entonces hagámoslo bien esta vez… enfrentémoslo juntos, paso a paso.
     #sprite:joseph_neutral
     No te culpes tanto… al menos ahora sé que, aunque cueste, mi lugar está allá afuera.

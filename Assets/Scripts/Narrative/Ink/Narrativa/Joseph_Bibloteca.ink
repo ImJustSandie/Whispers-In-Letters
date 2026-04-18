@@ -5,6 +5,7 @@ Joseph, deberías aprovechar para repasar o prepararte.
 Si quieres que esta vez sea diferente, necesitas comprometerte de verdad.
 
 #sprite:joseph_sad
+#sonido: joseph_suspiro
 ¿Pretendes que llene mi vacío existencial con más libros? Sophia, 
 eso es lo que me ha estado asfixiando toda la vida.
 
@@ -34,7 +35,6 @@ Esta vez es diferente porque no vas a estar solo. Vamos a vencer ese miedo junto
 
 #sprite:sophia_neutral
 Míralo como un entrenamiento para tu espíritu. Vamos, Joseph, antes de que pierdas el valor.
-// Sophia y Joseph caminan hacia la biblioteca
 #scene: Biblioteca
 
 -> END
@@ -44,6 +44,7 @@ Míralo como un entrenamiento para tu espíritu. Vamos, Joseph, antes de que pie
 Ya estamos aquí. Mira este lugar… el silencio casi se puede tocar.
 
 #sprite:joseph_neutral
+#sonido: joseph_sorpresa
 Es más imponente de lo que recordaba.
 
 #sprite:joseph_neutral
@@ -57,7 +58,7 @@ Es un refugio. Aquí el ruido del exterior no existe.
 Solo estás tú… y lo que decidas aprender.
 
 #sprite:joseph_sad
-(Suspira)
+#sonido: joseph_suspiro
 Solo espero que este “refugio” no termine siendo otra celda.
 
 #sprite:sophia_neutral
@@ -98,12 +99,12 @@ Hazlo por curiosidad. Solo una página.
 #sprite:sophia_euforic
 #setvar:ruta:estrategia
 voy a ayudar a joseph
--> END
+-> Camino_1_Joseph_Biblioteca
 +[Decirle que no puede]
 #sprite:sophia_sad
 #setvar:ruta:rendirse
 mejor me rindo
--> END
+-> Camino_2_Joseph_Biblioteca
 +[Pensar después]
 #sprite:sophia_thinking
 #setvar:ruta:Decision_Biblioteca_1
@@ -172,11 +173,11 @@ Está bien... peor es no intentarlo.
 #sprite:sophia_neutral
 #setvar:ruta:disciplina
 Joseph ha mejorado, pero hay que ser constante y disciplinado - Hay mucho camino por recorrer
--> END
+-> Camino_1_2_Joseph_Biblioteca
 +[Rendirse]
 #setvar:ruta:rendirse_2
 No ha avanzado casi nada - Este es un reto muy duro
--> END
+-> Camino_2_2_Joseph_Biblioteca
 +[Decidir después]
 #sprite:sophia_thinking
 #setvar:ruta:decision_biblioteca_2

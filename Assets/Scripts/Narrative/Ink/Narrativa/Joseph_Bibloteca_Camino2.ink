@@ -69,12 +69,12 @@ No tiene sentido seguir rompiéndote contra algo que no responde.
 #sprite:sophia_neutral
 #setvar:ruta:ultimo_esfuerzo
 No debería rendirmetan fácil
--> END
+-> Camino_1_2_Joseph_Biblioteca
 +[Aceptar la derrota]
 #setvar:ruta:rendicion_final
 #sprite:sophia_sad
 Este es un caso perdido
--> END
+-> Camino_2_2_Joseph_Biblioteca
 +[Decidir después]
 #sprite:sophia_thinking
 #setvar:ruta:decision_biblioteca_3
