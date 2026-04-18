@@ -2,6 +2,7 @@
 #setflag:Camino_2_Joseph_Biblioteca
 
 #sprite:joseph_sad
+#sonido:joseph_suspiro
 Es inútil, Sophia... por más que lo intente, estas palabras son solo ruido para mí.
 
 #sprite:sophia_sad
@@ -31,7 +32,7 @@ Es doloroso admitirlo… pero este es mi límite.
 #sprite:joseph_sad
 Y cada vez que lo intento más, solo me siento más atrás.
 
-#sprite:sophia_sad
+#sprite:sophia_neutral
 Forzarlo más no te va a hacer avanzar… solo te va a romper.
 
 #sprite:joseph_sad
@@ -41,6 +42,7 @@ Tienes razón… ya no sé si estoy aprendiendo o solo sobreviviendo a esto.
 Voy a cerrar el libro.
 
 #sprite:joseph_sad
+#sonido:joseph_suspiro
 Se siente extraño… como rendirme en silencio.
 
 #sprite:sophia_neutral
@@ -88,6 +90,7 @@ Necesito pensarlo
 Joseph, detente. No vamos a leer ni una sola línea más.
 
 #sprite:joseph_sad
+#sonido:joseph_sorpresa
 ¿Te rindes conmigo? Pensé que eras la única que creía que podía lograrlo.
 
 #sprite:sophia_thinking

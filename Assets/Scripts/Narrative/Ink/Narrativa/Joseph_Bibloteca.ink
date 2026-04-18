@@ -18,7 +18,8 @@ No entiendo cómo leer sobre contratos o leyes puede hacerme sentir "libre".
 #sprite:sophia_neutral
 La ignorancia es la mayor de las cárceles. Ven conmigo, vamos a la biblioteca.
 
-#sprite:joseph_sad
+#sprite:joseph_molesto
+#sonido:joseph_gruñido
 Es el lugar que más odio en este campus. El silencio allí dentro me grita mis fracasos.
 
 #sprite:joseph_thinking
@@ -127,6 +128,7 @@ Hay personas que entienden todo muy rápido... yo puedo leerlo diez veces y mi m
 Tu velocidad de procesamiento es distinta. Te enredas en la terminología técnica.
 
 #sprite:joseph_sad
+#sonido:joseph_suspiro
 Es humillante darme cuenta... quizás no es flojera, sino falta de capacidad.
 
 #sprite:sophia_neutral
@@ -235,7 +237,8 @@ Si me rindo ahora... todo habrá sido igual.
 Hazlo por tu propia voluntad, no por los demás.
 
 #sprite:joseph_neutral
-Está bien... tomaré agua y seguiré.
+#sonido:joseph_suspiro
+Está bien seguiré.
 
 #sprite:sophia_euforic
 Tu libertad está en no rendirte.

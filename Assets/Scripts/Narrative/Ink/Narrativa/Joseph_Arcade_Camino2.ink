@@ -117,7 +117,7 @@ Dare una vuelta y luego sigo hablando con Joseph
     Tal vez solo querías ayudar… pero ahora se siente como si hubiera sido mentira.
     
     #sprite:sophia_happy
-    #sonido: sophia_risa
+    #sonido:sophia_risa
     Entonces hagámoslo bien esta vez… enfrentémoslo juntos, paso a paso.
     #sprite:joseph_neutral
     No te culpes tanto… al menos ahora sé que, aunque cueste, mi lugar está allá afuera.
