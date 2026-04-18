@@ -1,9 +1,13 @@
 
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerInteraction : MonoBehaviour
 {
+    /// <summary>Se dispara cuando el interactuable cercano cambia (incluye null al salir).</summary>
+    public event Action<IInteractable> OnInteractableChanged;
+
     private PlayerControls controls;
     private IInteractable currentInteractable;
 
@@ -72,22 +76,32 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("[PlayerInteraction] OnTriggerEnter con: " + other.gameObject.name);
         IInteractable interactable = other.GetComponentInParent<IInteractable>();
 
         if (interactable != null)
         {
             currentInteractable = interactable;
             Debug.Log("Objeto cercano: " + interactable.GetInteractionName());
+            Debug.Log("[PlayerInteraction] Invocando OnInteractableChanged. Suscriptores: " + (OnInteractableChanged?.GetInvocationList().Length ?? 0));
+            OnInteractableChanged?.Invoke(currentInteractable);
+        }
+        else
+        {
+            Debug.Log("[PlayerInteraction] OnTriggerEnter: el objeto NO implementa IInteractable.");
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+        Debug.Log("[PlayerInteraction] OnTriggerExit con: " + other.gameObject.name);
         IInteractable interactable = other.GetComponentInParent<IInteractable>();
 
         if (interactable != null && interactable == currentInteractable)
         {
             currentInteractable = null;
+            Debug.Log("[PlayerInteraction] Invocando OnInteractableChanged(null). Suscriptores: " + (OnInteractableChanged?.GetInvocationList().Length ?? 0));
+            OnInteractableChanged?.Invoke(null);
         }
     }
 }
