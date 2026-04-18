@@ -1,14 +1,17 @@
-# ✉️ Whispers in Letters (Susurros en Letras)
+# Whispers in Letters
 
 ![Unity](https://img.shields.io/badge/Unity-2022.3+-black?style=for-the-badge&logo=unity)
 ![Ink](https://img.shields.io/badge/Narrative-Ink-orange?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+![License](https://img.shields.io/badge/License-Non--Commercial-green?style=for-the-badge)
 
-**Whispers in Letters** es una experiencia narrativa interactiva basada en el célebre libro *"El Mundo de Sofía"*. El objetivo principal del proyecto es transformar complejos **dilemas filosóficos** en situaciones cotidianas y comprensibles para estudiantes, permitiéndoles explorar las consecuencias de sus decisiones bajo la lupa de grandes pensadores.
+**Whispers in Letters** es una experiencia narrativa interactiva basada en el célebre libro _"El Mundo de Sofía"_. El objetivo principal del proyecto es transformar complejos **dilemas filosóficos** en situaciones cotidianas y comprensibles para estudiantes, permitiéndoles explorar las consecuencias de sus decisiones bajo la lupa de grandes pensadores.
+
+> [!NOTE]
+> Este proyecto es de código abierto con fines **estrictamente educativos**. No está permitida su explotación comercial externa, se puede reutilizar codigo para otros proyectos de codigo abierto, pero tiene que estar correctamente referenciado.
 
 ---
 
-## 🌟 Visión del Proyecto
+## Visión del Proyecto
 
 La filosofía no tiene por qué ser abstracta o aburrida. En este juego, los estudiantes de colegios y universidades pueden enfrentarse a problemas reales a través de los ojos de los personajes, aplicando conceptos de:
 
@@ -21,17 +24,19 @@ El juego busca que el aprendizaje sea **vivencial**, donde cada elección no sol
 
 ---
 
-## 🎭 Personajes y Ambientación
+## Personajes y Ambientación
 
 ### Joseph
+
 Es el eje central de las primeras narrativas. Un joven enfrentado a las presiones de la vida moderna, la vocación y la disciplina. A través de Joseph, el jugador explorará rutas que lo llevarán a la **Biblioteca** (el camino de la academia y la introspección) o al **Arcade** (el camino de la distracción y la gratificación inmediata).
 
 ### El Entorno
+
 Desde parques tranquilos hasta bibliotecas imponentes, cada escenario está diseñado para evocar una atmósfera específica que refuerza el dilema en cuestión.
 
 ---
 
-## 🧱 Arquitectura Modular
+## Arquitectura Modular
 
 Uno de los pilares técnicos de **Whispers in Letters** es su **Estructura Modular**. Hemos diseñado el motor del juego para que sea altamente escalable:
 
@@ -43,7 +48,7 @@ Esta arquitectura permite que el proyecto crezca orgánicamente, añadiendo más
 
 ---
 
-## 🚀 Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - **Unity**: Motor principal para el renderizado 3D y la lógica de juego.
 - **Ink Messaging System**: Un robusto parser para manejar diálogos ramificados complejos.
@@ -52,13 +57,12 @@ Esta arquitectura permite que el proyecto crezca orgánicamente, añadiendo más
 
 ---
 
-## 📖 Cómo Empezar
+## Cómo Empezar
 
-1. Clona el repositorio.
-2. Abre el proyecto en **Unity 2022.3** o superior.
-3. Carga la escena `Menu` en `Assets/Scenes/`.
-4. ¡Empieza a explorar el mundo de la filosofía!
+¡Simplemente descarga el Ejecutable cuando esté disponible!
+
+Asegurate de instalar la última versión
 
 ---
 
-*Desarrollado con ❤️ para transformar la educación a través de la interactividad.*
+_Desarrollado con ❤️ para transformar la educación a través de la interactividad._
