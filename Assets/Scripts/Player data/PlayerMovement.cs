@@ -11,14 +11,14 @@ public class PlayerMovement : MonoBehaviour
     private PlayerControls controls;
 
     private Vector2 moveInput;
+    public Animator Animator;
 
     void Awake()
     {
         controller = GetComponent<CharacterController>();
         controls = new PlayerControls();
 
-        controls.Player.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
-        controls.Player.Move.canceled += ctx => moveInput = Vector2.zero;
+        // El input se lee directamente en Update() para evitar desfase de frames
     }
 
     void OnEnable()
@@ -50,6 +50,9 @@ public class PlayerMovement : MonoBehaviour
 
 
 
+        // Leer el input en el mismo frame que se procesa el movimiento
+        moveInput = controls.Player.Move.ReadValue<Vector2>();
+
         Vector3 movement = new Vector3(moveInput.x, 0, moveInput.y);
 
         // Rotar el modelo suavemente hacia la direccion de movimiento
@@ -60,5 +63,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
         controller.Move(movement * moveSpeed * Time.deltaTime);
+
+        if (Animator != null)
+        {
+            Animator.SetFloat("MovementA", moveInput.magnitude);
+        }
     }
 }
