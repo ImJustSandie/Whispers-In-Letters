@@ -3336,7 +3336,11 @@ MonoBehaviour:
   flagToSetOnCollect: 'prologo_biblioteca_recoger_obj '
   inkKnotOnInteract: prologo_biblioteca_recoger_obj
   interactionName: Objeto
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 11400000, guid: 295cb6bbda0b0874ebaa937d8c0dc07d, type: 2}
+  useEmissionPulse: 1
+  emissionColor: {r: 1, g: 1, b: 1, a: 1}
+  pulseSpeed: 6
+  maxIntensity: 0.2
 --- !u!135 &1934308356
 SphereCollider:
   m_ObjectHideFlags: 0

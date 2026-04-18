@@ -1,4 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+
+[System.Serializable]
+public class TransitionCondition
+{
+    [Tooltip("El flag que se requiere para permitir la transición.")]
+    public string requiredFlag;
+    [Tooltip("El nudo de Ink que se reproducirá si este flag NO está presente.")]
+    public string fallbackKnot;
+}
 
 [RequireComponent(typeof(Collider))] // O Collider2D si estas trabajando en 2D
 public class SceneTransitionTrigger : MonoBehaviour
@@ -15,7 +26,16 @@ public class SceneTransitionTrigger : MonoBehaviour
     [Tooltip("Opcional: Nudo de Ink que se reproducirá si el jugador intenta cruzar pero no tiene el flag requerido.")]
     public string fallbackKnot = "";
 
+    [Header("Visual Feedback")]
+    [Tooltip("Distancia que se empuja al jugador hacia atrás si la entrada está bloqueada.")]
+    [SerializeField] private float pushDistance = 1.2f;
+
+    [Header("Condiciones Adicionales (Pila/Secuencia)")]
+    [Tooltip("Lista de condiciones evaluadas en orden. La primera que falle detendrá la transición.")]
+    public List<TransitionCondition> conditions = new List<TransitionCondition>();
+
     private bool isTransitioning = false;
+    private bool isPushingBack = false;
 
     // Si tu juego es 3D usa OnTriggerEnter, si es 2D usa OnTriggerEnter2D
     private void OnTriggerEnter(Collider other)
@@ -23,21 +43,29 @@ public class SceneTransitionTrigger : MonoBehaviour
         // Revisamos si quien toco la puerta fue realmente el jugador y si no estamos ya cargando
         if (other.CompareTag(playerTag) && !isTransitioning)
         {
+            // 1. Evaluar condición individual inicial (Retrocompatibilidad)
             if (!string.IsNullOrEmpty(requiredFlag))
             {
                 if (GameManager.Instance == null || !GameManager.Instance.GetStoryFlag(requiredFlag))
                 {
-                    Debug.Log($"[SceneTransition] Acceso denegado. Se requiere el flag: {requiredFlag}");
-                    
-                    if (!string.IsNullOrEmpty(fallbackKnot) && StoryManager.Instance != null)
-                    {
-                        StoryManager.Instance.StartStory(fallbackKnot);
-                    }
-                    
+                    HandleAccessDenied(requiredFlag, fallbackKnot);
+                    if (!isPushingBack) StartCoroutine(NaturalPushBackRoutine(other.gameObject));
                     return;
                 }
             }
 
+            // 2. Evaluar lista de condiciones secuenciales
+            foreach (var condition in conditions)
+            {
+                if (GameManager.Instance == null || !GameManager.Instance.GetStoryFlag(condition.requiredFlag))
+                {
+                    HandleAccessDenied(condition.requiredFlag, condition.fallbackKnot);
+                    if (!isPushingBack) StartCoroutine(NaturalPushBackRoutine(other.gameObject));
+                    return;
+                }
+            }
+
+            // 3. Si todas las condiciones pasaron, cambiar escena
             if (LevelManager.Instance != null && !string.IsNullOrEmpty(destinationSceneName))
             {
                 isTransitioning = true;
@@ -50,6 +78,66 @@ public class SceneTransitionTrigger : MonoBehaviour
             }
         }
     }
+
+    private void HandleAccessDenied(string flag, string knot)
+    {
+        Debug.Log($"[SceneTransition] Acceso denegado. Falta el flag: {flag}");
+        if (!string.IsNullOrEmpty(knot) && StoryManager.Instance != null)
+        {
+            StoryManager.Instance.StartStory(knot);
+        }
+    }
+
+    /// <summary>
+    /// Espera a que el diálogo termine y mueve suavemente al jugador en dirección opuesta.
+    /// Esto imita el movimiento natural (giro + caminata) en lugar de un salto instantáneo.
+    /// </summary>
+    private IEnumerator NaturalPushBackRoutine(GameObject player)
+    {
+        CharacterController cc = player.GetComponent<CharacterController>();
+        if (cc == null) yield break;
+
+        isPushingBack = true;
+
+        // 1. Esperar un breve momento para que StoryManager registre el diálogo activo
+        yield return new WaitForSeconds(0.1f);
+
+        // 2. Esperar a que el jugador cierre el diálogo (Sophia no se mueve mientras habla)
+        while (StoryManager.Instance != null && StoryManager.Instance.IsDialogueActive)
+        {
+            yield return null;
+        }
+
+        // 3. Iniciar movimiento de retroceso natural
+        Vector3 pushDir = (player.transform.position - transform.position);
+        pushDir.y = 0;
+        if (pushDir.sqrMagnitude < 0.01f) pushDir = -transform.forward; 
+        pushDir.Normalize();
+
+        float walkSpeed = 3.5f; 
+        float rotSpeed = 10f;
+        
+        // RESTRICCIÓN DE SEGURIDAD: Usamos tiempo en lugar de distancia para evitar bucles infinitos en esquinas/paredes
+        float pushDuration = 0.5f; 
+        float timer = 0f;
+
+        while (timer < pushDuration)
+        {
+            timer += Time.deltaTime;
+
+            // Girar suavemente hacia la dirección de retroceso
+            Quaternion targetRotation = Quaternion.LookRotation(pushDir);
+            player.transform.rotation = Quaternion.Slerp(player.transform.rotation, targetRotation, rotSpeed * Time.deltaTime);
+
+            // Mover hacia el punto de destino
+            cc.Move(pushDir * walkSpeed * Time.deltaTime);
+            
+            yield return null;
+        }
+
+        isPushingBack = false;
+        Debug.Log("[SceneTransition] Retroceso natural completado después del diálogo.");
+    }
     
     // Descomenta esto y borra la funcion de arriba si tu juego es estrictamente 2D
     /*
@@ -57,6 +145,22 @@ public class SceneTransitionTrigger : MonoBehaviour
     {
         if (other.CompareTag(playerTag) && !isTransitioning)
         {
+            // Evaluación de condiciones secuenciales
+            if (!string.IsNullOrEmpty(requiredFlag) && (GameManager.Instance == null || !GameManager.Instance.GetStoryFlag(requiredFlag)))
+            {
+                HandleAccessDenied(requiredFlag, fallbackKnot);
+                return;
+            }
+
+            foreach (var condition in conditions)
+            {
+                if (GameManager.Instance == null || !GameManager.Instance.GetStoryFlag(condition.requiredFlag))
+                {
+                    HandleAccessDenied(condition.requiredFlag, condition.fallbackKnot);
+                    return;
+                }
+            }
+
             if (LevelManager.Instance != null && !string.IsNullOrEmpty(destinationSceneName))
             {
                 isTransitioning = true;

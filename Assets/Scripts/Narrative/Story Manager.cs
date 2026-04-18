@@ -1,5 +1,6 @@
 using Ink.Runtime;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System;
 
 public class StoryManager : MonoBehaviour
@@ -25,8 +26,37 @@ public class StoryManager : MonoBehaviour
 
     void Awake()
     {
-        Instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+            InitializeStory();
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Muy importante: Al cambiar de escena, la referencia al dialoguePanel se vuelve null/missing 
+        // porque ese objeto pertenecía a la escena anterior. Debemos re-vincularlo.
+        RefreshUIReferences();
+    }
+
+    private void InitializeStory()
+    {
         if (inkJSON == null)
         {
             Debug.LogError("[StoryManager] inkJSON no esta asignado en el Inspector.");
@@ -36,7 +66,7 @@ public class StoryManager : MonoBehaviour
         story = new Story(inkJSON.text);
         Debug.Log("[StoryManager] Story inicializado correctamente.");
 
-        // Vincular funciones externas para que Ink lea directamente del GameManager
+        // Vincular funciones externas
         story.BindExternalFunction("GetFlag", (string flagName) => {
             return GameManager.Instance != null && GameManager.Instance.GetStoryFlag(flagName);
         });
@@ -46,22 +76,54 @@ public class StoryManager : MonoBehaviour
             return "";
         });
 
+        RefreshUIReferences();
+    }
+
+    /// <summary>
+    /// Busca el panel de diálogo en la escena actual y re-establece las conexiones.
+    /// Útil tras un cambio de escena o si se perdió la referencia.
+    /// </summary>
+    public void RefreshUIReferences()
+    {
+        // Al cargar una nueva escena, siempre asumimos que el diálogo debe empezar limpio
+        dialogueActive = false;
+
+        // 1. Intentar encontrar el panel si se perdió
+        if (dialoguePanel == null)
+        {
+            // Buscamos un objeto llamado "DialoguePanel" o similar. 
+            // Si el usuario usa un nombre distinto, lo ideal es usar tags.
+            dialoguePanel = GameObject.Find("DialoguePanel");
+            
+            if (dialoguePanel == null)
+            {
+                // Intento desesperado: buscar cualquier objeto con DialogueUIController
+                var foundUI = UnityEngine.Object.FindAnyObjectByType<DialogueUIController>(FindObjectsInactive.Include);
+                if (foundUI != null) dialoguePanel = foundUI.transform.parent.gameObject;
+            }
+        }
+
         if (dialoguePanel != null)
         {
-            // Intentamos obtener el DialogueUIController en el panel o en sus hijos
             uiController = dialoguePanel.GetComponentInChildren<DialogueUIController>(true);
             
-            if (uiController == null)
+            if (uiController != null)
             {
-                Debug.LogError("[StoryManager] No se encontro DialogueUIController en el dialoguePanel ni en sus hijos.");
-            }
-            else
-            {
-                // Suscribirse al evento de finalizacion del dialogo
+                // Limpiar suscripciones previas para evitar llamadas dobles si el objeto persiste
+                uiController.OnDialogueEnded -= EndStory;
                 uiController.OnDialogueEnded += EndStory;
-            }
 
+                // Limpiar la interfaz y flags pendientes (como el Fade Out)
+                uiController.ResetUI();
+                
+                Debug.Log($"[StoryManager] Referencias de UI vinculadas correctamente en {SceneManager.GetActiveScene().name}");
+            }
+            
             dialoguePanel.SetActive(false);
+        }
+        else
+        {
+            Debug.LogWarning("[StoryManager] No se pudo encontrar el 'DialoguePanel' en esta escena.");
         }
     }
 

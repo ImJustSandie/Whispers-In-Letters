@@ -40,6 +40,32 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Limpieza de seguridad: Al entrar en cualquier escena, la pantalla debe estar clara
+        // y las transiciones detenidas.
+        isTransitioning = false;
+
+        if (fadeCanvasGroup != null)
+        {
+            fadeCanvasGroup.alpha = 0f;
+            fadeCanvasGroup.blocksRaycasts = false;
+            fadeCanvasGroup.gameObject.SetActive(false);
+        }
+        
+        Debug.Log($"[LevelManager] Reset de fade y transición completado en {scene.name}");
+    }
+
     private bool isTransitioning = false;
 
     /// <summary>

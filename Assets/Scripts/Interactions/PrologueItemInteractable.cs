@@ -33,6 +33,24 @@ public class PrologueItemInteractable : MonoBehaviour, IInteractable
     [Tooltip("Sonido al recoger el objeto (opcional).")]
     public AudioEvent interactionSound;
 
+    [Header("Visual Feedback (Emission Pulse)")]
+    [Tooltip("¿Debe el objeto pulsar su emisión para llamar la atención?")]
+    [SerializeField] private bool useEmissionPulse = true;
+
+    [Tooltip("Color de la emisión (Soporta HDR).")]
+    [ColorUsage(true, true)]
+    [SerializeField] private Color emissionColor = Color.white;
+
+    [Tooltip("Velocidad de la pulsación.")]
+    [SerializeField] private float pulseSpeed = 2f;
+
+    [Tooltip("Intensidad máxima de la emisión.")]
+    [SerializeField] private float maxIntensity = 1.5f;
+
+    private Renderer _renderer;
+    private Material _material;
+    private static readonly int EmissionColorProperty = Shader.PropertyToID("_EmissionColor");
+
     // ─────────────────────────────────────────────────────────────────────────
     // Inicialización — auto-desactivación según GameState
     // ─────────────────────────────────────────────────────────────────────────
@@ -45,6 +63,7 @@ public class PrologueItemInteractable : MonoBehaviour, IInteractable
     private void Start()
     {
         EvaluateVisibility();
+        SetupEmission();
     }
 
     /// <summary>
@@ -69,6 +88,41 @@ public class PrologueItemInteractable : MonoBehaviour, IInteractable
             GameManager.Instance.GetStoryFlag(flagToSetOnCollect))
         {
             gameObject.SetActive(false);
+        }
+    }
+
+    private void SetupEmission()
+    {
+        if (useEmissionPulse)
+        {
+            _renderer = GetComponent<Renderer>();
+            if (_renderer != null)
+            {
+                // Acceder a .material crea una instancia única para este objeto
+                _material = _renderer.material;
+                _material.EnableKeyword("_EMISSION");
+            }
+        }
+    }
+
+    private void Update()
+    {
+        if (useEmissionPulse && _material != null)
+        {
+            // Efecto de pulsación suave usando Seno basado en el tiempo
+            float pulse = (Mathf.Sin(Time.time * pulseSpeed) + 1f) / 2f; // Rango 0..1
+            float currentIntensity = pulse * maxIntensity;
+            
+            _material.SetColor(EmissionColorProperty, emissionColor * currentIntensity);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        // Limpiar la instancia de material para evitar fugas de memoria
+        if (_material != null)
+        {
+            Destroy(_material);
         }
     }
 

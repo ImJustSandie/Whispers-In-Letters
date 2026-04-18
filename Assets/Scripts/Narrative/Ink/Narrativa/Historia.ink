@@ -183,6 +183,7 @@ Estoy muy cansada, quiero ir a mi casa a recostarme
 === Final_Del_Juego ===
 Es el momento de cerrar los ojos y dejar que el pensamiento descanse... hasta que volvamos a despertar. 
 #fade_out
+#setflag:Final
 #scene: Menu
 -> END
 

@@ -53,7 +53,7 @@ public class PrologueManager : MonoBehaviour
     /// <summary>True si el diálogo final aún no ha sido visto.</summary>
     public bool IsPrologueActive =>
         GameManager.Instance != null &&
-        !GameManager.Instance.GetStoryFlag(FLAG_FINAL_SEEN);
+        !GameManager.Instance.GetStoryFlag(GameManager.Instance.CompletionFlag);
 
     // ─────────────────────────────────────────────────────────────────────────
     // Ciclo de vida
@@ -89,7 +89,10 @@ public class PrologueManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (!IsPrologueActive) return;
+        bool active = IsPrologueActive;
+        Debug.Log($"[PrologueManager] Escena cargada: {scene.name}. Activo: {active}");
+        
+        if (!active) return;
 
         // Esperamos un frame para que todos los objetos de escena se inicialicen
         // (incluyendo StoryManager y PrologueItemInteractable)
@@ -98,13 +101,33 @@ public class PrologueManager : MonoBehaviour
 
     private IEnumerator HandleSceneRoutine(string sceneName)
     {
-        yield return null; // Un frame de gracia para inicialización
+        float timeout = 3.0f;
+        float elapsed = 0f;
+
+        // 1. Esperar activamente a que las dependencias estén listas
+        // (StoryManager se inicializa en Awake de la nueva escena, puede haber delay de carga)
+        while (StoryManager.Instance == null || StoryManager.Instance.Story == null)
+        {
+            elapsed += Time.deltaTime;
+            if (elapsed > timeout)
+            {
+                Debug.LogError($"[PrologueManager] TIMEOUT: StoryManager no disponible tras {timeout}s en {sceneName}.");
+                yield break;
+            }
+            yield return null;
+        }
+
+        // 2. Margen de seguridad para estabilidad de la UI y otros scripts de la escena
+        yield return new WaitForSeconds(0.2f);
 
         if (GameManager.Instance == null)
         {
             Debug.LogWarning("[PrologueManager] GameManager no disponible. Prólogo pausado.");
             yield break;
         }
+
+        // 3. Generar reporte de estado para depuración en consola
+        LogStatusReport(sceneName);
 
         switch (sceneName)
         {
@@ -120,25 +143,42 @@ public class PrologueManager : MonoBehaviour
         }
     }
 
+    /// <summary>Imprime el estado de todos los flags relevantes para el prólogo.</summary>
+    private void LogStatusReport(string sceneName)
+    {
+        var gm = GameManager.Instance;
+        bool isFinished = gm.GetStoryFlag(gm.CompletionFlag);
+        bool completed = gm.GetStoryFlag(FLAG_COMPLETED);
+        bool arcadeVisited = gm.GetStoryFlag(FLAG_ARCADE_VISITED);
+        bool libVisited = gm.GetStoryFlag(FLAG_LIBRARY_VISITED);
+
+        Debug.Log($"[PrologueManager] --- REPORTE DE ESTADO ({sceneName}) ---");
+        Debug.Log($"- Escena: {sceneName}");
+        Debug.Log($"- Prólogo Activo (Basado en {gm.CompletionFlag}): {!isFinished}");
+        Debug.Log($"- Flags Internos -> Completed: {completed}, ArcadeVisited: {arcadeVisited}, LibVisited: {libVisited}");
+    }
+
     // ─────────────────────────────────────────────────────────────────────────
     // Handlers por escena
     // ─────────────────────────────────────────────────────────────────────────
 
     private void HandleParqueLoaded()
     {
-        // Si pusiste 'prologue_completed' desde Ink, entonces Joseph ya está en la escena.
-        // Ahora disparamos su diálogo final y cerramos definitivamente el Manager.
-        if (GameManager.Instance.GetStoryFlag(FLAG_COMPLETED))
+        bool completed = GameManager.Instance.GetStoryFlag(FLAG_COMPLETED);
+        bool arcadeVisited = GameManager.Instance.GetStoryFlag(FLAG_ARCADE_VISITED);
+
+        Debug.Log($"[PrologueManager] Parque: completed={completed}, arcadeVisited={arcadeVisited}");
+
+        if (completed)
         {
-            if (!GameManager.Instance.GetStoryFlag(FLAG_FINAL_SEEN)) 
+            if (!GameManager.Instance.GetStoryFlag(GameManager.Instance.CompletionFlag)) 
             {
                 TriggerDialogue(KNOT_PARQUE_FINAL);
                 CompletePrologue();
             }
         }
-        else if (!GameManager.Instance.GetStoryFlag(FLAG_ARCADE_VISITED))
+        else if (!arcadeVisited)
         {
-            // Primera vez en el Parque: diálogo de inicio
             TriggerDialogue(KNOT_PARQUE_INICIO);
         }
     }
@@ -179,9 +219,9 @@ public class PrologueManager : MonoBehaviour
 
     private void CompletePrologue()
     {
-        GameManager.Instance.SetStoryFlag(FLAG_FINAL_SEEN, true);
+        GameManager.Instance.SetStoryFlag(GameManager.Instance.CompletionFlag, true);
         GameManager.Instance.SaveGame();
-        Debug.Log("[PrologueManager] Prólogo completado. Guardando estado.");
+        Debug.Log($"[PrologueManager] Prólogo completado. Marcando flag: {GameManager.Instance.CompletionFlag}");
     }
 
     // ─────────────────────────────────────────────────────────────────────────
@@ -192,17 +232,17 @@ public class PrologueManager : MonoBehaviour
     {
         if (StoryManager.Instance == null)
         {
-            Debug.LogWarning($"[PrologueManager] StoryManager no disponible para knot '{knot}'.");
+            Debug.LogError($"[PrologueManager] ERROR: StoryManager.Instance es NULO al intentar disparar '{knot}'.");
             return;
         }
 
         if (StoryManager.Instance.IsDialogueActive)
         {
-            Debug.LogWarning($"[PrologueManager] Ya hay un diálogo activo. Knot '{knot}' ignorado.");
+            Debug.LogWarning($"[PrologueManager] BLOQUEADO: Ya hay un diálogo activo. Ignorando KNOT: '{knot}'.");
             return;
         }
 
-        Debug.Log($"[PrologueManager] Disparando diálogo: '{knot}'");
+        Debug.Log($"[PrologueManager] >>> DISPARANDO DIÁLOGO: '{knot}'");
         StoryManager.Instance.StartStory(knot);
     }
 }

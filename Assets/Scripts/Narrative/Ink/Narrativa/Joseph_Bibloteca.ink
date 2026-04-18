@@ -33,6 +33,7 @@ He pasado por tres carreras antes que esta, y en todas las bibliotecas me sentí
 Esta vez es diferente porque no vas a estar solo. Vamos a vencer ese miedo juntos.
 
 #sprite:sophia_neutral
+#setflag:Desicion_DeCamino
 Míralo como un entrenamiento para tu espíritu. Vamos, Joseph, antes de que pierdas el valor.
 // Sophia y Joseph caminan hacia la biblioteca
 #scene: Biblioteca
@@ -82,7 +83,7 @@ Hazlo por curiosidad. Solo una página.
 …Está bien. Una página.
 #setvar:ruta:Decision_Biblioteca_1
 #setflag:Decision_Biblioteca_1
-#setflag:Desicion_DeCamino
+
 -> Decision_Biblioteca_1 
 
 === HandleDecision_Biblioteca_1 ===

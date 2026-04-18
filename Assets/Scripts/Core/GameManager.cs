@@ -27,6 +27,12 @@ public class GameManager : MonoBehaviour
     [Tooltip("Si está activado, borrará el save en disco y el estado en memoria al dar Play.")]
     [SerializeField] private bool clearStateOnStart = false;
 
+    [Header("Auto-Reset Settings")]
+    [Tooltip("Si este flag está presente en el guardado al iniciar la app, la partida se borrará automáticamente (ideal para obligar a un New Game tras el final).")]
+    [SerializeField] private string completionFlag = "prologue_final_seen";
+
+    public string CompletionFlag => completionFlag;
+
     // ─────────────────────────────────────────────────────────────────────────
     // Inicialización
     // ─────────────────────────────────────────────────────────────────────────
@@ -54,9 +60,7 @@ public class GameManager : MonoBehaviour
     {
         if (clearStateOnStart)
         {
-            gameState.ClearState();
-            SaveSystem.DeleteSave();
-            Debug.Log("[GameManager] Modo debug activo: estado y save eliminados.");
+            ResetGameState();
             return;
         }
 
@@ -66,13 +70,30 @@ public class GameManager : MonoBehaviour
         if (savedData != null)
         {
             gameState.LoadFrom(savedData);
+
+            // Verificación de partida finalizada:
+            if (!string.IsNullOrEmpty(completionFlag) && gameState.HasFlag(completionFlag))
+            {
+                ResetGameState();
+                return;
+            }
+
             Debug.Log($"[GameManager] Save cargado en memoria. Última escena: '{gameState.currentSceneName}'");
         }
         else
         {
             gameState.ClearState();
-            Debug.Log("[GameManager] Sin save previo. Estado inicializado desde cero.");
         }
+    }
+
+    /// <summary>
+    /// Limpia el estado en memoria y elimina el archivo físico.
+    /// </summary>
+    private void ResetGameState()
+    {
+        Debug.Log($"[GameManager] Reiniciando estado y borrando save de disco.");
+        gameState.ClearState();
+        SaveSystem.DeleteSave();
     }
 
     // ─────────────────────────────────────────────────────────────────────────
@@ -94,24 +115,32 @@ public class GameManager : MonoBehaviour
     {
         if (LevelManager.Instance == null)
         {
-            Debug.LogError("[GameManager] RequestLoadLevel: LevelManager no encontrado. ¿Está en la escena?");
+            Debug.LogError("[GameManager] RequestLoadLevel: LevelManager no encontrado.");
             return;
         }
 
-        if (SaveSystem.HasSave() && !string.IsNullOrEmpty(gameState.currentSceneName))
+        // 1. COMPROBACIÓN DINÁMICA: Si entramos aquí y el flag de final ya está activo, limpiamos.
+        // Esto cubre el caso donde el jugador termina la partida y vuelve al menú sin cerrar la app.
+        if (!string.IsNullOrEmpty(completionFlag) && gameState.HasFlag(completionFlag))
         {
-            // Partida existente: el GameState ya está cargado en InitializeFromDisk().
-            // Solo navegamos a la escena donde el jugador lo dejó.
+            Debug.Log($"[GameManager] Detectada partida finalizada con flag '{completionFlag}'. Forzando reset.");
+            ResetGameState();
+        }
+
+        // 2. COMPROBACIÓN DE ESCENA: Si no hay save o la última escena fue el "Menu", iniciamos limpia.
+        if (SaveSystem.HasSave() && 
+            !string.IsNullOrEmpty(gameState.currentSceneName) && 
+            gameState.currentSceneName != "Menu")
+        {
             string targetScene = gameState.currentSceneName;
-            Debug.Log($"[GameManager] Save encontrado. Reanudando en: '{targetScene}'");
+            Debug.Log($"[GameManager] Reanudando partida en: '{targetScene}'");
             LevelManager.Instance.ChangeScene(targetScene);
         }
         else
         {
-            // Sin save o estado vacío: limpiamos y empezamos desde el inicio.
-            gameState.ClearState();
-            SaveSystem.DeleteSave();
-            Debug.Log($"[GameManager] Sin save. Iniciando nueva partida en: '{baseSceneName}'");
+            // Partida nueva o reanudación inválida
+            ResetGameState();
+            Debug.Log($"[GameManager] Iniciando nueva partida en: '{baseSceneName}'");
             LevelManager.Instance.ChangeScene(baseSceneName);
         }
     }
