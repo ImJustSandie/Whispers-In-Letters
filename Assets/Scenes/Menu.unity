@@ -1894,7 +1894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2064189035240888415, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: clearStateOnStart
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2881550313710154253, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: m_Enabled

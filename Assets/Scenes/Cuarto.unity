@@ -1299,8 +1299,52 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6675554150374540722, guid: 7212bdeba3ddb3f44a9ccc62bff5e065, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 507770836}
   m_SourcePrefab: {fileID: 100100000, guid: 7212bdeba3ddb3f44a9ccc62bff5e065, type: 3}
+--- !u!1 &507770833 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6675554150374540722, guid: 7212bdeba3ddb3f44a9ccc62bff5e065, type: 3}
+  m_PrefabInstance: {fileID: 507770832}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &507770834 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7671638855633295329, guid: 7212bdeba3ddb3f44a9ccc62bff5e065, type: 3}
+  m_PrefabInstance: {fileID: 507770832}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 659218d9cd66d3b49b6f9441eb27d69d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteraction
+--- !u!114 &507770835 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1190062110540053656, guid: 7212bdeba3ddb3f44a9ccc62bff5e065, type: 3}
+  m_PrefabInstance: {fileID: 507770832}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507770833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44b1559c4cc907941ac7cf340abff1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractionIndicator
+--- !u!114 &507770836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507770833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf010d3dd68abb448382d15ccebf4dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractionIndicatorConnector
+  playerInteraction: {fileID: 507770834}
+  indicator: {fileID: 507770835}
 --- !u!1 &617513443
 GameObject:
   m_ObjectHideFlags: 0
@@ -3211,8 +3255,8 @@ SceneRoots:
   - {fileID: 58292974}
   - {fileID: 505331262}
   - {fileID: 301365233}
-  - {fileID: 507770832}
   - {fileID: 303954990}
   - {fileID: 1610935781}
   - {fileID: 1551454142}
   - {fileID: 1849950886}
+  - {fileID: 507770832}

@@ -25,8 +25,15 @@ public class InteractionIndicatorConnector : MonoBehaviour
     {
         if (playerInteraction == null)
         {
-            Debug.LogError("[Connector] 'playerInteraction' no está asignado en el Inspector. Arrástralo desde la jerarquía.");
-            return;
+            playerInteraction = PlayerInteraction.Instance;
+            if (playerInteraction == null)
+            {
+                Debug.LogWarning("[Connector] 'playerInteraction' no está asignado y PlayerInteraction.Instance no fue encontrado.");
+            }
+            else
+            {
+                Debug.Log("[Connector] PlayerInteraction encontrado exitosamente vía Singleton.");
+            }
         }
 
         if (indicator == null)
@@ -35,8 +42,11 @@ public class InteractionIndicatorConnector : MonoBehaviour
             return;
         }
 
-        playerInteraction.OnInteractableChanged += OnInteractableChanged;
-        Debug.Log("[Connector] Suscripción registrada correctamente en: " + playerInteraction.gameObject.name);
+        if (playerInteraction != null)
+        {
+            playerInteraction.OnInteractableChanged += OnInteractableChanged;
+            Debug.Log("[Connector] Suscripción registrada correctamente en: " + playerInteraction.gameObject.name);
+        }
     }
 
     private void OnInteractableChanged(IInteractable interactable)

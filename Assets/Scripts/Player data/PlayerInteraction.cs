@@ -11,8 +11,16 @@ public class PlayerInteraction : MonoBehaviour
     private PlayerControls controls;
     private IInteractable currentInteractable;
 
+    public static PlayerInteraction Instance { get; private set; }
+
     void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
         controls = new PlayerControls();
         controls.Player.Interact.performed += ctx => TryInteract();
 
@@ -37,6 +45,14 @@ public class PlayerInteraction : MonoBehaviour
     void OnDisable()
     {
         controls.Disable();
+    }
+
+    void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            Instance = null;
+        }
     }
 
     void TryInteract()

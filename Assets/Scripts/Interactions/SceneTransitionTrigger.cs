@@ -97,6 +97,9 @@ public class SceneTransitionTrigger : MonoBehaviour
         CharacterController cc = player.GetComponent<CharacterController>();
         if (cc == null) yield break;
 
+        PlayerMovement pm = player.GetComponent<PlayerMovement>();
+        if (pm != null) pm.enabled = false;
+
         isPushingBack = true;
 
         // 1. Esperar un breve momento para que StoryManager registre el diálogo activo
@@ -135,6 +138,7 @@ public class SceneTransitionTrigger : MonoBehaviour
             yield return null;
         }
 
+        if (pm != null) pm.enabled = true;
         isPushingBack = false;
         Debug.Log("[SceneTransition] Retroceso natural completado después del diálogo.");
     }
