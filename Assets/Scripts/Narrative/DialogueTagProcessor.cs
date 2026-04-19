@@ -8,7 +8,7 @@ public class DialogueTagProcessor : MonoBehaviour
     [SerializeField] private CharacterPortraitData portraitData;
 
     // Evento para separar la logica de parseo de la interfaz visual
-    public event Action<Sprite> OnPortraitSpriteChanged;
+    public event Action<string> OnPortraitAnimationChanged;
     
     // Evento para avisar qué personaje está hablando (ej: "sophia", para adaptar su voz)
     public event Action<string> OnCharacterSpeaking;
@@ -100,6 +100,14 @@ public class DialogueTagProcessor : MonoBehaviour
 
     private void HandleSpriteTag(string spriteId)
     {
+        if (string.IsNullOrEmpty(spriteId))
+        {
+            Debug.LogWarning("[DialogueTagProcessor] Se recibió un tag #sprite sin valor o vacío.");
+            return;
+        }
+
+        Debug.Log($"[DialogueTagProcessor] Procesando ID de retrato: {spriteId}");
+
         // 1. Extraer nombre base del personaje (e.g. "sophia" de "sophia_happy")
         string[] parts = spriteId.Split('_');
         if (parts.Length > 0)
@@ -114,10 +122,17 @@ public class DialogueTagProcessor : MonoBehaviour
             return;
         }
 
-        Sprite sprite = portraitData.GetPortrait(spriteId);
+        string animState = portraitData.GetAnimationState(spriteId);
         
-        // Disparamos el evento pasando la imagen obtenida. 
-        // Asi el UI Controller la escucha sin que este script este forzado a usar librerias de UI.
-        OnPortraitSpriteChanged?.Invoke(sprite);
+        // Solo enviamos el cambio si realmente devolvió un estado de animación válido.
+        // Esto evita que tags mal configurados limpien el retrato por error.
+        if (!string.IsNullOrEmpty(animState))
+        {
+            OnPortraitAnimationChanged?.Invoke(animState);
+        }
+        else
+        {
+            Debug.LogWarning($"[DialogueTagProcessor] El ID '{spriteId}' no tiene una animación asignada en el ScriptableObject.");
+        }
     }
 }

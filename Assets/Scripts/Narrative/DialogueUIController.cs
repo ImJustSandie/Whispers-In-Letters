@@ -14,7 +14,8 @@ public class DialogueUIController : MonoBehaviour
     [SerializeField] private Button choiceButtonPrefab;
 
     [Header("Portrait")]
-    [SerializeField] private Image portraitImage; // Componente de imagen para el retrato
+    [SerializeField] private Animator portraitAnimator; // Componente de animación para el retrato
+    [SerializeField] private Image portraitImage; // Mantenemos la imagen como respaldo o para ocultarla
     [SerializeField] private DialogueTagProcessor tagProcessor; // Referencia al procesador
 
     [Header("Settings")]
@@ -72,7 +73,7 @@ public class DialogueUIController : MonoBehaviour
         if (tagProcessor != null)
         {
             // Suscribir a eventos visuales y auditivos que vienen de Ink
-            tagProcessor.OnPortraitSpriteChanged += UpdatePortraitImage;
+            tagProcessor.OnPortraitAnimationChanged += UpdatePortraitAnimation;
             tagProcessor.OnCharacterSpeaking += UpdateTypewriterVoice;
             tagProcessor.OnSoundRequested += HandleSoundRequested;
         }
@@ -92,7 +93,7 @@ public class DialogueUIController : MonoBehaviour
     {
         if (tagProcessor != null)
         {
-            tagProcessor.OnPortraitSpriteChanged -= UpdatePortraitImage;
+            tagProcessor.OnPortraitAnimationChanged -= UpdatePortraitAnimation;
             tagProcessor.OnCharacterSpeaking -= UpdateTypewriterVoice;
             tagProcessor.OnSoundRequested -= HandleSoundRequested;
         }
@@ -148,19 +149,39 @@ public class DialogueUIController : MonoBehaviour
         }
     }
 
-    private void UpdatePortraitImage(Sprite newSprite)
+    private void UpdatePortraitAnimation(string animState)
     {
-        if (portraitImage == null) return;
-
-        if (newSprite != null)
+        if (string.IsNullOrEmpty(animState))
         {
-            portraitImage.sprite = newSprite;
-            portraitImage.gameObject.SetActive(true);
+            if (portraitImage != null) portraitImage.gameObject.SetActive(false);
+            return;
         }
-        else
+
+        if (portraitAnimator != null)
         {
-            // Si mandan un sprite nulo o vacio, quizas queramos ocultar el retrato
-            portraitImage.gameObject.SetActive(false);
+            // Detectamos si el objeto estaba apagado para evitar el parpadeo del estado por defecto
+            bool estabaApagado = !portraitImage.gameObject.activeSelf;
+
+            if (portraitImage != null) portraitImage.gameObject.SetActive(true);
+            
+            if (estabaApagado)
+            {
+                // Si el objeto se acaba de activar, forzamos el estado inmediatamente
+                portraitAnimator.Play(animState, 0, 0f);
+                portraitAnimator.Update(0f); // Empujón extra para que Unity no parpadee
+            }
+            else
+            {
+                // Si ya estaba activo, hacemos una transición suave
+                portraitAnimator.CrossFadeInFixedTime(animState, 0.1f);
+                portraitAnimator.Update(0f);
+            }
+
+            // Verificación final en consola
+            if (!portraitAnimator.GetCurrentAnimatorStateInfo(0).IsName(animState))
+            {
+                Debug.LogWarning($"[DialogueUI] El Animator intentó ir a '{animState}' pero el estado actual es '{portraitAnimator.GetCurrentAnimatorStateInfo(0).fullPathHash}'. ¿Está el nombre bien escrito?");
+            }
         }
     }
 
@@ -171,7 +192,7 @@ public class DialogueUIController : MonoBehaviour
     {
         if (dialogueText != null) dialogueText.text = "";
         ClearChoices();
-        UpdatePortraitImage(null);
+        UpdatePortraitAnimation(null);
         isFirstLineInDialogueSequence = true;
 
         if (tagProcessor != null)

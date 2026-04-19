@@ -5,7 +5,7 @@ using UnityEngine;
 public struct PortraitEntry
 {
     public string id;
-    public Sprite portrait;
+    public string animationStateName;
 }
 
 [CreateAssetMenu(fileName = "NewCharacterPortraitData", menuName = "Narrative/Character Portrait Data")]
@@ -13,30 +13,30 @@ public class CharacterPortraitData : ScriptableObject
 {
     [SerializeField] private List<PortraitEntry> portraits = new List<PortraitEntry>();
 
-    private Dictionary<string, Sprite> portraitDictionary;
+    private Dictionary<string, string> portraitDictionary;
 
-    public Sprite GetPortrait(string id)
+    public string GetAnimationState(string id)
     {
-        if (string.IsNullOrEmpty(id)) return null;
+        if (string.IsNullOrEmpty(id)) return string.Empty;
 
         if (portraitDictionary == null || portraitDictionary.Count != portraits.Count)
         {
-            portraitDictionary = new Dictionary<string, Sprite>();
+            portraitDictionary = new Dictionary<string, string>();
             foreach (var entry in portraits)
             {
                 if (!portraitDictionary.ContainsKey(entry.id))
                 {
-                    portraitDictionary.Add(entry.id, entry.portrait);
+                    portraitDictionary.Add(entry.id, entry.animationStateName);
                 }
             }
         }
 
-        if (portraitDictionary.TryGetValue(id.ToLower(), out Sprite sprite))
+        if (portraitDictionary.TryGetValue(id.ToLower(), out string animState))
         {
-            return sprite;
+            return animState;
         }
 
-        Debug.LogWarning($"[CharacterPortraitData] No se encontro retrato con id: {id}");
-        return null; // Opcionalmente, podrias retornar un Sprite por defecto si el ID no existe
+        Debug.LogWarning($"[CharacterPortraitData] No se encontro nombre de animacion con id: {id}");
+        return string.Empty;
     }
 }

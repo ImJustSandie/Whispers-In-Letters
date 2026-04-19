@@ -14,24 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterPortraitData
   portraits:
   - id: sophia_euphoric
-    portrait: {fileID: 1480806456, guid: c47a5de261c4b534eae99cb2acc1fe33, type: 3}
+    animationStateName: Sophia Euphoric
   - id: sophia_happy
-    portrait: {fileID: -1507049483, guid: aafe46c80d043724795dd6943c0abca4, type: 3}
+    animationStateName: Sophia Happy
   - id: sophia_sad
-    portrait: {fileID: -1301060850, guid: 2af3374cb2a8e0142bea3b40ac4b50b6, type: 3}
+    animationStateName: Sophia Sad
   - id: sophia_thinking
-    portrait: {fileID: -993297409, guid: 3350c856c7f49eb428e0351dde9b54ba, type: 3}
+    animationStateName: Sophia Thinking
   - id: sophia_neutral
-    portrait: {fileID: -1256929694, guid: 67788f8601f4fbb4cb354240d139e306, type: 3}
+    animationStateName: Sophia Neutral
   - id: 'sophia_annoyed '
-    portrait: {fileID: -838743899, guid: 62180e426696e1b4aad4e8081a5e804f, type: 3}
+    animationStateName: Sophia Annoyed
   - id: joseph_sad
-    portrait: {fileID: -1242758287, guid: acd2db0773211a54097db207cf59d3e7, type: 3}
+    animationStateName: Joseph Sad
   - id: joseph_happy
-    portrait: {fileID: 2072121420, guid: 4e1c155be62c3044ca54d3ae496c4946, type: 3}
+    animationStateName: Joseph Happy
   - id: joseph_neutral
-    portrait: {fileID: 1594030266, guid: dfd22328dd939544f8884cfc6b6e172e, type: 3}
+    animationStateName: Joseph Neutral
   - id: joseph_annoyed
-    portrait: {fileID: -494234438, guid: 5331216442378e64da31bc8b55a8d87e, type: 3}
+    animationStateName: Joseph Annoyed
   - id: joseph_confused
-    portrait: {fileID: -1626837327, guid: f0d5ce95d4dc1024789a2584412df06f, type: 3}
+    animationStateName: Joseph Confused
