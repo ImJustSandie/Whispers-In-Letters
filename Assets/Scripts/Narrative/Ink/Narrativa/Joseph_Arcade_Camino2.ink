@@ -35,7 +35,7 @@ Que deberia hacer con Joseph
 +[Motivar a Joseph a seguir su sueños]
 #setvar:ruta:Oportunidad
 #sprite:sophia_euforic
-Aquí joseph encontro la razón de vida despues de todo No es un fracasado, solo tenías otro enfoque
+Aquí Joseph encontró la razón de vida despues de todo, No es un fracasado, solo tenías otro enfoque
 -> Camino_1_2_Joseph_Arcade
 +[Eso no vale para nada]
 #setvar:ruta:sacarlo
@@ -45,7 +45,7 @@ debo detener
 +[Decidir luego]
 #setvar:ruta:desicion3
 #sprite:sophia_thinking
-Dare una vuelta y luego sigo hablando con Joseph
+Daré una vuelta y luego sigo hablando con Joseph
 -> END
     
     ===Camino_2_2_Joseph_Arcade ===
@@ -54,6 +54,7 @@ Dare una vuelta y luego sigo hablando con Joseph
     ¡Joseph, suelta ese mando ahora mismo! Llevamos horas aquí y ya perdiste la noción del tiempo.
     
     #sprite:joseph_molesto
+    #sonido:joseph_gruñido
     ¡Solo cinco minutos más! Estoy a punto de romper otro récord, no puedes interrumpir ahora.
     
     #sprite:sophia_enojada
@@ -64,7 +65,7 @@ Dare una vuelta y luego sigo hablando con Joseph
     #sprite:joseph_sad
     ¡Déjame en paz, Sophia! Aquí es donde soy feliz, no en esas clases.
     
-    #sprite:sophia_euforic
+    #sprite:sophia_enojada
     ¡Se acabó! Te levantas de esa silla o te dejo aquí solo.
     
     #sprite:joseph_sad
@@ -73,7 +74,7 @@ Dare una vuelta y luego sigo hablando con Joseph
     #sprite:sophia_enojada
     Te estoy evitando que te pierdas aquí; camina hacia la puerta.
     
-    #sprite:joseph_sad
+    #sprite:joseph_molesto
     Eres una dictadora... me traes para distraerme y ahora me arrastras como a un niño.
     
     #sprite:sophia_neutral
@@ -89,7 +90,7 @@ Dare una vuelta y luego sigo hablando con Joseph
     #sprite:sophia_neutral
     Muévete, Joseph. Tienes clase. Tu futuro no se va a construir aquí dentro.
     
-    #sprite:joseph_sad
+    #sprite:joseph_molesto
     Oye, no me empujes… puedo salir solo.
     
     #sprite:sophia_thinking

@@ -70,7 +70,7 @@ No tiene sentido seguir rompiéndote contra algo que no responde.
 +[Intentarlo otra vez]
 #sprite:sophia_neutral
 #setvar:ruta:ultimo_esfuerzo
-No debería rendirmetan fácil
+No debería rendirme tan fácil
 -> Camino_1_2_Joseph_Biblioteca
 +[Aceptar la derrota]
 #setvar:ruta:rendicion_final
@@ -112,7 +112,7 @@ Dejarlo ahora se siente como confirmar que todos tenían razón sobre mí.
 #sprite:sophia_thinking
 O como dejar de demostrarles que no la tenían.
 
-#sprite:joseph_neutral
+#sprite:joseph_sad
 Estoy cansado… de estudiar sin entender, de avanzar sin sentir nada.
 
 #sprite:joseph_sad

@@ -13,6 +13,7 @@ He estado pensando en lo que dijiste… a veces nos exigimos demasiado.
 Dejar de pensar tanto. Solo vivir un rato.
 
 #sprite:joseph_molesto  
+#sonido:joseph_gruñido
 No estoy para caminatas filosóficas.
 
 #sprite:sophia_thinking
@@ -118,14 +119,14 @@ Que le hice a Joseph debo sacarlo
 +[Decidir luego]
 #setvar:ruta:desicion_Arcade_1
 #sprite:sophia_thinking
-Dare una vuelta y luego sigo hablando con Joseph
+Daré una vuelta y luego sigo hablando con Joseph
 -> END
 
 === Camino_1_Joseph_Arcade ===
 #setflag:Camino_1_Joseph_Arcade
 #setvar:ruta:desicion2
 #sprite:joseph_happy
-#sonido: joseph_risa
+#sonido:joseph_risa
 ¡Sophia! ¡Le acabo de ganar al récord de la semana! ¡Soy el rey de este lugar!
 
 #sprite:joseph_happy
@@ -164,7 +165,7 @@ Hazlo, Joseph. Explora, juega, sé el dueño de este pequeño universo.
 - GetVar("ruta") == "desicion2": -> Desicion2_Arcade
 }
 === Desicion2_Arcade ===
-Que deberia hacer con joseph
+Que debería hacer con Joseph
 +[Darle otra oportunidad]
 #setvar:ruta:vocacion
 #sprite:sophia_euforic
@@ -178,7 +179,7 @@ debo detener
 +[Decidir luego]
 #setvar:ruta:desicion2
 #sprite:sophia_thinking
-Dare una vuelta y luego sigo hablando con joseph
+Daré una vuelta y luego sigo hablando con Joseph
 -> END
 
 === Camino_1_2_Joseph_Arcade ===
@@ -213,7 +214,7 @@ Se acabó intentar encajar en algo que no soy. Voy a hacer mi propio camino.
 ¿Y si esta “libertad” es solo otra presión distinta?
 
 #sprite:joseph_neutral
-#sonido: joseph_suspiro
+#sonido:joseph_suspiro
 Tal vez esto es una locura… mis padres nunca aceptarían esto.
 
 #sprite:sophia_neutral
@@ -254,5 +255,5 @@ No mires atrás. Corre antes de que la duda vuelva.
 #setflag:Joseph_Final_1
 #sprite:joseph_neutral
 Gracias Sophia por ayudarme, 
-Voy a seguir jugando  y me volvere streamer
+Voy a seguir jugando y me volveré streamer
 ->Sophia_Cansada

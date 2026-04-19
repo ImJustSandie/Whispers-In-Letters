@@ -191,7 +191,7 @@ Voy a pensarlo
 #sprite:joseph_neutral
 Llevo dos horas con la misma página, pero no he sentido ganas de rendirme ni una sola vez.
 
-#sprite:sophia_happy
+#sprite:sophia_neutral
 Eso es porque dejaste de pelear contra tu naturaleza.
 
 #sprite:joseph_neutral
@@ -203,7 +203,7 @@ La disciplina es la forma más pura de libertad.
 #sprite:joseph_sad
 Mi mente sigue siendo un terreno difícil...
 
-#sprite:sophia_happy
+#sprite:sophia_neutral
 Pero tu voluntad es la que manda ahora.
 
 #sprite:joseph_neutral
@@ -233,14 +233,14 @@ Eso es volver a la misma prisión.
 #sprite:joseph_neutral
 Si me rindo ahora... todo habrá sido igual.
 
-#sprite:sophia_happy
+#sprite:sophia_neutral
 Hazlo por tu propia voluntad, no por los demás.
 
 #sprite:joseph_neutral
 #sonido:joseph_suspiro
 Está bien seguiré.
 
-#sprite:sophia_euforic
+#sprite:sophia_happy
 Tu libertad está en no rendirte.
 #setvar:ruta:Epilogo3
 #setflag:Final_Alcanzado

@@ -157,7 +157,7 @@ Aun no deberia ir a mi casa, tengo cosas que hacer.
 
 === Confirmacion_Entrar_Cuarto ===
 #sprite:sophia_thinking
-#sonido: sophia_suspira
+#sonido:sophia_suspira
 Estoy a punto de entrar a mi cuarto. Siento que si entro, ya no volveré a salir por hoy...
 ¿Realmente quiero terminar de explorar por ahora?
 + [Sí, estoy segura.]
@@ -183,7 +183,7 @@ Aun no me puedo ir a dormir, tengo cosas que hacer.
 
 ===Salidas_Bloqueadas===
 #sprite:sophia_neutral
-#sonido: sophia_suspira
+#sonido:sophia_suspira
 Estoy muy cansada, quiero ir a mi casa a recostarme
 -> END
 
@@ -202,7 +202,7 @@ Es el momento de cerrar los ojos y dejar que el pensamiento descanse... hasta qu
 
 === Confirmacion_Dormir ===
 #sprite:sophia_neutral
-#sonido: sophia_suspira
+#sonido:sophia_suspira
 Estoy exhausta... Siento que si me duermo ahora, este día finalmente habrá terminado. 
 ¿Estoy lista para dejarlo todo atrás por hoy?
 + [Sí, es momento de descansar]
