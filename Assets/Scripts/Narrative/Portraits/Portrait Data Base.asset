@@ -13,17 +13,25 @@ MonoBehaviour:
   m_Name: Portrait Data Base
   m_EditorClassIdentifier: Assembly-CSharp::CharacterPortraitData
   portraits:
+  - id: sophia_euphoric
+    portrait: {fileID: 1480806456, guid: c47a5de261c4b534eae99cb2acc1fe33, type: 3}
   - id: sophia_happy
-    portrait: {fileID: 21300000, guid: 5fde2372b598eab4b9561176df16169a, type: 3}
-  - id: joseph_neutral
-    portrait: {fileID: 21300000, guid: 77eab7d468d1cdc4cb4e9b9057e2f3be, type: 3}
-  - id: joseph_sad
-    portrait: {fileID: 21300000, guid: 53651ee9190f32b4ab7f929b218167b1, type: 3}
-  - id: joseph_happy
-    portrait: {fileID: 21300000, guid: cd1b4e4970c6ab14d89f1c8c8735d723, type: 3}
+    portrait: {fileID: -1507049483, guid: aafe46c80d043724795dd6943c0abca4, type: 3}
   - id: sophia_sad
-    portrait: {fileID: 21300000, guid: ba2a8690c01168d4b9f324bfce70ab00, type: 3}
+    portrait: {fileID: -1301060850, guid: 2af3374cb2a8e0142bea3b40ac4b50b6, type: 3}
   - id: sophia_thinking
-    portrait: {fileID: 21300000, guid: eeecb38707cdfbd459e7711bfb320276, type: 3}
+    portrait: {fileID: -993297409, guid: 3350c856c7f49eb428e0351dde9b54ba, type: 3}
   - id: sophia_neutral
-    portrait: {fileID: 21300000, guid: 1917e5ec69150814ea22f1a4c25ee754, type: 3}
+    portrait: {fileID: -1256929694, guid: 67788f8601f4fbb4cb354240d139e306, type: 3}
+  - id: 'sophia_annoyed '
+    portrait: {fileID: -838743899, guid: 62180e426696e1b4aad4e8081a5e804f, type: 3}
+  - id: joseph_sad
+    portrait: {fileID: -1242758287, guid: acd2db0773211a54097db207cf59d3e7, type: 3}
+  - id: joseph_happy
+    portrait: {fileID: 2072121420, guid: 4e1c155be62c3044ca54d3ae496c4946, type: 3}
+  - id: joseph_neutral
+    portrait: {fileID: 1594030266, guid: dfd22328dd939544f8884cfc6b6e172e, type: 3}
+  - id: joseph_annoyed
+    portrait: {fileID: -494234438, guid: 5331216442378e64da31bc8b55a8d87e, type: 3}
+  - id: joseph_confused
+    portrait: {fileID: -1626837327, guid: f0d5ce95d4dc1024789a2584412df06f, type: 3}

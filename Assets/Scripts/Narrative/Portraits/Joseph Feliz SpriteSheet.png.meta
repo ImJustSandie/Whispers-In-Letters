@@ -1,0 +1,592 @@
+fileFormatVersion: 2
+guid: 4e1c155be62c3044ca54d3ae496c4946
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Joseph Feliz SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1570
+        width: 475
+        height: 417
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e8ebdf92f8de84d8e210dcbc56c6bb
+      internalID: 2072121420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Feliz SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1570
+        width: 475
+        height: 417
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c220d87fb7a7e974b8bbf8129d5d799b
+      internalID: 1601950089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Feliz SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 1571
+        width: 474
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14ccb1ebdbf7e54ba0472da7b3b6235
+      internalID: -1106351887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Feliz SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 1571
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f147c19343ce8f7499300bc35aeb7c13
+      internalID: 280066015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Feliz SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 1570
+        width: 475
+        height: 417
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f0598a92a5d2d442a59dde663b62cfb
+      internalID: -576867500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Feliz SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1072
+        width: 475
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 625d43c95b1c7954497cd2194170d5ec
+      internalID: -1705396069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Feliz SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1072
+        width: 475
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583186e0fb8f78e4ea3a9403acf72b4a
+      internalID: -1507753118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Feliz SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 1072
+        width: 474
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3242a135bfb64174c99dd9eee2b2d7c6
+      internalID: -1962121474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Feliz SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 1072
+        width: 475
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d6a30671daed4f4091eaddf5bf79d3b
+      internalID: 353981826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Feliz SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 1072
+        width: 475
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eda1faecb708424b9b6974c4edc7200
+      internalID: 1735850154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Feliz SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 571
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1343950ae972ecb408e24870b3c615bb
+      internalID: 463389152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Feliz SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 571
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5880ab99eca96b4586f47c4f603280a
+      internalID: -209360796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Feliz SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 571
+        width: 474
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaca068ef3b9f324a858ddbe331343d4
+      internalID: -178501920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Feliz SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 571
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7d8e47e499f3e4b80ef5dc33008517
+      internalID: -1847132906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Feliz SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 571
+        width: 475
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0344c77981d1894fa40159d1aae5035
+      internalID: 1179274536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Feliz SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 72
+        width: 475
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11a75ba480e8be64db5217c8e9eac92c
+      internalID: -430894622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Feliz SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 72
+        width: 475
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1d7d170d3a03fe4180f02a5e57e4309
+      internalID: 1918018657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Feliz SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 72
+        width: 474
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac74707f121478a4d9dc42c3188eddbb
+      internalID: -1654551597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Feliz SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 72
+        width: 475
+        height: 414
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b9b2a52ad31dbb43af5bb0194da422c
+      internalID: 176525361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Joseph Feliz SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 71
+        width: 475
+        height: 416
+      alignment: 9
+      pivot: {x: 0.5252129, y: 0.2113189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d4f720dcb77e824f8dbc0965a3183ec
+      internalID: -2044056085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a65e3db8319ce5246b8a4ce6ac1c0a73
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5252128839492798,"y":0.21131889522075654},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Joseph Feliz SpriteSheet_0: 2072121420
+      Joseph Feliz SpriteSheet_1: 1601950089
+      Joseph Feliz SpriteSheet_10: 463389152
+      Joseph Feliz SpriteSheet_11: -209360796
+      Joseph Feliz SpriteSheet_12: -178501920
+      Joseph Feliz SpriteSheet_13: -1847132906
+      Joseph Feliz SpriteSheet_14: 1179274536
+      Joseph Feliz SpriteSheet_15: -430894622
+      Joseph Feliz SpriteSheet_16: 1918018657
+      Joseph Feliz SpriteSheet_17: -1654551597
+      Joseph Feliz SpriteSheet_18: 176525361
+      Joseph Feliz SpriteSheet_19: -2044056085
+      Joseph Feliz SpriteSheet_2: -1106351887
+      Joseph Feliz SpriteSheet_3: 280066015
+      Joseph Feliz SpriteSheet_4: -576867500
+      Joseph Feliz SpriteSheet_5: -1705396069
+      Joseph Feliz SpriteSheet_6: -1507753118
+      Joseph Feliz SpriteSheet_7: -1962121474
+      Joseph Feliz SpriteSheet_8: 353981826
+      Joseph Feliz SpriteSheet_9: 1735850154
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

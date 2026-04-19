@@ -1,0 +1,592 @@
+fileFormatVersion: 2
+guid: c47a5de261c4b534eae99cb2acc1fe33
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Euforica SpriteSheets_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1614
+        width: 475
+        height: 431
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a80b4d8cebc2dee4eadef79d28ca5ae5
+      internalID: 1480806456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Euforica SpriteSheets_1
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1614
+        width: 475
+        height: 431
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 806bf633185d452479a4cab7a0ad78c2
+      internalID: 998027472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Euforica SpriteSheets_2
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 1614
+        width: 474
+        height: 431
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 529031fdad6f5a14a9da6a3f262896b3
+      internalID: 152847043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Euforica SpriteSheets_3
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 1614
+        width: 475
+        height: 433
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 106925bd06f723d41933736ec4ad3288
+      internalID: 645278580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Euforica SpriteSheets_4
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 1613
+        width: 475
+        height: 434
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081867c11705fed419eaf3e5aee9b4ed
+      internalID: -1537716010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Euforica SpriteSheets_5
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1114
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c4005e5ffa4f04392ef0364207e896
+      internalID: -1611947695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Euforica SpriteSheets_6
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1114
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a021561d00d30aa4db884969aa45806b
+      internalID: -1414383151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Euforica SpriteSheets_7
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 1113
+        width: 474
+        height: 434
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edebbb928696e2c498079f5ba4b72212
+      internalID: -602863463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Euforica SpriteSheets_8
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 1114
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a5c5905fe08a4448844950205405220
+      internalID: -232982154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Euforica SpriteSheets_9
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 1114
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c03a94196cc28344a962dfa71da1e2a
+      internalID: -1385569791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Euforica SpriteSheets_10
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 612
+        width: 475
+        height: 435
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d1b4a9554b25c342a7261de9aa3f417
+      internalID: -1471465529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Euforica SpriteSheets_11
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 613
+        width: 475
+        height: 433
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44be79363cecb364984922c52051660e
+      internalID: 855882328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Euforica SpriteSheets_12
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 613
+        width: 474
+        height: 433
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1628b89be0b082548a1f1cdee0c74f4c
+      internalID: -283778579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Euforica SpriteSheets_13
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 612
+        width: 475
+        height: 435
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e828e6eb9062684681ff9d5b48c1dd3
+      internalID: 922623918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Euforica SpriteSheets_14
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 613
+        width: 475
+        height: 433
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41972a8151ce69842a8b9aa63f03851f
+      internalID: -1019974272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Euforica SpriteSheets_15
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 113
+        width: 475
+        height: 434
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 206009147a06f0e40ac0db73256a5fa9
+      internalID: -795618633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Euforica SpriteSheets_16
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 113
+        width: 475
+        height: 434
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023750272c9dba7498495bc14f799705
+      internalID: 723928483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Euforica SpriteSheets_17
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 113
+        width: 474
+        height: 434
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76bfddf05ddb0fb42a5c17d0e14609c6
+      internalID: 1014485178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Euforica SpriteSheets_18
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 114
+        width: 475
+        height: 431
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28412b79d4c55ff4ca435b327b1d886a
+      internalID: 631663404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Euforica SpriteSheets_19
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 114
+        width: 475
+        height: 431
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d795a71dfc3a6d4b8093dad51ab2843
+      internalID: -1211513212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 15df82404f2133d4a8d5156c628e0185
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.3823406994342804,"y":0.25918421149253847},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Euforica SpriteSheets_0: 1480806456
+      Euforica SpriteSheets_1: 998027472
+      Euforica SpriteSheets_10: -1471465529
+      Euforica SpriteSheets_11: 855882328
+      Euforica SpriteSheets_12: -283778579
+      Euforica SpriteSheets_13: 922623918
+      Euforica SpriteSheets_14: -1019974272
+      Euforica SpriteSheets_15: -795618633
+      Euforica SpriteSheets_16: 723928483
+      Euforica SpriteSheets_17: 1014485178
+      Euforica SpriteSheets_18: 631663404
+      Euforica SpriteSheets_19: -1211513212
+      Euforica SpriteSheets_2: 152847043
+      Euforica SpriteSheets_3: 645278580
+      Euforica SpriteSheets_4: -1537716010
+      Euforica SpriteSheets_5: -1611947695
+      Euforica SpriteSheets_6: -1414383151
+      Euforica SpriteSheets_7: -602863463
+      Euforica SpriteSheets_8: -232982154
+      Euforica SpriteSheets_9: -1385569791
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

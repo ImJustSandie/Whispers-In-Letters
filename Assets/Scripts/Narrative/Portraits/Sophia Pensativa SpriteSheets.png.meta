@@ -1,0 +1,592 @@
+fileFormatVersion: 2
+guid: 3350c856c7f49eb428e0351dde9b54ba
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pensativa SpriteSheets_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1626
+        width: 475
+        height: 431
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17826c2a370c82941be8fee74ec6e565
+      internalID: -993297409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pensativa SpriteSheets_1
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1626
+        width: 475
+        height: 431
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4e0d1a80cf36c42bdda95c331da1ab
+      internalID: 276878669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pensativa SpriteSheets_2
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 1626
+        width: 474
+        height: 431
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71a1801114c3c640b874b736ea154b9
+      internalID: -1880878754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pensativa SpriteSheets_3
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 1626
+        width: 475
+        height: 433
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba57ce4a78ab5e4c9d48ad172527fdf
+      internalID: 2021572379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pensativa SpriteSheets_4
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 1626
+        width: 475
+        height: 433
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54229f3d7599b284c8a9961bdb9aecf5
+      internalID: 1720614167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pensativa SpriteSheets_5
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1126
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd14af030cd093a4bae2a183da69d6cf
+      internalID: 1827331125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pensativa SpriteSheets_6
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1126
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95b10d7c1e14ad243b750531cab5600f
+      internalID: 166017495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pensativa SpriteSheets_7
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 1125
+        width: 474
+        height: 434
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32c37c0c1292ead459042273300e4725
+      internalID: -1168512260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pensativa SpriteSheets_8
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 1126
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79ddfc85436352b47ab717c1e025c590
+      internalID: 114711338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pensativa SpriteSheets_9
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 1126
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b9fbe42f7f1a94c97d7f2c587fa431
+      internalID: 1638000926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pensativa SpriteSheets_10
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 624
+        width: 475
+        height: 435
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 144f38fca32bc10489088005b33b425f
+      internalID: 1195070412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pensativa SpriteSheets_11
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 625
+        width: 475
+        height: 434
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49c8ccd592faef74c89744754acfce17
+      internalID: 1230466085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pensativa SpriteSheets_12
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 625
+        width: 474
+        height: 434
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecd585594d1fbbb478c74d6437472690
+      internalID: -1790921366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pensativa SpriteSheets_13
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 624
+        width: 475
+        height: 435
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a854dbc7bd1149342903b804d04d61f8
+      internalID: -42242650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pensativa SpriteSheets_14
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 625
+        width: 475
+        height: 434
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a2fc53c30db5f743889e5fa57a61bf0
+      internalID: 407592972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pensativa SpriteSheets_15
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 126
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0351ed0cda28f7b418e77e0c04a12116
+      internalID: -1021923944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pensativa SpriteSheets_16
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 126
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585d87f7a0b10ff4880e92f76d28402d
+      internalID: 2117099085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pensativa SpriteSheets_17
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 126
+        width: 474
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c480771f34bff4f90f3b95b914b98a
+      internalID: -2129425519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pensativa SpriteSheets_18
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 127
+        width: 475
+        height: 430
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34cb85650607ba84f9ad12c08e945974
+      internalID: 621977628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pensativa SpriteSheets_19
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 127
+        width: 475
+        height: 430
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b91001684464c52478dfcf999bdd5416
+      internalID: -540506943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b7aa9429d35dbb54198c7ae33e3da379
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.3823406994342804,"y":0.25918421149253847},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Pensativa SpriteSheets_0: -993297409
+      Pensativa SpriteSheets_1: 276878669
+      Pensativa SpriteSheets_10: 1195070412
+      Pensativa SpriteSheets_11: 1230466085
+      Pensativa SpriteSheets_12: -1790921366
+      Pensativa SpriteSheets_13: -42242650
+      Pensativa SpriteSheets_14: 407592972
+      Pensativa SpriteSheets_15: -1021923944
+      Pensativa SpriteSheets_16: 2117099085
+      Pensativa SpriteSheets_17: -2129425519
+      Pensativa SpriteSheets_18: 621977628
+      Pensativa SpriteSheets_19: -540506943
+      Pensativa SpriteSheets_2: -1880878754
+      Pensativa SpriteSheets_3: 2021572379
+      Pensativa SpriteSheets_4: 1720614167
+      Pensativa SpriteSheets_5: 1827331125
+      Pensativa SpriteSheets_6: 166017495
+      Pensativa SpriteSheets_7: -1168512260
+      Pensativa SpriteSheets_8: 114711338
+      Pensativa SpriteSheets_9: 1638000926
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

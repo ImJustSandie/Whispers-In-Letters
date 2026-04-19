@@ -1,0 +1,592 @@
+fileFormatVersion: 2
+guid: 62180e426696e1b4aad4e8081a5e804f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enojada_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1576
+        width: 475
+        height: 431
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5392e4f94ad29843b65333d51280256
+      internalID: -838743899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enojada_1
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1576
+        width: 475
+        height: 431
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbfb391f3687f8a42b6cba45914d4736
+      internalID: -345771623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enojada_2
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 1576
+        width: 474
+        height: 431
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153aee314d851a340ac5462cc8244a11
+      internalID: 1942075037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enojada_3
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 1575
+        width: 475
+        height: 434
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d65dfb551c1186d44ae737774979c39d
+      internalID: -473829496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enojada_4
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 1575
+        width: 475
+        height: 434
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f37d4f35e463d1d4da4beab91c7c8cb7
+      internalID: -62359643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enojada_5
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1076
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7ab4bca70951204b8284cbcb3925b89
+      internalID: 1397206168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enojada_6
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1076
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c358cc5761632e4bb6702704c234179
+      internalID: 62630991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enojada_7
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 1075
+        width: 474
+        height: 434
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 733ded0e768c4884d8a79d8845bc589d
+      internalID: 1611474729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enojada_8
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 1076
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a636fe610654a458253c98e13b9fd0
+      internalID: 1024145430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enojada_9
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 1076
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefdebdcf4e4fca4ab7ca5fb7142c250
+      internalID: 377153728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enojada_10
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 575
+        width: 475
+        height: 434
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5cc549ab0ae4dc429e9ac9a44231b00
+      internalID: 829406353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enojada_11
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 576
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74473d5094c2e6e4eaa7ef5d1d9b3bcc
+      internalID: -1608849819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enojada_12
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 576
+        width: 474
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b3ce7f521b3764c9384fa10ebda3f6
+      internalID: -1190282033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enojada_13
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 575
+        width: 475
+        height: 434
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cebd9b39f68be804aacaf23202191766
+      internalID: -655282663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enojada_14
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 576
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc809090a0bbcf47b7b43c40fe399be
+      internalID: 791208346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enojada_15
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 76
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d6163bf40f3fa4b8edee52d4868231
+      internalID: -968859977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enojada_16
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 76
+        width: 475
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca6924dd3f024294798867f8b14d7fa9
+      internalID: -1359686369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enojada_17
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 76
+        width: 474
+        height: 432
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ddfe3662afcc4c40952aad1cadcc294
+      internalID: 7504382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enojada_18
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 77
+        width: 475
+        height: 431
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 849116424e01bb242b38a2e54f36e103
+      internalID: -1607954590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enojada_19
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 77
+        width: 475
+        height: 431
+      alignment: 9
+      pivot: {x: 0.3823407, y: 0.2591842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d12d43098cb464796c51a9142cd3c6
+      internalID: 698900039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 21df1c5849399304cac5a9d7be67cef4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.3823406994342804,"y":0.25918421149253847},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Enojada_0: -838743899
+      Enojada_1: -345771623
+      Enojada_10: 829406353
+      Enojada_11: -1608849819
+      Enojada_12: -1190282033
+      Enojada_13: -655282663
+      Enojada_14: 791208346
+      Enojada_15: -968859977
+      Enojada_16: -1359686369
+      Enojada_17: 7504382
+      Enojada_18: -1607954590
+      Enojada_19: 698900039
+      Enojada_2: 1942075037
+      Enojada_3: -473829496
+      Enojada_4: -62359643
+      Enojada_5: 1397206168
+      Enojada_6: 62630991
+      Enojada_7: 1611474729
+      Enojada_8: 1024145430
+      Enojada_9: 377153728
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
