@@ -7,7 +7,7 @@ Si quieres que esta vez sea diferente, necesitas comprometerte de verdad.
 #sprite:joseph_sad
 #sonido:joseph_suspiro
 ¿Pretendes que llene mi vacío existencial con más libros? Sophia, 
-eso es lo que me ha estado asfixiando toda la vida.
+Eso es lo que me ha estado asfixiando toda la vida.
 
 #sprite:sophia_thinking
 Te asfixia porque lo ves como una imposición, no como una herramienta para tu propia liberación.
@@ -18,7 +18,7 @@ No entiendo cómo leer sobre contratos o leyes puede hacerme sentir "libre".
 #sprite:sophia_neutral
 La ignorancia es la mayor de las cárceles. Ven conmigo, vamos a la biblioteca.
 
-#sprite:joseph_molesto
+#sprite:joseph_annoyed
 #sonido:joseph_gruñido
 Es el lugar que más odio en este campus. El silencio allí dentro me grita mis fracasos.
 
@@ -69,7 +69,7 @@ Empieza por algo pequeño. No tienes que entenderlo todo hoy.
 …Supongo que puedo intentarlo.
 
 #sprite:joseph_neutral
-voy a tomar un libro de la estantería, lo observare un momento
+Voy a tomar un libro de la estantería, lo observare un momento
 
 #sprite:joseph_sad
 Hace tiempo que no abro uno sin sentir presión…
@@ -99,16 +99,17 @@ Hazlo por curiosidad. Solo una página.
 +[Crear estrategia]
 #sprite:sophia_euforic
 #setvar:ruta:estrategia
-voy a ayudar a Joseph
+Voy a ayudar a Joseph
 -> Camino_1_Joseph_Biblioteca
 +[Decirle que no puede]
 #sprite:sophia_sad
 #setvar:ruta:rendirse
-mejor me rindo
+Mejor me rindo
 -> Camino_2_Joseph_Biblioteca
 +[Pensar después]
 #sprite:sophia_thinking
 #setvar:ruta:Decision_Biblioteca_1
+Pensaré luego 
 -> END
 
 
@@ -253,5 +254,5 @@ Tu libertad está en no rendirte.
 #setflag:Joseph_Final_3
 #sprite:joseph_neutral
 Gracias Sophia por ayudarme, 
-voy a seguir  estudiando un poco mas en la biblioteca
+Voy a seguir  estudiando un poco mas en la biblioteca
 ->Sophia_Cansada

@@ -5,14 +5,14 @@
 He estado pensando en lo que dijiste… a veces nos exigimos demasiado. 
 ¿Y si hoy simplemente te das un respiro?
 
-#sprite:joseph_confundido
+#sprite:joseph_confused
 #sonido:joseph_suspiro
 ¿"Darme un respiro" cómo?
 
 #sprite:sophia_neutral
 Dejar de pensar tanto. Solo vivir un rato.
 
-#sprite:joseph_molesto  
+#sprite:joseph_annoyed  
 #sonido:joseph_gruñido
 No estoy para caminatas filosóficas.
 
@@ -35,7 +35,7 @@ No necesito un refugio… necesito un título para que mi padre deje de verme co
 #sprite:joseph_sad
 Tal vez… pero es la única forma que tengo de no fallar.
 
-#sprite:joseph_confundido
+#sprite:joseph_confused
 Y si falto, el profesor me va a marcar.
 
 #sprite:sophia_neutral
@@ -174,7 +174,7 @@ Tienes potencial para esto de los videojuegos
 +[Eso no vale para nada]
 #setvar:ruta:universidad
 #sprite:sophia_neutral
-debo detener 
+Debo detener a Joseph 
 -> Camino_2_2_Joseph_Arcade
 +[Decidir luego]
 #setvar:ruta:desicion2
@@ -226,7 +226,7 @@ Aquí no soy ese fracaso… aquí soy alguien.
 #sprite:sophia_happy
 Entonces no dejes que ese miedo te detenga. Vuelve al juego.
 
-#sprite:joseph_confundido
+#sprite:joseph_confused
 ¿Me estás diciendo que ignore sus llamadas?
 
 #sprite:sophia_thinking

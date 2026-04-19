@@ -23,8 +23,8 @@ EXTERNAL GetVar(varName)
  Hola Joseph, que milagro en verte por aquí tan temprano.
  #sprite:joseph_neutral
  Ah, hola Sophia, que bueno encontrarte.
- #sprite:joseph_confundido
- #sonido: joseph_suspira
+ #sprite:joseph_confused
+ #sonido:joseph_suspira
   La verdad no. Es lo mismo de siempre, pero más pesado...
    #setvar:ruta:desicion_prologo
   -> Joseph1_Prologo_Reencuentro
@@ -38,7 +38,7 @@ EXTERNAL GetVar(varName)
     +[No Escuchar a Joseph]
     #setvar:ruta:desicion_prologo
      #sprite:sophia_euforic
-     no tengo tiempo, pero espero que te vaya bien
+     No tengo tiempo, pero espero que te vaya bien
      #sprite:joseph_sad
      #sonido: joseph_suspira
      No hay problema, nos vemos
@@ -58,14 +58,14 @@ EXTERNAL GetVar(varName)
 #sprite:joseph_happy
 Gracias por escucharme.
 
-#sprite:joseph_confundido
+#sprite:joseph_confused
 #sonido: joseph_suspira
 No sé qué estoy haciendo con mi vida.
 Mi familia me ha dado todo, pero me siento solo.
 
 #sprite:joseph_sad
 Esta es la cuarta carrera que empiezo…
-y siento que solo estudio por presión.
+Y siento que solo estudio por presión.
 
 #sprite:sophia_sad
 No te castigues tanto.
@@ -74,7 +74,7 @@ Cada quien encuentra su camino a su ritmo.
 #sprite:joseph_sad
 Eso dicen… pero siento que el tiempo se me escapa.
 
-#sprite:joseph_confundido
+#sprite:joseph_confused
 Se supone que soy libre, pero cada decisión pesa.
 
 #sprite:sophia_thinking
@@ -91,14 +91,14 @@ Derecho.
 No me apasiona, pero…
 
 #sprite:joseph_happy
-me gusta leer, debatir… ayudar a la gente.
+Me gusta leer, debatir… ayudar a la gente.
 
 #sprite:sophia_neutral
 Entonces no suena tan mal.
 
 #sprite:sophia_thinking
 Tal vez no necesitas cambiar de camino,
-sino de perspectiva.
+Sino de perspectiva.
 
 #sprite:joseph_happy
 A veces hablas como enciclopedia.
@@ -242,7 +242,7 @@ Es lo mismo que sucede con Joseph: no puede controlar lo que sus padres esperan 
 #sprite:sophia_thinking
 Definitivamente hay que vencer esa dualidad y buscar el control. Eso fue lo que logré con Joseph al mantenerlo en la biblioteca
 #sprite:sophia_thinking
-no fue un castigo, sino una forma de enseñarle a dominar sus impulsos y su...
+No fue un castigo, sino una forma de enseñarle a dominar sus impulsos y su...
 -> Final_Del_Juego
 
 === reflexion_nietzsche ===
@@ -250,7 +250,7 @@ no fue un castigo, sino una forma de enseñarle a dominar sus impulsos y su...
 Es cierto… vivir condicionado por el “tú debes” de la obediencia y las tradiciones que nos imponen es una carga pesada que no nos deja elegir el camino.
 #sprite:sophia_thinking
 Hice bien al incitar a Joseph a romper sus límites. Él tenía que pensar en lo que realmente quiere, 
-dejando de lado las verdades de otros para empezar a inventar su propia vida.
+Dejando de lado las verdades de otros para empezar a inventar su propia vida.
 -> Final_Del_Juego
 
 === Handle_Final_Joseph ===
