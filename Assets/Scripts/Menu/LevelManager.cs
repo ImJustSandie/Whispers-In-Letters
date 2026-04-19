@@ -148,7 +148,13 @@ public class LevelManager : MonoBehaviour
         {
             var state = GameManager.Instance.GetGameState();
             state.previousSceneName = SceneManager.GetActiveScene().name;
-            state.currentSceneName = sceneName;
+            
+            // Solo actualizamos la escena actual si NO vamos al menú.
+            // Esto permite que el botón de "Continuar" sepa a qué nivel volver.
+            if (sceneName != "Menu")
+            {
+                state.currentSceneName = sceneName;
+            }
 
             // Auto-save: persistir en disco antes de cambiar de escena.
             // Así, si el juego se cierra durante la carga, el progreso no se pierde.
