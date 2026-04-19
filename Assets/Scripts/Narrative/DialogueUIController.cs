@@ -168,19 +168,11 @@ public class DialogueUIController : MonoBehaviour
             {
                 // Si el objeto se acaba de activar, forzamos el estado inmediatamente
                 portraitAnimator.Play(animState, 0, 0f);
-                portraitAnimator.Update(0f); // Empujón extra para que Unity no parpadee
             }
             else
             {
                 // Si ya estaba activo, hacemos una transición suave
                 portraitAnimator.CrossFadeInFixedTime(animState, 0.1f);
-                portraitAnimator.Update(0f);
-            }
-
-            // Verificación final en consola
-            if (!portraitAnimator.GetCurrentAnimatorStateInfo(0).IsName(animState))
-            {
-                Debug.LogWarning($"[DialogueUI] El Animator intentó ir a '{animState}' pero el estado actual es '{portraitAnimator.GetCurrentAnimatorStateInfo(0).fullPathHash}'. ¿Está el nombre bien escrito?");
             }
         }
     }

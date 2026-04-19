@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72388898d886780469ba3714e69e2744, type: 3}
   m_Name: Sophia Sorpresa
   m_EditorClassIdentifier: Assembly-CSharp::AudioEvent
-  clip: {fileID: 8300000, guid: e8fcbcc31f932c74f97ba7f9ed52e02b, type: 3}
+  clip: {fileID: 8300000, guid: 20670733fbf1a0b4badaffffc68f49bb, type: 3}
   volume: 1
   pitch: 1
   loop: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72388898d886780469ba3714e69e2744, type: 3}
   m_Name: sophia risa
   m_EditorClassIdentifier: Assembly-CSharp::AudioEvent
-  clip: {fileID: 8300000, guid: 981085ccddb3fee40afd1b1dbfdebbf2, type: 3}
+  clip: {fileID: 8300000, guid: ace37edf4b2ac7145996d3421b3a0f26, type: 3}
   volume: 1
   pitch: 1
   loop: 0

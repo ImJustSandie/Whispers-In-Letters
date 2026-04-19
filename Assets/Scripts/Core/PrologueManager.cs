@@ -53,7 +53,7 @@ public class PrologueManager : MonoBehaviour
     /// <summary>True si el diálogo final aún no ha sido visto.</summary>
     public bool IsPrologueActive =>
         GameManager.Instance != null &&
-        !GameManager.Instance.GetStoryFlag(GameManager.Instance.CompletionFlag);
+        !GameManager.Instance.GetStoryFlag(FLAG_FINAL_SEEN);
 
     // ─────────────────────────────────────────────────────────────────────────
     // Ciclo de vida
@@ -147,14 +147,14 @@ public class PrologueManager : MonoBehaviour
     private void LogStatusReport(string sceneName)
     {
         var gm = GameManager.Instance;
-        bool isFinished = gm.GetStoryFlag(gm.CompletionFlag);
+        bool isFinished = gm.GetStoryFlag(FLAG_FINAL_SEEN);
         bool completed = gm.GetStoryFlag(FLAG_COMPLETED);
         bool arcadeVisited = gm.GetStoryFlag(FLAG_ARCADE_VISITED);
         bool libVisited = gm.GetStoryFlag(FLAG_LIBRARY_VISITED);
 
         Debug.Log($"[PrologueManager] --- REPORTE DE ESTADO ({sceneName}) ---");
         Debug.Log($"- Escena: {sceneName}");
-        Debug.Log($"- Prólogo Activo (Basado en {gm.CompletionFlag}): {!isFinished}");
+        Debug.Log($"- Prólogo Activo (Basado en {FLAG_FINAL_SEEN}): {!isFinished}");
         Debug.Log($"- Flags Internos -> Completed: {completed}, ArcadeVisited: {arcadeVisited}, LibVisited: {libVisited}");
     }
 
@@ -171,7 +171,7 @@ public class PrologueManager : MonoBehaviour
 
         if (completed)
         {
-            if (!GameManager.Instance.GetStoryFlag(GameManager.Instance.CompletionFlag)) 
+            if (!GameManager.Instance.GetStoryFlag(FLAG_FINAL_SEEN)) 
             {
                 TriggerDialogue(KNOT_PARQUE_FINAL);
                 CompletePrologue();
@@ -219,9 +219,9 @@ public class PrologueManager : MonoBehaviour
 
     private void CompletePrologue()
     {
-        GameManager.Instance.SetStoryFlag(GameManager.Instance.CompletionFlag, true);
+        GameManager.Instance.SetStoryFlag(FLAG_FINAL_SEEN, true);
         GameManager.Instance.SaveGame();
-        Debug.Log($"[PrologueManager] Prólogo completado. Marcando flag: {GameManager.Instance.CompletionFlag}");
+        Debug.Log($"[PrologueManager] Prólogo completado. Marcando flag: {FLAG_FINAL_SEEN}");
     }
 
     // ─────────────────────────────────────────────────────────────────────────
