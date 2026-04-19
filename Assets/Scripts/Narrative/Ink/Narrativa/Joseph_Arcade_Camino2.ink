@@ -4,14 +4,14 @@
     Estuvo bien, pero ya es hora de irnos, Joseph. No podemos quedarnos aquí para siempre.
     
     #sprite:joseph_sad
-    #sonido: joseph_suspiro
+    #sonido:joseph_suspiro
     ¿Ya? Apenas estaba empezando en serio… siempre tiene que acabarse justo cuando mejor se pone.
     
     #sprite:sophia_thinking
     Precisamente por eso. No se trata de escapar, sino de saber cuándo parar.
     
     #sprite:joseph_sad
-    #sonido: joseph_gruñido
+    #sonido:joseph_gruñido
     Es fácil decirlo… aquí al menos siento que soy bueno en algo. Afuera… todo es distinto.
     
     #sprite:sophia_neutral
@@ -50,14 +50,14 @@ Daré una vuelta y luego sigo hablando con Joseph
     
     ===Camino_2_2_Joseph_Arcade ===
     #setflag:Camino_2_2_Joseph_Arcade
-    #sprite:sophia_enojada
+    #sprite:sophia_annoyed
     ¡Joseph, suelta ese mando ahora mismo! Llevamos horas aquí y ya perdiste la noción del tiempo.
     
-    #sprite:joseph_molesto
+    #sprite:joseph_annoyed
     #sonido:joseph_gruñido
     ¡Solo cinco minutos más! Estoy a punto de romper otro récord, no puedes interrumpir ahora.
     
-    #sprite:sophia_enojada
+    #sprite:sophia_annoyed
     ¡¿A quién le importa un récord en una máquina?! 
     Hace una hora que me dijiste que ya terminabas, 
     no voy a permitir que te hundas en este antro.
@@ -65,16 +65,16 @@ Daré una vuelta y luego sigo hablando con Joseph
     #sprite:joseph_sad
     ¡Déjame en paz, Sophia! Aquí es donde soy feliz, no en esas clases.
     
-    #sprite:sophia_enojada
+    #sprite:sophia_annoyed
     ¡Se acabó! Te levantas de esa silla o te dejo aquí solo.
     
     #sprite:joseph_sad
     ¡Me estás arruinando el momento! ¡Casi lo tenía!
     
-    #sprite:sophia_enojada
+    #sprite:sophia_annoyed
     Te estoy evitando que te pierdas aquí; camina hacia la puerta.
     
-    #sprite:joseph_molesto
+    #sprite:joseph_annoyed
     Eres una dictadora... me traes para distraerme y ahora me arrastras como a un niño.
     
     #sprite:sophia_neutral
@@ -90,7 +90,7 @@ Daré una vuelta y luego sigo hablando con Joseph
     #sprite:sophia_neutral
     Muévete, Joseph. Tienes clase. Tu futuro no se va a construir aquí dentro.
     
-    #sprite:joseph_molesto
+    #sprite:joseph_annoyed
     Oye, no me empujes… puedo salir solo.
     
     #sprite:sophia_thinking

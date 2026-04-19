@@ -26,7 +26,7 @@ Debería ir a buscarlo antes de que se haga tarde.
 
 === prologo_arcade_llegada ===
 #sprite:sophia_neutral
-El arcade tambien llamado el templo del presente. 
+El arcade, tambien llamado el templo del presente. 
 Déjame revisar dónde lo dejé...
 -> END
 
@@ -36,7 +36,7 @@ Déjame revisar dónde lo dejé...
 ¡Aquí está! Menos mal.
 #sprite:sophia_thinking
 #sonido:sophia_sorpresa
-Aunque... también recuerdo que deje mi libro favorito en la biblioteca.
+Aunque... también recuerdo que dejé mi libro favorito en la biblioteca.
 Creo que debería pasarme por allá antes de volver.
 -> END
 
@@ -50,7 +50,7 @@ Debería seguir mirando por aquí.
 #sprite:sophia_neutral
 La biblioteca. Siempre tan tranquila a esta hora.
 #sprite:sophia_thinking
-Vamos, tiene que estar por algún lado...
+Vamos, tiene que estar por aquí en algún lado...
 -> END
 
 === prologo_biblioteca_recoger_obj ===
