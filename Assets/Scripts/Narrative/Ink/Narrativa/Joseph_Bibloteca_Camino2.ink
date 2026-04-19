@@ -2,6 +2,7 @@
 #setflag:Camino_2_Joseph_Biblioteca
 
 #sprite:joseph_sad
+#sonido:joseph_suspiro
 Es inútil, Sophia... por más que lo intente, estas palabras son solo ruido para mí.
 
 #sprite:sophia_sad
@@ -31,7 +32,7 @@ Es doloroso admitirlo… pero este es mi límite.
 #sprite:joseph_sad
 Y cada vez que lo intento más, solo me siento más atrás.
 
-#sprite:sophia_sad
+#sprite:sophia_neutral
 Forzarlo más no te va a hacer avanzar… solo te va a romper.
 
 #sprite:joseph_sad
@@ -41,6 +42,7 @@ Tienes razón… ya no sé si estoy aprendiendo o solo sobreviviendo a esto.
 Voy a cerrar el libro.
 
 #sprite:joseph_sad
+#sonido:joseph_suspiro
 Se siente extraño… como rendirme en silencio.
 
 #sprite:sophia_neutral
@@ -68,13 +70,13 @@ No tiene sentido seguir rompiéndote contra algo que no responde.
 +[Intentarlo otra vez]
 #sprite:sophia_neutral
 #setvar:ruta:ultimo_esfuerzo
-No debería rendirmetan fácil
--> END
+No debería rendirme tan fácil
+-> Camino_1_2_Joseph_Biblioteca
 +[Aceptar la derrota]
 #setvar:ruta:rendicion_final
 #sprite:sophia_sad
 Este es un caso perdido
--> END
+-> Camino_2_2_Joseph_Biblioteca
 +[Decidir después]
 #sprite:sophia_thinking
 #setvar:ruta:decision_biblioteca_3
@@ -88,6 +90,7 @@ Necesito pensarlo
 Joseph, detente. No vamos a leer ni una sola línea más.
 
 #sprite:joseph_sad
+#sonido:joseph_sorpresa
 ¿Te rindes conmigo? Pensé que eras la única que creía que podía lograrlo.
 
 #sprite:sophia_thinking
@@ -109,7 +112,7 @@ Dejarlo ahora se siente como confirmar que todos tenían razón sobre mí.
 #sprite:sophia_thinking
 O como dejar de demostrarles que no la tenían.
 
-#sprite:joseph_neutral
+#sprite:joseph_sad
 Estoy cansado… de estudiar sin entender, de avanzar sin sentir nada.
 
 #sprite:joseph_sad
@@ -136,7 +139,7 @@ Nunca pensé que rendirme se sentiría así…
 
 #sprite:joseph_sad
 Adiós a los libros… supongo que este nunca fue mi camino.
--> END
+-> Sophia_Cansada
 
 { GetVar("ruta") == "Epilogo4": -> epilogo_nietzsche }
 
@@ -145,4 +148,4 @@ Adiós a los libros… supongo que este nunca fue mi camino.
 #sprite:joseph_neutral
 Gracias Sophia por ayudarme, 
 Me siento mas relajado ahora que no tengo presiones
-->END
+->Sophia_Cansada

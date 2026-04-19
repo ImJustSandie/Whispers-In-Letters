@@ -5,13 +5,15 @@
 He estado pensando en lo que dijiste… a veces nos exigimos demasiado. 
 ¿Y si hoy simplemente te das un respiro?
 
-#sprite:joseph_sad
+#sprite:joseph_confundido
+#sonido:joseph_suspiro
 ¿"Darme un respiro" cómo?
 
 #sprite:sophia_neutral
 Dejar de pensar tanto. Solo vivir un rato.
 
-#sprite:joseph_sad
+#sprite:joseph_molesto  
+#sonido:joseph_gruñido
 No estoy para caminatas filosóficas.
 
 #sprite:sophia_thinking
@@ -24,6 +26,7 @@ Suena tentador… ¿y la clase?
 La clase seguirá ahí. Tú necesitas parar hoy.
 
 #sprite:joseph_sad
+#sonido:joseph_gruñido
 No necesito un refugio… necesito un título para que mi padre deje de verme como un error.
 
 #sprite:sophia_thinking
@@ -32,7 +35,7 @@ No necesito un refugio… necesito un título para que mi padre deje de verme co
 #sprite:joseph_sad
 Tal vez… pero es la única forma que tengo de no fallar.
 
-#sprite:joseph_sad
+#sprite:joseph_confundido
 Y si falto, el profesor me va a marcar.
 
 #sprite:sophia_neutral
@@ -50,7 +53,7 @@ Si alguien me ve fuera del campus…
 #sprite:sophia_happy
 Nadie lo sabrá. Solo por hoy, deja de pensar en consecuencias.
 
-#sprite:joseph_neutral
+#sprite:joseph_sad
 Está bien… igual ya me siento fuera de lugar.
 
 #sprite:sophia_happy
@@ -70,7 +73,7 @@ Solo por hoy.
 #sprite:sophia_euforic
 ¡Bienvenido al templo del presente! Aquí el placer es la única norma.
 #sprite:joseph_happy
-#sonido: joseph_sorpresa
+#sonido:joseph_sorpresa
 Ay caramba... esto me encanta, es el paraíso.
 #sprite:sophia_happy
 ¡Mira ese juego! Se ve genial. Olvida la carrera y el "llegar a ser alguien". Pásatela bien y ya.
@@ -85,6 +88,7 @@ Podría quedarme aquí horas... o días enteros si me lo permitieran.
 #sprite:sophia_happy
 ¿Ves? La libertad no estaba escondida en los libros, estaba en este lugar.
 #sprite:joseph_happy
+#sonido:joseph_risa
 Gracias por traerme.
 #sprite:sophia_neutral
 Disfrútalo. Te lo mereces después de tanto tiempo viviendo para los demás.
@@ -101,27 +105,28 @@ Voy a jugar mi primera partida.
 }
 === Desicion1_Arcade ===
 #sprite: sophia_thinking
-Que deberia hacer con joseph
+Que deberia hacer con Joseph
 +[Dejarlo y que siga jugando]
 #setvar:ruta:motivacion
 #sprite:sophia_euforic
-joseph se merece romper esa rutina y encontrar un respiro de la universidad
+Joseph se merece romper esa rutina y encontrar un respiro de la universidad
 ->  Camino_1_Joseph_Arcade
 +[llevarlo a la universidad]
 #setvar:ruta:desmotivarlo
 #sprite:sophia_sad
-Que le hice a joseph debo sacarlo
+Que le hice a Joseph debo sacarlo
 -> Camino_2_Joseph_Arcade
 +[Decidir luego]
 #setvar:ruta:desicion_Arcade_1
 #sprite:sophia_thinking
-Dare una vuelta y luego sigo hablando con joseph
+Daré una vuelta y luego sigo hablando con Joseph
 -> END
 
 === Camino_1_Joseph_Arcade ===
 #setflag:Camino_1_Joseph_Arcade
 #setvar:ruta:desicion2
 #sprite:joseph_happy
+#sonido:joseph_risa
 ¡Sophia! ¡Le acabo de ganar al récord de la semana! ¡Soy el rey de este lugar!
 
 #sprite:joseph_happy
@@ -160,7 +165,7 @@ Hazlo, Joseph. Explora, juega, sé el dueño de este pequeño universo.
 - GetVar("ruta") == "desicion2": -> Desicion2_Arcade
 }
 === Desicion2_Arcade ===
-Que deberia hacer con joseph
+Que debería hacer con Joseph
 +[Darle otra oportunidad]
 #setvar:ruta:vocacion
 #sprite:sophia_euforic
@@ -174,12 +179,12 @@ debo detener
 +[Decidir luego]
 #setvar:ruta:desicion2
 #sprite:sophia_thinking
-Dare una vuelta y luego sigo hablando con joseph
+Daré una vuelta y luego sigo hablando con Joseph
 -> END
 
 === Camino_1_2_Joseph_Arcade ===
 #setflag:Camino_1_2_Joseph_Arcade
-#sprite:joseph_neutral
+#sprite:joseph_happy
 Me gusta este lugar... no hay preguntas difíciles, solo obstáculos que puedo superar. 
 Aquí es donde pertenezco.
 Además, acabo de entender algo: no soy un mal estudiante… solo estaba en el lugar equivocado.
@@ -208,9 +213,8 @@ Se acabó intentar encajar en algo que no soy. Voy a hacer mi propio camino.
 #sprite:sophia_thinking
 ¿Y si esta “libertad” es solo otra presión distinta?
 
-// Joseph decae un momento
-
-#sprite:joseph_sad
+#sprite:joseph_neutral
+#sonido:joseph_suspiro
 Tal vez esto es una locura… mis padres nunca aceptarían esto.
 
 #sprite:sophia_neutral
@@ -222,7 +226,7 @@ Aquí no soy ese fracaso… aquí soy alguien.
 #sprite:sophia_happy
 Entonces no dejes que ese miedo te detenga. Vuelve al juego.
 
-#sprite:joseph_neutral
+#sprite:joseph_confundido
 ¿Me estás diciendo que ignore sus llamadas?
 
 #sprite:sophia_thinking
@@ -243,7 +247,7 @@ Gracias, Sophia… nunca me había sentido así de validado.
 
 #sprite:sophia_neutral
 No mires atrás. Corre antes de que la duda vuelva.
--> END
+-> Sophia_Cansada
 
 { GetVar("ruta") == "Epilogo1": -> epilogo_schopenhauer }
 
@@ -251,5 +255,5 @@ No mires atrás. Corre antes de que la duda vuelva.
 #setflag:Joseph_Final_1
 #sprite:joseph_neutral
 Gracias Sophia por ayudarme, 
-Voy a seguir jugando  y me volvere streamer
-->END
+Voy a seguir jugando y me volveré streamer
+->Sophia_Cansada

@@ -23,7 +23,7 @@ EXTERNAL GetVar(varName)
  Hola Joseph, que milagro en verte por aquí tan temprano.
  #sprite:joseph_neutral
  Ah, hola Sophia, que bueno encontrarte.
- #sprite:joseph_sad
+ #sprite:joseph_confundido
  #sonido: joseph_suspira
   La verdad no. Es lo mismo de siempre, pero más pesado...
    #setvar:ruta:desicion_prologo
@@ -35,15 +35,16 @@ EXTERNAL GetVar(varName)
 
   ¿Seguro que tienes tiempo para escuchar mis dramas?
   
-    +[No Escuhar a joseph]
+    +[No Escuchar a Joseph]
     #setvar:ruta:desicion_prologo
      #sprite:sophia_euforic
      no tengo tiempo, pero espero que te vaya bien
      #sprite:joseph_sad
+     #sonido: joseph_suspira
      No hay problema, nos vemos
      ->END
      
-    +[Si Escuhar a joseph]
+    +[Si Escuchar a Joseph]
     #setvar:ruta:aprobacion
      #sprite:sophia_happy
      Para los amigos siempre hay tiempo, cuéntame que te tiene tan preocupado
@@ -57,7 +58,8 @@ EXTERNAL GetVar(varName)
 #sprite:joseph_happy
 Gracias por escucharme.
 
-#sprite:joseph_sad
+#sprite:joseph_confundido
+#sonido: joseph_suspira
 No sé qué estoy haciendo con mi vida.
 Mi familia me ha dado todo, pero me siento solo.
 
@@ -69,10 +71,10 @@ y siento que solo estudio por presión.
 No te castigues tanto.
 Cada quien encuentra su camino a su ritmo.
 
-#sprite:joseph_neutral
+#sprite:joseph_sad
 Eso dicen… pero siento que el tiempo se me escapa.
 
-#sprite:joseph_neutral
+#sprite:joseph_confundido
 Se supone que soy libre, pero cada decisión pesa.
 
 #sprite:sophia_thinking
@@ -102,6 +104,7 @@ sino de perspectiva.
 A veces hablas como enciclopedia.
 
 #sprite:sophia_euforic
+#sonido: sophia_risa
 Y tú como si pensar doliera.
 
 #sprite:sophia_euforic
@@ -126,18 +129,26 @@ Dos horas bastan para cambiar el rumbo del día.
 === Desicion_DeCamino ===
 #setvar:ruta:desicion_Decamino
 #sprite:sophia_thinking
-Que deberia hacer con joseph
+Que deberia hacer con Joseph
   + [Ir al arcade]
      #setvar:ruta:arcade
-     Le dire a joseph de ir al arcade
+     Le diré a Joseph de ir al arcade
      -> Joseph_Arcade_Prologo
   + [Ir a la biblioteca]
      #setvar:ruta:biblioteca
-     Le dire a joseph de ir a la Biblioteca
+     Le diré a Joseph de ir a la Biblioteca
      -> Joseph_Bibloteca_Prologo
-  + [Mas tarde decir]
+  + [Mas tarde decidir]
      #setvar:ruta:desicion_Decamino
+     Voy a pensar a donde llevar a Joseph
      -> END
+     
+===Sophia_Cansada===
+#sprite:sophia_neutral
+Es suficiente por hoy...
+Deberia Volveré a la habitación.
+-> END
+
      
 === Habitacion_Bloqueada ===
 #sprite:sophia_neutral
@@ -146,6 +157,7 @@ Aun no deberia ir a mi casa, tengo cosas que hacer.
 
 === Confirmacion_Entrar_Cuarto ===
 #sprite:sophia_thinking
+#sonido:sophia_suspira
 Estoy a punto de entrar a mi cuarto. Siento que si entro, ya no volveré a salir por hoy...
 ¿Realmente quiero terminar de explorar por ahora?
 + [Sí, estoy segura.]
@@ -171,6 +183,7 @@ Aun no me puedo ir a dormir, tengo cosas que hacer.
 
 ===Salidas_Bloqueadas===
 #sprite:sophia_neutral
+#sonido:sophia_suspira
 Estoy muy cansada, quiero ir a mi casa a recostarme
 -> END
 
@@ -190,6 +203,7 @@ Es el momento de cerrar los ojos y dejar que el pensamiento descanse... hasta qu
 
 === Confirmacion_Dormir ===
 #sprite:sophia_neutral
+#sonido:sophia_suspira
 Estoy exhausta... Siento que si me duermo ahora, este día finalmente habrá terminado. 
 ¿Estoy lista para dejarlo todo atrás por hoy?
 + [Sí, es momento de descansar]

@@ -5,6 +5,7 @@ Joseph, deberías aprovechar para repasar o prepararte.
 Si quieres que esta vez sea diferente, necesitas comprometerte de verdad.
 
 #sprite:joseph_sad
+#sonido:joseph_suspiro
 ¿Pretendes que llene mi vacío existencial con más libros? Sophia, 
 eso es lo que me ha estado asfixiando toda la vida.
 
@@ -17,7 +18,8 @@ No entiendo cómo leer sobre contratos o leyes puede hacerme sentir "libre".
 #sprite:sophia_neutral
 La ignorancia es la mayor de las cárceles. Ven conmigo, vamos a la biblioteca.
 
-#sprite:joseph_sad
+#sprite:joseph_molesto
+#sonido:joseph_gruñido
 Es el lugar que más odio en este campus. El silencio allí dentro me grita mis fracasos.
 
 #sprite:joseph_thinking
@@ -35,7 +37,6 @@ Esta vez es diferente porque no vas a estar solo. Vamos a vencer ese miedo junto
 #sprite:sophia_neutral
 #setflag:Desicion_DeCamino
 Míralo como un entrenamiento para tu espíritu. Vamos, Joseph, antes de que pierdas el valor.
-// Sophia y Joseph caminan hacia la biblioteca
 #scene: Biblioteca
 
 -> END
@@ -45,6 +46,7 @@ Míralo como un entrenamiento para tu espíritu. Vamos, Joseph, antes de que pie
 Ya estamos aquí. Mira este lugar… el silencio casi se puede tocar.
 
 #sprite:joseph_neutral
+#sonido:joseph_sorpresa
 Es más imponente de lo que recordaba.
 
 #sprite:joseph_neutral
@@ -58,7 +60,7 @@ Es un refugio. Aquí el ruido del exterior no existe.
 Solo estás tú… y lo que decidas aprender.
 
 #sprite:joseph_sad
-(Suspira)
+#sonido:joseph_suspiro
 Solo espero que este “refugio” no termine siendo otra celda.
 
 #sprite:sophia_neutral
@@ -98,13 +100,13 @@ Hazlo por curiosidad. Solo una página.
 +[Crear estrategia]
 #sprite:sophia_euforic
 #setvar:ruta:estrategia
-voy a ayudar a joseph
--> END
+voy a ayudar a Joseph
+-> Camino_1_Joseph_Biblioteca
 +[Decirle que no puede]
 #sprite:sophia_sad
 #setvar:ruta:rendirse
 mejor me rindo
--> END
+-> Camino_2_Joseph_Biblioteca
 +[Pensar después]
 #sprite:sophia_thinking
 #setvar:ruta:Decision_Biblioteca_1
@@ -127,6 +129,7 @@ Hay personas que entienden todo muy rápido... yo puedo leerlo diez veces y mi m
 Tu velocidad de procesamiento es distinta. Te enredas en la terminología técnica.
 
 #sprite:joseph_sad
+#sonido:joseph_suspiro
 Es humillante darme cuenta... quizás no es flojera, sino falta de capacidad.
 
 #sprite:sophia_neutral
@@ -173,11 +176,11 @@ Está bien... peor es no intentarlo.
 #sprite:sophia_neutral
 #setvar:ruta:disciplina
 Joseph ha mejorado, pero hay que ser constante y disciplinado - Hay mucho camino por recorrer
--> END
+-> Camino_1_2_Joseph_Biblioteca
 +[Rendirse]
 #setvar:ruta:rendirse_2
 No ha avanzado casi nada - Este es un reto muy duro
--> END
+-> Camino_2_2_Joseph_Biblioteca
 +[Decidir después]
 #sprite:sophia_thinking
 #setvar:ruta:decision_biblioteca_2
@@ -189,7 +192,7 @@ Voy a pensarlo
 #sprite:joseph_neutral
 Llevo dos horas con la misma página, pero no he sentido ganas de rendirme ni una sola vez.
 
-#sprite:sophia_happy
+#sprite:sophia_neutral
 Eso es porque dejaste de pelear contra tu naturaleza.
 
 #sprite:joseph_neutral
@@ -201,7 +204,7 @@ La disciplina es la forma más pura de libertad.
 #sprite:joseph_sad
 Mi mente sigue siendo un terreno difícil...
 
-#sprite:sophia_happy
+#sprite:sophia_neutral
 Pero tu voluntad es la que manda ahora.
 
 #sprite:joseph_neutral
@@ -231,18 +234,19 @@ Eso es volver a la misma prisión.
 #sprite:joseph_neutral
 Si me rindo ahora... todo habrá sido igual.
 
-#sprite:sophia_happy
+#sprite:sophia_neutral
 Hazlo por tu propia voluntad, no por los demás.
 
 #sprite:joseph_neutral
-Está bien... tomaré agua y seguiré.
+#sonido:joseph_suspiro
+Está bien seguiré.
 
-#sprite:sophia_euforic
+#sprite:sophia_happy
 Tu libertad está en no rendirte.
 #setvar:ruta:Epilogo3
 #setflag:Final_Alcanzado
 #deleteflag:exploracion
--> END
+-> Sophia_Cansada
 { GetVar("ruta") == "Epilogo3": -> epilogo_estoicos}
 
 
@@ -251,4 +255,4 @@ Tu libertad está en no rendirte.
 #sprite:joseph_neutral
 Gracias Sophia por ayudarme, 
 voy a seguir  estudiando un poco mas en la biblioteca
-->END
+->Sophia_Cansada
