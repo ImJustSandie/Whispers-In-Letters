@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Portrait Data Base
   m_EditorClassIdentifier: Assembly-CSharp::CharacterPortraitData
   portraits:
-  - id: sophia_euphoric
+  - id: sophia_euforic
     animationStateName: Sophia Euphoric
   - id: sophia_happy
     animationStateName: Sophia Happy
