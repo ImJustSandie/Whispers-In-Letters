@@ -21,7 +21,7 @@ Mis compañeros ya terminaron… y yo sigo atrapado en la introducción.
 Es como si todos estuvieran leyendo el mismo idioma… y yo estuviera mirando símbolos que no encajan en nada.
 
 #sprite:sophia_neutral
-Quizás no es que no puedas… sino que estás intentando abrirlo de la forma equivocada.
+Quizás no es que no puedas… sino que estás intentando entenderlo de la forma equivocada.
 
 #sprite:sophia_thinking
 No todas las cerraduras están hechas para la misma llave.
