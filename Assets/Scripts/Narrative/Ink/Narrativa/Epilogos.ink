@@ -68,7 +68,7 @@ Perdiste la oportunidad de forjar un carácter inquebrantable. Obligaste a Josep
 // Llega una carta para Sophia con la postura filosófica de Nietzsche
 Sophia: #setflag:Carta_Leida
 
-¡Qué decepción! Caíste en el falso camino de lo que es la libertad, no supiste ver dentro de tu voluntad. No olvides la verdadera libertad es…   
+¡Qué decepción! Caíste en el falso camino de lo que es la libertad, le impusiste a Joseph la "verdad" de otros, traicionaste tu propia voluntad. Has olvidado que el hombre es algo que debe ser superado, no algo que debe ser domesticado. No olvides que la verdadera libertad es…   
 …Friedrich Nietzsche
 
 -> END

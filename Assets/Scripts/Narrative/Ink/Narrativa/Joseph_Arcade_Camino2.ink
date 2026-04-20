@@ -66,7 +66,7 @@ Daré una vuelta y luego sigo hablando con Joseph
     ¡Déjame en paz, Sophia! Aquí es donde soy feliz, no en esas clases.
     
     #sprite:sophia_annoyed
-    ¡Se acabó! Te levantas de esa silla o te dejo aquí solo.
+    ¡Se acabó! Te apartas de la máquina de arcade o te dejo aquí solo
     
     #sprite:joseph_sad
     ¡Me estás arruinando el momento! ¡Casi lo tenía!

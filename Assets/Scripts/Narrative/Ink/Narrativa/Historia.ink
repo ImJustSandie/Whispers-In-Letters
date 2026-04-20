@@ -24,7 +24,7 @@ EXTERNAL GetVar(varName)
  #sprite:joseph_neutral
  Ah, hola Sophia, que bueno encontrarte.
  #sprite:joseph_confused
- #sonido:joseph_suspira
+ #sonido:joseph_suspiro
   La verdad no. Es lo mismo de siempre, pero más pesado...
    #setvar:ruta:desicion_prologo
   -> Joseph1_Prologo_Reencuentro
@@ -40,7 +40,7 @@ EXTERNAL GetVar(varName)
      #sprite:sophia_euforic
      No tengo tiempo, pero espero que te vaya bien
      #sprite:joseph_sad
-     #sonido: joseph_suspira
+     #sonido:joseph_suspiro
      No hay problema, nos vemos
      ->END
      
@@ -59,7 +59,7 @@ EXTERNAL GetVar(varName)
 Gracias por escucharme.
 
 #sprite:joseph_confused
-#sonido: joseph_suspira
+#sonido:joseph_suspiro
 No sé qué estoy haciendo con mi vida.
 Mi familia me ha dado todo, pero me siento solo.
 
@@ -129,7 +129,7 @@ Dos horas bastan para cambiar el rumbo del día.
 === Desicion_DeCamino ===
 #setvar:ruta:desicion_Decamino
 #sprite:sophia_thinking
-Que deberia hacer con Joseph
+¿Que deberia hacer con Joseph?
   + [Ir al arcade]
      #setvar:ruta:arcade
      Le diré a Joseph de ir al arcade
@@ -146,7 +146,7 @@ Que deberia hacer con Joseph
 ===Sophia_Cansada===
 #sprite:sophia_neutral
 Es suficiente por hoy...
-Deberia Volveré a la habitación.
+Deberia volver a la habitación.
 -> END
 
      

@@ -69,7 +69,7 @@ Empieza por algo pequeño. No tienes que entenderlo todo hoy.
 …Supongo que puedo intentarlo.
 
 #sprite:joseph_neutral
-Voy a tomar un libro de la estantería, lo observare un momento
+Voy a tomar un libro de la estantería, lo observaré un momento
 
 #sprite:joseph_sad
 Hace tiempo que no abro uno sin sentir presión…
