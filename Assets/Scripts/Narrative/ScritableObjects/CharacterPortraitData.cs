@@ -24,14 +24,18 @@ public class CharacterPortraitData : ScriptableObject
             portraitDictionary = new Dictionary<string, string>();
             foreach (var entry in portraits)
             {
-                if (!portraitDictionary.ContainsKey(entry.id))
+                if (string.IsNullOrEmpty(entry.id)) continue;
+
+                string cleanId = entry.id.Trim().ToLower();
+                if (!portraitDictionary.ContainsKey(cleanId))
                 {
-                    portraitDictionary.Add(entry.id, entry.animationStateName);
+                    portraitDictionary.Add(cleanId, entry.animationStateName.Trim());
                 }
             }
         }
 
-        if (portraitDictionary.TryGetValue(id.ToLower(), out string animState))
+        // Buscamos usando el id limpiado
+        if (portraitDictionary.TryGetValue(id.Trim().ToLower(), out string animState))
         {
             return animState;
         }

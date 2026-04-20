@@ -1,0 +1,592 @@
+fileFormatVersion: 2
+guid: 4c708a5a033c4414482d6b0b9508d330
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Triste_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1648
+        width: 480
+        height: 457
+      alignment: 9
+      pivot: {x: 0.4798669, y: 0.2210467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc2b310a2e75ba04ca7ef2198fa6e8ce
+      internalID: -539569831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Triste_1
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1648
+        width: 480
+        height: 457
+      alignment: 9
+      pivot: {x: 0.4798669, y: 0.2210467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6761d6ef356db71489f958ff32bb1fc9
+      internalID: -1777561026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Triste_2
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1648
+        width: 480
+        height: 457
+      alignment: 9
+      pivot: {x: 0.4798669, y: 0.2210467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a801004f844573247a01cf15acbd3210
+      internalID: 153846635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Triste_3
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1648
+        width: 480
+        height: 457
+      alignment: 9
+      pivot: {x: 0.4798669, y: 0.2210467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 950e20dc2816a9441a9200d46ca59eb4
+      internalID: 198763124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Triste_4
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1648
+        width: 480
+        height: 457
+      alignment: 9
+      pivot: {x: 0.4798669, y: 0.2210467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb553d6ad400a0048873be6ed0dcde91
+      internalID: -1329310825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Triste_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1150
+        width: 480
+        height: 457
+      alignment: 9
+      pivot: {x: 0.4798669, y: 0.2210467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5156a03e1882c54da4a0400d53c2706
+      internalID: 734846377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Triste_6
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 1150
+        width: 480
+        height: 457
+      alignment: 9
+      pivot: {x: 0.4798669, y: 0.2210467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe80023f533a134fab9b47ddba34562
+      internalID: 2004888720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Triste_7
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1150
+        width: 480
+        height: 457
+      alignment: 9
+      pivot: {x: 0.4798669, y: 0.2210467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f792eeaf0382d9441a2a39acf725a857
+      internalID: 247380593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Triste_8
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 1150
+        width: 480
+        height: 457
+      alignment: 9
+      pivot: {x: 0.4798669, y: 0.2210467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc07e26bc02b5c4198f76a2658e310b
+      internalID: -1071456432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Triste_9
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1150
+        width: 480
+        height: 457
+      alignment: 9
+      pivot: {x: 0.4798669, y: 0.2210467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e45429ad286be844bfc3e996dff267d
+      internalID: 235790708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Triste_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 650
+        width: 480
+        height: 457
+      alignment: 9
+      pivot: {x: 0.4798669, y: 0.2210467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99cab4e7d782c4548a395234b7d23151
+      internalID: 197718219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Triste_11
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 650
+        width: 480
+        height: 457
+      alignment: 9
+      pivot: {x: 0.4798669, y: 0.2210467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2beb5f6409a5f2e42bad9e5b82133a14
+      internalID: -1300289080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Triste_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 480
+        height: 457
+      alignment: 9
+      pivot: {x: 0.4798669, y: 0.2210467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b7df69ed0e9124cab801288728d206
+      internalID: -588740454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Triste_16
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 150
+        width: 480
+        height: 457
+      alignment: 9
+      pivot: {x: 0.4798669, y: 0.2210467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f44877cd84c56c4418e372f274604f26
+      internalID: -48665423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Triste_17
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 150
+        width: 480
+        height: 457
+      alignment: 9
+      pivot: {x: 0.4798669, y: 0.2210467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e6db4293697fe4e970420dfe61b59d
+      internalID: 883572733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Triste_18
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 150
+        width: 480
+        height: 457
+      alignment: 9
+      pivot: {x: 0.4798669, y: 0.2210467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80837f1e37b66345b818fd9cf59b3f8
+      internalID: -1804766726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Triste_19
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 150
+        width: 480
+        height: 457
+      alignment: 9
+      pivot: {x: 0.4798669, y: 0.2210467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcc5733ac2b48db4aa3664ed6d2954bf
+      internalID: -2108082055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Triste_12
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 650
+        width: 480
+        height: 457
+      alignment: 9
+      pivot: {x: 0.4798669, y: 0.2210467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f957d01f578924b4786e60112eb00cbf
+      internalID: 1108397406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Triste_13
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 650
+        width: 480
+        height: 457
+      alignment: 9
+      pivot: {x: 0.4798669, y: 0.2210467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a53bc7f23a15c8748b95cce45d760967
+      internalID: -305699862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Triste_14
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 650
+        width: 480
+        height: 457
+      alignment: 9
+      pivot: {x: 0.4798669, y: 0.2210467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92b89e39eec6fef428bae2de01fe0ef2
+      internalID: -1011466383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8946f2904db07204fbeafd3548cbc2b5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":4.0},"gridSpriteSize":{"x":480.0,"y":457.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":92.0},"pivot":{"x":0.4798668920993805,"y":0.22104670107364655},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Triste_0: -539569831
+      Triste_1: -1777561026
+      Triste_10: 197718219
+      Triste_11: -1300289080
+      Triste_12: 1108397406
+      Triste_13: -305699862
+      Triste_14: -1011466383
+      Triste_15: -588740454
+      Triste_16: -48665423
+      Triste_17: 883572733
+      Triste_18: -1804766726
+      Triste_19: -2108082055
+      Triste_2: 153846635
+      Triste_3: 198763124
+      Triste_4: -1329310825
+      Triste_5: 734846377
+      Triste_6: 2004888720
+      Triste_7: 247380593
+      Triste_8: -1071456432
+      Triste_9: 235790708
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

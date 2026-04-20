@@ -59,6 +59,7 @@ Vamos, tiene que estar por aquí en algún lado...
 ¡Lo encontré!
 #sprite:sophia_neutral
 #setflag:prologue_completed
+#setvar:ruta:Inicio
 Bien. Ya tengo todo lo que necesitaba.
 Supongo que puedo volver al parque ahora.
 -> END
@@ -72,7 +73,7 @@ Debería revisarlo bien antes de irme.
 === prologo_parque_final ===
 #sprite:sophia_neutral
 #sonido:sophia_sorpresa
-...
+... 
 #sprite:sophia_thinking
 Ese es Joseph.
 #sprite:sophia_euforic

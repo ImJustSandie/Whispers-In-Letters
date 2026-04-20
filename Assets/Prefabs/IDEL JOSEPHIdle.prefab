@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 00341651c6b889d4e88e6bf6a94afa1c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 630.41
+      value: 629.97
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 00341651c6b889d4e88e6bf6a94afa1c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -84,6 +84,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 317cc748d6cde1d40807cb5ca72424c2, type: 2}
+    - target: {fileID: 2761784347946129185, guid: 00341651c6b889d4e88e6bf6a94afa1c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761784347946129185, guid: 00341651c6b889d4e88e6bf6a94afa1c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.187
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 00341651c6b889d4e88e6bf6a94afa1c, type: 3}
       propertyPath: m_Controller
       value: 
@@ -158,7 +166,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.74
-  m_Center: {x: 0, y: 0.46, z: 0.27}
+  m_Center: {x: 0, y: 0.46, z: 0}
 --- !u!136 &6161511955277658566
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -181,4 +189,4 @@ CapsuleCollider:
   m_Radius: 0.25
   m_Height: 1.486219
   m_Direction: 1
-  m_Center: {x: 0, y: 0.43, z: 0.25}
+  m_Center: {x: 0, y: 0.43, z: 0}

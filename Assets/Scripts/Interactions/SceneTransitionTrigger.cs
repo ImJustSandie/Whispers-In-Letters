@@ -26,6 +26,9 @@ public class SceneTransitionTrigger : MonoBehaviour
     [Tooltip("Opcional: Nudo de Ink que se reproducirá si el jugador intenta cruzar pero no tiene el flag requerido.")]
     public string fallbackKnot = "";
 
+    [Tooltip("Opcional: Nudo de Ink de confirmación. Si tiene un valor y se cumplen las condiciones, se reproducirá este nudo en lugar de cambiar de escena instantáneamente. Para efectuar el viaje, el script de Ink deberá usar el tag #scene:nombre_escena.")]
+    public string confirmationKnot = "";
+
     [Header("Visual Feedback")]
     [Tooltip("Distancia que se empuja al jugador hacia atrás si la entrada está bloqueada.")]
     [SerializeField] private float pushDistance = 1.2f;
@@ -65,7 +68,19 @@ public class SceneTransitionTrigger : MonoBehaviour
                 }
             }
 
-            // 3. Si todas las condiciones pasaron, cambiar escena
+            // 3. Si todas las condiciones pasaron, verificar diálogo de confirmación
+            if (!string.IsNullOrEmpty(confirmationKnot))
+            {
+                Debug.Log($"[SceneTransition] Iniciando diálogo de confirmación: {confirmationKnot}");
+                if (StoryManager.Instance != null)
+                {
+                    StoryManager.Instance.StartStory(confirmationKnot);
+                    if (!isPushingBack) StartCoroutine(NaturalPushBackRoutine(other.gameObject));
+                }
+                return;
+            }
+
+            // 4. Si no hay confirmación, cambiar escena directamente
             if (LevelManager.Instance != null && !string.IsNullOrEmpty(destinationSceneName))
             {
                 isTransitioning = true;
