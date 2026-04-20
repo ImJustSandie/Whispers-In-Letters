@@ -26,7 +26,6 @@ EXTERNAL GetVar(varName)
  #sprite:joseph_confused
  #sonido:joseph_suspiro
   La verdad no. Es lo mismo de siempre, pero más pesado...
-   #setvar:ruta:desicion_prologo
   -> Joseph1_Prologo_Reencuentro
   === Joseph1_Prologo_Reencuentro ===
   #setflag:Joseph1_Prologo_Reencuentro
@@ -36,7 +35,6 @@ EXTERNAL GetVar(varName)
   ¿Seguro que tienes tiempo para escuchar mis dramas?
   
     +[No Escuchar a Joseph]
-    #setvar:ruta:desicion_prologo
      #sprite:sophia_euforic
      No tengo tiempo, pero espero que te vaya bien
      #sprite:joseph_sad

@@ -122,10 +122,10 @@ Daré una vuelta y luego sigo hablando con Joseph
     Entonces hagámoslo bien esta vez… enfrentémoslo juntos, paso a paso.
     #sprite:joseph_neutral
     No te culpes tanto… al menos ahora sé que, aunque cueste, mi lugar está allá afuera.
-    #setvar:ruta:epilogo2 
+    #setvar:ruta:Epilogo2 
     #setflag:Final_Alcanzado
     #deleteflag:exploracion
-{ GetVar("ruta") == "epilogo2": -> epilogo_hegel }
+{ GetVar("ruta") == "Epilogo2": -> epilogo_hegel }
     ->Sophia_Cansada
     
 ===Joseph_Final_2====
