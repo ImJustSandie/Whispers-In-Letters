@@ -2938,13 +2938,13 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 0.76
+  m_Height: 2.2
   m_Radius: 0.24
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.43, z: 0}
+  m_Center: {x: 0, y: 0.09, z: 0}
 --- !u!114 &1530667279109482174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3334,6 +3334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1328685363655388813}
   - component: {fileID: 1190062110540053656}
+  - component: {fileID: 132504580653663916}
   m_Layer: 5
   m_Name: InteractiveButton
   m_TagString: Untagged
@@ -3374,6 +3375,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractionIndicator
   icon: {fileID: 2800544892063190502}
   worldOffset: {x: 0, y: 2, z: 0}
+--- !u!114 &132504580653663916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6675554150374540722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf010d3dd68abb448382d15ccebf4dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractionIndicatorConnector
+  playerInteraction: {fileID: 7671638855633295329}
+  indicator: {fileID: 1190062110540053656}
 --- !u!1 &6680468313265617897
 GameObject:
   m_ObjectHideFlags: 0

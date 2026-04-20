@@ -961,18 +961,6 @@ PrefabInstance:
       value: IDEL JOSEPHIdle
       objectReference: {fileID: 0}
     - target: {fileID: 2958803398663220439, guid: 2f20de22ca373704196302fc410ebada, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2958803398663220439, guid: 2f20de22ca373704196302fc410ebada, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2958803398663220439, guid: 2f20de22ca373704196302fc410ebada, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2958803398663220439, guid: 2f20de22ca373704196302fc410ebada, type: 3}
       propertyPath: m_LocalPosition.x
       value: 638.662
       objectReference: {fileID: 0}
@@ -1011,46 +999,6 @@ PrefabInstance:
     - target: {fileID: 2958803398663220439, guid: 2f20de22ca373704196302fc410ebada, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8381813511127177766, guid: 2f20de22ca373704196302fc410ebada, type: 3}
-      propertyPath: data
-      value: 
-      objectReference: {fileID: 11400000, guid: 9ff9cc649b1d91a4faf6b069a6b0248c, type: 2}
-    - target: {fileID: 8381813511127177766, guid: 2f20de22ca373704196302fc410ebada, type: 3}
-      propertyPath: disappearCondition.flagName
-      value: Desicion_DeCamino
-      objectReference: {fileID: 0}
-    - target: {fileID: 8381813511127177766, guid: 2f20de22ca373704196302fc410ebada, type: 3}
-      propertyPath: visibilityConditions.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8381813511127177766, guid: 2f20de22ca373704196302fc410ebada, type: 3}
-      propertyPath: disappearCondition.conditionType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8381813511127177766, guid: 2f20de22ca373704196302fc410ebada, type: 3}
-      propertyPath: visibilityConditions.Array.data[0].flagName
-      value: prologue_completed
-      objectReference: {fileID: 0}
-    - target: {fileID: 8381813511127177766, guid: 2f20de22ca373704196302fc410ebada, type: 3}
-      propertyPath: visibilityConditions.Array.data[1].flagName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8381813511127177766, guid: 2f20de22ca373704196302fc410ebada, type: 3}
-      propertyPath: visibilityConditions.Array.data[1].variableKey
-      value: ruta
-      objectReference: {fileID: 0}
-    - target: {fileID: 8381813511127177766, guid: 2f20de22ca373704196302fc410ebada, type: 3}
-      propertyPath: visibilityConditions.Array.data[0].conditionType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8381813511127177766, guid: 2f20de22ca373704196302fc410ebada, type: 3}
-      propertyPath: visibilityConditions.Array.data[1].conditionType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8381813511127177766, guid: 2f20de22ca373704196302fc410ebada, type: 3}
-      propertyPath: visibilityConditions.Array.data[1].requiredValue
-      value: Inicio
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6214,22 +6162,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2800544892063190502, guid: 7212bdeba3ddb3f44a9ccc62bff5e065, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4080342622547049734, guid: 7212bdeba3ddb3f44a9ccc62bff5e065, type: 3}
-      propertyPath: m_Height
-      value: 2.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4080342622547049734, guid: 7212bdeba3ddb3f44a9ccc62bff5e065, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4080342622547049734, guid: 7212bdeba3ddb3f44a9ccc62bff5e065, type: 3}
-      propertyPath: m_Center.y
-      value: 0.09
-      objectReference: {fileID: 0}
     - target: {fileID: 8383602872550509604, guid: 7212bdeba3ddb3f44a9ccc62bff5e065, type: 3}
       propertyPath: m_Name
       value: Player
@@ -6277,52 +6209,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6675554150374540722, guid: 7212bdeba3ddb3f44a9ccc62bff5e065, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 735579110603366990}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7212bdeba3ddb3f44a9ccc62bff5e065, type: 3}
---- !u!1 &735579110603366987 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6675554150374540722, guid: 7212bdeba3ddb3f44a9ccc62bff5e065, type: 3}
-  m_PrefabInstance: {fileID: 735579110603366986}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &735579110603366988 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7671638855633295329, guid: 7212bdeba3ddb3f44a9ccc62bff5e065, type: 3}
-  m_PrefabInstance: {fileID: 735579110603366986}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 659218d9cd66d3b49b6f9441eb27d69d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteraction
---- !u!114 &735579110603366989 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1190062110540053656, guid: 7212bdeba3ddb3f44a9ccc62bff5e065, type: 3}
-  m_PrefabInstance: {fileID: 735579110603366986}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735579110603366987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44b1559c4cc907941ac7cf340abff1e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractionIndicator
---- !u!114 &735579110603366990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735579110603366987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaf010d3dd68abb448382d15ccebf4dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractionIndicatorConnector
-  playerInteraction: {fileID: 735579110603366988}
-  indicator: {fileID: 735579110603366989}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
