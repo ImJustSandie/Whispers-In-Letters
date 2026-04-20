@@ -1246,6 +1246,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1190062110540053656, guid: 7212bdeba3ddb3f44a9ccc62bff5e065, type: 3}
+      propertyPath: worldOffset.y
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6449720890034403215, guid: 7212bdeba3ddb3f44a9ccc62bff5e065, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.8
@@ -3370,6 +3374,10 @@ PrefabInstance:
       propertyPath: data
       value: 
       objectReference: {fileID: 11400000, guid: 479692a6189fc2d44acc7ebf8dfa00a7, type: 2}
+    - target: {fileID: 8381813511127177766, guid: 2f20de22ca373704196302fc410ebada, type: 3}
+      propertyPath: visibilityConditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8381813511127177766, guid: 2f20de22ca373704196302fc410ebada, type: 3}
       propertyPath: visibilityConditions.Array.data[0].flagName
       value: Joseph_Arcade_Prologo
