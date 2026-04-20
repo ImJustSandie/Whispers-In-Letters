@@ -35,3 +35,5 @@ MonoBehaviour:
     animationStateName: Joseph Annoyed
   - id: joseph_confused
     animationStateName: Joseph Confused
+  - id: Tablos
+    animationStateName: Escencia

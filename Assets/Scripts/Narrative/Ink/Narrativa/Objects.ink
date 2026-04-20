@@ -3,6 +3,8 @@ Soy una lampara
 -> END
 
 ===minotauro===
+#sprite:Tablos
+#sonido:Escencia
 "La felicidad de tu vida depende de la calidad de tus pensamientos". — Marco Aurelio
 ->END
 
