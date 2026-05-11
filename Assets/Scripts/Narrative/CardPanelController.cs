@@ -12,6 +12,7 @@ public class CardPanelController : MonoBehaviour
     [SerializeField] private Image cardImage;
     [SerializeField] private GameObject panelRoot;
     [SerializeField] private Canvas parentCanvas;
+    [SerializeField] private Button closeButton;
 
     [Header("Multi-Card Navigation")]
     [SerializeField] private Transform buttonsContainer;
@@ -20,6 +21,12 @@ public class CardPanelController : MonoBehaviour
     private Story story;
     private bool isMultiMode;
     private PlayerControls controls;
+
+    private void Awake()
+    {
+        if (closeButton != null)
+            closeButton.onClick.AddListener(ClosePanel);
+    }
 
     private void EnsureControls()
     {
