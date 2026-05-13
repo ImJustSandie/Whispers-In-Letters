@@ -2,7 +2,7 @@ using System.IO;
 using UnityEngine;
 
 /// <summary>
-/// Servicio estático responsable EXCLUSIVAMENTE de leer y escribir el archivo de guardado en disco.
+/// Servicio estático responsable EXCLUSIVAMENTE de leer y escribir el archivo de guardado en disco o caché local.
 /// 
 /// REGLA DE ARQUITECTURA:
 ///   - Solo GameManager debe llamar a este servicio.
@@ -12,8 +12,9 @@ using UnityEngine;
 public static class SaveSystem
 {
     private const string SAVE_FILE_NAME = "save.json";
+    private const string PREFS_SAVE_KEY = "GameSaveData_JSON";
 
-    /// <summary>Ruta completa del archivo de guardado en el dispositivo del jugador.</summary>
+    /// <summary>Ruta completa del archivo de guardado en el dispositivo del jugador (Standalone).</summary>
     private static string SavePath => Path.Combine(Application.persistentDataPath, SAVE_FILE_NAME);
 
     // ─────────────────────────────────────────────────────────────────────────
@@ -21,15 +22,19 @@ public static class SaveSystem
     // ─────────────────────────────────────────────────────────────────────────
 
     /// <summary>
-    /// Devuelve true si existe un archivo de guardado válido en disco.
+    /// Devuelve true si existe un archivo de guardado válido.
     /// </summary>
     public static bool HasSave()
     {
+#if UNITY_WEBGL && !UNITY_EDITOR
+        return PlayerPrefs.HasKey(PREFS_SAVE_KEY);
+#else
         return File.Exists(SavePath);
+#endif
     }
 
     /// <summary>
-    /// Serializa el GameSaveData a JSON y lo escribe en disco.
+    /// Serializa el GameSaveData a JSON y lo escribe en disco o caché.
     /// Debe llamarse solo desde GameManager.
     /// </summary>
     public static void Save(GameSaveData data)
@@ -43,8 +48,15 @@ public static class SaveSystem
         try
         {
             string json = JsonUtility.ToJson(data, prettyPrint: true);
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+            PlayerPrefs.SetString(PREFS_SAVE_KEY, json);
+            PlayerPrefs.Save(); // Asegura de que se guarde en IndexedDB (caché del navegador)
+            Debug.Log("[SaveSystem] Juego guardado en PlayerPrefs (WebGL).");
+#else
             File.WriteAllText(SavePath, json);
             Debug.Log($"[SaveSystem] Juego guardado en: {SavePath}");
+#endif
         }
         catch (System.Exception e)
         {
@@ -66,7 +78,14 @@ public static class SaveSystem
 
         try
         {
-            string json = File.ReadAllText(SavePath);
+            string json;
+#if UNITY_WEBGL && !UNITY_EDITOR
+            json = PlayerPrefs.GetString(PREFS_SAVE_KEY);
+            Debug.Log("[SaveSystem] Guardado cargado desde PlayerPrefs (WebGL).");
+#else
+            json = File.ReadAllText(SavePath);
+            Debug.Log($"[SaveSystem] Guardado cargado desde: {SavePath}");
+#endif
             GameSaveData data = JsonUtility.FromJson<GameSaveData>(json);
 
             if (data == null)
@@ -75,7 +94,6 @@ public static class SaveSystem
                 return null;
             }
 
-            Debug.Log($"[SaveSystem] Guardado cargado desde: {SavePath}");
             return data;
         }
         catch (System.Exception e)
@@ -86,7 +104,7 @@ public static class SaveSystem
     }
 
     /// <summary>
-    /// Elimina el archivo de guardado del disco.
+    /// Elimina el archivo de guardado.
     /// Se usa al iniciar una nueva partida.
     /// </summary>
     public static void DeleteSave()
@@ -99,8 +117,14 @@ public static class SaveSystem
 
         try
         {
+#if UNITY_WEBGL && !UNITY_EDITOR
+            PlayerPrefs.DeleteKey(PREFS_SAVE_KEY);
+            PlayerPrefs.Save();
+            Debug.Log("[SaveSystem] Archivo de guardado eliminado de PlayerPrefs (WebGL).");
+#else
             File.Delete(SavePath);
-            Debug.Log("[SaveSystem] Archivo de guardado eliminado.");
+            Debug.Log("[SaveSystem] Archivo de guardado en disco eliminado.");
+#endif
         }
         catch (System.Exception e)
         {
