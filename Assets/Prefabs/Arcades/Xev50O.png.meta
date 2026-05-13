@@ -1,0 +1,4916 @@
+fileFormatVersion: 2
+guid: 6e8bf25d4b765d642a5f90b2e5e46e7b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Xev50O_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b254b2d6aa3e71f418278ba657bd1ad7
+      internalID: -1234637003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_1
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 3750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e055f323245d753449a71c6cd15401c2
+      internalID: 1487513133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_2
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 3750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0cbfc61d2c059740bdc7222f4d62007
+      internalID: 1481562022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_3
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 3750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92ed0ce29c0f084e88d97c9a478a34e
+      internalID: 1755730562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_4
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 3750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cdef6cb57a7fe44e98255613ed0056c
+      internalID: -1372611328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_5
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 3750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4712d264a2861eb428e784ce5499d21c
+      internalID: 48358945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_6
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 3750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7caf15737cfe7d41821d6db0a99a22d
+      internalID: -1351182291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_7
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 3750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 307994c43edcfce4da1b4a28388d96a4
+      internalID: -1976851962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_8
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 3750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282a584110a72b446b388f5799e49de0
+      internalID: 329763276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_9
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 3750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c08e384fdaba1e4dacc61e5791f3d8b
+      internalID: -1390745715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_10
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 3750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 009fe9cba9b35754d87c07b5c17a97db
+      internalID: 618106191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_11
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 3750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a2856add276374087b0be28e3ff702
+      internalID: 2134561226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_12
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 3750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5817addfcaa3924a8c4ad741eea7797
+      internalID: 467449800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40532732a5cb89b49963908141ebe1eb
+      internalID: -1538857897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_14
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 3500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa17481e982c474e8758fbf8cba0edd
+      internalID: 1763204438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_15
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 3500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14b545780e0d5f14796ff1ff911987ee
+      internalID: -47742241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_16
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 3500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e853d948ecdd448ad066d73298f15d
+      internalID: -558711691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_17
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 3500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1515e701313a37f4aba826739ddf9d38
+      internalID: 1571083717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_18
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 3500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9586e5bc5ac2907438d8cce383bf81c9
+      internalID: 1583696127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_19
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 3500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db6fea99f6e5db4e8ff8c48d4f1972c
+      internalID: 413298649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_20
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 3500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abab49b07e59b164f8ee71bf81a85b2e
+      internalID: 1829157662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_21
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 3500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c03780a960095cc448b426c95db63f13
+      internalID: -153119093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_22
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 3500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dedda9266a4d46842aefad27390cb383
+      internalID: 710772318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_23
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 3500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 039bb0ca96d86774ea52ab9fe787a946
+      internalID: 2008735377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_24
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 3500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05bc0f6db0daaab4bb606d42d60a5244
+      internalID: -1529210759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_25
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 3500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b7a1e2e152cae478bb208a2b4d0dcd
+      internalID: -466622012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0ee2260e3329e4380f81984e4f197e
+      internalID: 418500086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_27
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 3250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a931d255c860064da01eb6a9c668e12
+      internalID: -168999828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_28
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 3250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a2543ccf847324c8f7bd7cdf288dd9
+      internalID: -84532231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_29
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 3250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50957013a1a13441802d28b23a400ac
+      internalID: 1637311055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_30
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 3250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46f9103716005242be50c55c5ec3bf5
+      internalID: 1986720527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_31
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 3250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0900c50615bbacb4c85b284ac15c86ed
+      internalID: 1244652689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_32
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 3250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7092990948148e64e841e4022938bba3
+      internalID: 833272875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_33
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 3250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb39ad60913e47a43a912bc8f6d7e6db
+      internalID: 122353471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_34
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 3250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b2334cadf53964b9b97b0e55c0b87a
+      internalID: 1607087049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_35
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 3250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c30e028acd23764bad3362ec0385fbb
+      internalID: -1693886447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_36
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 3250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91de2195ecaa12140b3bdb78b8b3a0cb
+      internalID: -1243894088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_37
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 3250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c583a989653e672489bedaece0b559f8
+      internalID: 312049452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_38
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 3250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f35e165df933169429f1ef01e884e984
+      internalID: 134749016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75b66362dcccd1e499ecc064c2a63855
+      internalID: -386941017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_40
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 3000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21b1a1f4facb90f48ab571a4f2a870e3
+      internalID: 1227803194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_41
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 3000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001a7df563259624990d6f4687e867ed
+      internalID: -1609903101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_42
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 3000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb69307c8d41ce41a120c8c3ae47575
+      internalID: -1620580655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_43
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 3000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cce179e10c244e479a7cf625c886a2f
+      internalID: -1844658465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_44
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 3000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ba33a27c034ee469393a636fddc0aa
+      internalID: -663272310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_45
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 3000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c6d636dde33634abb3401e00caebf4
+      internalID: -150516364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_46
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 3000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e5aa20ffe015074694befb6342355e9
+      internalID: -2013871265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_47
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 3000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ae9511e0fd1c941a2261a1cca80b04
+      internalID: 1289340027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_48
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 3000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2942dc670bde644ebb4c6377f9aa047
+      internalID: 2018760890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_49
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 3000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b936d4af75af52f409ade6026c7b2cfd
+      internalID: 299439198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_50
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 3000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc04a48d171904c40a478dd012a952ea
+      internalID: -1149401575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_51
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 3000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af9350c872b2d544bd63c96b640a843
+      internalID: 755546167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31cedbfd66bffcc4b8a0f178f00dd691
+      internalID: 299270609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_53
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 2750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7fb21feab16de4458307c01b3037948
+      internalID: 2055609646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_54
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 2750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e800695aec4e4d489f9c8c953b0922b
+      internalID: -435644643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_55
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 2750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c4b30fc454d2449989b2a9bb380a7d
+      internalID: 1219467288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_56
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 2750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1418d021e0b83a41b72750e34c7202a
+      internalID: 79715708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_57
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 2750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c2795cf94e81e4d973a70ac35251b5
+      internalID: -2118083774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_58
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 2750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cb4b9bc382750941a4417969be04538
+      internalID: -1955395158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_59
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 2750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9becc6c915f8f054f9045b4abdacf4e8
+      internalID: -592407260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_60
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 2750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea8a9b14e0f1014aaece7591f6ed79d
+      internalID: 1483534902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_61
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 2750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 670784abe1d85a746b38970829a52ab7
+      internalID: -2052466100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_62
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 2750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 492b9ca62e9abd9459e5a9fe608ae14b
+      internalID: 2122597369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_63
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 2750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c9c86aa9c2979f41a792cd3bc94dd14
+      internalID: -95181500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_64
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 2750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b61c6041350e249b985efadc2b2c38
+      internalID: 936633070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_65
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78395283a0c9bb34a80efd22928b6e17
+      internalID: -1390876542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_66
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 2500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 673d55007881cef40a3445e92dc03b31
+      internalID: 1277535763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_67
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 2500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6132d786bc2805e40946f8a407f48e9e
+      internalID: 1009953597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_68
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 2500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ca003c813694bb4c81d884370d49c11
+      internalID: 1253312593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_69
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 2500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4030d632bec4f5e4db3817cd719ba895
+      internalID: 1826460289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_70
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 2500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41c029a18a6614a42b8d8a56fd44d3ce
+      internalID: 1151119465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_71
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 2500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82845518b482084489c72d774dd00531
+      internalID: -241992665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_72
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 2500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b170c65bd7a0604d96558b567d3e851
+      internalID: 333129824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_73
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 2500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bea6813fe0420754d864cb856dd5e2e7
+      internalID: -790111050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_74
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 2500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f21f0567e3a13749b49e9a15b94caeb
+      internalID: 1448681294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_75
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 2500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458ff29b81014ec47a193b333df61f21
+      internalID: -1879150116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_76
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 2500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f777b5d815afd4f8abcaeaa30bfe7f
+      internalID: 7497416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_77
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 2500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8833cadedb885294f9939e4524678efc
+      internalID: -2096014412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c538d61b60983d47b7f1cf9263e5c00
+      internalID: -2135138702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_79
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 2250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 110be6a6e6df75148bda437b5f3bb625
+      internalID: -843798122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_80
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 2250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ee4978f3bca7e4aad564331e61852c
+      internalID: 1185496774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_81
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 2250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf4be14817b8e84aa923059e3fb90bd
+      internalID: -1409197542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_82
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 2250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d711b23bb9d0f499b7b848c6fd1293
+      internalID: -472565223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_83
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 2250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d8c572b31aa834daf871e01c99d8ad
+      internalID: 1426227029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_84
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 2250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4521fbd25c8d82b4d9ff4012946ea514
+      internalID: 598126617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_85
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 2250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb018b566f7e21445bb1c71e9b0ef43e
+      internalID: 447297880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_86
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 2250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f602a621e4cd984cb6717b427302850
+      internalID: -1443575663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_87
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 2250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf820bd65f20f2f4295deec2e64f9141
+      internalID: -1213651970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_88
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 2250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f97b270547e48f40928e3a2eed3a504
+      internalID: -1342490919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_89
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 2250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8fb4b42af5aad54184bef638c9bdbd3
+      internalID: -500841636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_90
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 2250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cca2e4a420ff2546acf810197f2dfa1
+      internalID: 1371175885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3cdf9c0a8f8a6f418b71a9629aed153
+      internalID: -1020817630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_92
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 2000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaade4efa65cbc64ba5efe23c0d084ef
+      internalID: -861066453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_93
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 2000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cebbf47cf5feee4b8fe16118fc5798a
+      internalID: 18510425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_94
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 2000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d500d9829fcf906469fa7ec2ab4c1fb8
+      internalID: 481477604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_95
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 2000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22bb830ec54b84d458391469829bae1d
+      internalID: -765999225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_96
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 2000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae721e3d7d2e27c4b86b116e636598b1
+      internalID: 181545284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_97
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 2000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae862b9d33f8be45981f3f53c68b2a9
+      internalID: -1992072912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_98
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 2000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abeea34a9a95fe3459ea3831e88e72bb
+      internalID: 2141581068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_99
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 2000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a2c631893f29446b51915ac635ae60
+      internalID: -1454978507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_100
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 2000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f88d7c1f940edd647b63c11662de200d
+      internalID: -773457769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_101
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 2000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165e64ceaddb4d844bf098a3dececd49
+      internalID: -1180188130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_102
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 2000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23681550f2ad18a4a9235e439cdbdabb
+      internalID: -1191143050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_103
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 2000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ff58e673f01de49831a3b2e01bcd6f
+      internalID: -1992954018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_104
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac19f6003a247d4c81b91d9b4d34a51
+      internalID: 120323303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_105
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 1750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a3dc390a54459545885046ea422f069
+      internalID: -1094363514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_106
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 1750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09e2d5797e9d3794788f823f0f791c3e
+      internalID: 1016172332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_107
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 1750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75e582de1b0277145bc3b677e5363fe3
+      internalID: -31533019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_108
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 1750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d843b92f8e45fc244973789e92a285de
+      internalID: 1475489068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_109
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 1750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a26478e8e8acb49a7e63edb6ee6b94
+      internalID: 1228770009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_110
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeb245b18a5f7b842ac731984d63e871
+      internalID: -1658304460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_111
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 1750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a5a34b69475ef49a802fa7ec1c0750
+      internalID: -2058301795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_112
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 1750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93d11ad6f48c2d74bb8541647d549624
+      internalID: 1280276114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_113
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 1750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5551393db1d71b418d86744cf198e57
+      internalID: 1958857178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_114
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 1750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc9a309ba39f654aa3a0ed0e204d058
+      internalID: 953545347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_115
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 1750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b768f6d9f60bc4dacd6a4989c9e9e3
+      internalID: -1493252617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_116
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 1750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59e8bb93c64398f4d8c2f8bdb67051e5
+      internalID: -556354769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_117
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7841c68c8e090bc4bbd41e3b9a880b45
+      internalID: 1569713045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_118
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 1500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da54554ceee7a5d4cafb94865dc219f8
+      internalID: -1385097154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_119
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 1500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e35686c067a96c4aa08950b8c1c349a
+      internalID: 233949630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_120
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 1500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1dfc2ade9e9d2d4dbf4af4c1df3b1a0
+      internalID: -1154318495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_121
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 1500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb14a667b1fec543b1957ab1ef6e49c
+      internalID: 1806208888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_122
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 1500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36ef6ce4b0fd0d40816948c75681011
+      internalID: 453519060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_123
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 474c4d5ce75b53545bce553e5a28f7ed
+      internalID: 1478672670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_124
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 1500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c18c3ad25c11178468aef5dc697a766b
+      internalID: -2040184223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_125
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 1500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9fb4b267204a7a4fa3bd979f9e67614
+      internalID: 51683077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_126
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 1500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db3c4eab615b60444983283dc3efb549
+      internalID: 600981335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_127
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 1500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9857352396328b544a8ec6c7b5e396b8
+      internalID: 1397984627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_128
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 1500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ed04c5cf90f53c4ba7b606a67220357
+      internalID: -1592810954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_129
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 1500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e5358ffd1630745be04c76c06cccad
+      internalID: 1132073781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_130
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffcbb9a3fd2c23a478a1c8a7710d7bd1
+      internalID: -678299544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_131
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 1250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7558deb43d2cba24fb9592465105dee6
+      internalID: -381696594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_132
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 1250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 307a9d99b6e64c14cbd959d3e5fe0cb0
+      internalID: -1363484610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_133
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 1250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87298b7d0dd043743a871e2f94133a7c
+      internalID: 1270046662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_134
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 1250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38680f632c2af96479f4a4aa45da8eb1
+      internalID: -234434966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_135
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 1250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28f97a388b2fda14fbd57177505cb628
+      internalID: -1712375868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_136
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ae1b597df3537d498d35a93da8c5fe4
+      internalID: 476565388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_137
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 1250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49126db7328ae84daa4d8707b877a7b
+      internalID: -417719699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_138
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 1250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19411914c0f0d6e40a7cdbfc8bf66539
+      internalID: -23697759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_139
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 1250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b731dd567f33ac4882a7e16c20ab0cf
+      internalID: 1375065947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_140
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 1250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa132e776b7302044aec01c3c1119056
+      internalID: 1851425084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_141
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 1250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d94a9117db586c248ad9f6c75ebac9d5
+      internalID: 788379977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_142
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 1250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 098056ca020b8a94fad4ca50a49f680c
+      internalID: 1366284377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_143
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c648af76715f6849be6fc9e0fd715db
+      internalID: 880136064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_144
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 1000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04ffd022c627da4bb06452a37b194e1
+      internalID: -600544841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_145
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 1000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a947bb9bc7d31240ade6a8e3d37a536
+      internalID: 1400666564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_146
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 1000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382bddb57f0ac9f45acc5186cd575f0f
+      internalID: 212218093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_147
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 1000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a949ffd4caa7f52439f6bcb6be64066c
+      internalID: -723867366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_148
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 1000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02075720fb138014ba4b691d086bef1b
+      internalID: 718125016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_149
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c1190c90fd62d34789c510d27a557ed
+      internalID: -1070325985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_150
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 1000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 188e1d6315b95d545879517e3ee973cc
+      internalID: 360996726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_151
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 1000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 399340b83f3f86a449cc7d64e6d5bef1
+      internalID: 1012396110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_152
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 1000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ee3a83ddd32b94994b2dc387d4f14f
+      internalID: -261813294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_153
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 1000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f98a595739efba447856122a5f889c70
+      internalID: 276855470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_154
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 1000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20dfff25e043a3b419d24a6711ff6eee
+      internalID: 1406359040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_155
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 1000
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcc06f97f79937a439aec5f5a2f399c7
+      internalID: 1059627257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_156
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efef77b4f4f71fe4aae6b7b4fe96b0d3
+      internalID: -1324684836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_157
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a4da9d3fe8cfa64d85d1e4d8015fee1
+      internalID: -1189395274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_158
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecacd11afbd544a4aabfa4f3d6087e16
+      internalID: 2130536574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_159
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 735c9f9f2512bd14b8a5830926ec564e
+      internalID: 571713940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_160
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfbaaebc209cb7e4e91a2b67b5ec86ad
+      internalID: 1027816534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_161
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5561f946a133d9d4ba11ea70d624d8e2
+      internalID: 479661689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_162
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41cc972e1b088b644bed40cf2fa813a8
+      internalID: -207161805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_163
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5dd76d72d479da4fb0a90525aa222d5
+      internalID: 751634741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_164
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b34fad81963e6fe498aa453b3848275a
+      internalID: 711817896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_165
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f9923e5721f7a2479baf1096cb947c1
+      internalID: 2061369260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_166
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53fd79b53a3931a478f11a9af5fcc73d
+      internalID: 1994911190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_167
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b8000b7a979b241b5f54b1077d56c9
+      internalID: 845896190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_168
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 750
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 979663f31c4b6b44183ddfe7f194a005
+      internalID: 81803790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_169
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96755efdbe5f70147b5e66ea24370161
+      internalID: -425514337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_170
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 951db3c92e109324883984a3d6ba8fcf
+      internalID: 1875090426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_171
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb16e3745ea4c545836bc8653ee10d3
+      internalID: -202131881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_172
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f2914996f3a514d960edb52aaa1236
+      internalID: -1815685314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_173
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bd746f91f1a86542a974a400138bb96
+      internalID: 1622190185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_174
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57704223703be194b9f631a7caf7e05a
+      internalID: 272464141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_175
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7d118c652694545b773f81a8eb4b4f
+      internalID: 1249824585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_176
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bfa3bb9a48af7b4bb096bcc4c8c69da
+      internalID: 1141379322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_177
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f3ce6ea1a4870249b3b5be6102b86bf
+      internalID: 82683984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_178
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53cf7511377ad7b478292d75d4f3afbc
+      internalID: 1018946804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_179
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14fb703fc17b79744b353eccf216587c
+      internalID: -1301761990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_180
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb7ed1489cc3b8041b1eb7f50b02734e
+      internalID: -1173364237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_181
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 500
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a870a1d602afda438ce1d789f9fb05c
+      internalID: 1648478448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_182
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c230ea91394fc0448bfc01996e05a5a
+      internalID: -604713151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_183
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea3bd43fc68e324ba7efbcfe54145e7
+      internalID: 608212048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_184
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca3d33cfccdadd488ade6fbfa6201db
+      internalID: 1655837998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_185
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5ab830b16d16fc4896200a8e864292b
+      internalID: -641451597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_186
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 024ecf154f26e6d459127c9ef187fcc2
+      internalID: 1737984002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_187
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b7c7e9076eb5846b3e7af63e4fb74f
+      internalID: -1757510396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_188
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e714c72a2e0b114d94fd209ee9a6cb9
+      internalID: -2026664584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_189
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef96ed8127dce544797c4fcda11446a2
+      internalID: -1399734931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_190
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1dae129e6ef62441b6f30c1da596bb2
+      internalID: -198675070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_191
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a7f7de5c85522c4e8ce1d546d095907
+      internalID: -1465498584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_192
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e56ac2de72a7b84aa5b04d7d85d2cc0
+      internalID: -395899127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_193
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2944eb4d11d24294abb9b1a6e13dd4f1
+      internalID: -1221499169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_194
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 250
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae31829f2adf374381be4690b227f6a
+      internalID: 355805591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_195
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c2dafabede09244d84da0a3c36a63b2
+      internalID: 569577332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_196
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19f854d625c1744c9005d290d1b8a41
+      internalID: 2064951496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_197
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 0
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 125551f5781150741825c17c3440cad9
+      internalID: -1519485948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_198
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 0
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5cde8de8b6a0a84aadec7191ed11f61
+      internalID: -23328644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_199
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 0
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d43007d4269cc84a9e50a55eb8894e2
+      internalID: -1515294974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_200
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 0
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de32947b128a75847ab3614913cc0134
+      internalID: 242878930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_201
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 0
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb0109742f45974880a82acc9de5945
+      internalID: 1284374696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_202
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 0
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a614b1c0792d8704195fc45ec5aa06d4
+      internalID: 1875572156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_203
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 0
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa74eae42a0ad9b459b98dc98448e532
+      internalID: 1067053145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_204
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 0
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f15d3f1847e4d44a98723c84636351
+      internalID: 2072363879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_205
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 0
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 221713aa3cb0248419f09c8b75acc9b8
+      internalID: 1865154803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_206
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 0
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53e861776c26f2f4f8cdb4ff019b78f0
+      internalID: 2133089444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xev50O_207
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 0
+        width: 315
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274af8d2af195814ca7738e6dd755800
+      internalID: 534234865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 49235295677c0ef4c92681e2b5f23e90
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":13.0,"y":16.0},"gridSpriteSize":{"x":315.0,"y":250.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Xev50O_0: -1234637003
+      Xev50O_1: 1487513133
+      Xev50O_10: 618106191
+      Xev50O_100: -773457769
+      Xev50O_101: -1180188130
+      Xev50O_102: -1191143050
+      Xev50O_103: -1992954018
+      Xev50O_104: 120323303
+      Xev50O_105: -1094363514
+      Xev50O_106: 1016172332
+      Xev50O_107: -31533019
+      Xev50O_108: 1475489068
+      Xev50O_109: 1228770009
+      Xev50O_11: 2134561226
+      Xev50O_110: -1658304460
+      Xev50O_111: -2058301795
+      Xev50O_112: 1280276114
+      Xev50O_113: 1958857178
+      Xev50O_114: 953545347
+      Xev50O_115: -1493252617
+      Xev50O_116: -556354769
+      Xev50O_117: 1569713045
+      Xev50O_118: -1385097154
+      Xev50O_119: 233949630
+      Xev50O_12: 467449800
+      Xev50O_120: -1154318495
+      Xev50O_121: 1806208888
+      Xev50O_122: 453519060
+      Xev50O_123: 1478672670
+      Xev50O_124: -2040184223
+      Xev50O_125: 51683077
+      Xev50O_126: 600981335
+      Xev50O_127: 1397984627
+      Xev50O_128: -1592810954
+      Xev50O_129: 1132073781
+      Xev50O_13: -1538857897
+      Xev50O_130: -678299544
+      Xev50O_131: -381696594
+      Xev50O_132: -1363484610
+      Xev50O_133: 1270046662
+      Xev50O_134: -234434966
+      Xev50O_135: -1712375868
+      Xev50O_136: 476565388
+      Xev50O_137: -417719699
+      Xev50O_138: -23697759
+      Xev50O_139: 1375065947
+      Xev50O_14: 1763204438
+      Xev50O_140: 1851425084
+      Xev50O_141: 788379977
+      Xev50O_142: 1366284377
+      Xev50O_143: 880136064
+      Xev50O_144: -600544841
+      Xev50O_145: 1400666564
+      Xev50O_146: 212218093
+      Xev50O_147: -723867366
+      Xev50O_148: 718125016
+      Xev50O_149: -1070325985
+      Xev50O_15: -47742241
+      Xev50O_150: 360996726
+      Xev50O_151: 1012396110
+      Xev50O_152: -261813294
+      Xev50O_153: 276855470
+      Xev50O_154: 1406359040
+      Xev50O_155: 1059627257
+      Xev50O_156: -1324684836
+      Xev50O_157: -1189395274
+      Xev50O_158: 2130536574
+      Xev50O_159: 571713940
+      Xev50O_16: -558711691
+      Xev50O_160: 1027816534
+      Xev50O_161: 479661689
+      Xev50O_162: -207161805
+      Xev50O_163: 751634741
+      Xev50O_164: 711817896
+      Xev50O_165: 2061369260
+      Xev50O_166: 1994911190
+      Xev50O_167: 845896190
+      Xev50O_168: 81803790
+      Xev50O_169: -425514337
+      Xev50O_17: 1571083717
+      Xev50O_170: 1875090426
+      Xev50O_171: -202131881
+      Xev50O_172: -1815685314
+      Xev50O_173: 1622190185
+      Xev50O_174: 272464141
+      Xev50O_175: 1249824585
+      Xev50O_176: 1141379322
+      Xev50O_177: 82683984
+      Xev50O_178: 1018946804
+      Xev50O_179: -1301761990
+      Xev50O_18: 1583696127
+      Xev50O_180: -1173364237
+      Xev50O_181: 1648478448
+      Xev50O_182: -604713151
+      Xev50O_183: 608212048
+      Xev50O_184: 1655837998
+      Xev50O_185: -641451597
+      Xev50O_186: 1737984002
+      Xev50O_187: -1757510396
+      Xev50O_188: -2026664584
+      Xev50O_189: -1399734931
+      Xev50O_19: 413298649
+      Xev50O_190: -198675070
+      Xev50O_191: -1465498584
+      Xev50O_192: -395899127
+      Xev50O_193: -1221499169
+      Xev50O_194: 355805591
+      Xev50O_195: 569577332
+      Xev50O_196: 2064951496
+      Xev50O_197: -1519485948
+      Xev50O_198: -23328644
+      Xev50O_199: -1515294974
+      Xev50O_2: 1481562022
+      Xev50O_20: 1829157662
+      Xev50O_200: 242878930
+      Xev50O_201: 1284374696
+      Xev50O_202: 1875572156
+      Xev50O_203: 1067053145
+      Xev50O_204: 2072363879
+      Xev50O_205: 1865154803
+      Xev50O_206: 2133089444
+      Xev50O_207: 534234865
+      Xev50O_21: -153119093
+      Xev50O_22: 710772318
+      Xev50O_23: 2008735377
+      Xev50O_24: -1529210759
+      Xev50O_25: -466622012
+      Xev50O_26: 418500086
+      Xev50O_27: -168999828
+      Xev50O_28: -84532231
+      Xev50O_29: 1637311055
+      Xev50O_3: 1755730562
+      Xev50O_30: 1986720527
+      Xev50O_31: 1244652689
+      Xev50O_32: 833272875
+      Xev50O_33: 122353471
+      Xev50O_34: 1607087049
+      Xev50O_35: -1693886447
+      Xev50O_36: -1243894088
+      Xev50O_37: 312049452
+      Xev50O_38: 134749016
+      Xev50O_39: -386941017
+      Xev50O_4: -1372611328
+      Xev50O_40: 1227803194
+      Xev50O_41: -1609903101
+      Xev50O_42: -1620580655
+      Xev50O_43: -1844658465
+      Xev50O_44: -663272310
+      Xev50O_45: -150516364
+      Xev50O_46: -2013871265
+      Xev50O_47: 1289340027
+      Xev50O_48: 2018760890
+      Xev50O_49: 299439198
+      Xev50O_5: 48358945
+      Xev50O_50: -1149401575
+      Xev50O_51: 755546167
+      Xev50O_52: 299270609
+      Xev50O_53: 2055609646
+      Xev50O_54: -435644643
+      Xev50O_55: 1219467288
+      Xev50O_56: 79715708
+      Xev50O_57: -2118083774
+      Xev50O_58: -1955395158
+      Xev50O_59: -592407260
+      Xev50O_6: -1351182291
+      Xev50O_60: 1483534902
+      Xev50O_61: -2052466100
+      Xev50O_62: 2122597369
+      Xev50O_63: -95181500
+      Xev50O_64: 936633070
+      Xev50O_65: -1390876542
+      Xev50O_66: 1277535763
+      Xev50O_67: 1009953597
+      Xev50O_68: 1253312593
+      Xev50O_69: 1826460289
+      Xev50O_7: -1976851962
+      Xev50O_70: 1151119465
+      Xev50O_71: -241992665
+      Xev50O_72: 333129824
+      Xev50O_73: -790111050
+      Xev50O_74: 1448681294
+      Xev50O_75: -1879150116
+      Xev50O_76: 7497416
+      Xev50O_77: -2096014412
+      Xev50O_78: -2135138702
+      Xev50O_79: -843798122
+      Xev50O_8: 329763276
+      Xev50O_80: 1185496774
+      Xev50O_81: -1409197542
+      Xev50O_82: -472565223
+      Xev50O_83: 1426227029
+      Xev50O_84: 598126617
+      Xev50O_85: 447297880
+      Xev50O_86: -1443575663
+      Xev50O_87: -1213651970
+      Xev50O_88: -1342490919
+      Xev50O_89: -500841636
+      Xev50O_9: -1390745715
+      Xev50O_90: 1371175885
+      Xev50O_91: -1020817630
+      Xev50O_92: -861066453
+      Xev50O_93: 18510425
+      Xev50O_94: 481477604
+      Xev50O_95: -765999225
+      Xev50O_96: 181545284
+      Xev50O_97: -1992072912
+      Xev50O_98: 2141581068
+      Xev50O_99: -1454978507
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
