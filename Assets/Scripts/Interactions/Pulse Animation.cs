@@ -36,6 +36,13 @@ public class PulseAnimation : MonoBehaviour
     private float _timer = 0f;
     private bool _isPulsing = true;
 
+    /// <summary>
+    /// Controla si el efecto de pulso está habilitado.
+    /// Cuando está deshabilitado, la emisión se apaga y Update no procesa el ciclo.
+    /// Se puede cambiar en runtime desde scripts externos (ej: CollectableObject).
+    /// </summary>
+    private bool _isEnabled = true;
+
     private void Start()
     {
         SetupEmission();
@@ -49,6 +56,14 @@ public class PulseAnimation : MonoBehaviour
             // Acceder a .material crea una instancia única para este objeto
             _material = rend.material;
             _material.EnableKeyword("_EMISSION");
+
+            // Si SetPulseEnabled(false) fue llamado ANTES de que el material existiera
+            // (ej: InteractableObject.Start() corrió primero), asegurar que la emisión
+            // arranque apagada para no dejar un brillo residual.
+            if (!_isEnabled)
+            {
+                _material.SetColor(EmissionColorProperty, Color.black);
+            }
         }
         else
         {
@@ -58,7 +73,7 @@ public class PulseAnimation : MonoBehaviour
 
     private void Update()
     {
-        if (_material == null) return;
+        if (_material == null || !_isEnabled) return;
 
         _timer += Time.deltaTime;
 
@@ -87,6 +102,33 @@ public class PulseAnimation : MonoBehaviour
             }
         }
     }
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // API Pública
+    // ─────────────────────────────────────────────────────────────────────────
+
+    /// <summary>
+    /// Activa o desactiva el efecto de pulso de emisión.
+    /// Cuando se desactiva, la emisión se resetea a negro inmediatamente.
+    /// Usado por CollectableObject para controlar el pulso según flags del jugador.
+    /// </summary>
+    public void SetPulseEnabled(bool enabled)
+    {
+        _isEnabled = enabled;
+
+        if (!enabled && _material != null)
+        {
+            // Apagar emisión inmediatamente al desactivar
+            _material.SetColor(EmissionColorProperty, Color.black);
+            _isPulsing = true;
+            _timer = 0f;
+        }
+    }
+
+    /// <summary>
+    /// Devuelve si el pulso está actualmente habilitado.
+    /// </summary>
+    public bool IsPulseEnabled => _isEnabled;
 
     private void OnDestroy()
     {

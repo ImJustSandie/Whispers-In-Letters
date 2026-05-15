@@ -48,6 +48,11 @@ public class DialogueUIController : MonoBehaviour
     {
         public string soundId;
         public AudioEvent audioEvent;
+
+        [Tooltip("Texto onomatopéyico que se muestra en el panel mientras suena el efecto. " +
+                 "Ej: '*suspiro*', '¡CRACK!', '*risas*'. " +
+                 "Se usa cuando la línea de diálogo está vacía para no mostrar el panel en blanco.")]
+        public string onomatopoeia;
     }
 
     [Header("Efectos de Sonido (Tags)")]
@@ -64,6 +69,7 @@ public class DialogueUIController : MonoBehaviour
     private AudioEvent defaultTypewriterBeepSound;
     private float currentDelayBeforeTyping = 0f;
     private bool isFirstLineInDialogueSequence = true;
+    private string pendingOnomatopoeia = null;
 
     private void Awake()
     {
@@ -123,6 +129,12 @@ public class DialogueUIController : MonoBehaviour
             else
             {
                 Debug.LogWarning($"[DialogueUIController] Se detectó el tag #sonido:{soundId}, pero el AudioEvent en la lista Dialogue Sounds es NULL.");
+            }
+
+            // Guardar la onomatopeya para inyectarla si la línea de texto está vacía
+            if (!string.IsNullOrEmpty(dialogueSounds[index].onomatopoeia))
+            {
+                pendingOnomatopoeia = dialogueSounds[index].onomatopoeia;
             }
         }
         else
@@ -213,12 +225,15 @@ public class DialogueUIController : MonoBehaviour
         {
             currentLineText = story.Continue().Trim(); // Limpiar espacios en blanco al inicio o final
             currentDelayBeforeTyping = 0f; // Reiniciar delay
+            pendingOnomatopoeia = null; // Limpiar onomatopeya de la línea anterior
             
             // Procesamos los tags de la linea actual para cualquier efecto visual, de audio o sprite
             if (tagProcessor != null)
             {
                 tagProcessor.ProcessTags(story.currentTags);
             }
+
+
 
             // Reproducir sonido de avance solo si NO es la primera linea de la secuencia
             if (!isFirstLineInDialogueSequence && advanceDialogueSound != null)
@@ -349,7 +364,45 @@ public class DialogueUIController : MonoBehaviour
         // Esperamos si hay un sonido especial que deba reproducirse antes
         if (delayBeforeStart > 0f)
         {
-            yield return new WaitForSeconds(delayBeforeStart);
+            // Si hay una onomatopeya pendiente, escribirla con efecto typewriter (sin bleep)
+            // para que el panel no se vea vacío mientras suena el efecto.
+            if (!string.IsNullOrEmpty(pendingOnomatopoeia))
+            {
+                dialogueText.text = "";
+                float onomatopoeiaElapsed = 0f;
+
+                foreach (char letter in pendingOnomatopoeia.ToCharArray())
+                {
+                    dialogueText.text += letter;
+
+                    float currentSpeed = typewriterSpeed;
+                    if (StoryManager.Instance != null && StoryManager.Instance.IsSkippingMode)
+                    {
+                        currentSpeed = 0.005f;
+                    }
+
+                    onomatopoeiaElapsed += currentSpeed;
+                    yield return new WaitForSeconds(currentSpeed);
+                }
+
+                // Esperar el tiempo restante del sonido (si la onomatopeya se escribió más rápido que el clip)
+                float remainingDelay = delayBeforeStart - onomatopoeiaElapsed;
+                if (remainingDelay > 0f)
+                {
+                    yield return new WaitForSeconds(remainingDelay);
+                }
+            }
+            else
+            {
+                yield return new WaitForSeconds(delayBeforeStart);
+            }
+
+            // Limpiar el texto de onomatopeya antes de empezar a escribir la línea real.
+            // Si la línea real está vacía, la onomatopeya ya se mostró y queda visible.
+            if (!string.IsNullOrEmpty(line))
+            {
+                dialogueText.text = "";
+            }
         }
 
         int letterIndex = 0;
