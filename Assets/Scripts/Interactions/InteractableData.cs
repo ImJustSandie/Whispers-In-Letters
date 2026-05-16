@@ -15,4 +15,10 @@ public class InteractableData : ScriptableObject
     [Tooltip("Flag que se activará en GameState al recoger este objeto. " +
              "También se usa para detectar si ya fue recogido al recargar la escena.")]
     public string flagToSetOnCollect;
+    
+    [Tooltip("Variable numérica global que se incrementará al recoger este objeto (ej. 'libros_recogidos'). Opcional.")]
+    public string variableToIncrementOnCollect;
+    
+    [Tooltip("Cantidad a incrementar. Por defecto es 1.")]
+    public int incrementAmount = 1;
 }

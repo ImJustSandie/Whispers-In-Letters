@@ -75,6 +75,16 @@ public class DialogueTagProcessor : MonoBehaviour
                         }
                         break;
                         
+                    case "incrementvar":
+                        if (GameManager.Instance != null)
+                        {
+                            int amount = 1;
+                            if (splitTag.Length >= 3) int.TryParse(splitTag[2].Trim(), out amount);
+                            int newVal = GameManager.Instance.IncrementStoryVariable(tagValue, amount);
+                            Debug.Log($"[Ink] Variable incrementada: {tagValue} = {newVal}");
+                        }
+                        break;
+                        
                     case "sonido":
                         OnSoundRequested?.Invoke(tagValue.ToLower());
                         break;

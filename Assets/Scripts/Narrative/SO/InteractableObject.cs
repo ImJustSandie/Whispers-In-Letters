@@ -227,6 +227,13 @@ public class InteractableObject : MonoBehaviour, IInteractable
         {
             GameManager.Instance.SetStoryFlag(data.flagToSetOnCollect, true);
         }
+        
+        // 2.5 Incrementar variable si existe
+        if (!string.IsNullOrEmpty(data.variableToIncrementOnCollect))
+        {
+            int newVal = GameManager.Instance.IncrementStoryVariable(data.variableToIncrementOnCollect, data.incrementAmount);
+            Debug.Log($"[InteractableObject] Variable '{data.variableToIncrementOnCollect}' incrementada a {newVal}.");
+        }
 
         // 3. Checkpoint save — persistir inmediatamente
         GameManager.Instance.SaveGame();

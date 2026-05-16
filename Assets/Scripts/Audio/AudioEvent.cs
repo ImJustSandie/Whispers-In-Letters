@@ -47,4 +47,16 @@ public class AudioEvent : ScriptableObject
             AudioManager.Instance.PlayMusic(this);
         }
     }
+
+    /// <summary>
+    /// Reproduce este evento a través del canal de Sonido Ambiente.
+    /// Se reproduce en loop automáticamente.
+    /// </summary>
+    public void PlayAmbience()
+    {
+        if (AudioManager.Instance != null && clip != null)
+        {
+            AudioManager.Instance.PlayAmbience(this);
+        }
+    }
 }

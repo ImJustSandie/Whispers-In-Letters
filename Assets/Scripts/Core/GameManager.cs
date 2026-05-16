@@ -208,4 +208,22 @@ public class GameManager : MonoBehaviour
         if (gameState != null) return gameState.GetVariable(key);
         return string.Empty;
     }
+
+    public int IncrementStoryVariable(string key, int amount = 1)
+    {
+        string current = GetStoryVariable(key);
+        int value = 0;
+        if (!string.IsNullOrEmpty(current)) int.TryParse(current, out value);
+        value += amount;
+        SetStoryVariable(key, value.ToString());
+        return value;
+    }
+
+    public int GetStoryVariableAsInt(string key)
+    {
+        string val = GetStoryVariable(key);
+        int result = 0;
+        if (!string.IsNullOrEmpty(val)) int.TryParse(val, out result);
+        return result;
+    }
 }

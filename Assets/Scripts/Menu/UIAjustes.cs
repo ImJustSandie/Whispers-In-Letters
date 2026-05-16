@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -9,6 +9,7 @@ public class UIAjustes : MonoBehaviour
     public Slider sliderMusica;
     public Slider sliderSFX;
     public Slider sliderUI;
+    public Slider sliderAmbiente;
 
     void Start()
     {
@@ -18,11 +19,13 @@ public class UIAjustes : MonoBehaviour
             if (sliderMusica != null) sliderMusica.value = AudioManager.Instance.musicVolume;
             if (sliderSFX != null) sliderSFX.value = AudioManager.Instance.sfxVolume;
             if (sliderUI != null) sliderUI.value = AudioManager.Instance.uiVolume;
+            if (sliderAmbiente != null) sliderAmbiente.value = AudioManager.Instance.ambienceVolume;
 
             // Añadir listeners para actualizar el AudioManager cuando cambien los sliders
             if (sliderMusica != null) sliderMusica.onValueChanged.AddListener(SetMusica);
             if (sliderSFX != null) sliderSFX.onValueChanged.AddListener(SetSFX);
             if (sliderUI != null) sliderUI.onValueChanged.AddListener(SetUI);
+            if (sliderAmbiente != null) sliderAmbiente.onValueChanged.AddListener(SetAmbiente);
         }
     }
 
@@ -53,6 +56,7 @@ public class UIAjustes : MonoBehaviour
             if (sliderMusica != null) sliderMusica.value = AudioManager.Instance.musicVolume;
             if (sliderSFX != null) sliderSFX.value = AudioManager.Instance.sfxVolume;
             if (sliderUI != null) sliderUI.value = AudioManager.Instance.uiVolume;
+            if (sliderAmbiente != null) sliderAmbiente.value = AudioManager.Instance.ambienceVolume;
         }
     }
 
@@ -76,5 +80,10 @@ public class UIAjustes : MonoBehaviour
     public void SetUI(float val)
     {
         if (AudioManager.Instance != null) AudioManager.Instance.SetUIVolume(val);
+    }
+
+    public void SetAmbiente(float val)
+    {
+        if (AudioManager.Instance != null) AudioManager.Instance.SetAmbienceVolume(val);
     }
 }

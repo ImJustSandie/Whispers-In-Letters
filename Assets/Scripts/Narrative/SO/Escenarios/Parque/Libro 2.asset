@@ -15,4 +15,6 @@ MonoBehaviour:
   interactionName: Libro2
   inkKnot: Libro2
   isCollectable: 1
-  flagToSetOnCollect: Libro_2
+  flagToSetOnCollect: Libro Parque 2
+  variableToIncrementOnCollect: Libros Evento
+  incrementAmount: 1

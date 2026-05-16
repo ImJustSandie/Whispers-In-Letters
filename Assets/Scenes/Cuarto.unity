@@ -527,7 +527,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &237491389
 RectTransform:
   m_ObjectHideFlags: 0
@@ -749,6 +749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneMusicStarter
   sceneMusic: {fileID: 11400000, guid: 37e09a5bb52ddae4195a7c70dbe36530, type: 2}
+  sceneAmbience: {fileID: 0}
   playOnStart: 1
 --- !u!4 &301365233
 Transform:

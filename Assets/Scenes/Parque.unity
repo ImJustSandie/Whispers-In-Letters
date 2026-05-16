@@ -2719,7 +2719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d5f6a1eddb5aa49939f183c3b583d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
-  data: {fileID: 11400000, guid: 8e6c071fa5ba7394db8be62d500aaaae, type: 2}
+  data: {fileID: 11400000, guid: ff5bc1453fa92264a9b2be74426b57cb, type: 2}
   interactionSound: {fileID: 0}
   requiredFlag: 
   fallbackKnot: 
@@ -4938,6 +4938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneMusicStarter
   sceneMusic: {fileID: 11400000, guid: e0d13a8740bd4e9468ee27b18fc3a8a4, type: 2}
+  sceneAmbience: {fileID: 0}
   playOnStart: 1
 --- !u!4 &1264043247
 Transform:
