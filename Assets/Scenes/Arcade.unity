@@ -3151,6 +3151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneMusicStarter
   sceneMusic: {fileID: 11400000, guid: 77797221c2b627743a18db96f38f1200, type: 2}
+  sceneAmbience: {fileID: 11400000, guid: 1d7680f2f090ee94a89c8cf0f65d41cf, type: 2}
   playOnStart: 1
 --- !u!4 &1529537434
 Transform:

@@ -12,26 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e49c4c46e01a1aa4697086dd1bee484b, type: 3}
   m_Name: Estado
   m_EditorClassIdentifier: Assembly-CSharp::GameStateSO
-  currentSceneName: Cuarto
-  previousSceneName: Parque
+  currentSceneName: Parque
+  previousSceneName: Menu
   playerPosition: {x: 0, y: 0, z: 0}
-  unlockedFlags:
-  - Joseph1_Prologo
-  - Joseph1_Prologo_Reencuentro
-  - Joseph2_Prologo
-  - Desicion_DeCamino
-  - Joseph_Bibloteca_Prologo
-  - Decision_Biblioteca_1
-  - Camino_2_Joseph_Biblioteca
-  - decision_biblioteca_3
-  - Camino_2_2_Joseph_Biblioteca
-  - Final_Alcanzado
-  - Carta_Leida
-  - Carta_Aceptacion_Leida
-  storyVariables:
-  - key: ruta
-    value: Epilogo4
-  - key: ultima_carta_leida
-    value: Epilogo4
-  - key: proxima_reflexion
-    value: reflexion_nietzsche
+  unlockedFlags: []
+  storyVariables: []
