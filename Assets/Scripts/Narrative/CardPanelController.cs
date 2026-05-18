@@ -10,6 +10,7 @@ public class CardPanelController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI contentText;
     [SerializeField] private TextMeshProUGUI titleText;
     [SerializeField] private Image cardImage;
+    [SerializeField] private Image backgroundImage;
     [SerializeField] private GameObject panelRoot;
     [SerializeField] private Canvas parentCanvas;
     [SerializeField] private Button closeButton;
@@ -86,7 +87,41 @@ public class CardPanelController : MonoBehaviour
     private void ShowCard(PhilosopherCardDatabase.PhilosopherCardEntry entry, bool isAcceptance)
     {
         if (titleText != null) titleText.text = entry.displayName;
-        if (cardImage != null) cardImage.sprite = entry.cardSprite;
+
+        // --- Imagen del filósofo ---
+        if (cardImage != null)
+        {
+            if (entry.cardSprite != null)
+            {
+                cardImage.sprite = entry.cardSprite;
+                cardImage.preserveAspect = true;
+                cardImage.gameObject.SetActive(true);
+                Debug.Log($"[CardPanelController] Sprite asignado para '{entry.displayName}': {entry.cardSprite.name}");
+            }
+            else
+            {
+                cardImage.gameObject.SetActive(false);
+                Debug.LogWarning($"[CardPanelController] La entrada '{entry.displayName}' no tiene cardSprite asignado.");
+            }
+        }
+
+        // --- Fondo del panel ---
+        if (backgroundImage != null)
+        {
+            if (entry.backgroundSprite != null)
+            {
+                backgroundImage.sprite = entry.backgroundSprite;
+                Debug.Log($"[CardPanelController] Fondo asignado para '{entry.displayName}': {entry.backgroundSprite.name}");
+            }
+            else
+            {
+                Debug.LogWarning($"[CardPanelController] La entrada '{entry.displayName}' no tiene backgroundSprite asignado.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("[CardPanelController] backgroundImage no está asignado en el Inspector.");
+        }
 
         string knot = isAcceptance ? entry.acceptanceKnot : entry.reprocheKnot;
         contentText.text = GetKnotText(knot);

@@ -14,7 +14,8 @@ public class PhilosopherCardDatabase : ScriptableObject
         public string acceptanceKnot;   // "epilogo_schopenhauer"
         public string reprocheKnot;     // "epilogo_schopenhauer_reproche"
         public string reflectionKnot;   // "reflexion_schopenhauer"
-        public Sprite cardSprite;       // imagen visual de la carta
+        public Sprite cardSprite;       // retrato del filósofo
+        public Sprite backgroundSprite; // fondo del panel de carta
         public string displayName;      // "Schopenhauer"
     }
 
