@@ -1,5 +1,7 @@
 === lampara ===
 Soy una lampara 
+#sprite:sophia_euforic
+Si me acuerdo de esto, aun me duele la cabeza
 -> END
 
 ===minotauro===
@@ -30,146 +32,93 @@ Asumakina, sabía que me faltaba otro libro
 Creo que no, mejor lo dejo aqui
 -> END
 
+===Televisor===
+A las 6:00 pm “La Venganza de Nova, película de terror”
+A las 9:00 pm “Mire maestro, el documental de arte”
+A las 12:00 am “Como no quedarse calvo, siendo ingeniero en Multimedia”
+->END
 
+===Biblioteca_Sophia===
+Sophia en el país de las maravillas.
+Sophia y la piedra filosofal.
+Sophia y la balada de la tortuga y los koalas.
+Sophia y la comunidad filosófica.
+->END
 
+===Maquinarecreativa1===
+#sprite:sophia_happy
+Aquí puedo jugar: The legend of Sophia
+->END
 
+===Maquinarecreativa2===
+#sprite:sophia_happy
+Aquí puedo jugar: The league of Sophias
+->END
 
-=== Hamburguesa ===
+===Maquinarecreativa3===
+Esta máquina está en otro Arcade
+->END
+
+===Maquinarecreativa4===
+#sprite:sophia_happy
+En esta puedo jugar Whispers in Letters
+->END
+
+===Animatronicos===
+#sprite:sophia_euforic
+Son Alfredo y el Bonifacio Amarillo mis favoritos.
+->END
+
+===Mesacomida1===
+#sprite:sophia_thinking
+Quien pidió pizza con piña, esto solo le gusta a la gente rara.
+->END
+
+===Mesacomida2===
+#sprite:sophia_euforic
+De comer estas hamburguesas, no se nos ven los pies.
+->END
+
+===Fuente==
+#sprite:sophia_neutral
+Ya no quedan monedas en la fuente, misteriosamente han desaparecido.
+->END
+===AvisoArcade===
+ ← Arcade Playtown
+->END
+
+===AvisoBiblioteca===
+ → Biblioteca Miguel Olivares
+ -> END
+ 
+===AvisoProhibidopasar===
+Prohibido pasar
 #sprite: sophia_thinking
-Umm se ve tan rica
--> END
+Hace dos años que esto debió haberse inaugurado. 
+->END
 
-=== Pizza ===
-#sprite: sophia_thinking
-Umm se ve tan rica
--> END
+===Estantelibros1===
+#sprite:sophia_neutral
+Hasta aquí llega el olor a viejo con estos libros.
+->END
 
-=== Pato_Schopenhauer ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
+===Estantelibros2===
+#sprite:sophia_neutral
+Esto está lleno de libros, de los cuales ninguno voy a leer.
+->END
 
-=== Animatronics ===
-#sprite: sophia_sad
-Place holder dilog
--> END
+===Pergamino===
+#sprite:sophia_neutral
+Un pergamino, en esta época del año, a esta hora del día, en esta parte
+del mundo y ubicada específicamente en esta biblioteca. 
+->END
 
-=== Cinta_Arcade ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
+===Computador1===
+#sprite:sophia_neutral
+Estas computadoras son del Precámbrico
+->END
 
-=== L_Arcade_01 ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
-
-=== L_Arcade_02 ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
-
-=== Raro_Arcade_01 ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
-
-=== R_Arcade_02 ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
-
-=== R_Marcian_Arcade ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
-
-=== Biblioteca_Señal ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
-
-=== Home_Señal ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
-
-=== Arcade_Señal ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
-
-=== NoPasar_Señal ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
-
-=== Pato_Hegel ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
-
-=== Pato_Estoicos ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
-
-=== Pato_Nietz ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
-
-=== Fuente ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
-
-=== L_Down_Cpu ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
-
-=== R_Up_Pc ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
-
-=== L_Bookstand ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
-
-=== L_Stand ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
-
-=== L_Stand_Corner ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
-
-=== R_Bookstand ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
-
-=== R_Table ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
-
-=== Coffee_table ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
-
-=== Bookshelf_Tall ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
-
-=== Pato_Sophia ===
-#sprite: sophia_thinking
-Place holder dilog
--> END
+===Computador2===
+#sprite:sophia_neutral
+Alguien dejó su historial de búsqueda abierto, será mejor no mirarlo.
+->END
