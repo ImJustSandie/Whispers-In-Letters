@@ -2153,7 +2153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d5f6a1eddb5aa49939f183c3b583d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
-  data: {fileID: 11400000, guid: 28847447480988840844c1fa66a6fd6f, type: 2}
+  data: {fileID: 0}
   interactionSound: {fileID: 0}
   requiredFlag: 
   fallbackKnot: 
@@ -4711,7 +4711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d5f6a1eddb5aa49939f183c3b583d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
-  data: {fileID: 11400000, guid: f7fffb324beb48a409d50b3c6a924886, type: 2}
+  data: {fileID: 0}
   interactionSound: {fileID: 0}
   requiredFlag: 
   fallbackKnot: 

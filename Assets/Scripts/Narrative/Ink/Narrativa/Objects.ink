@@ -151,6 +151,27 @@ Siempre me sorprenderá lo mucho que me parezco a este pato...
 Creo que quiero guardarlo por ahora
 -> END
 
+=== NPC_01 ===
+#sprite: sophia_euforic
+¡No puede ser! Otra vez se quedó a uno de vida y me morí
+-> END
+
+=== NPC_02 ===
+#sprite: sophia_euforic
+Ojalá el autor de este libro estuviera vivo para que me explicara qué rayos quiso decir.
+-> END
+
+=== NPC_03 ===
+#sprite: sophia_euforic
+El silencio de esta biblioteca me da la paz necesaria para estudiar.
+-> END
+
+=== NPC_04 ===
+#sprite: sophia_euforic
+! Si, Gane!, voy 1 victoria y 99 derrotas el día de hoy
+-> END
+
+
 // ==========================================
 // ACTIVIDADES ARCADE
 // ==========================================
