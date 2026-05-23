@@ -1,5 +1,4 @@
 === lampara ===
-Soy una lampara 
 #sprite:sophia_euforic
 Si me acuerdo de esto, aun me duele la cabeza
 -> END
@@ -122,3 +121,109 @@ Estas computadoras son del Precámbrico
 #sprite:sophia_neutral
 Alguien dejó su historial de búsqueda abierto, será mejor no mirarlo.
 ->END
+
+===Pato_Parque1===
+#sprite: sophia_happy
+!Un pato! es muy bonito, me lo llevaré como recuerdo
+-> END
+
+===Pato_Parque2===
+#sprite: sophia_happy
+Este pato se ve muy tranquilo, ¡Me traerá tranquilidad en mi vida!
+-> END
+
+===Pato_Arcade===
+#sprite: sophia_neutral
+#sonido: sophia_suspira
+Este pato se ve algo amargado, !Un arcade no es un sitio para un pato asi!
+-> END
+
+===Pato_Biblioteca===
+#sprite: sophia_happy
+#sonido: sophia_risa
+!Este pato se ve muy concentrado! Estoy segura que me ayudará a estudiar
+-> END
+
+===Pato_Habitacion===
+#sprite: sophia_neutral
+#sonido: sophia_suspira
+Siempre me sorprenderá lo mucho que me parezco a este pato...
+Creo que quiero guardarlo por ahora
+-> END
+
+// ==========================================
+// ACTIVIDADES ARCADE
+// ==========================================
+
+===Activ_Pizza_Arcade===
+#sprite:sophia_happy
+#sonido:sophia_risa
+Aquí está la pizza. Joseph se pondrá contento.
+#setflag:Activ_Arcade_1
+-> END
+
+===Activ_Pizza_Arcade_Fail===
+#sprite:sophia_thinking
+Todavía no tengo por qué pedir una pizza. Mejor esperar a que Joseph tenga hambre.
+-> END
+
+===Activ_Maquina_Juego===
+{
+    - GetVar("ruta") == "desicion3":
+        #sprite:sophia_happy
+        Una partida más para entender bien lo que Joseph ve en esto.
+        #setflag:Activ_Arcade_3
+        -> END
+    - GetVar("ruta") == "desicion2":
+        #sprite:sophia_happy
+        Voy a jugar una partida para entender lo que Joseph siente aquí.
+        #setflag:Activ_Arcade_2
+        -> END
+    - else:
+        #sprite:sophia_thinking
+        No es momento de jugar. Joseph me necesita.
+        -> END
+}
+
+// ==========================================
+// ACTIVIDADES BIBLIOTECA
+// ==========================================
+
+===Activ_Libro_Leyes===
+#sprite:sophia_happy
+Aquí está el libro de derecho. Joseph lo pidió, esto le ayudará a familiarizarse con la materia.
+#setflag:Activ_Biblio_1
+-> END
+
+===Activ_Libro_Leyes_Fail===
+#sprite:sophia_neutral
+Este libro no es para mí ahora. Joseph todavía no me ha dicho qué necesita.
+-> END
+
+===Activ_Maquina_Juego_FB===
+#sprite:sophia_thinking
+Joseph aún no me ha pedido que juegue con él. Mejor esperar a que me lo pida.
+-> END
+
+===Activ_Estudio_Biblioteca_FB===
+#sprite:sophia_thinking
+Joseph aún no me ha hablado de estudiar juntos todavía. Mejor esperar.
+-> END
+
+===Activ_Estudio_Biblioteca===
+{
+    - GetVar("ruta") == "decision_biblioteca_3":
+        #sprite:sophia_neutral
+        Repasaré estos apuntes una vez más antes de decidir.
+        #setflag:Activ_Biblio_3
+        -> END
+    - GetVar("ruta") == "decision_biblioteca_2":
+        #sprite:sophia_neutral
+        Revisaré estos apuntes para entender mejor cómo ayudar a Joseph con su estudio.
+        #setflag:Activ_Biblio_2
+        -> END
+    - else:
+        #sprite:sophia_thinking
+        No tengo por qué estudiar esto ahora. Mejor acompañar a Joseph primero.
+        -> END
+}

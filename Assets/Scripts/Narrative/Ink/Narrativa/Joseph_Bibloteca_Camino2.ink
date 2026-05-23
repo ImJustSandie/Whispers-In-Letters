@@ -51,18 +51,24 @@ No es rendirse.
 #sprite:sophia_neutral
 Es dejar de pelear una batalla que no está hecha para ganarse así.
 
+#setflag:Obj_Biblio_3
+#setflag:Obj_Activ_Biblioteca
 #setvar:ruta:decision_biblioteca_3
 #setflag:decision_biblioteca_3
 
 #sprite:sophia_neutral
 No tiene sentido seguir rompiéndote contra algo que no responde.
--> decision_biblioteca_3
+-> END
 
 === HandleDecision_Biblioteca_3 ===
 {
 - GetVar("ruta") == "ultimo_esfuerzo": -> Camino_1_2_Joseph_Biblioteca
 - GetVar("ruta") == "rendicion_final": -> Camino_2_2_Joseph_Biblioteca
-- GetVar("ruta") == "decision_biblioteca_3": -> decision_biblioteca_3
+- GetVar("ruta") == "decision_biblioteca_3":
+    {
+        - GetFlag("Activ_Biblio_3") == true: -> decision_biblioteca_3
+        - else: -> decision_biblioteca_3_Gated
+    }
 }
 === decision_biblioteca_3 ===
 #sprite:sophia_thinking
@@ -72,6 +78,20 @@ No tiene sentido seguir rompiéndote contra algo que no responde.
 #setvar:ruta:ultimo_esfuerzo
 No debería rendirme tan fácil
 -> Camino_1_2_Joseph_Biblioteca
++[Aceptar la derrota]
+#setvar:ruta:rendicion_final
+#sprite:sophia_sad
+Este es un caso perdido
+-> Camino_2_2_Joseph_Biblioteca
++[Decidir después]
+#sprite:sophia_thinking
+#setvar:ruta:decision_biblioteca_3
+Necesito pensarlo
+-> END
+
+=== decision_biblioteca_3_Gated ===
+#sprite:sophia_thinking
+Aún no estoy lista para decidir. Debería explorar un poco más antes.
 +[Aceptar la derrota]
 #setvar:ruta:rendicion_final
 #sprite:sophia_sad

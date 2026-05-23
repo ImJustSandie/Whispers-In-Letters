@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 50e269bcd87d5f34293e12b3dd5ee6d8
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 324330
+  packageName: PlayerPrefs Manager
+  packageVersion: 1.0
+  assetPath: Assets/SproutGames/PlayerPrefManager/Scenes/PPMDemo.unity
+  uploadId: 767706

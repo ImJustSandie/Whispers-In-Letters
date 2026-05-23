@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Menu
   m_EditorClassIdentifier: Assembly-CSharp::AudioEvent
   clip: {fileID: 8300000, guid: 2b472b4b9a4a58c42afae502c8ec93fc, type: 3}
-  volume: 1
+  volume: 0.05
   pitch: 1
   loop: 0

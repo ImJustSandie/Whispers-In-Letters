@@ -195,7 +195,6 @@ Estoy muy cansada, quiero ir a mi casa a recostarme
 Es el momento de cerrar los ojos y dejar que el pensamiento descanse... hasta que volvamos a despertar. 
 #fade_out
 #setflag:Final_Del_Dia
-#scene: Menu
 -> END
 
 

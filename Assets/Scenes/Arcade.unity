@@ -920,7 +920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
   data: {fileID: 11400000, guid: 3c3952adb2fb9bb45930b0c5552acd63, type: 2}
   interactionSound: {fileID: 0}
-  requiredFlag: 
+  requiredFlag: Obj_Activ_Arcade
   fallbackKnot: 
   autoTriggerOnEnter: 0
 --- !u!1 &204251381
@@ -3083,77 +3083,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8370226666510373534, guid: 09975c50e0ee1c64684cdbd14923b48e, type: 3}
   m_PrefabInstance: {fileID: 412132651}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1030275025
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1030275026}
-  - component: {fileID: 1030275028}
-  - component: {fileID: 1030275027}
-  m_Layer: 0
-  m_Name: Coll Pizza
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1030275026
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1030275025}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.002, y: -0.0055, z: 0.0063}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1729209288}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1030275027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1030275025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d5f6a1eddb5aa49939f183c3b583d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
-  data: {fileID: 11400000, guid: c2b5b7226cd557349bb9f462d15862b7, type: 2}
-  interactionSound: {fileID: 0}
-  requiredFlag: 
-  fallbackKnot: 
-  autoTriggerOnEnter: 0
---- !u!135 &1030275028
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1030275025}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.015
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1075167808 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7134446639021718402, guid: 09975c50e0ee1c64684cdbd14923b48e, type: 3}
@@ -4499,10 +4428,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -4668074107676032118, guid: ebce98b03f6dd2c41a2097c8b8538c8c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1547126877}
-    - targetCorrespondingSourceObject: {fileID: 3681652847580564254, guid: ebce98b03f6dd2c41a2097c8b8538c8c, type: 3}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1869004960016252962, guid: ebce98b03f6dd2c41a2097c8b8538c8c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1030275026}
-    m_AddedComponents: []
+      addedObject: {fileID: 1729209290}
+    - targetCorrespondingSourceObject: {fileID: 1869004960016252962, guid: ebce98b03f6dd2c41a2097c8b8538c8c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1729209289}
   m_SourcePrefab: {fileID: 100100000, guid: ebce98b03f6dd2c41a2097c8b8538c8c, type: 3}
 --- !u!4 &1729209286 stripped
 Transform:
@@ -4514,11 +4446,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4668074107676032118, guid: ebce98b03f6dd2c41a2097c8b8538c8c, type: 3}
   m_PrefabInstance: {fileID: 1729209285}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1729209288 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3681652847580564254, guid: ebce98b03f6dd2c41a2097c8b8538c8c, type: 3}
+--- !u!1 &1729209288 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1869004960016252962, guid: ebce98b03f6dd2c41a2097c8b8538c8c, type: 3}
   m_PrefabInstance: {fileID: 1729209285}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1729209289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729209288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d5f6a1eddb5aa49939f183c3b583d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
+  data: {fileID: 11400000, guid: c2b5b7226cd557349bb9f462d15862b7, type: 2}
+  interactionSound: {fileID: 0}
+  requiredFlag: Obj_Pizza_Arcade
+  fallbackKnot: 
+  autoTriggerOnEnter: 0
+--- !u!135 &1729209290
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729209288}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.022222
+  m_Center: {x: 0.0000000055879354, y: 0, z: 0.000000037252903}
 --- !u!1 &1730266964
 GameObject:
   m_ObjectHideFlags: 0

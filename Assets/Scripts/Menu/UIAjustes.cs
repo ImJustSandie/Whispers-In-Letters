@@ -10,22 +10,23 @@ public class UIAjustes : MonoBehaviour
     public Slider sliderSFX;
     public Slider sliderUI;
     public Slider sliderAmbiente;
+    public Slider sliderMaster;
 
     void Start()
     {
-        // Inicializar sliders con los valores actuales del AudioManager
         if (AudioManager.Instance != null)
         {
-            if (sliderMusica != null) sliderMusica.value = AudioManager.Instance.musicVolume;
-            if (sliderSFX != null) sliderSFX.value = AudioManager.Instance.sfxVolume;
-            if (sliderUI != null) sliderUI.value = AudioManager.Instance.uiVolume;
-            if (sliderAmbiente != null) sliderAmbiente.value = AudioManager.Instance.ambienceVolume;
+            if (sliderMusica != null) sliderMusica.value = AudioManager.Instance.MusicVolume;
+            if (sliderSFX != null) sliderSFX.value = AudioManager.Instance.SFXVolume;
+            if (sliderUI != null) sliderUI.value = AudioManager.Instance.UIVolume;
+            if (sliderAmbiente != null) sliderAmbiente.value = AudioManager.Instance.AmbienceVolume;
+            if (sliderMaster != null) sliderMaster.value = AudioManager.Instance.MasterVolume;
 
-            // Añadir listeners para actualizar el AudioManager cuando cambien los sliders
             if (sliderMusica != null) sliderMusica.onValueChanged.AddListener(SetMusica);
             if (sliderSFX != null) sliderSFX.onValueChanged.AddListener(SetSFX);
             if (sliderUI != null) sliderUI.onValueChanged.AddListener(SetUI);
             if (sliderAmbiente != null) sliderAmbiente.onValueChanged.AddListener(SetAmbiente);
+            if (sliderMaster != null) sliderMaster.onValueChanged.AddListener(SetMaster);
         }
     }
 
@@ -50,13 +51,13 @@ public class UIAjustes : MonoBehaviour
         // Pausamos el juego cuando el panel está abierto
         Time.timeScale = estado ? 0f : 1f;
 
-        // Si se abre el panel, sincronizamos los sliders de nuevo por si cambiaron externamente
         if (estado && AudioManager.Instance != null)
         {
-            if (sliderMusica != null) sliderMusica.value = AudioManager.Instance.musicVolume;
-            if (sliderSFX != null) sliderSFX.value = AudioManager.Instance.sfxVolume;
-            if (sliderUI != null) sliderUI.value = AudioManager.Instance.uiVolume;
-            if (sliderAmbiente != null) sliderAmbiente.value = AudioManager.Instance.ambienceVolume;
+            if (sliderMusica != null) sliderMusica.value = AudioManager.Instance.MusicVolume;
+            if (sliderSFX != null) sliderSFX.value = AudioManager.Instance.SFXVolume;
+            if (sliderUI != null) sliderUI.value = AudioManager.Instance.UIVolume;
+            if (sliderAmbiente != null) sliderAmbiente.value = AudioManager.Instance.AmbienceVolume;
+            if (sliderMaster != null) sliderMaster.value = AudioManager.Instance.MasterVolume;
         }
     }
 
@@ -85,5 +86,10 @@ public class UIAjustes : MonoBehaviour
     public void SetAmbiente(float val)
     {
         if (AudioManager.Instance != null) AudioManager.Instance.SetAmbienceVolume(val);
+    }
+
+    public void SetMaster(float val)
+    {
+        if (AudioManager.Instance != null) AudioManager.Instance.SetMasterVolume(val);
     }
 }

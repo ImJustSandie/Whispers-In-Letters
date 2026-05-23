@@ -17,19 +17,25 @@
     #sprite:sophia_neutral
     Y eso no va a cambiar si te quedas escondido aquí. Lo que encontraste, te lo llevas contigo.
     
-    #setvar:ruta:desicion3
-    #setflag:Desicion3_Arcade
-    #sprite:joseph_sad
-    …Supongo que tienes razón. No puedo quedarme aquí para siempre, aunque quisiera.
-    -> Desicion3_Arcade
-    
-    === HandleDesicion3_Arcade ===
-#setvar:ruta:desicion3
-{
-- GetVar("ruta") == "Oportunidad": -> Camino_1_2_Joseph_Arcade
-- GetVar("ruta") == "sacarlo": -> Camino_2_2_Joseph_Arcade
-- GetVar("ruta") == "desicion3": -> Desicion3_Arcade
-}
+     #setflag:Obj_Arcade_3
+     #setflag:Obj_Activ_Arcade
+     #setvar:ruta:desicion3
+     #setflag:Desicion3_Arcade
+     #sprite:joseph_sad
+     …Supongo que tienes razón. No puedo quedarme aquí para siempre, aunque quisiera.
+     -> END
+     
+     === HandleDesicion3_Arcade ===
+ #setvar:ruta:desicion3
+ {
+ - GetVar("ruta") == "Oportunidad": -> Camino_1_2_Joseph_Arcade
+ - GetVar("ruta") == "sacarlo": -> Camino_2_2_Joseph_Arcade
+ - GetVar("ruta") == "desicion3":
+     {
+         - GetFlag("Activ_Arcade_3") == true: -> Desicion3_Arcade
+         - else: -> Desicion3_Arcade_Gated
+     }
+ }
 === Desicion3_Arcade ===
 Que deberia hacer con Joseph
 +[Motivar a Joseph a seguir su sueños]
@@ -37,6 +43,20 @@ Que deberia hacer con Joseph
 #sprite:sophia_euforic
 Aquí Joseph encontró la razón de vida despues de todo, No es un fracasado, solo tenías otro enfoque
 -> Camino_1_2_Joseph_Arcade
++[Eso no vale para nada]
+#setvar:ruta:sacarlo
+#sprite:sophia_neutral
+debo detener
+-> Camino_2_2_Joseph_Arcade
++[Decidir luego]
+#setvar:ruta:desicion3
+#sprite:sophia_thinking
+Daré una vuelta y luego sigo hablando con Joseph
+-> END
+    
+    === Desicion3_Arcade_Gated ===
+#sprite:sophia_thinking
+Aún no estoy lista para decidir. Debería explorar un poco más antes.
 +[Eso no vale para nada]
 #setvar:ruta:sacarlo
 #sprite:sophia_neutral

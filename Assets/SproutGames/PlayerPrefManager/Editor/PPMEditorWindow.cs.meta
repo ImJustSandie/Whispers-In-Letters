@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 5a1411f3ef933804589ece441bc2c2ef
+AssetOrigin:
+  serializedVersion: 1
+  productId: 324330
+  packageName: PlayerPrefs Manager
+  packageVersion: 1.0
+  assetPath: Assets/SproutGames/PlayerPrefManager/Editor/PPMEditorWindow.cs
+  uploadId: 767706

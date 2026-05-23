@@ -92,16 +92,25 @@ Podría quedarme aquí horas... o días enteros si me lo permitieran.
 Gracias por traerme.
 #sprite:sophia_neutral
 Disfrútalo. Te lo mereces después de tanto tiempo viviendo para los demás.
+#sprite:joseph_happy
+Oye… ¿no irás a buscar algo de comer? Una pizza me vendría increíble ahora.
+#sprite:sophia_happy
+Buena idea. Voy por una pizza, espérame aquí.
+#setflag:Obj_Pizza_Arcade
 #setvar:ruta:desicion_Arcade_1
 #setflag:Desicion1_Arcade
 Voy a jugar mi primera partida.
--> Desicion1_Arcade
+-> END
 
 === HandleDesicion1_Arcade ===
 {
 - GetVar("ruta") == "motivacion": -> Camino_1_Joseph_Arcade
 - GetVar("ruta") == "desmotivarlo": -> Camino_2_Joseph_Arcade
-- GetVar("ruta") == "desicion_Arcade_1": -> Desicion1_Arcade
+- GetVar("ruta") == "desicion_Arcade_1":
+    {
+        - GetFlag("Activ_Arcade_1") == true: -> Desicion1_Arcade
+        - else: -> Desicion1_Arcade_Gated
+    }
 }
 === Desicion1_Arcade ===
 #sprite: sophia_thinking
@@ -111,6 +120,20 @@ Que deberia hacer con Joseph
 #sprite:sophia_euforic
 Joseph se merece romper esa rutina y encontrar un respiro de la universidad
 ->  Camino_1_Joseph_Arcade
++[llevarlo a la universidad]
+#setvar:ruta:desmotivarlo
+#sprite:sophia_sad
+Que le hice a Joseph debo sacarlo
+-> Camino_2_Joseph_Arcade
++[Decidir luego]
+#setvar:ruta:desicion_Arcade_1
+#sprite:sophia_thinking
+Daré una vuelta y luego sigo hablando con Joseph
+-> END
+
+=== Desicion1_Arcade_Gated ===
+#sprite:sophia_thinking
+Aún no estoy lista para decidir. Debería explorar un poco más antes.
 +[llevarlo a la universidad]
 #setvar:ruta:desmotivarlo
 #sprite:sophia_sad
@@ -153,16 +176,26 @@ Me siento invencible… como si toda la frustración se volviera energía.
 #sprite:sophia_happy
 Eso pasa cuando dejas de vivir para otros… y empiezas a ser tú.
 
+#sprite:sophia_thinking
+Déjame probar una partida. Quiero entender qué se siente al jugar como tú.
+#sprite:joseph_happy
+¡Claro! Toma, te enseño.
+#setflag:Obj_Game_Arcade
+#setflag:Obj_Activ_Arcade
 #setvar:ruta:desicion2
 #setflag:Desicion2_Arcade
 Hazlo, Joseph. Explora, juega, sé el dueño de este pequeño universo.
--> Desicion2_Arcade
+-> END
 
 === HandleDesicion2_Arcade ===
 {
 - GetVar("ruta") == "vocacion": -> Camino_1_2_Joseph_Arcade
 - GetVar("ruta") == "universidad": -> Camino_2_2_Joseph_Arcade
-- GetVar("ruta") == "desicion2": -> Desicion2_Arcade
+- GetVar("ruta") == "desicion2":
+    {
+        - GetFlag("Activ_Arcade_2") == true: -> Desicion2_Arcade
+        - else: -> Desicion2_Arcade_Gated
+    }
 }
 === Desicion2_Arcade ===
 Que debería hacer con Joseph
@@ -171,6 +204,20 @@ Que debería hacer con Joseph
 #sprite:sophia_euforic
 Tienes potencial para esto de los videojuegos
 -> Camino_1_2_Joseph_Arcade
++[Eso no vale para nada]
+#setvar:ruta:universidad
+#sprite:sophia_neutral
+Debo detener a Joseph 
+-> Camino_2_2_Joseph_Arcade
++[Decidir luego]
+#setvar:ruta:desicion2
+#sprite:sophia_thinking
+Daré una vuelta y luego sigo hablando con Joseph
+-> END
+
+=== Desicion2_Arcade_Gated ===
+#sprite:sophia_thinking
+Aún no estoy lista para decidir. Debería explorar un poco más antes.
 +[Eso no vale para nada]
 #setvar:ruta:universidad
 #sprite:sophia_neutral

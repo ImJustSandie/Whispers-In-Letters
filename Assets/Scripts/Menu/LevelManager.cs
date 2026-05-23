@@ -123,6 +123,12 @@ public class LevelManager : MonoBehaviour
     {
         isTransitioning = true;
 
+        // Cerrar el panel de configuración antes de cualquier transición
+        if (sceneName != "Menu" && GameManager.Instance != null && GameManager.Instance.uiAjustes != null)
+        {
+            GameManager.Instance.uiAjustes.CerrarAjustes();
+        }
+
         if (sceneTransitionSound != null)
         {
             sceneTransitionSound.PlaySFX();

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67152d8daea5e584b921889ac55c7ca8, type: 3}
   m_Name: Pizza
   m_EditorClassIdentifier: Assembly-CSharp::InteractableData
-  interactionName: Pizza
-  inkKnot: Pizza
-  isCollectable: 0
-  flagToSetOnCollect: 
+  interactionName: Activ_Pizza_Arcade
+  inkKnot: Activ_Pizza_Arcade
+  isCollectable: 1
+  flagToSetOnCollect: Activ_Arcade_1
   variableToIncrementOnCollect: 
   incrementAmount: 1

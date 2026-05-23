@@ -7,12 +7,19 @@ public class TutorialCarrusel : MonoBehaviour
 
     private int panelActual = 0;
 
+    private static bool tutorialCompletado = false;
+
     void Start()
     {
+        if (tutorialCompletado)
+        {
+            gameObject.SetActive(false);
+            return;
+        }
         MostrarPanel(panelActual);
     }
 
-    // Mostrar panel según índice
+    // Mostrar panel segï¿½n ï¿½ndice
     void MostrarPanel(int indice)
     {
         for (int i = 0; i < paneles.Length; i++)
@@ -21,7 +28,7 @@ public class TutorialCarrusel : MonoBehaviour
         }
     }
 
-    // Botón siguiente >
+    // Botï¿½n siguiente >
     public void Siguiente()
     {
         if (panelActual < paneles.Length - 1)
@@ -31,7 +38,7 @@ public class TutorialCarrusel : MonoBehaviour
         }
     }
 
-    // Botón anterior <
+    // Botï¿½n anterior <
     public void Anterior()
     {
         if (panelActual > 0)
@@ -41,16 +48,17 @@ public class TutorialCarrusel : MonoBehaviour
         }
     }
 
-    // Botón SI
+    // Botï¿½n SI
     public void EmpezarTutorial()
     {
         panelActual = 1;
         MostrarPanel(panelActual);
     }
 
-    // Botón NO
+    // Botn NO
     public void CerrarTutorial()
     {
+        tutorialCompletado = true;
         gameObject.SetActive(false);
     }
 

@@ -73,18 +73,40 @@ public class CarruselNiveles : MonoBehaviour
 
         textoTiempo.text = tiempos[nivelActual];
 
-        int estrellas = dificultad[nivelActual];
-
-        estrella1.enabled = estrellas >= 1;
-        estrella2.enabled = estrellas >= 2;
-        estrella3.enabled = estrellas >= 3;
-        estrella4.enabled = estrellas >= 4;
-
         // bloquear niveles
+        candado.SetActive(nivelActual != 0);
+
         if (nivelActual == 0)
-            candado.SetActive(false);
+        {
+            // Nivel 1: Las estrellas representan los 4 finales
+            estrella1.enabled = true;
+            estrella2.enabled = true;
+            estrella3.enabled = true;
+            estrella4.enabled = true;
+
+            Color unlockedColor = new Color32(255, 210, 0, 255);
+            Color lockedColor = Color.white;
+
+            // Orden: Biblioteca (Estoicos, Nietzsche), Arcade (Schopenhauer, Hegel)
+            estrella1.color = PlayerPrefs.GetInt(PlayerPrefsKeys.EndingKey("Estoicos"), 0) == 1 ? unlockedColor : lockedColor;
+            estrella2.color = PlayerPrefs.GetInt(PlayerPrefsKeys.EndingKey("Nietzsche"), 0) == 1 ? unlockedColor : lockedColor;
+            estrella3.color = PlayerPrefs.GetInt(PlayerPrefsKeys.EndingKey("Schopenhauer"), 0) == 1 ? unlockedColor : lockedColor;
+            estrella4.color = PlayerPrefs.GetInt(PlayerPrefsKeys.EndingKey("Hegel"), 0) == 1 ? unlockedColor : lockedColor;
+        }
         else
-            candado.SetActive(true);
+        {
+            // Otros niveles: Lógica original de dificultad
+            int estrellas = dificultad[nivelActual];
+            estrella1.enabled = estrellas >= 1;
+            estrella2.enabled = estrellas >= 2;
+            estrella3.enabled = estrellas >= 3;
+            estrella4.enabled = estrellas >= 4;
+
+            estrella1.color = Color.white;
+            estrella2.color = Color.white;
+            estrella3.color = Color.white;
+            estrella4.color = Color.white;
+        }
     }
 
     /// <summary>

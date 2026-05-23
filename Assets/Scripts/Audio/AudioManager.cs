@@ -9,19 +9,43 @@ public class AudioManager : MonoBehaviour
     public AudioSource UIAudioSource;
     public AudioSource SFXAudioSource;
     public AudioSource AmbienceAudioSource;
-    
-    [Header("Volume Settings")]
-    [Range(0f, 1f)] public float musicVolume = 1f;
-    [Range(0f, 1f)] public float uiVolume = 1f;
-    [Range(0f, 1f)] public float sfxVolume = 1f;
-    [Range(0f, 1f)] public float ambienceVolume = 1f;
+
+    [Header("Volume Configuration (Defaults)")]
+    [Range(0f, 1f)] [SerializeField] private float musicVolumeConfig = 1f;
+    [Range(0f, 1f)] [SerializeField] private float sfxVolumeConfig = 1f;
+    [Range(0f, 1f)] [SerializeField] private float uiVolumeConfig = 1f;
+    [Range(0f, 1f)] [SerializeField] private float ambienceVolumeConfig = 1f;
+    [Range(0f, 1f)] [SerializeField] private float masterVolumeConfig = 1f;
+
+    // Runtime volume state (loaded from/saved to PlayerPrefs)
+    private float _currentMusicVolume;
+    private float _currentSFXVolume;
+    private float _currentUIVolume;
+    private float _currentAmbienceVolume;
+    private float _currentMasterVolume;
+
+    // Base AudioSource volumes from Inspector (read once at Awake)
+    private float _musicSourceBaseVolume;
+    private float _sfxSourceBaseVolume;
+    private float _uiSourceBaseVolume;
+    private float _ambienceSourceBaseVolume;
+
+    // Currently playing events (for continuous playback recalculation)
+    private AudioEvent _currentMusicEvent;
+    private AudioEvent _currentAmbienceEvent;
+
+    // Public read-only access for UI
+    public float MusicVolume => _currentMusicVolume;
+    public float SFXVolume => _currentSFXVolume;
+    public float UIVolume => _currentUIVolume;
+    public float AmbienceVolume => _currentAmbienceVolume;
+    public float MasterVolume => _currentMasterVolume;
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            // Evita que el AudioManager se destruya al cambiar de escenas
             DontDestroyOnLoad(gameObject);
             LoadVolumes();
         }
@@ -33,27 +57,69 @@ public class AudioManager : MonoBehaviour
 
     private void LoadVolumes()
     {
-        musicVolume = PlayerPrefs.GetFloat("MusicVolume", 1f);
-        sfxVolume = PlayerPrefs.GetFloat("SFXVolume", 1f);
-        uiVolume = PlayerPrefs.GetFloat("UIVolume", 1f);
-        ambienceVolume = PlayerPrefs.GetFloat("AmbienceVolume", 1f);
+        // Load runtime values from PlayerPrefs (use config values as defaults)
+        _currentMusicVolume = PlayerPrefs.GetFloat("MusicVolume", musicVolumeConfig);
+        _currentSFXVolume = PlayerPrefs.GetFloat("SFXVolume", sfxVolumeConfig);
+        _currentUIVolume = PlayerPrefs.GetFloat("UIVolume", uiVolumeConfig);
+        _currentAmbienceVolume = PlayerPrefs.GetFloat("AmbienceVolume", ambienceVolumeConfig);
+        _currentMasterVolume = PlayerPrefs.GetFloat("MasterVolume", masterVolumeConfig);
 
-        // Aplicar volumen inicial a la fuente de música
+        // Store base Source volumes from Inspector
+        _musicSourceBaseVolume = MusicAudioSource != null ? MusicAudioSource.volume : 1f;
+        _sfxSourceBaseVolume = SFXAudioSource != null ? SFXAudioSource.volume : 1f;
+        _uiSourceBaseVolume = UIAudioSource != null ? UIAudioSource.volume : 1f;
+        _ambienceSourceBaseVolume = AmbienceAudioSource != null ? AmbienceAudioSource.volume : 1f;
+
+        // Apply initial volumes to AudioSources
+        UpdateOneShotSourceVolumes();
+
         if (MusicAudioSource != null)
-        {
-            MusicAudioSource.volume = musicVolume;
-        }
+            MusicAudioSource.volume = _musicSourceBaseVolume;
 
-        // Aplicar volumen inicial a la fuente de sonido ambiente
         if (AmbienceAudioSource != null)
-        {
-            AmbienceAudioSource.volume = ambienceVolume;
-        }
+            AmbienceAudioSource.volume = _ambienceSourceBaseVolume;
     }
 
     /// <summary>
-    /// Reproduce un efecto de sonido en general.
+    /// Calculates final volume as: EventVolume x SourceVolume x CategoryVolume x MasterVolume
     /// </summary>
+    private float CalculateVolume(float eventVolume, float sourceVolume, float categoryVolume, float masterVolume)
+    {
+        return Mathf.Clamp01(eventVolume * sourceVolume * categoryVolume * masterVolume);
+    }
+
+    /// <summary>
+    /// Updates SFX and UI AudioSource volumes (affects currently-playing one-shots dynamically).
+    /// </summary>
+    private void UpdateOneShotSourceVolumes()
+    {
+        if (SFXAudioSource != null)
+            SFXAudioSource.volume = _sfxSourceBaseVolume * _currentSFXVolume * _currentMasterVolume;
+
+        if (UIAudioSource != null)
+            UIAudioSource.volume = _uiSourceBaseVolume * _currentUIVolume * _currentMasterVolume;
+    }
+
+    /// <summary>
+    /// Updates all AudioSource volumes after category or master changes.
+    /// </summary>
+    private void UpdateAllVolumes()
+    {
+        UpdateOneShotSourceVolumes();
+
+        if (_currentMusicEvent != null)
+        {
+            MusicAudioSource.volume = CalculateVolume(
+                _currentMusicEvent.volume, _musicSourceBaseVolume, _currentMusicVolume, _currentMasterVolume);
+        }
+
+        if (_currentAmbienceEvent != null)
+        {
+            AmbienceAudioSource.volume = CalculateVolume(
+                _currentAmbienceEvent.volume, _ambienceSourceBaseVolume, _currentAmbienceVolume, _currentMasterVolume);
+        }
+    }
+
     public void PlaySFX(AudioEvent audioEvent)
     {
         if (audioEvent == null || audioEvent.clip == null)
@@ -61,117 +127,123 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("[AudioManager] Intento de reproducir un SFX con un AudioEvent o Clip nulo.");
             return;
         }
-        
+
         SFXAudioSource.pitch = audioEvent.pitch;
-        SFXAudioSource.PlayOneShot(audioEvent.clip, audioEvent.volume * sfxVolume);
+        SFXAudioSource.PlayOneShot(audioEvent.clip, audioEvent.volume);
     }
-    
-    /// <summary>
-    /// Reproduce un sonido de interfaz de usuario.
-    /// </summary>
+
     public void PlayUI(AudioEvent audioEvent)
     {
         if (audioEvent == null || audioEvent.clip == null) return;
 
         UIAudioSource.pitch = audioEvent.pitch;
-        UIAudioSource.PlayOneShot(audioEvent.clip, audioEvent.volume * uiVolume);
+        UIAudioSource.PlayOneShot(audioEvent.clip, audioEvent.volume);
     }
-    
-    /// <summary>
-    /// Reproduce la música de fondo.
-    /// </summary>
+
     public void PlayMusic(AudioEvent audioEvent)
     {
         if (audioEvent == null || audioEvent.clip == null) return;
 
-        // Evitar reiniciar si ya esta sonando la misma musica
         if (MusicAudioSource.clip == audioEvent.clip && MusicAudioSource.isPlaying)
-            return; 
+            return;
 
+        _currentMusicEvent = audioEvent;
         MusicAudioSource.clip = audioEvent.clip;
-        MusicAudioSource.volume = audioEvent.volume * musicVolume;
+        MusicAudioSource.volume = CalculateVolume(audioEvent.volume, _musicSourceBaseVolume, _currentMusicVolume, _currentMasterVolume);
         MusicAudioSource.pitch = audioEvent.pitch;
         MusicAudioSource.loop = audioEvent.loop;
         MusicAudioSource.Play();
     }
 
-    /// <summary>
-    /// Detiene la música actual.
-    /// </summary>
     public void StopMusic()
     {
+        _currentMusicEvent = null;
         MusicAudioSource.Stop();
     }
 
-    /// <summary>
-    /// Reproduce el sonido ambiente. Funciona igual que la música: loop y evita reiniciar si ya suena el mismo clip.
-    /// </summary>
     public void PlayAmbience(AudioEvent audioEvent)
     {
         if (audioEvent == null || audioEvent.clip == null) return;
 
-        // Evitar reiniciar si ya esta sonando el mismo sonido ambiente
         if (AmbienceAudioSource.clip == audioEvent.clip && AmbienceAudioSource.isPlaying)
             return;
 
+        _currentAmbienceEvent = audioEvent;
         AmbienceAudioSource.clip = audioEvent.clip;
-        AmbienceAudioSource.volume = audioEvent.volume * ambienceVolume;
+        AmbienceAudioSource.volume = CalculateVolume(audioEvent.volume, _ambienceSourceBaseVolume, _currentAmbienceVolume, _currentMasterVolume);
         AmbienceAudioSource.pitch = audioEvent.pitch;
-        AmbienceAudioSource.loop = true; // Siempre en loop
+        AmbienceAudioSource.loop = true;
         AmbienceAudioSource.Play();
     }
 
-    /// <summary>
-    /// Detiene el sonido ambiente actual.
-    /// </summary>
     public void StopAmbience()
     {
+        _currentAmbienceEvent = null;
         AmbienceAudioSource.Stop();
     }
 
-    // ==== MÉTODOS DE ACTUALIZACIÓN EN TIEMPO REAL ====
+    // ==== VOLUME SETTERS (Runtime + Persistence) ====
 
     public void SetMusicVolume(float volume)
     {
-        musicVolume = Mathf.Clamp01(volume);
-        MusicAudioSource.volume = musicVolume; 
-        PlayerPrefs.SetFloat("MusicVolume", musicVolume);
+        _currentMusicVolume = Mathf.Clamp01(volume);
+        PlayerPrefs.SetFloat("MusicVolume", _currentMusicVolume);
+
+        if (_currentMusicEvent != null)
+        {
+            MusicAudioSource.volume = CalculateVolume(
+                _currentMusicEvent.volume, _musicSourceBaseVolume, _currentMusicVolume, _currentMasterVolume);
+        }
     }
 
     public void SetSFXVolume(float volume)
     {
-        sfxVolume = Mathf.Clamp01(volume);
-        PlayerPrefs.SetFloat("SFXVolume", sfxVolume);
+        _currentSFXVolume = Mathf.Clamp01(volume);
+        PlayerPrefs.SetFloat("SFXVolume", _currentSFXVolume);
+        UpdateOneShotSourceVolumes();
     }
 
     public void SetUIVolume(float volume)
     {
-        uiVolume = Mathf.Clamp01(volume);
-        PlayerPrefs.SetFloat("UIVolume", uiVolume);
+        _currentUIVolume = Mathf.Clamp01(volume);
+        PlayerPrefs.SetFloat("UIVolume", _currentUIVolume);
+        UpdateOneShotSourceVolumes();
     }
 
     public void SetAmbienceVolume(float volume)
     {
-        ambienceVolume = Mathf.Clamp01(volume);
-        AmbienceAudioSource.volume = ambienceVolume;
-        PlayerPrefs.SetFloat("AmbienceVolume", ambienceVolume);
+        _currentAmbienceVolume = Mathf.Clamp01(volume);
+        PlayerPrefs.SetFloat("AmbienceVolume", _currentAmbienceVolume);
+
+        if (_currentAmbienceEvent != null)
+        {
+            AmbienceAudioSource.volume = CalculateVolume(
+                _currentAmbienceEvent.volume, _ambienceSourceBaseVolume, _currentAmbienceVolume, _currentMasterVolume);
+        }
     }
 
-    // OnValidate se ejecuta automáticamente cada vez que cambias un valor en el Inspector de Unity
+    public void SetMasterVolume(float volume)
+    {
+        _currentMasterVolume = Mathf.Clamp01(volume);
+        PlayerPrefs.SetFloat("MasterVolume", _currentMasterVolume);
+        UpdateAllVolumes();
+    }
+
 #if UNITY_EDITOR
     private void OnValidate()
     {
         if (Application.isPlaying)
         {
-            if (MusicAudioSource != null && MusicAudioSource.isPlaying)
+            if (_currentMusicEvent != null)
             {
-                // Actualiza en vivo. Nota: Ignora el localVolume del AudioEvent en este refresh rápido
-                MusicAudioSource.volume = musicVolume; 
+                MusicAudioSource.volume = CalculateVolume(
+                    _currentMusicEvent.volume, _musicSourceBaseVolume, _currentMusicVolume, _currentMasterVolume);
             }
 
-            if (AmbienceAudioSource != null && AmbienceAudioSource.isPlaying)
+            if (_currentAmbienceEvent != null)
             {
-                AmbienceAudioSource.volume = ambienceVolume;
+                AmbienceAudioSource.volume = CalculateVolume(
+                    _currentAmbienceEvent.volume, _ambienceSourceBaseVolume, _currentAmbienceVolume, _currentMasterVolume);
             }
         }
     }

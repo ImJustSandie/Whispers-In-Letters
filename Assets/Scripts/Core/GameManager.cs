@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
         // El usuario configurará el Input Action, pero por ahora detectamos la tecla Q directamente
         if (Keyboard.current != null && Keyboard.current.qKey.wasPressedThisFrame)
         {
-            if (uiAjustes != null)
+            if (uiAjustes != null && SceneManager.GetActiveScene().name != "Menu")
             {
                 uiAjustes.ToggleAjustes();
             }

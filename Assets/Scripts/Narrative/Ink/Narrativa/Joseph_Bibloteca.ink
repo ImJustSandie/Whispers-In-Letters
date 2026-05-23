@@ -83,16 +83,25 @@ Hazlo por curiosidad. Solo una página.
 
 #sprite:joseph_neutral
 …Está bien. Una página.
+#sprite:joseph_neutral
+Pero… antes de empezar, ¿podrías traerme ese libro de derecho del que hablamos? El de introducción a las leyes. Creo que me ayudará a familiarizarme con la materia.
+#sprite:sophia_happy
+Claro, voy a buscarlo. Espérame aquí.
+#setflag:Obj_Libro_Biblioteca
 #setvar:ruta:Decision_Biblioteca_1
 #setflag:Decision_Biblioteca_1
 
--> Decision_Biblioteca_1 
+-> END
 
 === HandleDecision_Biblioteca_1 ===
 {
 - GetVar("ruta") == "estrategia": -> Camino_1_Joseph_Biblioteca
 - GetVar("ruta") == "rendirse": -> Camino_2_Joseph_Biblioteca
-- GetVar("ruta") == "Decision_Biblioteca_1": -> Decision_Biblioteca_1
+- GetVar("ruta") == "Decision_Biblioteca_1":
+    {
+        - GetFlag("Activ_Biblio_1") == true: -> Decision_Biblioteca_1
+        - else: -> Decision_Biblioteca_1_Gated
+    }
 }
 === Decision_Biblioteca_1 ===
 #sprite:sophia_thinking
@@ -113,6 +122,19 @@ Mejor me rindo
 Pensaré luego 
 -> END
 
+=== Decision_Biblioteca_1_Gated ===
+#sprite:sophia_thinking
+Aún no estoy lista para decidir. Debería explorar un poco más antes.
++[Decirle que no puede]
+#sprite:sophia_sad
+#setvar:ruta:rendirse
+Mejor me rindo
+-> Camino_2_Joseph_Biblioteca
++[Pensar después]
+#sprite:sophia_thinking
+#setvar:ruta:Decision_Biblioteca_1
+Pensaré luego 
+-> END
 
 === Camino_1_Joseph_Biblioteca ===
 #setflag:Camino_1_Joseph_Biblioteca
@@ -161,14 +183,26 @@ Me tomará el triple de tiempo...
 #setvar:ruta:decision_biblioteca_2
 #setflag:decision_biblioteca_2
 No compitas con otros. Compite con tu propio ritmo.
+#sprite:sophia_neutral
+Voy a repasar el material contigo. Así puedo entender mejor cómo ayudarte.
+#sprite:joseph_neutral
+¿De verdad harías eso por mí?
+#sprite:sophia_happy
+Claro. No vas a estar solo en esto.
+#setflag:Obj_Estudio_Biblioteca
+#setflag:Obj_Activ_Biblioteca
 #sprite:joseph_neutral
 Está bien... peor es no intentarlo.
--> decision_biblioteca_2
+-> END
 === HandleDecision_Biblioteca_2 ===
 {
 - GetVar("ruta") == "disciplina": -> Camino_1_2_Joseph_Biblioteca
 - GetVar("ruta") == "rendirse_2": -> Camino_2_2_Joseph_Biblioteca
-- GetVar("ruta") == "decision_biblioteca_2": -> decision_biblioteca_2
+- GetVar("ruta") == "decision_biblioteca_2":
+    {
+        - GetFlag("Activ_Biblio_2") == true: -> decision_biblioteca_2
+        - else: -> decision_biblioteca_2_Gated
+    }
 }
 === decision_biblioteca_2 ===
 #sprite:sophia_thinking
@@ -178,6 +212,19 @@ Está bien... peor es no intentarlo.
 #setvar:ruta:disciplina
 Joseph ha mejorado, pero hay que ser constante y disciplinado - Hay mucho camino por recorrer
 -> Camino_1_2_Joseph_Biblioteca
++[Rendirse]
+#setvar:ruta:rendirse_2
+No ha avanzado casi nada - Este es un reto muy duro
+-> Camino_2_2_Joseph_Biblioteca
++[Decidir después]
+#sprite:sophia_thinking
+#setvar:ruta:decision_biblioteca_2
+Voy a pensarlo
+-> END
+
+=== decision_biblioteca_2_Gated ===
+#sprite:sophia_thinking
+Aún no estoy lista para decidir. Debería explorar un poco más antes.
 +[Rendirse]
 #setvar:ruta:rendirse_2
 No ha avanzado casi nada - Este es un reto muy duro
