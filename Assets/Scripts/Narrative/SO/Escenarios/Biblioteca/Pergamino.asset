@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67152d8daea5e584b921889ac55c7ca8, type: 3}
-  m_Name: L_Stand
+  m_Name: Pergamino
   m_EditorClassIdentifier: Assembly-CSharp::InteractableData
-  interactionName: L_Stand
-  inkKnot: L_Stand
+  interactionName: Pergamino
+  inkKnot: Pergamino
   isCollectable: 0
   flagToSetOnCollect: 
   variableToIncrementOnCollect: 

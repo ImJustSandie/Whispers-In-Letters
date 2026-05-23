@@ -13,23 +13,23 @@ MonoBehaviour:
   m_Name: Patos DB
   m_EditorClassIdentifier: Assembly-CSharp::CollectableDuckDatabase
   ducks:
-  - duckName: Pato_Schopenhauer
-    flagName: Pato_Schopenhauer
+  - duckName: 'Pato_Arcade '
+    flagName: 'Pato_Arcade '
     collectedSprite: {fileID: 21300000, guid: bae5ee95d3a2aed4090e0b369a838549, type: 3}
     lockedSprite: {fileID: 21300000, guid: 762d9ecb201bb7743a527c8a24c77db2, type: 3}
-  - duckName: Pato_Estoicos
-    flagName: Pato_Estoicos
+  - duckName: Pato_Parque2
+    flagName: Pato_Parque2
     collectedSprite: {fileID: 21300000, guid: 51eea430a92b0d244a5718a924352693, type: 3}
     lockedSprite: {fileID: 21300000, guid: 762d9ecb201bb7743a527c8a24c77db2, type: 3}
-  - duckName: Pato_Nietz
-    flagName: Pato_Nietz
+  - duckName: Pato_Parque1
+    flagName: Pato_Parque1
     collectedSprite: {fileID: 21300000, guid: 6945712774cee4045b3c387f80e02e6b, type: 3}
     lockedSprite: {fileID: 21300000, guid: 762d9ecb201bb7743a527c8a24c77db2, type: 3}
-  - duckName: Pato_Hegel
-    flagName: Pato_Hegel
+  - duckName: Pato_Biblioteca
+    flagName: Pato_Biblioteca
     collectedSprite: {fileID: 21300000, guid: dcba12ab8add5ff40a4b53d33d47e0e0, type: 3}
     lockedSprite: {fileID: 21300000, guid: 762d9ecb201bb7743a527c8a24c77db2, type: 3}
-  - duckName: Pato_Sophia
-    flagName: Pato_Sophia
+  - duckName: Pato_Habitacion
+    flagName: Pato_Habitacion
     collectedSprite: {fileID: 21300000, guid: 5640f15e0054ff44f8070127c377b97f, type: 3}
     lockedSprite: {fileID: 21300000, guid: 762d9ecb201bb7743a527c8a24c77db2, type: 3}

@@ -78,16 +78,21 @@ Quien pidió pizza con piña, esto solo le gusta a la gente rara.
 De comer estas hamburguesas, no se nos ven los pies.
 ->END
 
+===AvisoCinta===
+#sprite: sophia_neutral
+Esta zona esta bloqueada, supongo que está en mantenimiento
+-> END
+
 ===Fuente==
 #sprite:sophia_neutral
 Ya no quedan monedas en la fuente, misteriosamente han desaparecido.
 ->END
 ===AvisoArcade===
- ← Arcade Playtown
+Arcade Playtown
 ->END
 
 ===AvisoBiblioteca===
- → Biblioteca Miguel Olivares
+ Biblioteca Miguel Olivares
  -> END
  
 ===AvisoProhibidopasar===
@@ -95,6 +100,11 @@ Prohibido pasar
 #sprite: sophia_thinking
 Hace dos años que esto debió haberse inaugurado. 
 ->END
+
+===AvisoCasa===
+#sprite: sophia_neutral
+Conjunto Residencial Diabulus Berchello
+-> END
 
 ===Estantelibros1===
 #sprite:sophia_neutral
@@ -105,6 +115,11 @@ Hasta aquí llega el olor a viejo con estos libros.
 #sprite:sophia_neutral
 Esto está lleno de libros, de los cuales ninguno voy a leer.
 ->END
+
+===EstanteLibros3===
+#sprite:sophia_neutral
+No veo nada de interés aquí.
+-> END
 
 ===Pergamino===
 #sprite:sophia_neutral

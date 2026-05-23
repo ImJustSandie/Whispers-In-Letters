@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67152d8daea5e584b921889ac55c7ca8, type: 3}
   m_Name: "Biblioteca_Se\xF1al"
   m_EditorClassIdentifier: Assembly-CSharp::InteractableData
-  interactionName: "Biblioteca_Se\xF1al"
-  inkKnot: "Biblioteca_Se\xF1al"
+  interactionName: AvisoBiblioteca
+  inkKnot: AvisoBiblioteca
   isCollectable: 0
   flagToSetOnCollect: 
   variableToIncrementOnCollect: 

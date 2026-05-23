@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67152d8daea5e584b921889ac55c7ca8, type: 3}
   m_Name: Pato Schopenhauer
   m_EditorClassIdentifier: Assembly-CSharp::InteractableData
-  interactionName: Pato_Schopenhauer
-  inkKnot: Pato_Schopenhauer
+  interactionName: Pato_Arcade
+  inkKnot: Pato_Arcade
   isCollectable: 1
-  flagToSetOnCollect: Pato_Schopenhauer
+  flagToSetOnCollect: Pato_Arcade
   variableToIncrementOnCollect: Patos
   incrementAmount: 1

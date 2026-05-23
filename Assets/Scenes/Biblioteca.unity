@@ -301,8 +301,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 88439018}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.096, z: 0.111}
+  m_LocalRotation: {x: -3.7493998e-33, y: -6.123234e-17, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.095999986, z: 0.11099921}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1060,10 +1060,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3400300254300690847, guid: fdae72dac4a66cb47965b9b32a5d13a6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 374041325}
+      addedObject: {fileID: 374041324}
     - targetCorrespondingSourceObject: {fileID: 3400300254300690847, guid: fdae72dac4a66cb47965b9b32a5d13a6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 374041324}
+      addedObject: {fileID: 374041325}
   m_SourcePrefab: {fileID: 100100000, guid: fdae72dac4a66cb47965b9b32a5d13a6, type: 3}
 --- !u!1 &374041323 stripped
 GameObject:
@@ -1102,12 +1102,12 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.41632596
-  m_Center: {x: 0.010397516, y: 0.045569945, z: -0.23200597}
+  m_Radius: 0.31
+  m_Center: {x: 0.12, y: 0.14, z: 0.09}
 --- !u!1001 &394693753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2961,9 +2961,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 155372053230363201, guid: f181d6123494e4e478d357b8080ddce6, type: 3}
       insertIndex: 1
       addedObject: {fileID: 1029506920}
-    - targetCorrespondingSourceObject: {fileID: -1398924627415131814, guid: f181d6123494e4e478d357b8080ddce6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1713470715}
     - targetCorrespondingSourceObject: {fileID: 7252694469357577584, guid: f181d6123494e4e478d357b8080ddce6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2004492520}
@@ -3106,9 +3103,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5110847816294493053, guid: f181d6123494e4e478d357b8080ddce6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1722850901}
-    - targetCorrespondingSourceObject: {fileID: 5110847816294493053, guid: f181d6123494e4e478d357b8080ddce6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1722850900}
   m_SourcePrefab: {fileID: 100100000, guid: f181d6123494e4e478d357b8080ddce6, type: 3}
 --- !u!4 &1383922791 stripped
 Transform:
@@ -3128,11 +3122,6 @@ Transform:
 --- !u!4 &1383922794 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9188494739778893658, guid: f181d6123494e4e478d357b8080ddce6, type: 3}
-  m_PrefabInstance: {fileID: 1383922790}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1383922795 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -1398924627415131814, guid: f181d6123494e4e478d357b8080ddce6, type: 3}
   m_PrefabInstance: {fileID: 1383922790}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1389385649
@@ -3753,77 +3742,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9999967, y: 2.9347723, z: 0.9999967}
   m_Center: {x: 0, y: 0.967387, z: 0}
---- !u!1 &1713470714
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1713470715}
-  - component: {fileID: 1713470717}
-  - component: {fileID: 1713470716}
-  m_Layer: 0
-  m_Name: Coll L Bookstand
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1713470715
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1713470714}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.001, y: 0.285, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1383922795}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1713470716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1713470714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d5f6a1eddb5aa49939f183c3b583d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
-  data: {fileID: 11400000, guid: 6ab800a287f9b9d4598e54f1923eaa27, type: 2}
-  interactionSound: {fileID: 0}
-  requiredFlag: 
-  fallbackKnot: 
-  autoTriggerOnEnter: 0
---- !u!135 &1713470717
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1713470714}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1721618809
 GameObject:
   m_ObjectHideFlags: 0
@@ -3882,23 +3800,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5110847816294493053, guid: f181d6123494e4e478d357b8080ddce6, type: 3}
   m_PrefabInstance: {fileID: 1383922790}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1722850900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1722850899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3371ebe959ba12b4cbc2e40fe921a06e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PulseAnimation
-  emissionColor: {r: 1, g: 1, b: 1, a: 1}
-  pulseSpeed: 2
-  maxIntensity: 1.5
-  pulseDuration: 0
-  pauseDuration: 0
 --- !u!135 &1722850901
 SphereCollider:
   m_ObjectHideFlags: 0

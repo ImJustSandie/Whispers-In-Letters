@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67152d8daea5e584b921889ac55c7ca8, type: 3}
-  m_Name: R_Bookstand
+  m_Name: Estante 1
   m_EditorClassIdentifier: Assembly-CSharp::InteractableData
-  interactionName: R_Bookstand
-  inkKnot: R_Bookstand
+  interactionName: Estantelibros1
+  inkKnot: Estantelibros1
   isCollectable: 0
   flagToSetOnCollect: 
   variableToIncrementOnCollect: 

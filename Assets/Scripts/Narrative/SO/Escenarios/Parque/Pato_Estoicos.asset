@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67152d8daea5e584b921889ac55c7ca8, type: 3}
   m_Name: Pato_Estoicos
   m_EditorClassIdentifier: Assembly-CSharp::InteractableData
-  interactionName: Pato_Estoicos
-  inkKnot: Pato_Estoicos
+  interactionName: Pato_Parque2
+  inkKnot: Pato_Parque2
   isCollectable: 1
-  flagToSetOnCollect: Pato_Estoicos
+  flagToSetOnCollect: Pato_Parque2
   variableToIncrementOnCollect: Patos
   incrementAmount: 1

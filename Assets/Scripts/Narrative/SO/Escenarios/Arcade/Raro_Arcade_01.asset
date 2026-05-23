@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67152d8daea5e584b921889ac55c7ca8, type: 3}
   m_Name: Raro_Arcade_01
   m_EditorClassIdentifier: Assembly-CSharp::InteractableData
-  interactionName: Raro_Arcade_01
-  inkKnot: Raro_Arcade_01
+  interactionName: Maquinarecreativa4
+  inkKnot: Maquinarecreativa4
   isCollectable: 0
   flagToSetOnCollect: 
   variableToIncrementOnCollect: 

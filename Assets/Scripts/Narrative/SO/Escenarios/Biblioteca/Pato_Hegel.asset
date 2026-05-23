@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67152d8daea5e584b921889ac55c7ca8, type: 3}
   m_Name: Pato_Hegel
   m_EditorClassIdentifier: Assembly-CSharp::InteractableData
-  interactionName: Pato_Hegel
-  inkKnot: Pato_Hegel
+  interactionName: Pato_Biblioteca
+  inkKnot: Pato_Biblioteca
   isCollectable: 1
-  flagToSetOnCollect: Pato_Hegel
+  flagToSetOnCollect: Pato_Biblioteca
   variableToIncrementOnCollect: Patos
   incrementAmount: 1
