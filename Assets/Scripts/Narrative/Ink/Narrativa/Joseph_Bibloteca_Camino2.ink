@@ -58,6 +58,9 @@ Es dejar de pelear una batalla que no está hecha para ganarse así.
 
 #sprite:sophia_neutral
 No tiene sentido seguir rompiéndote contra algo que no responde.
+#sprite:joseph_sad
+Aunque si realmente quiero ayudar a joseph deberia estudiar su tema.
+
 -> END
 
 === HandleDecision_Biblioteca_3 ===

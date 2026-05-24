@@ -37,18 +37,31 @@ Asumakina, sabía que me faltaba otro libro
 Creo que no, mejor lo dejo aqui
 -> END
 
+// ==========================================
+//Objetos- Habitacion de sofia
+// ==========================================
+
 ===Televisor===
+#sprite:sophia_neutral
 A las 6:00 pm “La Venganza de Nova, película de terror”
 A las 9:00 pm “Mire maestro, el documental de arte”
 A las 12:00 am “Como no quedarse calvo, siendo ingeniero en Multimedia”
 ->END
 
 ===Biblioteca_Sophia===
+#sprite:sophia_neutral
 Sophia en el país de las maravillas.
 Sophia y la piedra filosofal.
 Sophia y la balada de la tortuga y los koalas.
 Sophia y la comunidad filosófica.
+#sprite: sophia_thinking
+La promoción decía ‘pague 4 y lleve 5’, 
+pero no sabía que se referían a los cactus.
 ->END
+
+// ==========================================
+// Objetos-Arcade
+// ==========================================
 
 ===Maquinarecreativa1===
 #sprite:sophia_happy
@@ -61,6 +74,7 @@ Aquí puedo jugar: The league of Sophias
 ->END
 
 ===Maquinarecreativa3===
+#sprite:sophia_happy
 Esta máquina está en otro Arcade
 ->END
 
@@ -89,19 +103,25 @@ De comer estas hamburguesas, no se nos ven los pies.
 Esta zona esta bloqueada, supongo que está en mantenimiento
 -> END
 
+// ==========================================
+// Objetos-Parque
+// ==========================================
 ===Fuente==
 #sprite:sophia_neutral
 Ya no quedan monedas en la fuente, misteriosamente han desaparecido.
 ->END
 ===AvisoArcade===
+#sprite:sophia_neutral
 Arcade Playtown
 ->END
 
 ===AvisoBiblioteca===
+#sprite:sophia_neutral
  Biblioteca Miguel Olivares
  -> END
  
 ===AvisoProhibidopasar===
+#sprite:sophia_neutral
 Prohibido pasar
 #sprite: sophia_thinking
 Hace dos años que esto debió haberse inaugurado. 
@@ -111,6 +131,10 @@ Hace dos años que esto debió haberse inaugurado.
 #sprite: sophia_neutral
 Conjunto Residencial Diabulus Berchello
 -> END
+
+// ==========================================
+// Objetos-Bibloteca
+// ==========================================
 
 ===Estantelibros1===
 #sprite:sophia_neutral
@@ -135,13 +159,17 @@ del mundo y ubicada específicamente en esta biblioteca.
 
 ===Computador1===
 #sprite:sophia_neutral
-Estas computadoras son del Precámbrico
+Estas computadoras son de la prehistoria
 ->END
 
 ===Computador2===
 #sprite:sophia_neutral
 Alguien dejó su historial de búsqueda abierto, será mejor no mirarlo.
 ->END
+
+// ==========================================
+// Patos
+// ==========================================
 
 ===Pato_Parque1===
 #sprite: sophia_happy
@@ -171,6 +199,11 @@ Este pato se ve algo amargado, !Un arcade no es un sitio para un pato asi!
 Siempre me sorprenderá lo mucho que me parezco a este pato...
 Creo que quiero guardarlo por ahora
 -> END
+
+
+// ==========================================
+// NPC
+// ==========================================
 
 === NPC_01 ===
 #sprite: sophia_euforic
@@ -214,6 +247,11 @@ Esta pizza se ve deliciosa..
 Este juego se ve interesante, creo que me podría gustar...
 -> END
 
+===Activ_Maquina_Juego_FB===
+#sprite:sophia_thinking
+Joseph aún no me ha pedido que juegue con él. Mejor esperar a que me lo pida.
+-> END
+
 ===Activ_Maquina_Juego===
 {
     - GetVar("ruta") == "desicion3":
@@ -244,13 +282,9 @@ Aquí está el libro de derecho. Joseph lo pidió, esto le ayudará a familiariz
 
 ===Activ_Libro_Leyes_Fail===
 #sprite:sophia_neutral
-Este libro no es para mí ahora. Joseph todavía no me ha dicho qué necesita.
+Este libro es sobre introducción al derecho
 -> END
 
-===Activ_Maquina_Juego_FB===
-#sprite:sophia_thinking
-Joseph aún no me ha pedido que juegue con él. Mejor esperar a que me lo pida.
--> END
 
 ===Activ_Estudio_Biblioteca_FB===
 #sprite:sophia_thinking

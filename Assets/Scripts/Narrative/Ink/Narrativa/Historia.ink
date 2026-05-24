@@ -130,15 +130,15 @@ Dos horas bastan para cambiar el rumbo del día.
 ¿Que deberia hacer con Joseph?
   + [Ir al arcade]
      #setvar:ruta:arcade
-     Le diré a Joseph de ir al arcade
+     Le diré a Joseph de ir al arcade.
      -> Joseph_Arcade_Prologo
   + [Ir a la biblioteca]
      #setvar:ruta:biblioteca
-     Le diré a Joseph de ir a la Biblioteca
+     Le diré a Joseph de ir a la Biblioteca.
      -> Joseph_Bibloteca_Prologo
   + [Mas tarde decidir]
      #setvar:ruta:desicion_Decamino
-     Voy a pensar a donde llevar a Joseph
+     Voy a pensar a donde llevar a Joseph.
      -> END
      
 ===Sophia_Cansada===
@@ -170,7 +170,7 @@ Estoy a punto de entrar a mi cuarto. Siento que si entro, ya no volveré a salir
 
 === Salida_Bloqueada ===
 #sprite:sophia_neutral
-Estoy muy cansada, no creo que quiera salir mas por hoy
+Estoy muy cansada, no creo que quiera salir mas por hoy.
 -> END
 
 
@@ -182,7 +182,7 @@ Aun no me puedo ir a dormir, tengo cosas que hacer.
 ===Salidas_Bloqueadas===
 #sprite:sophia_neutral
 #sonido:sophia_suspira
-Estoy muy cansada, quiero ir a mi casa a recostarme
+Estoy muy cansada, quiero ir a mi casa a recostarme.
 -> END
 
 
@@ -238,7 +238,7 @@ Pensar en que hay cosas que se pueden controlar y otras que no me crea una duali
 #sprite:sophia_thinking
 Es lo mismo que sucede con Joseph: no puede controlar lo que sus padres esperan de él, pero sí cómo se siente respecto a eso.
 #sprite:sophia_thinking
-Definitivamente hay que vencer esa dualidad y buscar el control. Eso fue lo que logré con Joseph al mantenerlo en la biblioteca
+Definitivamente hay que vencer esa dualidad y buscar el control. Eso fue lo que logré con Joseph al mantenerlo en la biblioteca.
 #sprite:sophia_thinking
 No fue un castigo, sino una forma de enseñarle a dominar sus impulsos y su...
 -> Final_Del_Juego

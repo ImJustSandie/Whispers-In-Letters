@@ -86,7 +86,8 @@ Hazlo por curiosidad. Solo una página.
 #sprite:joseph_neutral
 Pero… antes de empezar, ¿podrías traerme ese libro de derecho del que hablamos? El de introducción a las leyes. Creo que me ayudará a familiarizarme con la materia.
 #sprite:sophia_happy
-Claro, voy a buscarlo. Espérame aquí.
+Claro, voy a buscarlo. Espérame aquí debe estar en una estanteria.
+#sprite:sophia_neutral
 #setflag:Obj_Libro_Biblioteca
 #setvar:ruta:Decision_Biblioteca_1
 #setflag:Decision_Biblioteca_1
@@ -106,10 +107,10 @@ Claro, voy a buscarlo. Espérame aquí.
 === Decision_Biblioteca_1 ===
 #sprite:sophia_thinking
 ¿Qué debería hacer con Joseph?
-+[Crear estrategia]
++[Entregar el libro]
 #sprite:sophia_euforic
 #setvar:ruta:estrategia
-Voy a ayudar a Joseph
+Toma Joseph, aqui tienes
 -> Camino_1_Joseph_Biblioteca
 +[Decirle que no puede]
 #sprite:sophia_sad
@@ -207,7 +208,7 @@ Está bien... peor es no intentarlo.
 === decision_biblioteca_2 ===
 #sprite:sophia_thinking
 ¿Qué debería hacer con Joseph?
-+[Seguir disciplinado]
++[Explicarle a Joseph]
 #sprite:sophia_neutral
 #setvar:ruta:disciplina
 Joseph ha mejorado, pero hay que ser constante y disciplinado - Hay mucho camino por recorrer

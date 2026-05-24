@@ -2,6 +2,7 @@
 // PRÓLOGO — Whispers in Letters
 // Archivo: Prologo.ink
 // Incluido desde Historia.ink
+// Si vas a cambiar la historia no cambies el NPC_03
 //
 // KNOTS DISPONIBLES:
 //   prologo_parque_inicio          → Sophia llega al parque (primera vez)

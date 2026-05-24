@@ -115,7 +115,7 @@ Voy a jugar mi primera partida.
 === Desicion1_Arcade ===
 #sprite: sophia_thinking
 Que deberia hacer con Joseph
-+[Dejarlo y que siga jugando]
++[Entregarle la pizza]
 #setvar:ruta:motivacion
 #sprite:sophia_euforic
 Joseph se merece romper esa rutina y encontrar un respiro de la universidad
@@ -175,6 +175,7 @@ Me siento invencible… como si toda la frustración se volviera energía.
 
 #sprite:sophia_happy
 Eso pasa cuando dejas de vivir para otros… y empiezas a ser tú.
+Hazlo, Joseph. Explora, juega, sé el dueño de este pequeño universo.
 
 #sprite:sophia_thinking
 Déjame probar una partida. Quiero entender qué se siente al jugar como tú.
@@ -184,7 +185,7 @@ Déjame probar una partida. Quiero entender qué se siente al jugar como tú.
 #setflag:Obj_Activ_Arcade
 #setvar:ruta:desicion2
 #setflag:Desicion2_Arcade
-Hazlo, Joseph. Explora, juega, sé el dueño de este pequeño universo.
+Aunque yo estoy usando este arcade, busca otra igual
 -> END
 
 === HandleDesicion2_Arcade ===
@@ -199,7 +200,7 @@ Hazlo, Joseph. Explora, juega, sé el dueño de este pequeño universo.
 }
 === Desicion2_Arcade ===
 Que debería hacer con Joseph
-+[Darle otra oportunidad]
++[Admirar su potencial]
 #setvar:ruta:vocacion
 #sprite:sophia_euforic
 Tienes potencial para esto de los videojuegos
