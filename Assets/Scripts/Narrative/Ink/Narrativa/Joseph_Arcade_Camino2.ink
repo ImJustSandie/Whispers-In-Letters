@@ -23,6 +23,7 @@
      #setflag:Desicion3_Arcade
      #sprite:joseph_sad
      …Supongo que tienes razón. No puedo quedarme aquí para siempre, aunque quisiera.
+     Pero y si intentas entenderme y probar esta sensacion
      -> END
      
      === HandleDesicion3_Arcade ===
