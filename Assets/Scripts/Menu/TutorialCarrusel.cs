@@ -66,5 +66,6 @@ public class TutorialCarrusel : MonoBehaviour
     public void FinalizarTutorial()
     {
         gameObject.SetActive(false);
+        tutorialCompletado = true;
     }
 }

@@ -1661,6 +1661,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 25754938891326203, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 88.99983
+      objectReference: {fileID: 0}
+    - target: {fileID: 222224383039228285, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1751449920}
+    - target: {fileID: 222224383039228285, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CerrarAjustes
+      objectReference: {fileID: 0}
+    - target: {fileID: 222224383039228285, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIAjustes, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 640183255054141977, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_text
+      value: Volumen ambiente
+      objectReference: {fileID: 0}
     - target: {fileID: 694720348087310390, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1668,6 +1688,14 @@ PrefabInstance:
     - target: {fileID: 790325387754562527, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314775315327609316, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -255.99997
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630207495773860538, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -29.99996
       objectReference: {fileID: 0}
     - target: {fileID: 1666429012910589564, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: skipDelay
@@ -1721,6 +1749,10 @@ PrefabInstance:
       propertyPath: sceneTransitionSound
       value: 
       objectReference: {fileID: 11400000, guid: 1c51676deadc48d46bbff4f7287996ae, type: 2}
+    - target: {fileID: 3565021531189776598, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 211
+      objectReference: {fileID: 0}
     - target: {fileID: 4456879551735160588, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: sliderUI
       value: 
@@ -1741,13 +1773,29 @@ PrefabInstance:
       propertyPath: sliderAmbiente
       value: 
       objectReference: {fileID: 626872431}
+    - target: {fileID: 4922816279419955699, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087611697361511767, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_text
+      value: Volumen maestro
+      objectReference: {fileID: 0}
     - target: {fileID: 5638436678370919060, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: m_Name
       value: Game Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 5717404283936305658, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -150.99997
+      objectReference: {fileID: 0}
     - target: {fileID: 5910255758591305214, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5954035812835052725, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -32.000053
       objectReference: {fileID: 0}
     - target: {fileID: 6026398073737762597, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1757,9 +1805,25 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7130900380957618278, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -14.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7148656523402382981, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 209.99983
+      objectReference: {fileID: 0}
     - target: {fileID: 7160512460265353867, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286451608319426692, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -744
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286451608319426692, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -346
       objectReference: {fileID: 0}
     - target: {fileID: 7350300024035768456, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1893,6 +1957,38 @@ PrefabInstance:
       propertyPath: dialogueSounds.Array.data[8].onomatopoeia
       value: P U R A     E S C E N C I A
       objectReference: {fileID: 0}
+    - target: {fileID: 7817914364540954405, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5965788
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817914364540954405, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4209574
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817914364540954405, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5965788
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817914364540954405, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -293
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817914364540954405, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 326
+      objectReference: {fileID: 0}
+    - target: {fileID: 7875783221922976547, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -258.99997
+      objectReference: {fileID: 0}
+    - target: {fileID: 8330325568140569190, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -150.00003
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612805975861907925, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 81.00001
+      objectReference: {fileID: 0}
     - target: {fileID: 8884749705660651705, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: m_LocalPosition.x
       value: 703.1862
@@ -1932,6 +2028,18 @@ PrefabInstance:
     - target: {fileID: 8884749705660651705, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106384103033088190, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 19.809177
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106384103033088190, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10.270712
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106384103033088190, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6648865
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8812,6 +8920,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1751449920 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4456879551735160588, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+  m_PrefabInstance: {fileID: 296831563}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97275d7f6f8ecdc43b748967dc8b44cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIAjustes
 --- !u!1 &1760625724
 GameObject:
   m_ObjectHideFlags: 0
