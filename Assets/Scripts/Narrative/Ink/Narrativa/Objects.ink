@@ -9,8 +9,14 @@ Si me acuerdo de esto, aun me duele la cabeza
 "La felicidad de tu vida depende de la calidad de tus pensamientos". — Marco Aurelio
 ->END
 
+===minotauro_fallback ===
+#sprite: sophia_sad
+Siento que me olvidé de algo muy importante...
+No creo tener sufience escencia.
+->END
+
 === ArcadeBloqueadoPrologo ===
-#sprite:sophia_thinking
+#sprite: sophia_thinking
 Necesito ir al arcade primero a buscar mi control
 -> END
 
@@ -178,7 +184,7 @@ Ojalá el autor de este libro estuviera vivo para que me explicara qué rayos qu
 
 === NPC_03 ===
 #sprite: sophia_euforic
-El silencio de esta biblioteca me da la paz necesaria para estudiar.
+Negrito, eso es una pregunta capciosa, tienes que leerte el libro.
 -> END
 
 === NPC_04 ===
@@ -200,13 +206,18 @@ Aquí está la pizza. Joseph se pondrá contento.
 
 ===Activ_Pizza_Arcade_Fail===
 #sprite:sophia_thinking
-Todavía no tengo por qué pedir una pizza. Mejor esperar a que Joseph tenga hambre.
+Esta pizza se ve deliciosa..
+-> END
+
+===Maquina_Juego_Arcade_Fail===
+#sprite: sophia_neutral
+Este juego se ve interesante, creo que me podría gustar...
 -> END
 
 ===Activ_Maquina_Juego===
 {
     - GetVar("ruta") == "desicion3":
-        #sprite:sophia_happy
+        #sprite: sophia_happy
         Una partida más para entender bien lo que Joseph ve en esto.
         #setflag:Activ_Arcade_3
         -> END
@@ -243,7 +254,7 @@ Joseph aún no me ha pedido que juegue con él. Mejor esperar a que me lo pida.
 
 ===Activ_Estudio_Biblioteca_FB===
 #sprite:sophia_thinking
-Joseph aún no me ha hablado de estudiar juntos todavía. Mejor esperar.
+La república, el príncipe, leviatán... Es curioso como los filosofos hablaban también mucho sobre el estado y política de su época.
 -> END
 
 ===Activ_Estudio_Biblioteca===

@@ -1837,6 +1837,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4806265110847655197, guid: 584d1c7cc616ec3468023132bc8fe25f, type: 3}
   m_PrefabInstance: {fileID: 7660357436302559134}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1038245204 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 584d1c7cc616ec3468023132bc8fe25f, type: 3}
+  m_PrefabInstance: {fileID: 7660357436302559134}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1038245205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038245204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8820f9e06c460d9428091b14c5a0dfd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AdvancedInteractableObject
+  data: {fileID: 11400000, guid: b56513d56bbf9bb46a7a97c7add70f0f, type: 2}
+  interactionSound: {fileID: 0}
+  autoTriggerOnEnter: 0
+  visibilityConditions: []
+  disappearAfterDialogue: 0
+  disappearCondition:
+    conditionType: 0
+    flagName: 
+    variableKey: 
+    requiredValue: 
+  disappearFadeDuration: -1
+--- !u!135 &1038245206
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038245204}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.17
+  m_Center: {x: 0, y: -0.1, z: 0}
 --- !u!1 &1083945645
 GameObject:
   m_ObjectHideFlags: 0
@@ -3553,6 +3602,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7742391454975305099, guid: 584d1c7cc616ec3468023132bc8fe25f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7660357436302559137}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 584d1c7cc616ec3468023132bc8fe25f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1038245206}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 584d1c7cc616ec3468023132bc8fe25f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1038245205}
   m_SourcePrefab: {fileID: 100100000, guid: 584d1c7cc616ec3468023132bc8fe25f, type: 3}
 --- !u!1 &7660357436302559135 stripped
 GameObject:

@@ -232,6 +232,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6848607571876947384, guid: 558cf6acaef598045b1536ee99a60fdc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -278142992453444180, guid: 558cf6acaef598045b1536ee99a60fdc, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1102,7 +1106,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -3836,7 +3840,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 3d183acffbe4a9c4faa1632a6a509ef1, type: 2}
   interactionSound: {fileID: 0}
   requiredFlag: Obj_Activ_Biblioteca
-  fallbackKnot: 
+  fallbackKnot: Activ_Estudio_Biblioteca_FB
   autoTriggerOnEnter: 0
 --- !u!1 &1727801629
 GameObject:

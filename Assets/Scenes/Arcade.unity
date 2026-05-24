@@ -987,7 +987,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 3c3952adb2fb9bb45930b0c5552acd63, type: 2}
   interactionSound: {fileID: 0}
   requiredFlag: Obj_Activ_Arcade
-  fallbackKnot: 
+  fallbackKnot: Maquina_Juego_Arcade_Fail
   autoTriggerOnEnter: 0
 --- !u!1 &204251381
 GameObject:
@@ -4705,7 +4705,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: c2b5b7226cd557349bb9f462d15862b7, type: 2}
   interactionSound: {fileID: 0}
   requiredFlag: Obj_Pizza_Arcade
-  fallbackKnot: 
+  fallbackKnot: Activ_Pizza_Arcade_Fail
   autoTriggerOnEnter: 0
 --- !u!135 &1729209290
 SphereCollider:

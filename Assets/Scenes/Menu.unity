@@ -1671,7 +1671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1666429012910589564, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: skipDelay
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2064189035240888415, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: hudObjects
@@ -1771,7 +1771,11 @@ PrefabInstance:
       objectReference: {fileID: 2026730992}
     - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: dialogueSounds.Array.size
-      value: 8
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: characterVoices.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: dialogueSounds.Array.data[0].soundId
@@ -1806,6 +1810,14 @@ PrefabInstance:
       value: "sophia_gru\xF1ido"
       objectReference: {fileID: 0}
     - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: dialogueSounds.Array.data[8].soundId
+      value: Escencia
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: characterVoices.Array.data[2].voiceBeep
+      value: 
+      objectReference: {fileID: 11400000, guid: 8e16b16ff56e0234c818778a0e80ce4c, type: 2}
+    - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: dialogueSounds.Array.data[0].audioEvent
       value: 
       objectReference: {fileID: 11400000, guid: 824b2b5f5163e3b4480d26191c76a249, type: 2}
@@ -1838,6 +1850,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 79c594dbd6a2cad44b71a2b247675733, type: 2}
     - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: dialogueSounds.Array.data[8].audioEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 2ded2d3ff7434c64ca49878e05774903, type: 2}
+    - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: characterVoices.Array.data[2].characterId
+      value: tablos
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: dialogueSounds.Array.data[0].onomatopoeia
       value: Hmhmhm
       objectReference: {fileID: 0}
@@ -1868,6 +1888,10 @@ PrefabInstance:
     - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: dialogueSounds.Array.data[7].onomatopoeia
       value: Grrr
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: dialogueSounds.Array.data[8].onomatopoeia
+      value: P U R A     E S C E N C I A
       objectReference: {fileID: 0}
     - target: {fileID: 8884749705660651705, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: m_LocalPosition.x
