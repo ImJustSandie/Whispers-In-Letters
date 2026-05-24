@@ -1843,7 +1843,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: dialogueSounds.Array.data[0].soundId
-      value: joseph_suspira
+      value: joseph_suspiro
       objectReference: {fileID: 0}
     - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: dialogueSounds.Array.data[1].soundId
@@ -1855,7 +1855,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: dialogueSounds.Array.data[3].soundId
-      value: ' joseph_risas'
+      value: joseph_risa
       objectReference: {fileID: 0}
     - target: {fileID: 7488194699951904511, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: dialogueSounds.Array.data[4].soundId

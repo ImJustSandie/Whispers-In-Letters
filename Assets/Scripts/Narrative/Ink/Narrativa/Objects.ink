@@ -56,7 +56,7 @@ Sophia y la balada de la tortuga y los koalas.
 Sophia y la comunidad filosófica.
 #sprite: sophia_thinking
 La promoción decía ‘pague 4 y lleve 5’, 
-pero no sabía que se referían a los cactus.
+Pero no sabía que se referían a los cactus.
 ->END
 
 // ==========================================
@@ -275,9 +275,9 @@ Joseph aún no me ha pedido que juegue con él. Mejor esperar a que me lo pida.
 // ==========================================
 
 ===Activ_Libro_Leyes===
+#setflag:Activ_Biblio_1
 #sprite:sophia_happy
 Aquí está el libro de derecho. Joseph lo pidió, esto le ayudará a familiarizarse con la materia.
-#setflag:Activ_Biblio_1
 -> END
 
 ===Activ_Libro_Leyes_Fail===
@@ -294,14 +294,14 @@ La república, el príncipe, leviatán... Es curioso como los filosofos hablaban
 ===Activ_Estudio_Biblioteca===
 {
     - GetVar("ruta") == "decision_biblioteca_3":
+        #setflag:Activ_Biblio_3
         #sprite:sophia_neutral
         Repasaré estos apuntes una vez más antes de decidir.
-        #setflag:Activ_Biblio_3
         -> END
     - GetVar("ruta") == "decision_biblioteca_2":
+        #setflag:Activ_Biblio_2
         #sprite:sophia_neutral
         Revisaré estos apuntes para entender mejor cómo ayudar a Joseph con su estudio.
-        #setflag:Activ_Biblio_2
         -> END
     - else:
         #sprite:sophia_thinking

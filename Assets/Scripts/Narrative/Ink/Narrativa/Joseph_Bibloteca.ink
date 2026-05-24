@@ -69,29 +69,22 @@ Empieza por algo pequeño. No tienes que entenderlo todo hoy.
 #sprite:joseph_neutral
 …Supongo que puedo intentarlo.
 
-#sprite:joseph_neutral
-Voy a tomar un libro de la estantería, lo observaré un momento
-
-#sprite:joseph_sad
-Hace tiempo que no abro uno sin sentir presión…
-
 #sprite:sophia_thinking
-Entonces no lo hagas por presión.
+No lo hagas por presión.
 
 #sprite:sophia_neutral
-Hazlo por curiosidad. Solo una página.
+Hazlo por curiosidad.
 
 #sprite:joseph_neutral
-…Está bien. Una página.
+…Está bien.
 #sprite:joseph_neutral
-Pero… antes de empezar, ¿podrías traerme ese libro de derecho del que hablamos? El de introducción a las leyes. Creo que me ayudará a familiarizarme con la materia.
-#sprite:sophia_happy
-Claro, voy a buscarlo. Espérame aquí debe estar en una estanteria.
-#sprite:sophia_neutral
+¿Podrías traerme ese libro de derecho del que hablamos? El de introducción a las leyes. Creo que me ayudará a familiarizarme con la materia.
+
 #setflag:Obj_Libro_Biblioteca
 #setvar:ruta:Decision_Biblioteca_1
 #setflag:Decision_Biblioteca_1
-
+#sprite:sophia_happy
+Claro, voy a buscarlo. Espérame aquí debe estar en una estanteria.
 -> END
 
 === HandleDecision_Biblioteca_1 ===
@@ -194,6 +187,9 @@ Claro. No vas a estar solo en esto.
 #setflag:Obj_Activ_Biblioteca
 #sprite:joseph_neutral
 Está bien... peor es no intentarlo.
+#sprite:sophia_happy
+Deberia repasar los temas en una mesa para estar mas comoda
+
 -> END
 === HandleDecision_Biblioteca_2 ===
 {
@@ -211,7 +207,7 @@ Está bien... peor es no intentarlo.
 +[Explicarle a Joseph]
 #sprite:sophia_neutral
 #setvar:ruta:disciplina
-Joseph ha mejorado, pero hay que ser constante y disciplinado - Hay mucho camino por recorrer
+ Muy bien Joseph has mejorado, pero hay que ser constante y disciplinado, Hay mucho camino por recorrer
 -> Camino_1_2_Joseph_Biblioteca
 +[Rendirse]
 #setvar:ruta:rendirse_2
