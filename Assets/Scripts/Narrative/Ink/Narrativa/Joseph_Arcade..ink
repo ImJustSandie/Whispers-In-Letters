@@ -93,13 +93,13 @@ Gracias por traerme.
 #sprite:sophia_neutral
 Disfrútalo. Te lo mereces después de tanto tiempo viviendo para los demás.
 #sprite:joseph_happy
-Oye… ¿no irás a buscar algo de comer? Una pizza me vendría increíble ahora.
-#sprite:sophia_happy
-Buena idea. Voy por una pizza, espérame aquí.
+Oye… ¿no podrías ir a buscar algo de comer? Una pizza me vendría increíble ahora.
 #setflag:Obj_Pizza_Arcade
 #setvar:ruta:desicion_Arcade_1
 #setflag:Desicion1_Arcade
-Voy a jugar mi primera partida.
+#sprite:sophia_happy
+Buena idea. Voy por una pizza, espérame aquí.
+
 -> END
 
 === HandleDesicion1_Arcade ===

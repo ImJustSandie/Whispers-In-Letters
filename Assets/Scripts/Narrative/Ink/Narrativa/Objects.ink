@@ -233,8 +233,8 @@ Negrito, eso es una pregunta capciosa, tienes que leerte el libro.
 ===Activ_Pizza_Arcade===
 #sprite:sophia_happy
 #sonido:sophia_risa
-Aquí está la pizza. Joseph se pondrá contento.
 #setflag:Activ_Arcade_1
+Aquí está la pizza. Joseph se pondrá contento.
 -> END
 
 ===Activ_Pizza_Arcade_Fail===
