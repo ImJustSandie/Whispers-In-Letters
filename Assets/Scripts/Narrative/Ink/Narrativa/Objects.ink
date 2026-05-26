@@ -256,13 +256,13 @@ Joseph aún no me ha pedido que juegue con él. Mejor esperar a que me lo pida.
 {
     - GetVar("ruta") == "desicion3":
         #sprite: sophia_happy
-        Una partida más para entender bien lo que Joseph ve en esto.
         #setflag:Activ_Arcade_3
+        Una partida más para entender bien lo que Joseph ve en esto.
         -> END
     - GetVar("ruta") == "desicion2":
         #sprite:sophia_happy
-        Voy a jugar una partida para entender lo que Joseph siente aquí.
         #setflag:Activ_Arcade_2
+        Voy a jugar una partida para entender lo que Joseph siente aquí.
         -> END
     - else:
         #sprite:sophia_thinking
