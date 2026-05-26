@@ -82,12 +82,16 @@ public class GameSummaryUI : MonoBehaviour
 
     private void OnContinueClicked()
     {
-        // Reanudamos tiempo si fuera necesario
         Time.timeScale = 1f;
 
-        // Limpiamos la UI actual y vamos al menú
         if (summaryPanel != null) summaryPanel.SetActive(false);
-        
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.SetStoryFlag(GameManager.Instance.CompletionFlag, true);
+            GameManager.Instance.SaveGame();
+        }
+
         if (LevelManager.Instance != null)
         {
             LevelManager.Instance.ChangeScene("Menu");

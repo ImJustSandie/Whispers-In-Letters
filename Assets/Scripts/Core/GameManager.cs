@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Auto-Reset Settings")]
     [Tooltip("Si este flag está presente en el guardado al iniciar la app, la partida se borrará automáticamente.")]
-    [SerializeField] private string completionFlag = "prologue_final_seen";
+    [SerializeField] private string completionFlag = "Final_Del_Dia";
 
     public string CompletionFlag => completionFlag;
 

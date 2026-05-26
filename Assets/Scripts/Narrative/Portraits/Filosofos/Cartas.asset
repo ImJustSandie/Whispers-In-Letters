@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab9cc2894a567f4d9023a5c04afc4e0, type: 3}
+  m_Name: Cartas
+  m_EditorClassIdentifier: Assembly-CSharp::PhilosopherCardDatabase
+  entries:
+  - philosopherKey: Schopenhauer
+    rutaValue: Epilogo1
+    acceptanceKnot: epilogo_schopenhauer
+    reprocheKnot: epilogo_schopenhauer_reproche
+    reflectionKnot: reflexion_schopenhauer
+    cardSprite: {fileID: 21300000, guid: 846be4f6baa7b07469ec3fca7d3038d2, type: 3}
+    silhouetteSprite: {fileID: 21300000, guid: 0dc0c6ebdcffc5c42b319dec4808e8fb, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 213ff64633e06b346b711295332a0a8b, type: 3}
+    displayName: Schopenhauer
+  - philosopherKey: Hegel
+    rutaValue: epilogo2
+    acceptanceKnot: epilogo_hegel
+    reprocheKnot: epilogo_hegel_reproche
+    reflectionKnot: reflexion_hegel
+    cardSprite: {fileID: 21300000, guid: d8e1411fb5323044bb517f6047902efa, type: 3}
+    silhouetteSprite: {fileID: 21300000, guid: 8020b7209d1101144a72dc2cf8ac1f4d, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 946d8d993475b1f468462a8a5ad41581, type: 3}
+    displayName: Hegel
+  - philosopherKey: Estoicos
+    rutaValue: Epilogo3
+    acceptanceKnot: epilogo_estoicos
+    reprocheKnot: epilogo_estoicos_reproche
+    reflectionKnot: reflexion_estoicos
+    cardSprite: {fileID: 21300000, guid: 0f5ca32246387dc4daed374d8643a1bb, type: 3}
+    silhouetteSprite: {fileID: 21300000, guid: 380f25f9593876947b6c6ec4f608ba87, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 530f717c03d709d4e95c6d883b738004, type: 3}
+    displayName: Estoicos
+  - philosopherKey: Nietzsche
+    rutaValue: Epilogo4
+    acceptanceKnot: epilogo_nietzsche
+    reprocheKnot: epilogo_nietzsche_reproche
+    reflectionKnot: reflexion_nietzsche
+    cardSprite: {fileID: 21300000, guid: fd2df094a03d70842a4e8505d5223bd0, type: 3}
+    silhouetteSprite: {fileID: 21300000, guid: 6fc90c10437fed543b60eafec075d8dd, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 4d23d4a542c9ca6439d5a9ba8c64cab3, type: 3}
+    displayName: Nietzsche

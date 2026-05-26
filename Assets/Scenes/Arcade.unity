@@ -2396,6 +2396,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gamepad_Classic
       objectReference: {fileID: 0}
+    - target: {fileID: 1486978961850026616, guid: 23bd8e8b994b3a84abfecb06f39da217, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9156984657478592334, guid: 23bd8e8b994b3a84abfecb06f39da217, type: 3}
       propertyPath: m_LocalScale.x
       value: 10.951793
