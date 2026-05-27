@@ -15,6 +15,6 @@ MonoBehaviour:
   interactionName: Pato_Habitacion
   inkKnot: Pato_Habitacion
   isCollectable: 1
-  flagToSetOnCollect: Pato_Sophia
+  flagToSetOnCollect: Pato_Habitacion
   variableToIncrementOnCollect: Patos
   incrementAmount: 1
