@@ -1,7 +1,7 @@
 
 INCLUDE Joseph_Bibloteca.ink
 INCLUDE Epilogos.ink
-INCLUDE Joseph_Arcade..ink
+INCLUDE Joseph_Arcade.ink
 INCLUDE Joseph_Arcade_Camino2.ink
 INCLUDE Objects.ink
 INCLUDE Joseph_Bibloteca_Camino2.ink
