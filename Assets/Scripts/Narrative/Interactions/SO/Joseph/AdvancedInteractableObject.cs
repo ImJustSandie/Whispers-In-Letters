@@ -101,7 +101,7 @@ public class AdvancedInteractableObject : MonoBehaviour, IInteractable
                 if (!condition.IsMet())
                 {
                     gameObject.SetActive(false);
-                    Debug.Log($"[AdvancedInteractableObject] '{gameObject.name}' desactivado por condición de visibilidad inicial.");
+
                     return;
                 }
             }
@@ -113,7 +113,7 @@ public class AdvancedInteractableObject : MonoBehaviour, IInteractable
         if (disappearAfterDialogue && disappearCondition != null && disappearCondition.IsMet())
         {
             gameObject.SetActive(false);
-            Debug.Log($"[AdvancedInteractableObject] '{gameObject.name}' desactivado permanentemente porque su condición de desaparición ya se cumplió en el pasado.");
+
             return;
         }
     }
@@ -172,7 +172,7 @@ public class AdvancedInteractableObject : MonoBehaviour, IInteractable
 
             // 2. Desactivar el objeto mientras la pantalla está en negro
             gameObject.SetActive(false);
-            Debug.Log($"[AdvancedInteractableObject] '{gameObject.name}' desapareció con fade.");
+
 
             // 3. Pequeña pausa para que el estado sea estable
             yield return new WaitForSeconds(0.1f);
@@ -183,7 +183,7 @@ public class AdvancedInteractableObject : MonoBehaviour, IInteractable
         else
         {
             gameObject.SetActive(false);
-            Debug.LogWarning($"[AdvancedInteractableObject] '{gameObject.name}' desapareció sin fade (LevelManager no encontrado).");
+
         }
     }
 
@@ -200,7 +200,7 @@ public class AdvancedInteractableObject : MonoBehaviour, IInteractable
     {
         if (data == null)
         {
-            Debug.LogWarning("[AdvancedInteractableObject] Interactable sin data asignada en: " + gameObject.name);
+
             return;
         }
 
@@ -208,11 +208,11 @@ public class AdvancedInteractableObject : MonoBehaviour, IInteractable
 
         if (string.IsNullOrEmpty(knot))
         {
-            Debug.Log($"[AdvancedInteractableObject] Ninguna interacción válida en {data.interactionName}");
+
             return;
         }
 
-        Debug.Log("[AdvancedInteractableObject] Interact() ejecutado. Knot: '" + knot + "'");
+
 
         // Rotar hacia el jugador para que se sienta como una conversación real
         GameObject player = GameObject.FindWithTag("Player");
@@ -228,7 +228,7 @@ public class AdvancedInteractableObject : MonoBehaviour, IInteractable
 
         if (StoryManager.Instance == null)
         {
-            Debug.LogError("[AdvancedInteractableObject] StoryManager.Instance es NULL. ¿Está en la escena?");
+
             return;
         }
 

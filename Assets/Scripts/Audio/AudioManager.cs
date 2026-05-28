@@ -124,7 +124,7 @@ public class AudioManager : MonoBehaviour
     {
         if (audioEvent == null || audioEvent.clip == null)
         {
-            Debug.LogWarning("[AudioManager] Intento de reproducir un SFX con un AudioEvent o Clip nulo.");
+
             return;
         }
 

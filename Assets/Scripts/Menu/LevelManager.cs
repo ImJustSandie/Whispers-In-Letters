@@ -53,6 +53,16 @@ public class LevelManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        if (loadStopwatch.IsRunning)
+        {
+            loadStopwatch.Stop();
+
+        }
+        else
+        {
+
+        }
+
         if (!isTransitioning)
         {
             if (fadeCanvasGroup != null)
@@ -62,12 +72,11 @@ public class LevelManager : MonoBehaviour
                 fadeCanvasGroup.gameObject.SetActive(false);
             }
         }
-        
-        Debug.Log($"[LevelManager] Escena cargada: {scene.name}");
     }
 
     private bool isTransitioning = false;
     private Coroutine activeFadeRoutine;
+    private readonly System.Diagnostics.Stopwatch loadStopwatch = new System.Diagnostics.Stopwatch();
 
     /// <summary>
     /// Cambia a la escena indicada aplicando transiciones visuales.
@@ -176,11 +185,14 @@ public class LevelManager : MonoBehaviour
         }
 
         // 3. Carga asíncrona para no congelar el juego
+        loadStopwatch.Reset();
+        loadStopwatch.Start();
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
         
         if (asyncLoad == null)
         {
-            Debug.LogError($"[LevelManager] No se pudo cargar la escena '{sceneName}'. ¿Aseguraste agregarla en File -> Build Settings?");
+            loadStopwatch.Stop();
+
             isTransitioning = false;
             yield break; // Detener la corrutina para evitar errores
         }
@@ -193,6 +205,11 @@ public class LevelManager : MonoBehaviour
         // 3.5 Reubicar al jugador en el SpawnPoint correcto
         yield return null; // Esperar un frame para que todos los objetos de la nueva escena se inicialicen
         HandlePlayerSpawn();
+
+        // 3.6 Liberar assets huérfanos y forzar recolección de basura
+        yield return Resources.UnloadUnusedAssets();
+        GC.Collect();
+        GC.WaitForPendingFinalizers();
 
         // 4. Efecto Fade In (Aclarar pantalla)
         yield return StartCoroutine(FadeRoutine(1f, 0f, fadeDuration, false));
@@ -207,12 +224,12 @@ public class LevelManager : MonoBehaviour
     {
         if (GameManager.Instance == null || GameManager.Instance.GetGameState() == null)
         {
-            Debug.Log("[LevelManager] No hay GameManager/GameState. Spawn omitido.");
+
             return;
         }
 
         string previousScene = GameManager.Instance.GetGameState().previousSceneName;
-        Debug.Log($"[LevelManager] Buscando SpawnPoint para escena anterior: '{previousScene}'");
+
 
         if (string.IsNullOrEmpty(previousScene)) return;
 
@@ -220,17 +237,17 @@ public class LevelManager : MonoBehaviour
         GameObject player = GameObject.FindWithTag("Player");
         if (player == null)
         {
-            Debug.LogWarning("[LevelManager] No se encontro jugador con Tag 'Player' en la escena.");
+
             return;
         }
 
         // Buscar SpawnPoints
         SpawnPoint[] spawnPoints = UnityEngine.Object.FindObjectsByType<SpawnPoint>(FindObjectsSortMode.None);
-        Debug.Log($"[LevelManager] SpawnPoints encontrados: {spawnPoints.Length}");
+
 
         foreach (SpawnPoint sp in spawnPoints)
         {
-            Debug.Log($"[LevelManager] Comparando SpawnPoint '{sp.fromSceneName}' con '{previousScene}'");
+
 
             if (sp.fromSceneName.Trim().Equals(previousScene.Trim(), System.StringComparison.OrdinalIgnoreCase))
             {
@@ -243,11 +260,11 @@ public class LevelManager : MonoBehaviour
 
                 if (cc != null) cc.enabled = true;
 
-                Debug.Log($"[LevelManager] Jugador reubicado en SpawnPoint de '{previousScene}'");
+
                 return;
             }
         }
 
-        Debug.LogWarning($"[LevelManager] No se encontro SpawnPoint para '{previousScene}'.");
+
     }
 }

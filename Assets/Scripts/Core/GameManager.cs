@@ -36,6 +36,9 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             InitializeFromDisk();
             
+            Application.targetFrameRate = 60;
+            QualitySettings.vSyncCount = 0;
+
             // Verificación inicial de la UI al arrancar
             UpdateUIVisibility(SceneManager.GetActiveScene().name);
         }
@@ -70,7 +73,7 @@ public class GameManager : MonoBehaviour
             // Ocultar si estamos en el menú, mostrar en cualquier otra escena
             bool isMenu = sceneName == "Menu";
             hudObjects.SetActive(!isMenu);
-            Debug.Log($"[GameManager] UI Visibility actualizada. HUD activo: {!isMenu} (Escena: {sceneName})");
+
         }
     }
 
@@ -105,7 +108,7 @@ public class GameManager : MonoBehaviour
                 return;
             }
 
-            Debug.Log($"[GameManager] Save cargado en memoria. Última escena: '{gameState.currentSceneName}'");
+
         }
         else
         {
@@ -115,7 +118,7 @@ public class GameManager : MonoBehaviour
 
     private void ResetGameState()
     {
-        Debug.Log("[GameManager] Reiniciando estado y borrando save de disco.");
+
         gameState.ClearState();
         SaveSystem.DeleteSave();
     }
@@ -124,7 +127,7 @@ public class GameManager : MonoBehaviour
     {
         if (LevelManager.Instance == null)
         {
-            Debug.LogError("[GameManager] RequestLoadLevel: LevelManager no encontrado.");
+
             return;
         }
 
@@ -138,13 +141,13 @@ public class GameManager : MonoBehaviour
             gameState.currentSceneName != "Menu")
         {
             string targetScene = gameState.currentSceneName;
-            Debug.Log($"[GameManager] Reanudando partida en: '{targetScene}'");
+
             LevelManager.Instance.ChangeScene(targetScene);
         }
         else
         {
             ResetGameState();
-            Debug.Log($"[GameManager] Iniciando nueva partida en: '{baseSceneName}'");
+
             LevelManager.Instance.ChangeScene(baseSceneName);
         }
     }

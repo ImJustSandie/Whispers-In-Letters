@@ -32,7 +32,6 @@ public class InteractionIndicator : MonoBehaviour
         // Desparentar este script de cualquier objeto que lo mueva
         if (transform.parent != null)
         {
-            Debug.LogWarning("[InteractionIndicator] Desparentando de: " + transform.parent.name);
             transform.SetParent(null);
         }
 
@@ -47,14 +46,12 @@ public class InteractionIndicator : MonoBehaviour
                 // Si el Canvas tiene padre, desparentarlo para que esté en la raíz del mundo
                 if (iconRoot.parent != null)
                 {
-                    Debug.LogWarning("[InteractionIndicator] Desparentando Canvas del icon de: " + iconRoot.parent.name);
                     iconRoot.SetParent(null);
                 }
 
                 // Forzar World Space para que la posición world tenga efecto
                 if (canvas.renderMode != RenderMode.WorldSpace)
                 {
-                    Debug.LogWarning("[InteractionIndicator] Canvas del icon no es World Space. Cambiando a World Space.");
                     canvas.renderMode = RenderMode.WorldSpace;
                 }
             }
@@ -64,7 +61,6 @@ public class InteractionIndicator : MonoBehaviour
                 iconRoot = icon.transform;
                 if (iconRoot.parent != null)
                 {
-                    Debug.LogWarning("[InteractionIndicator] Desparentando icon de: " + iconRoot.parent.name);
                     iconRoot.SetParent(null);
                 }
             }
@@ -81,7 +77,6 @@ public class InteractionIndicator : MonoBehaviour
     {
         if (icon == null)
         {
-            Debug.LogError("[InteractionIndicator] 'icon' es null, asígnalo en el Inspector.");
             return;
         }
 
@@ -92,13 +87,11 @@ public class InteractionIndicator : MonoBehaviour
 
             bool activar = targetTransform != null;
             icon.SetActive(activar);
-            Debug.Log($"[InteractionIndicator] SetInteractable → {interactable.GetInteractionName()} | icon.SetActive({activar})");
         }
         else
         {
             targetTransform = null;
             icon.SetActive(false);
-            Debug.Log("[InteractionIndicator] SetInteractable → null | icon.SetActive(false)");
         }
     }
 
@@ -118,7 +111,6 @@ public class InteractionIndicator : MonoBehaviour
         {
             targetTransform = null;
             icon.SetActive(false);
-            Debug.Log("[InteractionIndicator] Interactuable desactivado → icon ocultado automáticamente.");
             return;
         }
 

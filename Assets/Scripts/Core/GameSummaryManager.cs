@@ -25,7 +25,7 @@ public class GameSummaryManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("[GameSummaryManager] StoryManager no encontrado en Start. Escuchando en el futuro...");
+
         }
     }
 
@@ -44,7 +44,7 @@ public class GameSummaryManager : MonoBehaviour
 
         if (GameManager.Instance != null && GameManager.Instance.GetStoryFlag("Final_Del_Dia"))
         {
-            Debug.Log("[GameSummaryManager] Detectado Final_Del_Dia. Mostrando resumen.");
+
             ShowGameSummary();
             
             // Removemos el flag para que no salte el panel repetidamente al cambiar de escena 
@@ -57,7 +57,7 @@ public class GameSummaryManager : MonoBehaviour
     {
         if (summaryUI == null)
         {
-            Debug.LogError("[GameSummaryManager] GameSummaryUI no asignado.");
+
             return;
         }
 
@@ -77,7 +77,7 @@ public class GameSummaryManager : MonoBehaviour
                     // Registrar permanentemente
                     PlayerPrefs.SetInt(PlayerPrefsKeys.EndingKey(entry.philosopherKey), 1);
                     PlayerPrefs.Save();
-                    Debug.Log($"[GameSummaryManager] Final guardado en PlayerPrefs: {entry.philosopherKey}");
+
                 }
             }
             

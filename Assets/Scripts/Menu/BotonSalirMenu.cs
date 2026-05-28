@@ -30,8 +30,6 @@ public class BotonSalirMenu : MonoBehaviour
         // 2. Reanudamos el tiempo (por si CerrarAjustes no lo hizo o no se encontró).
         Time.timeScale = 1f;
 
-        Debug.Log($"[BotonSalirMenu] Iniciando cambio de escena a: {nombreEscenaMenu}");
-
         // 2. Usamos el LevelManager para una transición fluida con fade.
         if (LevelManager.Instance != null)
         {
@@ -40,7 +38,6 @@ public class BotonSalirMenu : MonoBehaviour
         else
         {
             // Fallback por si el LevelManager no está en la escena (aunque debería ser Singleton persistente)
-            Debug.LogWarning("[BotonSalirMenu] LevelManager no encontrado. Usando carga directa.");
             UnityEngine.SceneManagement.SceneManager.LoadScene(nombreEscenaMenu);
         }
     }

@@ -23,11 +23,8 @@ public class InteractableTable : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        Debug.LogWarning("[InteractableTable] MÉTODO INTERACT LLAMADO CORRECTAMENTE.");
-
         if (panelController == null)
         {
-            Debug.LogError("[InteractableTable] No se ha asignado CardPanelController en el Inspector.");
             return;
         }
 
@@ -35,24 +32,14 @@ public class InteractableTable : MonoBehaviour, IInteractable
         {
             if (acceptanceEntry != null)
             {
-                Debug.LogWarning("[InteractableTable] Abriendo Acceptance Panel para: " + acceptanceEntry.displayName);
                 panelController.OpenSingle(StoryManager.Instance.Story, acceptanceEntry);
-            }
-            else
-            {
-                Debug.LogWarning("[InteractableTable] No hay datos de aceptación configurados en esta mesa.");
             }
         }
         else if (mode == TableMode.Reproach)
         {
             if (reproachEntries != null && reproachEntries.Count > 0)
             {
-                Debug.LogWarning("[InteractableTable] Abriendo Reproach Panel con " + reproachEntries.Count + " cartas.");
                 panelController.OpenMulti(StoryManager.Instance.Story, reproachEntries);
-            }
-            else
-            {
-                Debug.LogWarning("[InteractableTable] No hay datos de reproche configurados en esta mesa.");
             }
         }
     }

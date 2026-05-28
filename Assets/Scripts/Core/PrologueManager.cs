@@ -90,7 +90,7 @@ public class PrologueManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         bool active = IsPrologueActive;
-        Debug.Log($"[PrologueManager] Escena cargada: {scene.name}. Activo: {active}");
+
         
         if (!active) return;
 
@@ -111,7 +111,7 @@ public class PrologueManager : MonoBehaviour
             elapsed += Time.deltaTime;
             if (elapsed > timeout)
             {
-                Debug.LogError($"[PrologueManager] TIMEOUT: StoryManager no disponible tras {timeout}s en {sceneName}.");
+
                 yield break;
             }
             yield return null;
@@ -122,7 +122,7 @@ public class PrologueManager : MonoBehaviour
 
         if (GameManager.Instance == null)
         {
-            Debug.LogWarning("[PrologueManager] GameManager no disponible. Prólogo pausado.");
+
             yield break;
         }
 
@@ -152,10 +152,10 @@ public class PrologueManager : MonoBehaviour
         bool arcadeVisited = gm.GetStoryFlag(FLAG_ARCADE_VISITED);
         bool libVisited = gm.GetStoryFlag(FLAG_LIBRARY_VISITED);
 
-        Debug.Log($"[PrologueManager] --- REPORTE DE ESTADO ({sceneName}) ---");
-        Debug.Log($"- Escena: {sceneName}");
-        Debug.Log($"- Prólogo Activo (Basado en {FLAG_FINAL_SEEN}): {!isFinished}");
-        Debug.Log($"- Flags Internos -> Completed: {completed}, ArcadeVisited: {arcadeVisited}, LibVisited: {libVisited}");
+
+
+
+
     }
 
     // ─────────────────────────────────────────────────────────────────────────
@@ -167,7 +167,7 @@ public class PrologueManager : MonoBehaviour
         bool completed = GameManager.Instance.GetStoryFlag(FLAG_COMPLETED);
         bool arcadeVisited = GameManager.Instance.GetStoryFlag(FLAG_ARCADE_VISITED);
 
-        Debug.Log($"[PrologueManager] Parque: completed={completed}, arcadeVisited={arcadeVisited}");
+
 
         if (completed)
         {
@@ -221,7 +221,7 @@ public class PrologueManager : MonoBehaviour
     {
         GameManager.Instance.SetStoryFlag(FLAG_FINAL_SEEN, true);
         GameManager.Instance.SaveGame();
-        Debug.Log($"[PrologueManager] Prólogo completado. Marcando flag: {FLAG_FINAL_SEEN}");
+
     }
 
     // ─────────────────────────────────────────────────────────────────────────
@@ -232,17 +232,17 @@ public class PrologueManager : MonoBehaviour
     {
         if (StoryManager.Instance == null)
         {
-            Debug.LogError($"[PrologueManager] ERROR: StoryManager.Instance es NULO al intentar disparar '{knot}'.");
+
             return;
         }
 
         if (StoryManager.Instance.IsDialogueActive)
         {
-            Debug.LogWarning($"[PrologueManager] BLOQUEADO: Ya hay un diálogo activo. Ignorando KNOT: '{knot}'.");
+
             return;
         }
 
-        Debug.Log($"[PrologueManager] >>> DISPARANDO DIÁLOGO: '{knot}'");
+
         StoryManager.Instance.StartStory(knot);
     }
 }

@@ -139,7 +139,7 @@ public class PrologueItemInteractable : MonoBehaviour, IInteractable
     {
         if (GameManager.Instance == null)
         {
-            Debug.LogWarning("[PrologueItemInteractable] GameManager no disponible.");
+
             return;
         }
 
@@ -147,7 +147,7 @@ public class PrologueItemInteractable : MonoBehaviour, IInteractable
         if (!string.IsNullOrEmpty(flagToSetOnCollect) &&
             GameManager.Instance.GetStoryFlag(flagToSetOnCollect))
         {
-            Debug.Log($"[PrologueItemInteractable] '{interactionName}' ya fue recogido. Interacción ignorada.");
+
             gameObject.SetActive(false);
             return;
         }
@@ -161,7 +161,7 @@ public class PrologueItemInteractable : MonoBehaviour, IInteractable
             }
             else if (StoryManager.Instance == null)
             {
-                Debug.LogError("[PrologueItemInteractable] StoryManager.Instance es NULL.");
+
             }
         }
 
@@ -183,6 +183,6 @@ public class PrologueItemInteractable : MonoBehaviour, IInteractable
         // 5. El objeto desaparece
         gameObject.SetActive(false);
 
-        Debug.Log($"[PrologueItemInteractable] '{interactionName}' recogido. Flag: '{flagToSetOnCollect}'. Guardado.");
+
     }
 }

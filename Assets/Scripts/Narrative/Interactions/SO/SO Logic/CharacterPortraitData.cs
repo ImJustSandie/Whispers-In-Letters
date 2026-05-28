@@ -40,7 +40,7 @@ public class CharacterPortraitData : ScriptableObject
             return animState;
         }
 
-        Debug.LogWarning($"[CharacterPortraitData] No se encontro nombre de animacion con id: {id}");
+
         return string.Empty;
     }
 }

@@ -83,7 +83,7 @@ public class InteractableObject : MonoBehaviour, IInteractable
             GameManager.Instance.GetStoryFlag(data.flagToSetOnCollect))
         {
             gameObject.SetActive(false);
-            Debug.Log($"[InteractableObject] '{gameObject.name}' ya fue recogido. Desactivado.");
+
         }
     }
 
@@ -100,7 +100,7 @@ public class InteractableObject : MonoBehaviour, IInteractable
         bool shouldPulse = CanCollect();
         pulseAnimation.SetPulseEnabled(shouldPulse);
 
-        Debug.Log($"[InteractableObject] '{gameObject.name}' pulse: {shouldPulse}");
+
     }
 
     /// <summary>
@@ -138,7 +138,7 @@ public class InteractableObject : MonoBehaviour, IInteractable
         {
             if (GameManager.Instance == null || !GameManager.Instance.GetStoryFlag(requiredFlag))
             {
-                Debug.Log($"[InteractableObject] Interacción bloqueada. Falta el flag: {requiredFlag}");
+
 
                 if (!string.IsNullOrEmpty(fallbackKnot) && StoryManager.Instance != null)
                 {
@@ -151,7 +151,7 @@ public class InteractableObject : MonoBehaviour, IInteractable
 
         if (data == null)
         {
-            Debug.LogWarning("[InteractableObject] Interactable sin data asignada en: " + gameObject.name);
+
             return;
         }
 
@@ -163,11 +163,11 @@ public class InteractableObject : MonoBehaviour, IInteractable
         }
 
         // ── Modo narrativo normal ──
-        Debug.Log("[InteractableObject] Interact() ejecutado. Knot: '" + data.inkKnot + "'");
+
 
         if (StoryManager.Instance == null)
         {
-            Debug.LogError("[InteractableObject] StoryManager.Instance es NULL. ¿Está en la escena?");
+
             return;
         }
 
@@ -196,7 +196,7 @@ public class InteractableObject : MonoBehaviour, IInteractable
     {
         if (GameManager.Instance == null)
         {
-            Debug.LogWarning("[InteractableObject] GameManager no disponible para recolección.");
+
             return;
         }
 
@@ -204,7 +204,7 @@ public class InteractableObject : MonoBehaviour, IInteractable
         if (!string.IsNullOrEmpty(data.flagToSetOnCollect) &&
             GameManager.Instance.GetStoryFlag(data.flagToSetOnCollect))
         {
-            Debug.Log($"[InteractableObject] '{data.interactionName}' ya fue recogido. Interacción ignorada.");
+
             gameObject.SetActive(false);
             return;
         }
@@ -218,7 +218,7 @@ public class InteractableObject : MonoBehaviour, IInteractable
             }
             else if (StoryManager.Instance == null)
             {
-                Debug.LogError("[InteractableObject] StoryManager.Instance es NULL.");
+
             }
         }
 
@@ -232,7 +232,7 @@ public class InteractableObject : MonoBehaviour, IInteractable
         if (!string.IsNullOrEmpty(data.variableToIncrementOnCollect))
         {
             int newVal = GameManager.Instance.IncrementStoryVariable(data.variableToIncrementOnCollect, data.incrementAmount);
-            Debug.Log($"[InteractableObject] Variable '{data.variableToIncrementOnCollect}' incrementada a {newVal}.");
+
         }
 
         // 3. Checkpoint save — persistir inmediatamente
@@ -247,6 +247,6 @@ public class InteractableObject : MonoBehaviour, IInteractable
         // 5. El objeto desaparece
         gameObject.SetActive(false);
 
-        Debug.Log($"[InteractableObject] '{data.interactionName}' recogido. Flag: '{data.flagToSetOnCollect}'. Guardado.");
+
     }
 }

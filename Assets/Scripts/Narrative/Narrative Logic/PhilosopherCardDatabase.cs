@@ -29,7 +29,7 @@ public class PhilosopherCardDatabase : ScriptableObject
     {
         if (string.IsNullOrEmpty(ruta)) 
         {
-            Debug.LogWarning("[PhilosopherCardDatabase] GetByRuta recibió una ruta vacía o nula.");
+
             return null;
         }
 
@@ -38,7 +38,7 @@ public class PhilosopherCardDatabase : ScriptableObject
         
         if (found == null)
         {
-            Debug.LogWarning($"[PhilosopherCardDatabase] No se encontró coincidencia para '{trimmedRuta}'. Entradas disponibles: " + string.Join(", ", entries.ConvertAll(e => e.rutaValue)));
+
         }
 
         return found;

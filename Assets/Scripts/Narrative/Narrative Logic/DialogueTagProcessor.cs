@@ -57,7 +57,7 @@ public class DialogueTagProcessor : MonoBehaviour
                         {
                             // Si el tag es #setflag:conocio_sophia, guardamos "conocio_sophia" en el SO
                             GameManager.Instance.SetStoryFlag(tagValue, true);
-                            Debug.Log($"[Ink] Nueva decisión registrada en el GameState: {tagValue}");
+
                         }
                         break;
                         
@@ -66,7 +66,7 @@ public class DialogueTagProcessor : MonoBehaviour
                         {
                             // Elimina un flag dejándolo en falso
                             GameManager.Instance.SetStoryFlag(tagValue, false);
-                            Debug.Log($"[Ink] Decisión eliminada del GameState (borrada): {tagValue}");
+
                         }
                         break;
                         
@@ -77,7 +77,7 @@ public class DialogueTagProcessor : MonoBehaviour
                             string varVal = splitTag[2].Trim();
                             
                             GameManager.Instance.SetStoryVariable(varKey, varVal);
-                            Debug.Log($"[Ink] Variable mutada registrada: {varKey} = {varVal}");
+
                         }
                         break;
                         
@@ -87,7 +87,7 @@ public class DialogueTagProcessor : MonoBehaviour
                             int amount = 1;
                             if (splitTag.Length >= 3) int.TryParse(splitTag[2].Trim(), out amount);
                             int newVal = GameManager.Instance.IncrementStoryVariable(tagValue, amount);
-                            Debug.Log($"[Ink] Variable incrementada: {tagValue} = {newVal}");
+
                         }
                         break;
                         
@@ -143,7 +143,7 @@ public class DialogueTagProcessor : MonoBehaviour
     {
         if (string.IsNullOrEmpty(tagValue))
         {
-            Debug.LogWarning("[DialogueTagProcessor] Se recibió un tag #small_image sin valor.");
+
             return;
         }
 
@@ -159,7 +159,7 @@ public class DialogueTagProcessor : MonoBehaviour
 
         if (imageIds.Count > 3)
         {
-            Debug.LogWarning($"[DialogueTagProcessor] #small_image recibió {imageIds.Count} IDs, máximo 3. Se usarán los primeros 3.");
+
             imageIds = imageIds.GetRange(0, 3);
         }
 
@@ -170,7 +170,7 @@ public class DialogueTagProcessor : MonoBehaviour
     {
         if (string.IsNullOrEmpty(tagValue))
         {
-            Debug.LogWarning("[DialogueTagProcessor] Se recibió un tag #big_image sin valor.");
+
             return;
         }
 
@@ -181,11 +181,11 @@ public class DialogueTagProcessor : MonoBehaviour
     {
         if (string.IsNullOrEmpty(spriteId))
         {
-            Debug.LogWarning("[DialogueTagProcessor] Se recibió un tag #sprite sin valor o vacío.");
+
             return;
         }
 
-        Debug.Log($"[DialogueTagProcessor] Procesando ID de retrato: {spriteId}");
+
 
         // 1. Extraer nombre base del personaje (e.g. "sophia" de "sophia_happy")
         string[] parts = spriteId.Split('_');
@@ -197,7 +197,7 @@ public class DialogueTagProcessor : MonoBehaviour
         // 2. Procesar el retrato visual
         if (portraitData == null)
         {
-            Debug.LogWarning("[DialogueTagProcessor] No hay CharacterPortraitData asignado en el Inspector.");
+
             return;
         }
 
@@ -211,7 +211,7 @@ public class DialogueTagProcessor : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning($"[DialogueTagProcessor] El ID '{spriteId}' no tiene una animación asignada en el ScriptableObject.");
+
         }
     }
 }

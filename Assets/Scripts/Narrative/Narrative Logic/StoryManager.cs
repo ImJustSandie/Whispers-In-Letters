@@ -53,18 +53,25 @@ public class StoryManager : MonoBehaviour
         // Muy importante: Al cambiar de escena, la referencia al dialoguePanel se vuelve null/missing 
         // porque ese objeto pertenecía a la escena anterior. Debemos re-vincularlo.
         RefreshUIReferences();
+
+        // Al volver al menú, reiniciamos el estado del Story de Ink
+        // para evitar que el call stack interno acumule estado innecesariamente.
+        if (scene.name == "Menu")
+        {
+            ResetStoryState();
+        }
     }
 
     private void InitializeStory()
     {
         if (inkJSON == null)
         {
-            Debug.LogError("[StoryManager] inkJSON no esta asignado en el Inspector.");
+
             return;
         }
 
         story = new Story(inkJSON.text);
-        Debug.Log("[StoryManager] Story inicializado correctamente.");
+
 
         // Vincular funciones externas
         story.BindExternalFunction("GetFlag", (string flagName) => {
@@ -116,30 +123,42 @@ public class StoryManager : MonoBehaviour
                 // Limpiar la interfaz y flags pendientes (como el Fade Out)
                 uiController.ResetUI();
                 
-                Debug.Log($"[StoryManager] Referencias de UI vinculadas correctamente en {SceneManager.GetActiveScene().name}");
+
             }
             
             dialoguePanel.SetActive(false);
         }
         else
         {
-            Debug.LogWarning("[StoryManager] No se pudo encontrar el 'DialoguePanel' en esta escena.");
+
         }
+    }
+
+    public void ResetStoryState()
+    {
+        if (story != null)
+        {
+            story.UnbindExternalFunction("GetFlag");
+            story.UnbindExternalFunction("GetVar");
+        }
+
+        InitializeStory();
+
     }
 
     public void StartStory(string knot)
     {
-        Debug.Log("[StoryManager] StartStory llamado con knot: '" + knot + "'");
+
 
         if (string.IsNullOrEmpty(knot))
         {
-            Debug.LogWarning("[StoryManager] El knot esta vacio o nulo.");
+
             return;
         }
 
         if (dialogueActive)
         {
-            Debug.LogWarning("[StoryManager] Ya hay un dialogo activo. Ignorando nueva llamada.");
+
             return;
         }
 
@@ -165,7 +184,7 @@ public class StoryManager : MonoBehaviour
     {
         if (!dialogueActive)
         {
-            Debug.LogWarning("[StoryManager] AdvanceStory llamado sin dialogo activo.");
+
             return;
         }
 

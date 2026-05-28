@@ -67,7 +67,7 @@ public class PulseAnimation : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("[PulseAnimation] No se encontró un Renderer en este GameObject.");
+
         }
     }
 

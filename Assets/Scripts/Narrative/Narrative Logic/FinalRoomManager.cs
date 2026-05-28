@@ -27,7 +27,7 @@ public class FinalRoomManager : MonoBehaviour
     {
         if (StoryManager.Instance == null || cardDatabase == null)
         {
-            Debug.LogError("[FinalRoomManager] StoryManager o CardDatabase no encontrados.");
+
             return;
         }
 
@@ -39,7 +39,7 @@ public class FinalRoomManager : MonoBehaviour
         if (GameManager.Instance != null)
         {
             currentRuta = GameManager.Instance.GetStoryVariable("ruta");
-            Debug.Log("[FinalRoomManager] Ruta recuperada del GameManager: '" + currentRuta + "'");
+
             
             // Sincronizar la variable interna de Ink SOLO si está declarada en el archivo .ink
             if (!string.IsNullOrEmpty(currentRuta))
@@ -47,14 +47,14 @@ public class FinalRoomManager : MonoBehaviour
                 try {
                     story.variablesState["ruta"] = currentRuta;
                 } catch {
-                    Debug.LogWarning("[FinalRoomManager] La variable 'ruta' no está declarada en el archivo Ink. Ignorando sincronización interna.");
+
                 }
             }
         }
 
         if (string.IsNullOrEmpty(currentRuta))
         {
-            Debug.LogWarning("[FinalRoomManager] No se encontró la variable 'ruta' en el GameManager. Usando fallback.");
+
             // Intentar leer de Ink como último recurso
             try {
                 if (story.variablesState["ruta"] != null)
@@ -67,11 +67,11 @@ public class FinalRoomManager : MonoBehaviour
         if (acceptanceEntry != null)
         {
             table1.SetupAcceptance(acceptanceEntry);
-            Debug.Log("[FinalRoomManager] Mesa 1 configurada para: " + acceptanceEntry.displayName);
+
         }
         else
         {
-            Debug.LogError("[FinalRoomManager] Mesa 1 NO pudo configurarse. 'acceptanceEntry' es null para ruta: " + currentRuta);
+
         }
 
         // Obtener los otros 3 filósofos (reproche)
@@ -79,11 +79,11 @@ public class FinalRoomManager : MonoBehaviour
         if (reproachEntries.Count > 0)
         {
             table2.SetupReproach(reproachEntries);
-            Debug.Log("[FinalRoomManager] Mesa 2 configurada con " + reproachEntries.Count + " reproches.");
+
         }
         else
         {
-            Debug.LogError("[FinalRoomManager] Mesa 2 NO pudo configurarse. 'reproachEntries' está vacío.");
+
         }
     }
 }

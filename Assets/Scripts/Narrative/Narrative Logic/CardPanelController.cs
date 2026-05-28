@@ -102,12 +102,12 @@ public class CardPanelController : MonoBehaviour
                 cardImage.sprite = targetSprite;
                 cardImage.preserveAspect = true;
                 cardImage.gameObject.SetActive(true);
-                Debug.Log($"[CardPanelController] Sprite asignado para '{entry.displayName}': {targetSprite.name}");
+
             }
             else
             {
                 cardImage.gameObject.SetActive(false);
-                Debug.LogWarning($"[CardPanelController] La entrada '{entry.displayName}' no tiene {(isAcceptance ? "cardSprite" : "silhouetteSprite")} asignado.");
+
             }
         }
 
@@ -117,16 +117,16 @@ public class CardPanelController : MonoBehaviour
             if (entry.backgroundSprite != null)
             {
                 backgroundImage.sprite = entry.backgroundSprite;
-                Debug.Log($"[CardPanelController] Fondo asignado para '{entry.displayName}': {entry.backgroundSprite.name}");
+
             }
             else
             {
-                Debug.LogWarning($"[CardPanelController] La entrada '{entry.displayName}' no tiene backgroundSprite asignado.");
+
             }
         }
         else
         {
-            Debug.LogWarning("[CardPanelController] backgroundImage no está asignado en el Inspector.");
+
         }
 
         string knot = isAcceptance ? entry.acceptanceKnot : entry.reprocheKnot;

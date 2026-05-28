@@ -34,16 +34,13 @@ public class PlayerManager : MonoBehaviour
         // 1. Verificar que el GameManager exista
         if (GameManager.Instance == null || GameManager.Instance.GetGameState() == null)
         {
-            Debug.Log("[PlayerManager] No hay GameManager o GameState. Spawn cancelado.");
             return;
         }
 
         string previousScene = GameManager.Instance.GetGameState().previousSceneName;
-        Debug.Log($"[PlayerManager] Escena anterior registrada: '{previousScene}'");
 
         if (string.IsNullOrEmpty(previousScene))
         {
-            Debug.Log("[PlayerManager] No hay escena anterior (primera carga del juego). Posicion base mantenida.");
             return;
         }
 
@@ -51,28 +48,21 @@ public class PlayerManager : MonoBehaviour
         GameObject player = GetPlayerReference();
         if (player == null)
         {
-            Debug.LogWarning("[PlayerManager] No se encontro al jugador. Asegurate de asignar la referencia o de que tenga el Tag 'Player'.");
             return;
         }
 
         // 3. Buscar todos los SpawnPoints en la escena
         SpawnPoint[] spawnPoints = Object.FindObjectsByType<SpawnPoint>(FindObjectsSortMode.None);
-        Debug.Log($"[PlayerManager] Se encontraron {spawnPoints.Length} SpawnPoint(s) en la escena.");
 
         foreach (SpawnPoint sp in spawnPoints)
         {
-            Debug.Log($"[PlayerManager] Comparando SpawnPoint '{sp.fromSceneName}' con escena anterior '{previousScene}'");
-
-            // Comparacion robusta: sin importar mayusculas ni espacios
             if (sp.fromSceneName.Trim().Equals(previousScene.Trim(), System.StringComparison.OrdinalIgnoreCase))
             {
                 TeleportPlayer(player, sp.transform.position, sp.transform.rotation);
-                Debug.Log($"[PlayerManager] Jugador spawneado en SpawnPoint correspondiente a: '{previousScene}'");
                 return;
             }
         }
 
-        Debug.LogWarning($"[PlayerManager] No se encontro SpawnPoint con fromSceneName='{previousScene}'. Posicion base mantenida.");
     }
 
     /// <summary>

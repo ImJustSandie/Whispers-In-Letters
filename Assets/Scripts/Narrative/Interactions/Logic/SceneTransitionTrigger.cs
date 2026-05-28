@@ -71,7 +71,7 @@ public class SceneTransitionTrigger : MonoBehaviour
             // 3. Si todas las condiciones pasaron, verificar diálogo de confirmación
             if (!string.IsNullOrEmpty(confirmationKnot))
             {
-                Debug.Log($"[SceneTransition] Iniciando diálogo de confirmación: {confirmationKnot}");
+
                 if (StoryManager.Instance != null)
                 {
                     StoryManager.Instance.StartStory(confirmationKnot);
@@ -84,19 +84,19 @@ public class SceneTransitionTrigger : MonoBehaviour
             if (LevelManager.Instance != null && !string.IsNullOrEmpty(destinationSceneName))
             {
                 isTransitioning = true;
-                Debug.Log($"[SceneTransition] Sophia toco la zona. Viajando hacia: {destinationSceneName}");
+
                 LevelManager.Instance.ChangeScene(destinationSceneName);
             }
             else
             {
-                Debug.LogWarning("[SceneTransition] No hay un LevelManager instanciado o la escena de destino esta en blanco.");
+
             }
         }
     }
 
     private void HandleAccessDenied(string flag, string knot)
     {
-        Debug.Log($"[SceneTransition] Acceso denegado. Falta el flag: {flag}");
+
         if (!string.IsNullOrEmpty(knot) && StoryManager.Instance != null)
         {
             StoryManager.Instance.StartStory(knot);
@@ -155,7 +155,7 @@ public class SceneTransitionTrigger : MonoBehaviour
 
         if (pm != null) pm.enabled = true;
         isPushingBack = false;
-        Debug.Log("[SceneTransition] Retroceso natural completado después del diálogo.");
+
     }
     
     // Descomenta esto y borra la funcion de arriba si tu juego es estrictamente 2D

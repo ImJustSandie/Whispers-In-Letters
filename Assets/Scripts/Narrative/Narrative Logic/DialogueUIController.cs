@@ -96,7 +96,7 @@ public class DialogueUIController : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("[DialogueUIController] No hay un TagProcessor asignado. Los tags de #sonido y #sprite no funcionarán.");
+
         }
 
         // Asegurarse de ocultar inicialmente la imagen de retrato
@@ -108,6 +108,12 @@ public class DialogueUIController : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (typewriterCoroutine != null)
+        {
+            StopCoroutine(typewriterCoroutine);
+            typewriterCoroutine = null;
+        }
+
         if (tagProcessor != null)
         {
             tagProcessor.OnPortraitAnimationChanged -= UpdatePortraitAnimation;
@@ -136,12 +142,12 @@ public class DialogueUIController : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogWarning($"[DialogueUIController] El tag #sonido:{soundId} se detectó, pero el AudioEvent no tiene un Clip asignado.");
+
                 }
             }
             else
             {
-                Debug.LogWarning($"[DialogueUIController] Se detectó el tag #sonido:{soundId}, pero el AudioEvent en la lista Dialogue Sounds es NULL.");
+
             }
 
             // Guardar la onomatopeya para inyectarla si la línea de texto está vacía
@@ -152,7 +158,7 @@ public class DialogueUIController : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning($"[DialogueUIController] Se llamó al tag #sonido:{soundId}, pero esa ID no existe en la lista 'Dialogue Sounds' del Inspector.");
+
         }
     }
 
@@ -162,7 +168,7 @@ public class DialogueUIController : MonoBehaviour
 
         if (smallImageContainer == null || smallImagePrefab == null)
         {
-            Debug.LogWarning("[DialogueUIController] smallImageContainer o smallImagePrefab no asignados.");
+
             return;
         }
 
@@ -174,7 +180,7 @@ public class DialogueUIController : MonoBehaviour
 
             if (sprite == null)
             {
-                Debug.LogWarning($"[DialogueUIController] #small_image: '{id}' no encontrado en la base de datos.");
+
                 continue;
             }
 
@@ -196,7 +202,7 @@ public class DialogueUIController : MonoBehaviour
 
         if (bigImageDisplay == null)
         {
-            Debug.LogWarning("[DialogueUIController] bigImageDisplay no asignado.");
+
             return;
         }
 
@@ -205,7 +211,7 @@ public class DialogueUIController : MonoBehaviour
 
         if (sprite == null)
         {
-            Debug.LogWarning($"[DialogueUIController] #big_image: '{imageId}' no encontrado en la base de datos.");
+
             return;
         }
 
@@ -564,6 +570,11 @@ public class DialogueUIController : MonoBehaviour
     {
         foreach (Transform child in choicesContainer)
         {
+            Button btn = child.GetComponent<Button>();
+            if (btn != null)
+            {
+                btn.onClick.RemoveAllListeners();
+            }
             Destroy(child.gameObject);
         }
 

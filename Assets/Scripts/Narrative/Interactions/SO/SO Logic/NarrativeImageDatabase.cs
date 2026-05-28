@@ -37,7 +37,7 @@ public class NarrativeImageDatabase : ScriptableObject
     {
         if (string.IsNullOrEmpty(id))
         {
-            Debug.LogWarning("[NarrativeImageDatabase] GetImage recibió un ID vacío o nulo.");
+
             return null;
         }
 
@@ -49,7 +49,7 @@ public class NarrativeImageDatabase : ScriptableObject
             return sprite;
         }
 
-        Debug.LogWarning($"[NarrativeImageDatabase] No se encontró una imagen con ID: '{id}'. IDs disponibles: {string.Join(", ", entries.ConvertAll(e => e.id))}");
+
         return null;
     }
 }
