@@ -15,21 +15,21 @@ MonoBehaviour:
   ducks:
   - duckName: 'Pato_Arcade '
     flagName: 'Pato_Arcade '
-    collectedSprite: {fileID: 21300000, guid: bae5ee95d3a2aed4090e0b369a838549, type: 3}
-    lockedSprite: {fileID: 21300000, guid: 762d9ecb201bb7743a527c8a24c77db2, type: 3}
+    collectedSprite: {fileID: 21300000, guid: 04619b98c53bb7042b2aadced131af9c, type: 3}
+    lockedSprite: {fileID: 21300000, guid: 7e62a219a8331c8449acdf28da55b831, type: 3}
   - duckName: Pato_Parque2
     flagName: Pato_Parque2
-    collectedSprite: {fileID: 21300000, guid: 51eea430a92b0d244a5718a924352693, type: 3}
-    lockedSprite: {fileID: 21300000, guid: 762d9ecb201bb7743a527c8a24c77db2, type: 3}
+    collectedSprite: {fileID: 21300000, guid: 2b3c1ae725ea14943b80d6a73eb8dff8, type: 3}
+    lockedSprite: {fileID: 21300000, guid: 3fe24020eba65c24dac6f10f0ff3326a, type: 3}
   - duckName: Pato_Parque1
     flagName: Pato_Parque1
-    collectedSprite: {fileID: 21300000, guid: 6945712774cee4045b3c387f80e02e6b, type: 3}
-    lockedSprite: {fileID: 21300000, guid: 762d9ecb201bb7743a527c8a24c77db2, type: 3}
+    collectedSprite: {fileID: 21300000, guid: 72d46a3ab1707354c944f7db996e4034, type: 3}
+    lockedSprite: {fileID: 21300000, guid: 399e65437b36358429cd9c65cf665599, type: 3}
   - duckName: Pato_Biblioteca
     flagName: Pato_Biblioteca
-    collectedSprite: {fileID: 21300000, guid: dcba12ab8add5ff40a4b53d33d47e0e0, type: 3}
-    lockedSprite: {fileID: 21300000, guid: 762d9ecb201bb7743a527c8a24c77db2, type: 3}
+    collectedSprite: {fileID: 21300000, guid: ab1c248129001e04da010b920510171c, type: 3}
+    lockedSprite: {fileID: 21300000, guid: dc73977b20e4b1f43a0ba316258e3e9f, type: 3}
   - duckName: Pato_Habitacion
     flagName: Pato_Habitacion
-    collectedSprite: {fileID: 21300000, guid: 5640f15e0054ff44f8070127c377b97f, type: 3}
-    lockedSprite: {fileID: 21300000, guid: 762d9ecb201bb7743a527c8a24c77db2, type: 3}
+    collectedSprite: {fileID: 21300000, guid: 70679e2b0ff3eb9429232b8ea6e37e39, type: 3}
+    lockedSprite: {fileID: 21300000, guid: 16c6020d82cdfd745a5b7ec8e0a08eaa, type: 3}
