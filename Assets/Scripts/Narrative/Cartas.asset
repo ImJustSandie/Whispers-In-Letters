@@ -19,7 +19,7 @@ MonoBehaviour:
     reprocheKnot: epilogo_schopenhauer_reproche
     reflectionKnot: reflexion_schopenhauer
     cardSprite: {fileID: 21300000, guid: 846be4f6baa7b07469ec3fca7d3038d2, type: 3}
-    backgroundSprite: {fileID: 21300000, guid: 527ef593db7698d4cb6739968b096424, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 213ff64633e06b346b711295332a0a8b, type: 3}
     displayName: Arthur Schopenhauer
   - philosopherKey: Hegel
     rutaValue: epilogo2
@@ -27,7 +27,7 @@ MonoBehaviour:
     reprocheKnot: epilogo_hegel_reproche
     reflectionKnot: reflexion_hegel
     cardSprite: {fileID: 21300000, guid: d8e1411fb5323044bb517f6047902efa, type: 3}
-    backgroundSprite: {fileID: 21300000, guid: bc16fa556a4c0f3449cc84c2a6633e43, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 946d8d993475b1f468462a8a5ad41581, type: 3}
     displayName: Friedrich Hegel
   - philosopherKey: Estoicos
     rutaValue: Epilogo3
@@ -35,7 +35,7 @@ MonoBehaviour:
     reprocheKnot: epilogo_estoicos_reproche
     reflectionKnot: reflexion_estoicos
     cardSprite: {fileID: 21300000, guid: 0f5ca32246387dc4daed374d8643a1bb, type: 3}
-    backgroundSprite: {fileID: 21300000, guid: 4b418494aea646249b5da0cbdb74a1a6, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 530f717c03d709d4e95c6d883b738004, type: 3}
     displayName: Estoicos
   - philosopherKey: Nietzsche
     rutaValue: Epilogo4
@@ -43,5 +43,5 @@ MonoBehaviour:
     reprocheKnot: epilogo_nietzsche_reproche
     reflectionKnot: reflexion_nietzsche
     cardSprite: {fileID: 21300000, guid: fd2df094a03d70842a4e8505d5223bd0, type: 3}
-    backgroundSprite: {fileID: 21300000, guid: 4cb0a7f79086d0b4392b4618ad437491, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 4d23d4a542c9ca6439d5a9ba8c64cab3, type: 3}
     displayName: Friedrich Nietzsche
