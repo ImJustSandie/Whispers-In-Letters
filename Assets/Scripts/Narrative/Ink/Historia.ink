@@ -130,10 +130,12 @@ Dos horas bastan para cambiar el rumbo del día.
 ¿Que deberia hacer con Joseph?
   + [Ir al arcade]
      #setvar:ruta:arcade
+     #setflag: Decision_Tomada
      Le diré a Joseph de ir al arcade.
      -> Joseph_Arcade_Prologo
   + [Ir a la biblioteca]
      #setvar:ruta:biblioteca
+     #setflag: Decision_Tomada
      Le diré a Joseph de ir a la Biblioteca.
      -> Joseph_Bibloteca_Prologo
   + [Mas tarde decidir]

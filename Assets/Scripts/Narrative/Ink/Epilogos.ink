@@ -45,21 +45,21 @@ Por fin alguien que se atreve. Comprendiste que la libertad no es un permiso, si
 #setflag:epilogo_schopenhauer_reproche
 Sophia: #setflag:Carta_Leida
 ¿Por qué te has empeñado en aumentar el sufrimiento de ese muchacho al obligarlo a hacer algo que no le gusta?, ¿Qué hubiera pasado si le hubieras permitido soltar sus cadenas a Joseph?, solo has prolongado su agonía en un mar de aburrimiento. Recuerda que la verdadera libertad es…
-…Arthur Schopenhauer
+…A.S
 -> END
 
 === epilogo_hegel_reproche ===
 #setflag:epilogo_hegel_reproche
 Sophia: #setflag:Carta_Leida
 Has cometido un error, has fallado en tu deber como guía. Permitiste que Joseph cayera en una falsa libertad, alejándolo del orden de la Razón. Sin embargo, en medio de su extravío, él puede comenzar a comprender que la verdadera libertad es…
-…Georg Wilhelm Friedrich Hegel
+…G.W.F.H
 ->END
 === epilogo_estoicos_reproche===
 #setflag:epilogo_estoicos_reproche
 
 Sophia: #setflag:Carta_Leida
 Perdiste la oportunidad de forjar un carácter inquebrantable. Obligaste a Joseph a encajar en un molde. Mejor déjate llevar por las circunstancias y no luches contra ellas. La verdadera libertad es…
-…Filósofos Estoicos
+…F.E.
 
 -> END
 
@@ -69,7 +69,7 @@ Perdiste la oportunidad de forjar un carácter inquebrantable. Obligaste a Josep
 Sophia: #setflag:Carta_Leida
 
 ¡Qué decepción! Caíste en el falso camino de lo que es la libertad, le impusiste a Joseph la "verdad" de otros, traicionaste tu propia voluntad. Has olvidado que el hombre es algo que debe ser superado, no algo que debe ser domesticado. No olvides que la verdadera libertad es…   
-…Friedrich Nietzsche
+…F.N
 
 -> END
 
