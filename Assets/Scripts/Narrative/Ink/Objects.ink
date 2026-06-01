@@ -206,22 +206,22 @@ Creo que quiero guardarlo por ahora
 // ==========================================
 
 === NPC_01 ===
-#sprite: sophia_euforic
+#sprite: NPC_01
 ¡No puede ser! Otra vez se quedó a uno de vida y me morí
 -> END
 
 === NPC_02 ===
-#sprite: sophia_euforic
+#sprite: NPC_02
 Ojalá el autor de este libro estuviera vivo para que me explicara qué rayos quiso decir.
 -> END
 
 === NPC_03 ===
-#sprite: sophia_euforic
+#sprite: NPC_03
 Negrito, eso es una pregunta capciosa, tienes que leerte el libro.
 -> END
 
 === NPC_04 ===
-#sprite: sophia_euforic
+#sprite: NPC_04
 ! Si, Gane!, voy 1 victoria y 99 derrotas el día de hoy
 -> END
 
