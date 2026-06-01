@@ -16,4 +16,16 @@ MonoBehaviour:
   - id: sophia
     sprite: {fileID: -838743899, guid: 62180e426696e1b4aad4e8081a5e804f, type: 3}
   - id: Control_Arcade
-    sprite: {fileID: 21300000, guid: c66be9dfdf6108f43b1118997f861150, type: 3}
+    sprite: {fileID: -1905725234, guid: ede602ebb041e64458646537b8549dad, type: 3}
+  - id: Pizza_Arcade
+    sprite: {fileID: 1465793431, guid: 2904de02c7112d948940f0d82801dcb1, type: 3}
+  - id: Maquina_Arcade
+    sprite: {fileID: -424315801, guid: c78200dfae9383345b388f463c3c00b7, type: 3}
+  - id: Libro_Biblioteca_01
+    sprite: {fileID: -1799840502, guid: fe6050470ff06954ea50281ede9d44d1, type: 3}
+  - id: Libro_Biblioteca_02
+    sprite: {fileID: 571851324, guid: 51dc23c2623b1264e8c6539a6c2361ed, type: 3}
+  - id: Libros_Biblioteca
+    sprite: {fileID: -990434025, guid: f5dffcd181fdd6947aaaaa83dcace6dc, type: 3}
+  - id: Luz_Parque
+    sprite: {fileID: -1136991013, guid: f313a9d6490dd114f83d7a8d695b73ac, type: 3}

@@ -57,10 +57,11 @@ Vamos, tiene que estar por aquí en algún lado...
 -> END
 
 === prologo_biblioteca_recoger_obj ===
-#sprite:sophia_euforic
-#sonido:sophia_risa
+#sprite: sophia_euforic
+#sonido: sophia_risa
+#big_image: Libro_Biblioteca_01
 ¡Lo encontré!
-#sprite:sophia_neutral
+#sprite: sophia_neutral
 #setflag:prologue_completed
 #setvar:ruta:Inicio
 Bien. Ya tengo todo lo que necesitaba.

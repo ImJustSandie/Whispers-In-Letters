@@ -234,6 +234,7 @@ Negrito, eso es una pregunta capciosa, tienes que leerte el libro.
 #sprite:sophia_happy
 #sonido:sophia_risa
 #setflag:Activ_Arcade_1
+#big_image: Pizza_Arcade
 Aquí está la pizza. Joseph se pondrá contento.
 -> END
 
@@ -257,11 +258,13 @@ Joseph aún no me ha pedido que juegue con él. Mejor esperar a que me lo pida.
     - GetVar("ruta") == "desicion3":
         #sprite: sophia_happy
         #setflag:Activ_Arcade_3
+        #big_image: Maquina_Arcade
         Una partida más para entender bien lo que Joseph ve en esto.
         -> END
     - GetVar("ruta") == "desicion2":
         #sprite:sophia_happy
         #setflag:Activ_Arcade_2
+        #big_image: Maquina_Arcade
         Voy a jugar una partida para entender lo que Joseph siente aquí.
         -> END
     - else:
@@ -277,6 +280,7 @@ Joseph aún no me ha pedido que juegue con él. Mejor esperar a que me lo pida.
 ===Activ_Libro_Leyes===
 #setflag:Activ_Biblio_1
 #sprite:sophia_happy
+#big_image: Libro_Biblioteca_02
 Aquí está el libro de derecho. Joseph lo pidió, esto le ayudará a familiarizarse con la materia.
 -> END
 
@@ -296,11 +300,13 @@ La república, el príncipe, leviatán... Es curioso como los filosofos hablaban
     - GetVar("ruta") == "decision_biblioteca_3":
         #setflag:Activ_Biblio_3
         #sprite:sophia_neutral
+        #big_image: Libros_Biblioteca
         Repasaré estos apuntes una vez más antes de decidir.
         -> END
     - GetVar("ruta") == "decision_biblioteca_2":
         #setflag:Activ_Biblio_2
         #sprite:sophia_neutral
+        #big_image: Libros_Biblioteca
         Revisaré estos apuntes para entender mejor cómo ayudar a Joseph con su estudio.
         -> END
     - else:

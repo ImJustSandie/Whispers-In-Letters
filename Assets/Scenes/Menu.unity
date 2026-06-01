@@ -1789,6 +1789,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 5638436678370919060, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5717404283936305658, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -150.99997
