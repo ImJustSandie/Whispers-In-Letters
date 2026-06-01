@@ -54,12 +54,13 @@ Debería seguir mirando por aquí.
 La biblioteca. Siempre tan tranquila a esta hora.
 #sprite:sophia_thinking
 Vamos, tiene que estar por aquí en algún lado...
+#big_image: Libro_Biblioteca_01
+Creo que ya lo vi...
 -> END
 
 === prologo_biblioteca_recoger_obj ===
 #sprite: sophia_euforic
 #sonido: sophia_risa
-#big_image: Libro_Biblioteca_01
 ¡Lo encontré!
 #sprite: sophia_neutral
 #setflag:prologue_completed

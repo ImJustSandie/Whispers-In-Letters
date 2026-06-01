@@ -84,6 +84,7 @@ Hazlo por curiosidad.
 #setvar:ruta:Decision_Biblioteca_1
 #setflag:Decision_Biblioteca_1
 #sprite:sophia_happy
+#big_image: Libro_Biblioteca_02
 Claro, voy a buscarlo. Espérame aquí debe estar en una estanteria.
 -> END
 
@@ -188,6 +189,7 @@ Claro. No vas a estar solo en esto.
 #sprite:joseph_neutral
 Está bien... peor es no intentarlo.
 #sprite:sophia_happy
+#big_image: Libros_Biblioteca
 Deberia repasar los temas en una mesa para estar mas comoda
 
 -> END

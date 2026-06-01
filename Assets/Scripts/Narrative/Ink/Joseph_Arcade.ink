@@ -98,6 +98,7 @@ Oye… ¿no podrías ir a buscar algo de comer? Una pizza me vendría increíble
 #setvar:ruta:desicion_Arcade_1
 #setflag:Desicion1_Arcade
 #sprite:sophia_happy
+#big_image: Pizza_Arcade
 Buena idea. Voy por una pizza, espérame aquí.
 
 -> END
