@@ -18,8 +18,6 @@
 | [**7**](#capítulo-7-guía-de-creación-de-contenido) | Guía de Creación de Contenido — Pipelines, checklists, riesgos |
 | [**8**](#capítulo-8-convenciones-técnicas-y-reglas-arquitectónicas) | Convenciones Técnicas — Código, Ink, buenas prácticas, deuda técnica |
 
-> **Documentación externa:** [`docs/README.md`](docs/README.md) — tabla de sistemas, roadmap.
-
 ---
 
 ## Capítulo 1: Arquitectura General
@@ -51,7 +49,7 @@ graph TB
         UIA[UIAjustes] --> AM
     end
     SM --> DUC --> DTP
-    linkStyle default stroke:#666;stroke-width:1px
+    linkStyle default stroke:#666,stroke-width:1px
 ```
 
 | Manager | Dependencias |
@@ -76,11 +74,63 @@ graph TB
 - LevelManager: ResetFade() (si no está en transición)
 - PrologueManager: HandleSceneRoutine() (evalúa flags del prólogo)
 
+#### Diagrama 1.1: Secuencia de inicio del juego
+
+```mermaid
+sequenceDiagram
+    participant GM as GameManager
+    participant SS as SaveSystem
+    participant GSO as GameStateSO
+    participant AM as AudioManager
+    participant SM as StoryManager
+    participant LM as LevelManager
+    participant PM as PrologueManager
+
+    GM->>SS: SaveSystem.Load()
+    SS-->>GM: GameSaveData
+    GM->>GSO: LoadFrom(data) / ClearState()
+    AM->>AM: LoadVolumes() desde PlayerPrefs
+    SM->>SM: InitializeStory() + BindExternalFunctions()
+    SM->>GM: GetFlag / GetVar bindings
+    LM->>LM: Configurar fade canvas (apagado)
+    PM->>PM: DontDestroyOnLoad + Awake()
+    GM->>GM: UpdateUIVisibility("Menu")
+```
+
+> **Explicación:** Muestra el orden de inicialización de los managers en su Awake(). GameManager es el primero en restaurar el estado desde save, seguido de AudioManager, StoryManager (que vincula funciones externas a GameManager), LevelManager y PrologueManager. Finalmente se actualiza la UI según la escena.
+
 **Comunicación entre sistemas:**
 1. **Eventos C# nativos** — DialogueTagProcessor → DialogueUIController, OnDialogueStateChanged (GameSummaryManager, AdvancedInteractableObject), OnInteractableChanged (InteractionIndicatorConnector)
 2. **Referencias directas a singleton** — Patrón dominante (~10-13 clases por manager)
 3. **Funciones externas de Ink** — StoryManager vincula GetFlag/GetVar al GameManager
 4. **Tags Ink como comandos** — #scene:, #setflag:, #sonido: → DialogueTagProcessor → manager destino
+
+#### Diagrama 1.2: Vías de comunicación entre sistemas
+
+```mermaid
+graph TB
+    subgraph Comunicacion["Vías de comunicación"]
+        E["Eventos C# nativos"] --> DTP[DialogueTagProcessor]
+        E --> DUC[DialogueUIController]
+        E --> GMS[GameSummaryManager]
+        E --> AIO[AdvancedInteractableObject]
+
+        REF[Referencias directas singleton] --> GM[GameManager ~13 clases]
+        REF --> SM[StoryManager ~10 clases]
+
+        INK[Funciones externas Ink] --> SM
+        SM --> GM
+        INK -->|GetFlag / GetVar| GM
+
+        TAGS[Tags Ink como comandos] --> DTP
+        DTP --> GM
+        DTP --> LM[LevelManager]
+        DTP --> DUC
+    end
+    linkStyle default stroke:#666,stroke-width:1px
+```
+
+> **Explicación:** Mapa de las 4 vías de comunicación entre sistemas. Resalta el acoplamiento actual: GameManager y StoryManager como hubs centrales recibiendo referencias directas de múltiples clases, mientras eventos y tags distribuyen carga hacia DialogueTagProcessor como intermediario.
 
 **Dependencias fuertes:**
 - GameManager: referenciado por ~13 clases (God Object incipiente)
@@ -108,6 +158,24 @@ Arquitectura en 4 capas: Ink (.ink → .json) → StoryManager (motor Unity) →
 | `Epilogos.ink` | 75 | 8 | Cartas de filósofos |
 
 Todos incluidos vía `INCLUDE` desde `Historia.ink`, compilado a `Historia.json`.
+
+#### Diagrama 2.1: Árbol de inclusión de archivos Ink
+
+```mermaid
+graph BT
+    subgraph INCLUDE["INCLUDE tree"]
+        HP["Historia.ink<br/>entry point"] --> PR[Prologo.ink]
+        HP --> OB[Objects.ink]
+        HP --> JA[Joseph_Arcade.ink]
+        HP --> JA2[Joseph_Arcade_Camino2.ink]
+        HP --> JB[Joseph_Bibloteca.ink]
+        HP --> JB2[Joseph_Bibloteca_Camino2.ink]
+        HP --> EP[Epilogos.ink]
+    end
+    HP -.->|Compila a| HJ[Historia.json]
+```
+
+> **Explicación:** Muestra la jerarquía de archivos Ink. Historia.ink es el punto de entrada que incluye los 7 archivos restantes mediante `INCLUDE`. El compilador de Inky produce un único `Historia.json` que StoryManager carga en Unity.
 
 ### Tags de Ink
 
@@ -182,6 +250,40 @@ Variables observadas: `ruta` (elige epílogo).
 5. **Opciones:** si hay `+ [Opción]`, se muestran como botones. El jugador elige → story.ChooseChoice()
 6. **Repite** 3-5 hasta END → StoryManager.EndStory() → OnDialogueStateChanged(false)
 
+#### Diagrama 2.2: Flujo completo del diálogo
+
+```mermaid
+sequenceDiagram
+    participant PJ as Jugador
+    participant PI as PlayerInteraction
+    participant SM as StoryManager
+    participant I as "Ink Story"
+    participant DUC as DialogueUIController
+    participant DTP as DialogueTagProcessor
+
+    PJ->>PI: Presiona E
+    PI->>SM: StartStory(knot)
+    SM->>I: ChoosePathString(knot)
+    SM->>DUC: SetStory() + DisplayNextLine()
+    I->>SM: story.Continue()
+    SM->>DTP: Procesar tags Ink
+    DTP->>SM: #setflag, #scene, etc.
+    SM->>DUC: Mostrar texto typewriter
+    alt Hay opciones
+        DUC->>PJ: Mostrar botones
+        PJ->>DUC: Elegir opción
+        DUC->>I: ChooseChoice(index)
+    else Siguiente línea
+        PJ->>SM: AdvanceStory()
+    end
+    SM->>I: story.Continue()
+    I-->>SM: END
+    SM->>SM: EndStory()
+    SM->>PJ: OnDialogueStateChanged(false)
+```
+
+> **Explicación:** Secuencia completa desde la pulsación de tecla hasta el fin del diálogo. Ink evalúa condiciones y ramifica, los tags se procesan para efectos secundarios (flags, sonido, escena), y el ciclo continúa hasta alcanzar END.
+
 ### DialogueUIController
 
 `DialogueUIController.cs`. Controla la interfaz del diálogo: texto typewriter, botones de opciones, retratos animados con blend shapes, voces por personaje, SFX e imágenes. Asigna `DialogueTagProcessor` para reaccionar a los tags de Ink.
@@ -238,6 +340,42 @@ GameStateSO almacena `List<string> flags`, `List<StoryVariable> variables`. El a
 
 Arcade → Schopenhauer/Hegel. Biblioteca → Estoicos/Nietzsche. Cada ruta tiene 2 caminos con 2 finales cada uno (aceptación/reproche) = 4 finales totales + 1 epílogo por filósofo. ~45 objetos interactuables, 4 NPCs, 6 patos coleccionables.
 
+#### Diagrama 2.3: Árbol de decisión narrativa
+
+```mermaid
+graph TD
+    INICIO[Prólogo - Parque] --> ELECCION{Elige puerta}
+    ELECCION --> ARCADE[Arcade]
+    ELECCION --> BIBLIO[Biblioteca]
+
+    ARCADE --> R1{Camino 1}
+    ARCADE --> R2{Camino 2}
+    BIBLIO --> R3{Camino 1}
+    BIBLIO --> R4{Camino 2}
+
+    R1 --> F1[Schopenhauer - Aceptación]
+    R1 --> F2[Schopenhauer - Reproche]
+    R2 --> F3[Hegel - Aceptación]
+    R2 --> F4[Hegel - Reproche]
+    R3 --> F5[Estoicos - Aceptación]
+    R3 --> F6[Estoicos - Reproche]
+    R4 --> F7[Nietzsche - Aceptación]
+    R4 --> F8[Nietzsche - Reproche]
+
+    F1 --> CUARTO[Cuarto - Reflexión final]
+    F2 --> CUARTO
+    F3 --> CUARTO
+    F4 --> CUARTO
+    F5 --> CUARTO
+    F6 --> CUARTO
+    F7 --> CUARTO
+    F8 --> CUARTO
+
+    CUARTO --> EPI[Epílogos - Cartas de filósofos]
+```
+
+> **Explicación:** Mapa completo de ramificaciones narrativas. El jugador elige entre Arcada (Schopenhauer/Hegel) o Biblioteca (Estoicos/Nietzsche), cada una con 2 caminos y 2 finales (aceptación o reproche), totalizando 8 finales + epílogo.
+
 ---
 
 ## Capítulo 3: Sistema de Interacción
@@ -248,9 +386,95 @@ Arquitectura en 4 capas: Collider Trigger → PlayerInteraction (IInteractable) 
 
 Interfaz raíz en `Assets/Scripts/Narrative/Interactions/Logic/IInteractable.cs`. Métodos: `void Interact()`, `string GetInteractionName()`.
 
+#### Diagrama 3.1: Jerarquía de clases de interacción
+
+```mermaid
+classDiagram
+    class IInteractable {
+        << interface >>
+        +Interact()
+        +GetInteractionName() string
+    }
+    class InteractableObject {
+        -InteractableData data
+        +Interact()
+        +GetInteractionName()
+    }
+    class AdvancedInteractableObject {
+        -AdvancedInteractableData data
+        +Interact()
+        +GetInteractionName()
+    }
+    class PrologueItemInteractable {
+        -string inkKnot
+        -string collectFlag
+        +Interact()
+    }
+    class InteractableTable {
+        -PhilosopherCardDatabase db
+        +Interact()
+    }
+    class FinalReflectionInteractable {
+        -PhilosopherCardDatabase db
+        +Interact()
+    }
+    class SceneTransitionTrigger {
+        -string destinationScene
+        -string confirmationKnot
+        +OnTriggerEnter()
+    }
+
+    IInteractable <|.. InteractableObject : implements
+    IInteractable <|.. AdvancedInteractableObject : implements
+    IInteractable <|.. PrologueItemInteractable : implements
+    IInteractable <|.. InteractableTable : implements
+    IInteractable <|.. FinalReflectionInteractable : implements
+
+    InteractableObject --> InteractableData
+    AdvancedInteractableObject --> AdvancedInteractableData
+    InteractableTable --> PhilosopherCardDatabase
+    FinalReflectionInteractable --> PhilosopherCardDatabase
+
+    note for SceneTransitionTrigger "NO implementa IInteractable<br/>Usa OnTriggerEnter directo"
+```
+
+> **Explicación:** UML simplificado de la jerarquía de interacción. La interfaz IInteractable es implementada por 5 clases concretas, cada una con su propio SO de datos. SceneTransitionTrigger es la excepción: usa OnTriggerEnter directamente.
+
 ### PlayerInteraction
 
 `Assets/Scripts/Player data/PlayerInteraction.cs`. Singleton en Player.prefab. Detecta IInteractable via OnTriggerEnter/Exit. Enlaza input (Tecla E / Gamepad South). Si hay diálogo activo, llama AdvanceStory() en lugar de Interact(). Expone evento `OnInteractableChanged(Action<IInteractable>)`.
+
+#### Diagrama 3.2: Flujo de detección e interacción
+
+```mermaid
+graph TD
+    TRIGGER[OnTriggerEnter] --> PI[PlayerInteraction]
+    PI --> DETECT{¿Diálogo activo?}
+    DETECT -->|Sí| ADV[Llama AdvanceStory]
+    DETECT -->|No| CHECK{¿IInteractable?}
+    CHECK -->|Sí| SHOW[Muestra Indicator]
+    SHOW --> INPUT[Espera input E / Gamepad South]
+    INPUT --> INTERACT[Llama Interact]
+
+    INTERACT --> TIPO{¿Tipo de objeto?}
+    TIPO -->|InteractableObject| IO{¿isCollectable?}
+    IO -->|Narrativo| SN[StartStory inkKnot]
+    IO -->|Coleccionable| COL[Setear flag + incrementar + sonido + desactivar]
+
+    TIPO -->|AdvancedInteractableObject| AO[Evaluar condiciones AND]
+    AO --> MATCH[Primera InteractionEntry que cumple]
+    MATCH --> AOK[StartStory inkKnot]
+
+    TIPO -->|PrologueItemInteractable| PRO[StartStory + flag + checkpoint]
+    TIPO -->|SceneTransitionTrigger| STT{Modo}
+    STT -->|Directo| CHG[ChangeScene]
+    STT -->|Con flag| FALL{¿Cumple?}
+    FALL -->|Sí| CHG
+    FALL -->|No| FB[Fallback knot + PushBack]
+    STT -->|Confirmación| CK["StartStory confirmationKnot + #scene:"]
+```
+
+> **Explicación:** Árbol de decisión completo desde que el jugador entra en un trigger hasta que la interacción se resuelve. Cada tipo de objeto sigue su propia ruta: narrativo simple, coleccionable, condicional, prólogo o transición de escena.
 
 ### Implementaciones
 
@@ -277,6 +501,33 @@ Implementa IInteractable. Usa `AdvancedInteractableData` SO con lista de `Intera
 - **Visibility Conditions:** si fallan en Start(), el objeto se oculta.
 - **Disappear After Dialogue:** se suscribe a OnDialogueStateChanged. Al terminar, si la condición se cumple → fade-out → desactiva → fade-in.
 - **NPC Rotation:** al interactuar, rota el NPC hacia el jugador.
+
+#### Diagrama 3.3: Evaluación de condiciones en AdvancedInteractableObject
+
+```mermaid
+flowchart LR
+    START[Interact] --> V{"visibilityConditions<br/>¿se cumplen?"}
+    V -->|No| HIDE[Ocultar objeto]
+    V -->|Sí| E0["Evaluar InteractionEntry[0]"]
+    E0 --> C0{"¿Condiciones AND<br/>se cumplen?"}
+    C0 -->|Sí| K0[Ejecutar inkKnot 0]
+    C0 -->|No| E1["Evaluar InteractionEntry[1]"]
+    E1 --> C1{"¿Condiciones AND<br/>se cumplen?"}
+    C1 -->|Sí| K1[Ejecutar inkKnot 1]
+    C1 -->|No| E2[... siguientes entradas ...]
+
+    K0 --> DAD{disappearAfterDialogue?}
+    K1 --> DAD
+    DAD -->|Sí| SUB[OnDialogueStateChanged]
+    SUB --> CHECK{¿Condición post-diálogo?}
+    CHECK -->|Sí| FADE[FadeOut + desactivar + FadeIn]
+
+    K0 --> ROT{¿NPC Rotation?}
+    K1 --> ROT
+    ROT -->|Sí| ROTATE[Rotar NPC hacia jugador]
+```
+
+> **Explicación:** Flujo de evaluación del AdvancedInteractableObject. Primero verifica visibilityConditions en Start(); si pasan, evalúa InteractionEntry por orden de prioridad ejecutando el primer knot cuyas condiciones AND se cumplan. Opcionalmente puede desaparecer post-diálogo o rotar al NPC.
 
 ### InteractableData SO
 
@@ -313,7 +564,6 @@ Autocontenido (no requiere SO). En Start(): si prólogo completado u objeto ya r
 | `Player.prefab` | PlayerInteraction, InteractUI |
 | `Cambio de escena.prefab` | SceneTransitionTrigger |
 | `IDEL JOSEPHIdle.prefab` | AdvancedInteractableObject |
-| `JOSEPH.prefab` | AdvancedInteractableObject |
 | `Gamepad_Classic.prefab` | InteractableObject |
 
 ### Dependencias
@@ -347,6 +597,35 @@ Todos los interactables dependen de `GameManager.Instance` (flags/variables), `S
 
 **Flujo:** Menu → Parque → (Arcade ↔ Parque ↔ Biblioteca) → Cuarto → Menu.
 
+#### Diagrama 4.1: Flujo del jugador entre escenas
+
+```mermaid
+graph TD
+    MENU[Menu.unity] -->|Jugar| PARQ[Parque.unity]
+
+    subgraph PROL["Prólogo"]
+        PARQ -->|Puerta Arcade| ARCADEP[Arcade.unity]
+        PARQ -->|Puerta Biblioteca| BIBLIOP[Biblioteca.unity]
+        ARCADEP -->|Recoger objeto| PARQ2[Parque.unity - Reencuentro]
+        BIBLIOP -->|Recoger objeto| PARQ2
+        PARQ2 -->|Prólogo completado| PARQJ[Parque.unity - Juego libre]
+    end
+
+    PARQJ -->|Puerta Arcade| ARCADE[Arcade.unity]
+    PARQJ -->|Puerta Biblioteca| BIBLIOTECA[Biblioteca.unity]
+    ARCADE <-->|Transición libre| PARQJ
+    BIBLIOTECA <-->|Transición libre| PARQJ
+
+    ARCADE -->|Completar ruta| CUARTO[Cuarto.unity]
+    BIBLIOTECA -->|Completar ruta| CUARTO
+
+    CUARTO -->|Epílogo visto| MENU2[Menu.unity]
+
+    MENU -.->|Continuar partida| PARQJ
+```
+
+> **Explicación:** Mapa navegacional completo. El prólogo es una secuencia lineal guiada (Parque → Arcade/Biblioteca → Parque). Tras completarlo, el jugador puede moverse libremente entre escenas hasta completar una ruta narrativa, que lo lleva al Cuarto para el epílogo.
+
 ### LevelManager
 
 Singleton persistente en `Game Manager.prefab`. API:
@@ -355,6 +634,40 @@ Singleton persistente en `Game Manager.prefab`. API:
 - `FadeToBlackRoutine()` / `FadeToClearRoutine()` — corrutinas para uso externo
 
 **Flujo ChangeScene:** Cerrar ajustes → Play transitionSFX → FadeOut → actualizar previousSceneName → SaveGame() → SceneManager.LoadSceneAsync(destino) → HandlePlayerSpawn() → FadeIn.
+
+#### Diagrama 4.2: Secuencia de ChangeScene()
+
+```mermaid
+sequenceDiagram
+    participant TRIG as Trigger
+    participant LM as LevelManager
+    participant UI as SettingsUI
+    participant FC as FadeCanvas
+    participant SS as SaveSystem
+    participant GSO as GameStateSO
+    participant SM as SceneManager
+    participant PM as PlayerManager
+    participant SP as SpawnPoint
+
+    TRIG->>LM: ChangeScene(destino)
+    LM->>UI: CloseSettings()
+    LM->>FC: FadeOut()
+    LM->>GSO: Update previousSceneName
+    LM->>SS: SaveGame()
+    SS->>SS: Serializar GameStateSO → JSON
+    SS->>SS: Write save.json
+    LM->>SM: LoadSceneAsync(destino)
+    SM-->>LM: sceneLoaded event
+    LM->>PM: HandlePlayerSpawn()
+    PM->>GSO: Read previousSceneName
+    PM->>SP: Buscar SpawnPoint coincidente
+    SP-->>PM: Position + Rotation
+    PM->>PM: Teleportar jugador
+    LM->>FC: FadeIn()
+    LM->>LM: ResetFade()
+```
+
+> **Explicación:** La transición de escena es una operación crítica que orquesta: cierre de UI, fade out, auto-save (serializando GameStateSO a JSON), carga asíncrona de la nueva escena, teletransporte del jugador al SpawnPoint correcto según la escena de origen, y fade in final.
 
 ### SpawnPoints
 
@@ -416,6 +729,25 @@ Tres subsistemas independientes: **Menu UI** (menú principal), **Dialogue UI** 
 | Fade Canvas | ScreenSpace Overlay | 10 | Fundido a negro |
 | Summary Canvas | ScreenSpace Overlay | 4 | Resumen final |
 
+#### Diagrama 5.1: Jerarquía de Canvases
+
+```mermaid
+graph BT
+    subgraph Overlay["ScreenSpace Overlay - por orden"]
+        MC["Menu Canvas<br/>Orden: 0<br/>Paneles de menú"]
+        SC["Settings Canvas<br/>Orden: 1<br/>Ajustes"]
+        DC["Dialogue Canvas<br/>Orden: 2<br/>Diálogo + opciones + retratos"]
+        CC["Card Canvas<br/>Orden: 3<br/>Cartas de filósofos"]
+        SUC["Summary Canvas<br/>Orden: 4<br/>Resumen final"]
+        FC["Fade Canvas<br/>Orden: 10<br/>Fundido a negro"]
+    end
+    subgraph World["WorldSpace"]
+        IC["Interaction Canvas<br/>Billboard de interacción"]
+    end
+```
+
+> **Explicación:** Capas de Canvas superpuestas por orden de renderizado. El Fade Canvas tiene el orden más alto (10) para asegurar que los fundidos a negro cubran todo. El Interaction Canvas es el único en WorldSpace para posicionarse como billboard 3D sobre los objetos.
+
 ### CardPanelController (Cartas de filósofos)
 
 `CardPanelController.cs` en `Narrative/Narrative Logic/`. Gestiona la visualización de cartas coleccionables en el epílogo. Recibe `PhilosopherCardData` desde `PhilosopherCardDatabase` y las muestra en el Card Canvas.
@@ -438,6 +770,34 @@ GameManager controla visibilidad de `hudObjects[]`. Tecla Q abre/cierra panel de
 ### Menú Principal
 
 `MenuInicio.cs`: Jugar → CarruselNiveles, Créditos, Ajustes, Salir. `CarruselNiveles.cs`: navegación A/D, muestra hasta 4 estrellas por final desbloqueado vía PlayerPrefs. `UIAjustes.cs`: 5 sliders (Música, SFX, UI, Ambiente, Master) vinculados a AudioManager.
+
+#### Diagrama 5.2: Navegación del menú principal
+
+```mermaid
+graph TD
+    MENU[MenuInicio] --> PLAY[Botón Jugar]
+    MENU --> CRED[Botón Créditos]
+    MENU --> SET[Botón Ajustes]
+    MENU --> QUIT[Botón Salir]
+
+    PLAY --> CARRUSEL[CarruselNiveles]
+    CARRUSEL --> NIV1[Parque]
+    CARRUSEL --> NIV2[Arcade]
+    CARRUSEL --> NIV3[Biblioteca]
+    CARRUSEL --> NIV4[Cuarto]
+    CARRUSEL -->|Navegación A/D| CARRUSEL
+
+    SET --> UIA[UIAjustes]
+    UIA --> SLIDERS[5 sliders]
+    SLIDERS --> AM[AudioManager]
+
+    CARRUSEL -->|Jugar nivel| GM["GameManager.<br/>RequestLoadLevel"]
+    GM --> LM["LevelManager.<br/>ChangeScene"]
+
+    MENU -.->|Tecla Q en juego| UIA
+```
+
+> **Explicación:** Árbol de navegación del menú principal. El CarruselNiveles permite seleccionar escena con navegación por teclado (A/D) y muestra estrellas por final desbloqueado. Los ajustes modifican volúmenes en AudioManager vía PlayerPrefs.
 
 ### Clases de UI
 
@@ -472,6 +832,46 @@ LoadGame(): SaveSystem.Load() → GameSaveData → GameStateSO.LoadFrom(data)
 RequestLoadLevel(): ¿Save existe? → Sí: ¿currentSceneName válido? → ChangeScene(guardada). No: ResetGameState → ChangeScene(base).
 ```
 
+#### Diagrama 6.1: Flujo Save / Load
+
+```mermaid
+sequenceDiagram
+    participant SRC as Fuente
+    participant GM as GameManager
+    participant GSO as GameStateSO
+    participant GSD as GameSaveData
+    participant SS as SaveSystem
+    participant LM as LevelManager
+    participant DISK as Archivo
+
+    Note over SRC, DISK: SAVE
+    SRC->>GM: SaveGame()
+    GM->>GSO: Export flags + variables + escena + posición
+    GSO->>GSD: Crear GameSaveData
+    GSD->>SS: Save(data)
+    SS->>DISK: Write save.json
+
+    Note over SRC, DISK: LOAD
+    GM->>SS: Load()
+    SS->>DISK: Read save.json
+    DISK-->>SS: GameSaveData
+    SS-->>GM: data
+    GM->>GSO: LoadFrom(data)
+    GSO->>GSO: Restaurar flags + variables + escena + posición
+
+    Note over SRC, DISK: LOAD LEVEL
+    GM->>GM: RequestLoadLevel()
+    alt Save existe
+        GM->>GSO: Leer currentSceneName
+        GM->>LM: ChangeScene(guardada)
+    else No save
+        GM->>GM: ResetGameState()
+        GM->>LM: ChangeScene(base)
+    end
+```
+
+> **Explicación:** El flujo de guardado serializa GameStateSO → GameSaveData → JSON en disco. El flujo de carga invierte el proceso. RequestLoadLevel decide entre partida nueva o continuación según exista save.
+
 ### Cuándo se guarda
 
 - **Auto-save:** en cada `LevelManager.ChangeScene()`, antes de cargar la nueva escena.
@@ -498,6 +898,36 @@ Clase estática en `Assets/Scripts/Core/SaveSystem.cs`. Solo GameManager lo invo
 | Volúmenes de audio | AudioManager | PlayerPrefs |
 | Finales desbloqueados | GameSummaryManager | PlayerPrefs |
 
+#### Diagrama 6.2: Mapa de datos persistidos
+
+```mermaid
+graph LR
+    subgraph SAVE_JSON["save.json"]
+        F["Flags narrativos<br/>List&lt;string&gt;"]
+        V["Variables narrativas<br/>List&lt;StoryVariable&gt;"]
+        SN[SceneName actual + anterior]
+        PP[Posición + rotación jugador]
+    end
+
+    subgraph PREF["PlayerPrefs"]
+        MV[MusicVolume]
+        SV[SFXVolume]
+        UV[UIVolume]
+        AV[AmbientVolume]
+        MAV[MasterVolume]
+        E1[EndingUnlocked_Schopenhauer]
+        E2[EndingUnlocked_Hegel]
+        E3[EndingUnlocked_Estoicos]
+        E4[EndingUnlocked_Nietzsche]
+    end
+
+    GSO[GameStateSO] -.->|serializa| SAVE_JSON
+    AM[AudioManager] -.->|guarda/lee| PREF
+    GSM[GameSummaryManager] -.->|guarda/lee| PREF
+```
+
+> **Explicación:** Dos destinos de persistencia: `save.json` almacena el estado completo del juego (GameStateSO), mientras PlayerPrefs almacena configuraciones de audio y finales desbloqueados. AudioManager y GameSummaryManager acceden directamente a PlayerPrefs.
+
 ### PlayerPrefs Keys
 
 `PlayerPrefsKeys.cs` — constantes centralizadas. Volúmenes: `MusicVolume`, `SFXVolume`, `UIVolume`, `AmbientVolume`, `MasterVolume`. Finales: `EndingUnlocked_Schopenhauer`, `EndingUnlocked_Hegel`, `EndingUnlocked_Estoicos`, `EndingUnlocked_Nietzsche`.
@@ -514,6 +944,26 @@ Clase estática en `Assets/Scripts/Core/SaveSystem.cs`. Solo GameManager lo invo
 
 Este capítulo unifica pipelines, checklists y riesgos de los capítulos anteriores. Es la referencia única para creación de nuevo contenido.
 
+#### Diagrama 7.1: Pipeline de creación de contenido
+
+```mermaid
+graph LR
+    A[1. Escribir knot en .ink] --> B[2. Compilar .json desde Inky]
+    B --> C[3. Crear ScriptableObject]
+    C --> D[4. Asignar SO a GameObject]
+    D --> E[5. Configurar Collider + Tags]
+    E --> F[6. Probar en Unity Play Mode]
+    F -->|Error| A
+    F -->|OK| G[7. Commit + PR]
+
+    C --> C1{Tipo}
+    C1 -->|InteractableObject| SO1[InteractableData SO]
+    C1 -->|Advanced| SO2[AdvancedInteractableData SO]
+    C1 -->|Coleccionable| SO3[PhilosopherCard / Duck DB]
+```
+
+> **Explicación:** Pipeline unificado para crear cualquier tipo de contenido interactuable. El ciclo comienza en Ink, pasa por la creación del SO correspondiente, el montaje en escena, y cierra con pruebas en Unity. Si falla, se itera desde el paso 1.
+
 ### 7.2 Cómo crear un nuevo objeto interactuable
 
 1. Crear `InteractableData` SO (Assets/Create/Narrative/Interactable) con `interactionName`, `inkKnot`
@@ -523,7 +973,7 @@ Este capítulo unifica pipelines, checklists y riesgos de los capítulos anterio
 
 **Coleccionable:** marcar `isCollectable`, configurar `flagToSetOnCollect`. Se desactiva automáticamente si el flag ya existe al cargar.
 
-### 7.3 Cómo crear una secuencia interactiva (puzzle)
+### 7.3 Cómo crear una secuencia interactiva (Joseph)
 
 1. Crear `AdvancedInteractableData` SO (Assets/Create/Narrative/Advanced Interactable)
 2. Agregar `InteractionEntry` por cada knot posible con condiciones AND
@@ -642,6 +1092,33 @@ StoryManager.Instance.StartStory(data.inkKnot);
 - [ ] El prólogo fluye correctamente entre escenas
 - [ ] Al terminar el diálogo, el panel se oculta y el personaje puede moverse
 - [ ] Los managers persistentes no se duplican al recargar Menu
+
+#### Diagrama 7.2: Árbol de decisión para elegir tipo de interactable
+
+```mermaid
+flowchart TD
+    INICIO["¿Qué quieres crear?"] --> PUERTA{"¿Es una<br/>transición/puerta?"}
+    PUERTA -->|Sí| STT["SceneTransitionTrigger<br/>+ Collider trigger"]
+    PUERTA -->|No| PROL{"¿Es parte del<br/>prólogo?"}
+
+    PROL -->|Sí| PROLITEM["PrologueItemInteractable<br/>+ Collider trigger"]
+    PROL -->|No| COL{"¿Es coleccionable?<br/>Carta o pato"}
+
+    COL -->|Sí| DBTYPE{"¿Carta o pato?"}
+    DBTYPE -->|Carta| CARD["InteractableTable<br/>+ PhilosopherCardDatabase"]
+    DBTYPE -->|Pato| DUCK["InteractableObject<br/>isCollectable=true<br/>+ CollectableDuckDatabase"]
+
+    COL -->|No| COND{"¿Tiene condiciones<br/>o múltiples knots?"}
+    COND -->|Sí| ADV["AdvancedInteractableObject<br/>+ AdvancedInteractableData SO"]
+    COND -->|No| SIMPLE["InteractableObject<br/>+ InteractableData SO"]
+
+    STT --> STTMOD{Modo}
+    STTMOD -->|Directo| CHGDIR[ChangeScene destino]
+    STTMOD -->|Con flag| CHGFLAG[requiredFlag + fallbackKnot]
+    STTMOD -->|Confirmación| CHGKNOT["confirmationKnot + #scene:"]
+```
+
+> **Explicación:** Árbol de decisión para desarrolladores que necesitan crear un nuevo objeto interactuable. Guía paso a paso según el tipo: transición, prólogo, coleccionable, condicional o simple. Cada hoja indica el componente y SO necesario.
 
 ### 7.11 Riesgos Frecuentes
 
@@ -772,11 +1249,11 @@ Assets/
 
 ### 8.5 Flujo Recomendado de Git
 
-1. Crear rama desde `develop`: `feature/nueva-interaccion`
+1. Crear rama desde `main`: `feature/nueva-interaccion`
 2. Implementar contenido Ink + configuración Unity
 3. Probar en Unity Play mode
 4. Commit: mensaje descriptivo con prefijo (`[Narrativa]`, `[Interacción]`, `[UI]`)
-5. Push + PR a `develop` con descripción de qué se probó
+5. Push + PR a `main` con descripción de qué se probó
 
 ### 8.6 Prácticas Seguras para Modificar Sistemas
 
@@ -858,7 +1335,6 @@ Assets/
 |-----------|-------------|
 | Resetear flags/variables | GameManager Inspector → ClearStoryFlags |
 | Ver estado de juego | GameStateSO Inspector (runtime) |
-| Verificar knot en Ink | Play Mode → consola: `[StoryManager] StartStory llamado con knot: '...'` |
 | Ver auto-save | `%APPDATA%/WhispersInLetters/save.json` |
 | Buscar SO por escena | Tool: InteractableTable.SceneInteractablesByScene |
 
