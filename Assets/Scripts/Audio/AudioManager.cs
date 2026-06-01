@@ -74,10 +74,10 @@ public class AudioManager : MonoBehaviour
         UpdateOneShotSourceVolumes();
 
         if (MusicAudioSource != null)
-            MusicAudioSource.volume = _musicSourceBaseVolume;
+            MusicAudioSource.volume = _musicSourceBaseVolume * _currentMusicVolume * _currentMasterVolume;
 
         if (AmbienceAudioSource != null)
-            AmbienceAudioSource.volume = _ambienceSourceBaseVolume;
+            AmbienceAudioSource.volume = _ambienceSourceBaseVolume * _currentAmbienceVolume * _currentMasterVolume;
     }
 
     /// <summary>

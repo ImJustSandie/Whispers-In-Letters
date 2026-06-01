@@ -1625,7 +1625,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &291941800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1768,6 +1768,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -255.99997
       objectReference: {fileID: 0}
+    - target: {fileID: 1477087423416412457, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562516408680490270, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 1630207495773860538, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -29.99996
@@ -1790,7 +1798,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2524367484460950441, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: m_Volume
-      value: 1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2881550313710154253, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: m_Enabled
@@ -2399,8 +2407,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6420050c4090e5f4cb1e7c3f3867b457, type: 2}
-  m_sharedMaterial: {fileID: 806946236576824012, guid: 6420050c4090e5f4cb1e7c3f3867b457, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5119,7 +5127,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -9715,7 +9723,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1901496150
 RectTransform:
   m_ObjectHideFlags: 0
