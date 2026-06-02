@@ -74,10 +74,10 @@ public class AudioManager : MonoBehaviour
         UpdateOneShotSourceVolumes();
 
         if (MusicAudioSource != null)
-            MusicAudioSource.volume = _musicSourceBaseVolume;
+            MusicAudioSource.volume = _musicSourceBaseVolume * _currentMusicVolume * _currentMasterVolume;
 
         if (AmbienceAudioSource != null)
-            AmbienceAudioSource.volume = _ambienceSourceBaseVolume;
+            AmbienceAudioSource.volume = _ambienceSourceBaseVolume * _currentAmbienceVolume * _currentMasterVolume;
     }
 
     /// <summary>
@@ -124,7 +124,7 @@ public class AudioManager : MonoBehaviour
     {
         if (audioEvent == null || audioEvent.clip == null)
         {
-            Debug.LogWarning("[AudioManager] Intento de reproducir un SFX con un AudioEvent o Clip nulo.");
+
             return;
         }
 

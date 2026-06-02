@@ -37,3 +37,11 @@ MonoBehaviour:
     animationStateName: Joseph Confused
   - id: Tablos
     animationStateName: Escencia
+  - id: NPC_01
+    animationStateName: NPC 01 Animation
+  - id: NPC_02
+    animationStateName: NPC 02 Animation
+  - id: NPC_03
+    animationStateName: NPC 03 Animation
+  - id: NPC_04
+    animationStateName: NPC 04 Animation

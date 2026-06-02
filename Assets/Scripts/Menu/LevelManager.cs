@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -52,21 +53,30 @@ public class LevelManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Limpieza de seguridad: Al entrar en cualquier escena, la pantalla debe estar clara
-        // y las transiciones detenidas.
-        isTransitioning = false;
-
-        if (fadeCanvasGroup != null)
+        if (loadStopwatch.IsRunning)
         {
-            fadeCanvasGroup.alpha = 0f;
-            fadeCanvasGroup.blocksRaycasts = false;
-            fadeCanvasGroup.gameObject.SetActive(false);
+            loadStopwatch.Stop();
+
         }
-        
-        Debug.Log($"[LevelManager] Reset de fade y transición completado en {scene.name}");
+        else
+        {
+
+        }
+
+        if (!isTransitioning)
+        {
+            if (fadeCanvasGroup != null)
+            {
+                fadeCanvasGroup.alpha = 0f;
+                fadeCanvasGroup.blocksRaycasts = false;
+                fadeCanvasGroup.gameObject.SetActive(false);
+            }
+        }
     }
 
     private bool isTransitioning = false;
+    private Coroutine activeFadeRoutine;
+    private readonly System.Diagnostics.Stopwatch loadStopwatch = new System.Diagnostics.Stopwatch();
 
     /// <summary>
     /// Cambia a la escena indicada aplicando transiciones visuales.
@@ -82,22 +92,39 @@ public class LevelManager : MonoBehaviour
     /// </summary>
     public void FadeToBlack(float duration = -1f)
     {
+        if (isTransitioning) return;
         float d = duration < 0 ? fadeDuration : duration;
-        StartCoroutine(FadeRoutine(0f, 1f, d, true));
+        if (activeFadeRoutine != null) StopCoroutine(activeFadeRoutine);
+        activeFadeRoutine = StartCoroutine(FadeRoutine(0f, 1f, d, true, () => activeFadeRoutine = null));
     }
 
-    /// <summary>
-    /// Inicia un aclaramiento gradual de la pantalla.
-    /// </summary>
     public void FadeToClear(float duration = -1f)
     {
+        if (isTransitioning) return;
         float d = duration < 0 ? fadeDuration : duration;
-        StartCoroutine(FadeRoutine(1f, 0f, d, false));
+        if (activeFadeRoutine != null) StopCoroutine(activeFadeRoutine);
+        activeFadeRoutine = StartCoroutine(FadeRoutine(1f, 0f, d, false, () => activeFadeRoutine = null));
     }
 
-    private IEnumerator FadeRoutine(float startAlpha, float endAlpha, float duration, bool blockRaycasts)
+    public IEnumerator FadeToBlackRoutine(float duration = -1f)
     {
-        if (fadeCanvasGroup == null) yield break;
+        float d = duration < 0 ? fadeDuration : duration;
+        yield return FadeRoutine(0f, 1f, d, true);
+    }
+
+    public IEnumerator FadeToClearRoutine(float duration = -1f)
+    {
+        float d = duration < 0 ? fadeDuration : duration;
+        yield return FadeRoutine(1f, 0f, d, false);
+    }
+
+    private IEnumerator FadeRoutine(float startAlpha, float endAlpha, float duration, bool blockRaycasts, Action onComplete = null)
+    {
+        if (fadeCanvasGroup == null)
+        {
+            onComplete?.Invoke();
+            yield break;
+        }
 
         fadeCanvasGroup.gameObject.SetActive(true);
         fadeCanvasGroup.blocksRaycasts = blockRaycasts;
@@ -117,6 +144,8 @@ public class LevelManager : MonoBehaviour
             fadeCanvasGroup.blocksRaycasts = false;
             fadeCanvasGroup.gameObject.SetActive(false);
         }
+
+        onComplete?.Invoke();
     }
 
     private IEnumerator TransitionToScene(string sceneName)
@@ -135,19 +164,7 @@ public class LevelManager : MonoBehaviour
         }
         
         // 1. Efecto Fade Out (Oscurecer pantalla)
-        if (fadeCanvasGroup != null)
-        {
-            fadeCanvasGroup.gameObject.SetActive(true); // Prenderlo automáticamente
-            fadeCanvasGroup.blocksRaycasts = true;
-            float timer = 0f;
-            while (timer < fadeDuration)
-            {
-                fadeCanvasGroup.alpha = Mathf.Lerp(0f, 1f, timer / fadeDuration);
-                timer += Time.deltaTime;
-                yield return null;
-            }
-            fadeCanvasGroup.alpha = 1f;
-        }
+        yield return StartCoroutine(FadeRoutine(0f, 1f, fadeDuration, true));
 
         // 2. Registrar el historial en la persistencia a través del GameManager
         if (GameManager.Instance != null && GameManager.Instance.GetGameState() != null)
@@ -168,11 +185,14 @@ public class LevelManager : MonoBehaviour
         }
 
         // 3. Carga asíncrona para no congelar el juego
+        loadStopwatch.Reset();
+        loadStopwatch.Start();
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
         
         if (asyncLoad == null)
         {
-            Debug.LogError($"[LevelManager] No se pudo cargar la escena '{sceneName}'. ¿Aseguraste agregarla en File -> Build Settings?");
+            loadStopwatch.Stop();
+
             isTransitioning = false;
             yield break; // Detener la corrutina para evitar errores
         }
@@ -186,20 +206,13 @@ public class LevelManager : MonoBehaviour
         yield return null; // Esperar un frame para que todos los objetos de la nueva escena se inicialicen
         HandlePlayerSpawn();
 
+        // 3.6 Liberar assets huérfanos y forzar recolección de basura
+        yield return Resources.UnloadUnusedAssets();
+        GC.Collect();
+        GC.WaitForPendingFinalizers();
+
         // 4. Efecto Fade In (Aclarar pantalla)
-        if (fadeCanvasGroup != null)
-        {
-            float timer = 0f;
-            while (timer < fadeDuration)
-            {
-                fadeCanvasGroup.alpha = Mathf.Lerp(1f, 0f, timer / fadeDuration);
-                timer += Time.deltaTime;
-                yield return null;
-            }
-            fadeCanvasGroup.alpha = 0f;
-            fadeCanvasGroup.blocksRaycasts = false;
-            fadeCanvasGroup.gameObject.SetActive(false); // Apagarlo para que no estorbe en el Editor ni en el juego
-        }
+        yield return StartCoroutine(FadeRoutine(1f, 0f, fadeDuration, false));
 
         isTransitioning = false;
     }
@@ -211,12 +224,12 @@ public class LevelManager : MonoBehaviour
     {
         if (GameManager.Instance == null || GameManager.Instance.GetGameState() == null)
         {
-            Debug.Log("[LevelManager] No hay GameManager/GameState. Spawn omitido.");
+
             return;
         }
 
         string previousScene = GameManager.Instance.GetGameState().previousSceneName;
-        Debug.Log($"[LevelManager] Buscando SpawnPoint para escena anterior: '{previousScene}'");
+
 
         if (string.IsNullOrEmpty(previousScene)) return;
 
@@ -224,17 +237,17 @@ public class LevelManager : MonoBehaviour
         GameObject player = GameObject.FindWithTag("Player");
         if (player == null)
         {
-            Debug.LogWarning("[LevelManager] No se encontro jugador con Tag 'Player' en la escena.");
+
             return;
         }
 
         // Buscar SpawnPoints
-        SpawnPoint[] spawnPoints = Object.FindObjectsByType<SpawnPoint>(FindObjectsSortMode.None);
-        Debug.Log($"[LevelManager] SpawnPoints encontrados: {spawnPoints.Length}");
+        SpawnPoint[] spawnPoints = UnityEngine.Object.FindObjectsByType<SpawnPoint>(FindObjectsSortMode.None);
+
 
         foreach (SpawnPoint sp in spawnPoints)
         {
-            Debug.Log($"[LevelManager] Comparando SpawnPoint '{sp.fromSceneName}' con '{previousScene}'");
+
 
             if (sp.fromSceneName.Trim().Equals(previousScene.Trim(), System.StringComparison.OrdinalIgnoreCase))
             {
@@ -247,11 +260,11 @@ public class LevelManager : MonoBehaviour
 
                 if (cc != null) cc.enabled = true;
 
-                Debug.Log($"[LevelManager] Jugador reubicado en SpawnPoint de '{previousScene}'");
+
                 return;
             }
         }
 
-        Debug.LogWarning($"[LevelManager] No se encontro SpawnPoint para '{previousScene}'.");
+
     }
 }

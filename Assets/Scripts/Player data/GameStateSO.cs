@@ -148,7 +148,6 @@ public class GameStateSO : ScriptableObject
     {
         if (data == null)
         {
-            Debug.LogWarning("[GameStateSO] LoadFrom recibió datos nulos. Estado no modificado.");
             return;
         }
 
@@ -169,6 +168,5 @@ public class GameStateSO : ScriptableObject
             }
         }
 
-        Debug.Log($"[GameStateSO] Estado restaurado desde disco. Escena: '{currentSceneName}' | Flags: {unlockedFlags.Count} | Variables: {storyVariables.Count}");
     }
 }

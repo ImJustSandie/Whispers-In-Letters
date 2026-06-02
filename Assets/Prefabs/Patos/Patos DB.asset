@@ -15,21 +15,21 @@ MonoBehaviour:
   ducks:
   - duckName: 'Pato_Arcade '
     flagName: 'Pato_Arcade '
-    collectedSprite: {fileID: 21300000, guid: bae5ee95d3a2aed4090e0b369a838549, type: 3}
-    lockedSprite: {fileID: 21300000, guid: 762d9ecb201bb7743a527c8a24c77db2, type: 3}
+    collectedSprite: {fileID: 542488861, guid: baef6f7e5a991264faed61d03664d8a9, type: 3}
+    lockedSprite: {fileID: -1911931534, guid: 3ae93444d85af224d991d7ce935bdf50, type: 3}
   - duckName: Pato_Parque2
     flagName: Pato_Parque2
-    collectedSprite: {fileID: 21300000, guid: 51eea430a92b0d244a5718a924352693, type: 3}
-    lockedSprite: {fileID: 21300000, guid: 762d9ecb201bb7743a527c8a24c77db2, type: 3}
+    collectedSprite: {fileID: 1862002262, guid: f9dbd9af2ece63041a2dcb3783cd86e2, type: 3}
+    lockedSprite: {fileID: -778858550, guid: 7691af44c4a235143bd1eaaa65e64044, type: 3}
   - duckName: Pato_Parque1
     flagName: Pato_Parque1
-    collectedSprite: {fileID: 21300000, guid: 6945712774cee4045b3c387f80e02e6b, type: 3}
-    lockedSprite: {fileID: 21300000, guid: 762d9ecb201bb7743a527c8a24c77db2, type: 3}
+    collectedSprite: {fileID: 1437336566, guid: 06bfbbd31631b17489cd9fc1ac9eaac6, type: 3}
+    lockedSprite: {fileID: 1373536959, guid: 6cf89274ca0eeb74bb7c1a2847f57d22, type: 3}
   - duckName: Pato_Biblioteca
     flagName: Pato_Biblioteca
-    collectedSprite: {fileID: 21300000, guid: dcba12ab8add5ff40a4b53d33d47e0e0, type: 3}
-    lockedSprite: {fileID: 21300000, guid: 762d9ecb201bb7743a527c8a24c77db2, type: 3}
+    collectedSprite: {fileID: 1912273728, guid: 4ec2b710d7af9d94d8de5dc0efddfa72, type: 3}
+    lockedSprite: {fileID: 1302819300, guid: 447371f7eb60cf34994d6c511cee9243, type: 3}
   - duckName: Pato_Habitacion
     flagName: Pato_Habitacion
-    collectedSprite: {fileID: 21300000, guid: 5640f15e0054ff44f8070127c377b97f, type: 3}
-    lockedSprite: {fileID: 21300000, guid: 762d9ecb201bb7743a527c8a24c77db2, type: 3}
+    collectedSprite: {fileID: -1055047044, guid: c58e9cfdc5c440b49a57bf66c5711d54, type: 3}
+    lockedSprite: {fileID: -1489227773, guid: 95c455d6327ddab4bb654e1f57619027, type: 3}

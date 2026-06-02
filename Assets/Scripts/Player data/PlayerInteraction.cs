@@ -57,7 +57,7 @@ public class PlayerInteraction : MonoBehaviour
 
     void TryInteract()
     {
-        Debug.Log("[PlayerInteraction] Intentando interactuar. DialogueActive: " + (StoryManager.Instance != null && StoryManager.Instance.IsDialogueActive));
+
 
         if (StoryManager.Instance != null && StoryManager.Instance.IsDialogueActive)
         {
@@ -67,7 +67,7 @@ public class PlayerInteraction : MonoBehaviour
 
         if (currentInteractable != null)
         {
-            Debug.Log("[PlayerInteraction] Ejecutando Interact() en: " + currentInteractable.GetInteractionName());
+
 
             // Rotar suavemente hacia el objeto con el que vamos a interactuar
             Component targetComponent = currentInteractable as Component;
@@ -86,37 +86,37 @@ public class PlayerInteraction : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("[PlayerInteraction] currentInteractable es NULL.");
+
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("[PlayerInteraction] OnTriggerEnter con: " + other.gameObject.name);
+
         IInteractable interactable = other.GetComponentInParent<IInteractable>();
 
         if (interactable != null)
         {
             currentInteractable = interactable;
-            Debug.Log("Objeto cercano: " + interactable.GetInteractionName());
-            Debug.Log("[PlayerInteraction] Invocando OnInteractableChanged. Suscriptores: " + (OnInteractableChanged?.GetInvocationList().Length ?? 0));
+
+
             OnInteractableChanged?.Invoke(currentInteractable);
         }
         else
         {
-            Debug.Log("[PlayerInteraction] OnTriggerEnter: el objeto NO implementa IInteractable.");
+
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("[PlayerInteraction] OnTriggerExit con: " + other.gameObject.name);
+
         IInteractable interactable = other.GetComponentInParent<IInteractable>();
 
         if (interactable != null && interactable == currentInteractable)
         {
             currentInteractable = null;
-            Debug.Log("[PlayerInteraction] Invocando OnInteractableChanged(null). Suscriptores: " + (OnInteractableChanged?.GetInvocationList().Length ?? 0));
+
             OnInteractableChanged?.Invoke(null);
         }
     }

@@ -123,7 +123,7 @@ public class CarruselNiveles : MonoBehaviour
         if (GameManager.Instance == null)
         {
             // Fallback de emergencia solo para debug directo desde escena de menú
-            Debug.LogWarning("[CarruselNiveles] GameManager no encontrado. Cargando escena directamente (solo para debug).");
+
             UnityEngine.SceneManagement.SceneManager.LoadScene("Parque");
             return;
         }
