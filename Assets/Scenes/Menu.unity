@@ -1794,7 +1794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2064189035240888415, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: clearStateOnStart
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2524367484460950441, guid: ba9bf306ad2e7b5499351f8697e06e43, type: 3}
       propertyPath: m_Volume
@@ -4455,7 +4455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneMusicStarter
   sceneMusic: {fileID: 11400000, guid: 97200d530a84d7849964b7a20e5b7140, type: 2}
-  sceneAmbience: {fileID: 0}
+  sceneAmbience: {fileID: 11400000, guid: 4f808f599c38a39408da4095c3537a70, type: 2}
   playOnStart: 1
 --- !u!4 &657935575
 Transform:

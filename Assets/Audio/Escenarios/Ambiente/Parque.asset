@@ -15,4 +15,4 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 87881fa30f30b2b428a3eaaded288b5b, type: 3}
   volume: 0.5
   pitch: 1
-  loop: 0
+  loop: 1

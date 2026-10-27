@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Cuarto
   m_EditorClassIdentifier: Assembly-CSharp::AudioEvent
   clip: {fileID: 8300000, guid: 9312f519f98fcbf499ee1318120db703, type: 3}
-  volume: 0.3
+  volume: 0.25
   pitch: 1
-  loop: 0
+  loop: 1
